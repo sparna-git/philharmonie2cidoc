@@ -1,0 +1,31 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:mus="http://data.doremus.org/ontology#"
+	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
+	xmlns:ecrm="http://erlangen-crm.org/current/"
+>
+
+<efrbroo:F24_Publication_Expression rdf:about="http://data.philharmoniedeparis.fr/0070318">
+	<!-- en dur -->
+	<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
+	<!--
+	<ecrm:P72_has_language>
+		<ecrm:E56_Language>
+			<rdfs:label>FR</rdfs:label>
+		</ecrm:E56_Language>
+	</ecrm:P72_has_language>
+	-->
+	<mus:U170_has_title_statement>
+		<mus:M156_Title_Statement>
+			<rdfs:label>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)</rdfs:label>
+		</mus:M156_Title_Statement>
+	</mus:U170_has_title_statement>
+	<mus:U172_has_statement_of_responsibility_relating_to_title>
+		<mus:M157_Statement_of_Responsibility>
+			<rdfs:label>Ellie Anne Duque</rdfs:label>
+		</mus:M157_Statement_of_Responsibility>
+	</mus:U172_has_statement_of_responsibility_relating_to_title>
+</efrbroo:F24_Publication_Expression>
+
+
+</rdf:RDF>

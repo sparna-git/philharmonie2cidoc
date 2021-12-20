@@ -1,0 +1,5446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NOTICES>
+  <TYPREG type="UNI:5">
+    <NOTICE id="0070318" type="UNI:5">
+      <champs UnimarcTag="006">
+        <SOUSCHAMP UnimarcSubfield="006$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="006$a">
+          <data>ncm1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="010">
+        <SOUSCHAMP UnimarcSubfield="010$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="010$a">
+          <data>958-95698-3-8</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="019">
+        <SOUSCHAMP UnimarcSubfield="019$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$a">
+          <data>UNI5</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$b">
+          <data>L45339</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="100">
+        <SOUSCHAMP UnimarcSubfield="100$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="100$a">
+          <data>19991210d1998    m  y0fre 0103    ba</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="105">
+        <SOUSCHAMP UnimarcSubfield="105$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="105$a">
+          <data>gh      000yy</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="200">
+        <SOUSCHAMP UnimarcSubfield="200$">
+          <data>1 </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$a">
+          <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$f">
+          <data>Ellie Anne Duque</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="210">
+        <SOUSCHAMP UnimarcSubfield="210$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$a">
+          <data>[Colombie]</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$c">
+          <data>Musica americana</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$d">
+          <data>1998</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="215">
+        <SOUSCHAMP UnimarcSubfield="215$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$a">
+          <data>2 vol. (93 + 64 p.)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$d">
+          <data>31x23 cm</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$e">
+          <data>1 disque compact</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="300">
+        <SOUSCHAMP UnimarcSubfield="300$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="300$a">
+          <data>Recueil de 26 pièces, publiées dans trois revues colombiennes entre 1848 et 1860 :" El Neo-Granadino", "El pasatiempo", El mosaico". Le premier volume présente les fac-similés des pièces, ainsi qu'une longue introduction. Le second volume contient les mêmes pièces en édition moderne.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="315">
+        <SOUSCHAMP UnimarcSubfield="315$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="315$a">
+          <data>P</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096273</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Contradanza en sol mayor ; Valse en sol mayor</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>para flauta</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>por un aficionado</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096277</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Contradanza n°1 en mi bemol mayor ; Contradanza n°2 en mi bemol mayor</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>para guitarra</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>por un aficionado</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096280</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>La Belle étoile</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>J. Fco. Aguledo</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096283</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>El piquillo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>José T. Andrade</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096285</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>El Adios</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>musica de Atanasio Bello</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096347</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Polaca</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>para guitarra</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>C.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096288</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>La adelfa</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>contradanza en lab mayor</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Mercedes Campuzano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096290</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Ma. del Carmen Cordovez</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096293</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>El cumpleaños</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>contradanza</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>I.F.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096297</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>El barquero</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>musica de Joaquin Guarin</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096300</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Contradanza</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Joaquin Guarin</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096344</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Serenata</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>sobre un tema aleman para violin y flauta con acompañamiento de guitarra</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Joaquin Guarin</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096303</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>El pescador</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>musica de Joaquin Guarin</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096305</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Contradanza ; Valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>para guitarra</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Francisco Londoño</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096307</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>La ilusion</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>contradanza</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Julio Quevedo</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096310</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Contradanza n°1 en la mayor ; Contradanza n°2 en la mayor</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>para guitarra</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Santos Quijano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096314</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>La nueva amistad</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Santos Quijano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096319</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>El año nuevo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Joaquin Guarin</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096324</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>en mib mayor para piano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>J. Fco. Aguledo</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096326</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>La aurora</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>redova en si menor para piano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>D. Figueroa</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096329</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Mimi Ramirez</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>redova en mib mayor para piano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>J.C. Osorio</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096330</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Valse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>en re mayor para piano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>M.M. Parraga</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096339</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Las bombas de jabon</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>duo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>musica de Santos Quijano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096333</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Galopa</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>en fa mayor para piano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>walz</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>S. Quijano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096342</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Polka</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>para guitarra</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>Santos Quijano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="462">
+        <SOUSCHAMP UnimarcSubfield="462$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$3">
+          <data>0096335</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$a">
+          <data>Virginia</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$e">
+          <data>polka mazurca</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="462$f">
+          <data>M. de Quijano</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="541">
+        <SOUSCHAMP UnimarcSubfield="541$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="541$a">
+          <data>La musique dans les publications colombiennes du 19ème siècle (1848-1860)</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067773</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Recueil</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0068617</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Mélodie</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>04</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0144424</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>19 ème siècle</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>02</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067983</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Musique de salon</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>05</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="700">
+        <SOUSCHAMP UnimarcSubfield="700$">
+          <data> |</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$3">
+          <data>0032955</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$a">
+          <data>Duque</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$b">
+          <data>Ellie Anne</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$4">
+          <data>070</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="801">
+        <SOUSCHAMP UnimarcSubfield="801$">
+          <data> |</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$a">
+          <data>FR</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$b">
+          <data>CRMD</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$c">
+          <data>19991210</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="911">
+        <SOUSCHAMP UnimarcSubfield="911$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$3">
+          <data>0458725</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$a">
+          <data>Musica Americana</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="936">
+        <SOUSCHAMP UnimarcSubfield="936$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="936$a">
+          <data>MP32269</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="936">
+        <SOUSCHAMP UnimarcSubfield="936$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="936$a">
+          <data>MP32270</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096273</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Contradanza en sol mayor ; Valse en sol mayor : para flauta / por un aficionado</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096277</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Contradanza n°1 en mi bemol mayor ; Contradanza n°2 en mi bemol mayor : para guitarra / por un aficionado</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096280</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>La Belle étoile : valse / J. Fco. Aguledo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096283</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>El piquillo : valse / José T. Andrade</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096285</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>El Adios / musica de Atanasio Bello ; versos de A. Lozano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096288</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>La adelfa : contradanza en lab mayor / Mercedes Campuzano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096290</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Valse / Ma. del Carmen Cordovez</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096293</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>El cumpleaños : valse ; La aurora : contradanza / I.F.</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096297</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>El barquero / musica de Joaquin Guarin ; texto de F.L. de Retes</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096300</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Contradanza ; El desengañado ; el granadino ; gratitud ; mi secreto ; valse : valse / Joaquin Guarin</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096303</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>El pescador / musica de Joaquin Guarin ; texto de Espronceda</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096305</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Contradanza ; Valse : para guitarra / Francisco Londoño</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096307</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>La ilusion : contradanza ; El recuerdo : valse / Julio Quevedo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096310</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Contradanza n°1 en la mayor ; Contradanza n°2 en la mayor : para guitarra / Santos Quijano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096314</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>La nueva amistad : valse ; Valse / Santos Quijano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096319</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>El año nuevo : valse / Joaquin Guarin</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096324</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Valse : en mib mayor para piano / J. Fco. Aguledo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096326</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>La aurora : redova en si menor para piano / D. Figueroa</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096329</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Mimi Ramirez : redova en mib mayor para piano / J.C. Osorio</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096330</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Valse : en re mayor para piano / M.M. Parraga</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096333</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Galopa : en fa mayor para piano ; Mis delirios : walz ; Polka a Isabel / S. Quijano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096335</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Virginia : polka mazurca / M. de Quijano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096339</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Las bombas de jabon : duo / musica de Santos Quijano ; texto de R. Carrasquilla</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096342</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Polka : para guitarra / Santos Quijano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096344</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Serenata : sobre un tema aleman para violin y flauta con acompañamiento de guitarra / Joaquin Guarin</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="937">
+        <SOUSCHAMP UnimarcSubfield="937$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$3">
+          <data>0096347</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$a">
+          <data>Polaca : para guitarra / C.</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="937$b">
+          <data>UNI45</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="940">
+        <SOUSCHAMP UnimarcSubfield="940$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="940$a">
+          <data>soprano(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="940$t">
+          <data>voix(1)</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="945">
+        <SOUSCHAMP UnimarcSubfield="945$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>flûte_traversière(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="949">
+        <SOUSCHAMP UnimarcSubfield="949$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$a">
+          <data>piano(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="950">
+        <SOUSCHAMP UnimarcSubfield="950$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="950$a">
+          <data>guitare(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="950$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="954">
+        <SOUSCHAMP UnimarcSubfield="954$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$t">
+          <data>1</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$t">
+          <data>2</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="980">
+        <SOUSCHAMP UnimarcSubfield="980$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$a">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$e">
+          <data>1848-1860</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="990">
+        <SOUSCHAMP UnimarcSubfield="990$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="990$a">
+          <data>21 MUS:P:32270-32269</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="991">
+        <SOUSCHAMP UnimarcSubfield="991$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$b">
+          <data>Hommage éditeur</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$d">
+          <data>1999/12</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$i">
+          <data>0x2</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$j">
+          <data>2x2</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="997">
+        <SOUSCHAMP UnimarcSubfield="997$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$3">
+          <data>0745775</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$a">
+          <data>MP32269-32270</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$c">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$d">
+          <data>RES1</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$g">
+          <data>140.4 MUS:P:32269-32270 (Réserve)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$t">
+          <data>PAR</data>
+        </SOUSCHAMP>
+      </champs>
+    </NOTICE>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096273" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49268</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001113 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Contradanza en sol mayor ; Valse en sol mayor</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>para flauta</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>por un aficionado</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="541">
+          <SOUSCHAMP UnimarcSubfield="541$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$a">
+            <data>Contredanse en Sol Majeur</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$e">
+            <data>pour flûte, par un amateur</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001113</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="945">
+          <SOUSCHAMP UnimarcSubfield="945$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="945$a">
+            <data>flûte_traversière(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="945$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096277" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49269</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001113 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Contradanza n°1 en mi bemol mayor ; Contradanza n°2 en mi bemol mayor</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>para guitarra</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>por un aficionado</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="541">
+          <SOUSCHAMP UnimarcSubfield="541$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$a">
+            <data>Contredanses n°1 et 2 en Mib Majeur</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$e">
+            <data>pour guitare, par un amateur</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001113</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="950">
+          <SOUSCHAMP UnimarcSubfield="950$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$a">
+            <data>guitare(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096280" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49270</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>La Belle étoile</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>J. Fco. Aguledo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0041172</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Aguledo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Juan Francisco</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001113</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096283" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49271</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El piquillo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>José T. Andrade</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036117</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Andrade</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Jose T.</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sol Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096285" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49272</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>spa</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El Adios</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>musica de Atanasio Bello</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$g">
+            <data>versos de A. Lozano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0068617</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Mélodie</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>04</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036130</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Bello</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Atanasio</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1800-1876</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="701">
+          <SOUSCHAMP UnimarcSubfield="701$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$3">
+            <data>0041177</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$a">
+            <data>Lozano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$b">
+            <data>A.</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$4">
+            <data>070</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="940">
+          <SOUSCHAMP UnimarcSubfield="940$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$a">
+            <data>soprano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$t">
+            <data>voix(1)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mi Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096347" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49294</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Polaca</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>para guitarra</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>C.</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="950">
+          <SOUSCHAMP UnimarcSubfield="950$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$a">
+            <data>guitare(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096288" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49273</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>La adelfa</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>contradanza en lab mayor</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Mercedes Campuzano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036136</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Campuzano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Mercedes</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Lab Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096290" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49274</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Ma. del Carmen Cordovez</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0041184</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Cordovez</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Maria del Carmen</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Ré mineur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096293" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49275</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El cumpleaños</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>La aurora</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>contradanza</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>I.F.</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0041189</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>F.</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>I</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sol Majeur ; Fa Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096297" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49276</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>spa</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El barquero</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>musica de Joaquin Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$g">
+            <data>texto de F.L. de Retes</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0068617</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Mélodie</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>04</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036148</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Joaquin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1825-1854</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="701">
+          <SOUSCHAMP UnimarcSubfield="701$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$3">
+            <data>0041196</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$a">
+            <data>Retes</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$b">
+            <data>F.L. de</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$4">
+            <data>070</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="940">
+          <SOUSCHAMP UnimarcSubfield="940$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$a">
+            <data>soprano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$t">
+            <data>voix(1)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Lab Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096300" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49277</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Contradanza</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El desengañado ; el granadino ; gratitud ; mi secreto ; valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Joaquin Guarin</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036148</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Joaquin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1825-1854</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Tonal</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096344" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49293</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Serenata</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>sobre un tema aleman para violin y flauta con acompañamiento de guitarra</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Joaquin Guarin</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "el Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="541">
+          <SOUSCHAMP UnimarcSubfield="541$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$a">
+            <data>Sérénade</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$e">
+            <data>sur un thème allemand, pour flûte et violon avec accompagnement de guitare</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036148</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Joaquin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1825-1854</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="945">
+          <SOUSCHAMP UnimarcSubfield="945$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="945$a">
+            <data>flûte_traversière(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="945$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="950">
+          <SOUSCHAMP UnimarcSubfield="950$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$a">
+            <data>guitare(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="951">
+          <SOUSCHAMP UnimarcSubfield="951$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="951$a">
+            <data>violon(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="951$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>3</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sol Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096303" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49278</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>spa</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El pescador</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>musica de Joaquin Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$g">
+            <data>texto de Espronceda</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0068617</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Mélodie</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>04</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036148</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Joaquin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1825-1854</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="701">
+          <SOUSCHAMP UnimarcSubfield="701$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$3">
+            <data>0041204</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$a">
+            <data>Espronceda</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$4">
+            <data>070</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="940">
+          <SOUSCHAMP UnimarcSubfield="940$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$a">
+            <data>soprano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$t">
+            <data>voix(1)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>La mineur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096305" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49279</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Contradanza ; Valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>para guitarra</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Francisco Londoño</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0067721</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Contredanse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>04</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0067147</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>04</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0041234</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Londono</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Francisco</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="950">
+          <SOUSCHAMP UnimarcSubfield="950$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$a">
+            <data>guitare(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mi Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096307" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49280</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>La ilusion</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>contradanza</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El recuerdo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Julio Quevedo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036111</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quevedo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Julio</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1829-1897</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sol mineur ; Mib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096310" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49281</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Contradanza n°1 en la mayor ; Contradanza n°2 en la mayor</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>para guitarra</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Santos Quijano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036106</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Santos</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="950">
+          <SOUSCHAMP UnimarcSubfield="950$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$a">
+            <data>guitare(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>La Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096314" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49282</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>La nueva amistad</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Santos Quijano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Neo-Granadino" (1848-1849)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036106</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Santos</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1848-1849</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mib majeur ; Lab Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096319" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49284</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>El año nuevo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Joaquin Guarin</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Pasatiempo" (1851)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036148</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Guarin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Joaquin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1825-1854</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1851</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096324" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49285</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>en mib mayor para piano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>J. Fco. Aguledo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0041172</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Aguledo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Juan Francisco</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096326" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49286</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>La aurora</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>redova en si menor para piano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>D. Figueroa</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036123</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Figueroa</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Daniel</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Si mineur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096329" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49287</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Mimi Ramirez</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>redova en mib mayor para piano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>J.C. Osorio</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036168</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Osorio</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Juan C.</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1836-1887</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096330" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49288</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Valse</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>en re mayor para piano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>M.M. Parraga</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036164</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Parraga</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Manuel Maria</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1826-1895</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Ré Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096339" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49291</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>spa</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Las bombas de jabon</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>duo</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>musica de Santos Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$g">
+            <data>texto de R. Carrasquilla</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0068617</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Mélodie</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>04</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036106</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Santos</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="701">
+          <SOUSCHAMP UnimarcSubfield="701$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$3">
+            <data>0041227</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$a">
+            <data>Carrasquilla</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$b">
+            <data>R</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$f">
+            <data>18..-19..</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$4">
+            <data>070</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="940">
+          <SOUSCHAMP UnimarcSubfield="940$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$a">
+            <data>voix_moyenne(2)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="940$t">
+            <data>voix(2)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>3</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096333" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49289</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Galopa</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>en fa mayor para piano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Mis delirios</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>walz</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Polka a Isabel</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>S. Quijano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièces publiées dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036106</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Santos</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Fa Majeur ; Sib Majeur ; Sol mineur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096342" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49292</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Polka</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>para guitarra</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>Santos Quijano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036106</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Santos</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="950">
+          <SOUSCHAMP UnimarcSubfield="950$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$a">
+            <data>guitare(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="950$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Sol Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0096335" type="UNI:45">
+        <champs UnimarcTag="006">
+          <SOUSCHAMP UnimarcSubfield="006$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="006$a">
+            <data>nca2</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$b">
+            <data>L49290</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="100">
+          <SOUSCHAMP UnimarcSubfield="100$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="100$a">
+            <data>20001114 1998    m  y0fre 0103    ba</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="101">
+          <SOUSCHAMP UnimarcSubfield="101$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="101$a">
+            <data>ooo</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="105">
+          <SOUSCHAMP UnimarcSubfield="105$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="105$a">
+            <data>y       000yy</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>1 </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>Virginia</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>polka mazurca</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>M. de Quijano</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="300">
+          <SOUSCHAMP UnimarcSubfield="300$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="300$a">
+            <data>Pièce publiée dans la revue colombienne "El Mosaico" (1859-1860)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0144424</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>19 ème siècle</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0036153</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Quijano</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>Maria de</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="801">
+          <SOUSCHAMP UnimarcSubfield="801$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$a">
+            <data>FR</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$b">
+            <data>médiathèque</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="801$c">
+            <data>20001114</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0070318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860) / Ellie Anne Duque, 2 vol. (93 + 64 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="949">
+          <SOUSCHAMP UnimarcSubfield="949$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$a">
+            <data>piano(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="949$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>1</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="980">
+          <SOUSCHAMP UnimarcSubfield="980$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$e">
+            <data>1859-1860</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="980$n">
+            <data>Mib Majeur</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+  </TYPREG>
+</NOTICES>
