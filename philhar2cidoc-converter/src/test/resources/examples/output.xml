@@ -404,7 +404,171 @@
  		</P148_has_component>	
 
 
- 		
+ 		<mus:U13_has_casting>
+	 		<!-- Création de M6 Casting -->
+	 		<!-- Mapping du nombre total d’exécutants -->
+	 		<!-- prendre le maximun de $t, sera le Nombre total d’exécutants -->
+	 		<mus:M6_Casting>
+	 			<mus:U48_foresees_quantity_of_actors>
+	 				<!-- Le total sera la somme de $t ? -->
+	 				<ecrm:E60_Number>2</ecrm:E60_Number>
+	 			</mus:U48_foresees_quantity_of_actors>	
+	 			
 
+		 		<!-- Création des M23 Casting Detail (cas simple):  -->
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance>
+		 					<!-- Example: 940$a -->
+		 					<!-- soprano(1) -->
+		 					<mus:M14_Medium_Of_Performance>
+		 						<rdfs:label>soprano</rdfs:label>
+		 					</mus:M14_Medium_Of_Performance>
+		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 					<!--
+		 				<mus:U90_foresees_creation_or_performance_mode>
+		 					<mus:M50_Creation_or_Performance_Mode>
+		 					</mus:M50_Creation_or_Performance_Mode>	
+		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				-->
+
+		 				<!-- soprano(1) -->
+		 				<mus:U30_foresees_quantity_of_mop>
+		 					<ecrm:E60_Number>1</ecrm:E60_Number>
+		 				</mus:U30_foresees_quantity_of_mop>
+
+		 				<!-- Voix(1) 940$x-->
+		 				<!--
+		 				<ecrm:P3_has_note>
+		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
+		 				</ecrm:P3_has_note>
+		 				-->
+
+		 				<!-- Voix(1) 940$t-->
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
+
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
+		 				<!-- <mus:U36_foresees_responsibility> -->
+		 			
+		 			</mus:M23_Casting_Detail>	
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance>		 					
+		 					<!-- 945$a flûte_traversière(1) -->
+		 					<mus:M14_Medium_Of_Performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/wfl"/>
+		 					<rdfs:preflabel>4093</rdfs:preflabel>
+		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 				<!--
+		 				<mus:U90_foresees_creation_or_performance_mode>
+		 					<mus:M50_Creation_or_Performance_Mode + URI>
+		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				-->
+
+		 				<!-- flûte_traversière(1) -->
+		 				<mus:U30_foresees_quantity_of_mop>
+		 					<ecrm:E60_Number>1</ecrm:E60_Number>
+		 				</mus:U30_foresees_quantity_of_mop>
+
+		 				<!--
+		 				<ecrm:P3_has_note>
+		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
+		 				</ecrm:P3_has_note>
+		 				-->
+
+		 				<!-- Voix(1) 940$t
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
+
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
+		 				<!-- <mus:U36_foresees_responsibility> -->
+
+
+		 			</mus:M23_Casting_Detail>	
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance>
+		 					
+		 					<!-- 949$a piano(1) -->
+		 					<mus:M14_Medium_Of_Performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/kpf"/>
+		 					<rdfs:preflabel>2299</rdfs:preflabel>
+		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 				<!--
+		 				<mus:U90_foresees_creation_or_performance_mode>
+		 					<mus:M50_Creation_or_Performance_Mode + URI>
+		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				-->
+
+
+		 				<mus:U30_foresees_quantity_of_mop>
+		 					<ecrm:E60_Number>1</ecrm:E60_Number>
+		 				</mus:U30_foresees_quantity_of_mop>
+
+		 				<!-- Voix(1) 940$x-->
+		 				<!--
+		 				<ecrm:P3_has_note>
+		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
+		 				</ecrm:P3_has_note>
+		 				-->
+
+		 				<!-- Voix(1) 940$t
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
+
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
+		 				<!-- <mus:U36_foresees_responsibility> -->
+		 				
+		 			</mus:M23_Casting_Detail>	
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance>	 					
+		 					
+		 					<!-- 950$a guitare(1) -->
+		 					<mus:M14_Medium_Of_Performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/tgu"/>
+		 					<rdfs:preflabel>3237</rdfs:preflabel>
+		 				</mus:U2_foresees_use_of_medium_of_performance>	
+
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 				<!--
+		 				<mus:U90_foresees_creation_or_performance_mode>
+		 					<mus:M50_Creation_or_Performance_Mode + URI>
+		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				-->
+
+		 				<mus:U30_foresees_quantity_of_mop>
+		 					<ecrm:E60_Number>1</ecrm:E60_Number>
+		 				</mus:U30_foresees_quantity_of_mop>
+
+		 				<!-- Voix(1) 940$x-->
+		 				<!--
+		 				<ecrm:P3_has_note>
+		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
+		 				</ecrm:P3_has_note>
+		 				-->
+
+		 				<!-- Voix(1) 940$t
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
+
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
+		 				<!-- <mus:U36_foresees_responsibility> -->		 				
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 	
+
+
+		 		<!-- Casting alternatif -->
+		 		<!-- note $x “hautbois ou cor anglais et trompette” - utiliser le “ou” pour construire le casting alternatif  -->
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail>
+		 			</mus:M23_Casting_Detail>
+		 			<mus:M23_Casting_Detail>
+		 			</mus:M23_Casting_Detail>
+		 			<mus:M23_Casting_Detail>
+		 			</mus:M23_Casting_Detail>
+		 			<mus:M23_Casting_Detail>
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>	
+
+			</mus:M6_Casting>
+		</mus:U13_has_casting>
 	</efrbroo:F24_Publication_Expression>
 </rdf:RDF>
