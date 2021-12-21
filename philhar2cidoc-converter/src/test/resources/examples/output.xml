@@ -25,30 +25,43 @@
 		 	-->
 			<ecrm:E42_Identifier>
 				<rdfs:label>958-95698-3-8</rdfs:label>
+
+				<!-- UNI5 : notice id
+						UNI5 : 010$a
+						UNI5 : 013$a
+
+					Indiquer “CMPP-ALOES”
+					Indiquer “ISBN” pour l’identifiant décrit en 010
+					Indiquer “ISMN” pour l’identifiant décrit en 013
+			 	-->
+				<ecrm:P2_has_type>
+					<ecrm:E55_Type>
+						<rdfs:label>ISBN</rdfs:label>
+					</ecrm:E55_Type>	
+				</ecrm:P2_has_type>
+
 			</ecrm:E42_Identifier>
-
-			<!-- UNI5 : notice id
-					UNI5 : 010$a
-					UNI5 : 013$a
-
-				Indiquer “CMPP-ALOES”
-				Indiquer “ISBN” pour l’identifiant décrit en 010
-				Indiquer “ISMN” pour l’identifiant décrit en 013
-		 	-->
-			<ecrm:P2_has_type>
-				<ecrm:E55_Type>
-					<rdfs:label>ISBN</rdfs:label>
-				</ecrm:E55_Type>	
-			</ecrm:P2_has_type>
-
-			<!-- UNI5 : 010$a 
-				 UNI5 : notice id
-				 UNI5 : 010$a
-				 UNI5 : 013$a
-			-->
-			<ecrm:E62_String>958-95698-3-8</ecrm:E62_String>	
-
 		</ecrm:P1_is_identified_by>
+
+		<ecrm:P1_is_identified_by>
+			<ecrm:E42_Identifier>
+				<rdfs:label>0070318</rdfs:label>
+				<ecrm:P2_has_type>
+					<ecrm:E55_Type>
+						<rdfs:label>CMPP-ALOES</rdfs:label>
+					</ecrm:E55_Type>	
+				</ecrm:P2_has_type>
+			</ecrm:E42_Identifier>
+		</ecrm:P1_is_identified_by>
+
+		<!-- Avec un vocabulaire de types d'identifiants : 
+		<ecrm:P1_is_identified_by>
+			<ecrm:E42_Identifier>
+				<rdfs:label>0070318</rdfs:label>
+				<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES" />
+			</ecrm:E42_Identifier>
+		</ecrm:P1_is_identified_by>
+		-->
 
 		<!-- Cas 1 : 
 				Respecter l'ordre des sous-zones et générer une ponctuation entre elles, en faisant précéder 
@@ -166,10 +179,18 @@
 		-->
 
 		<!-- 208$a.  et 200 $e s’il contient l’une des valeurs suivantes - partition de poche - tablature - réduction -->
+
+		<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
 		<!--
 		<mus:U182_has_music_format_statement>
 			<mus:M163_Music_Format_Statement>
 				<rdfs:label>réduction piano et chant</rdfs:label>
+			</mus:M163_Music_Format_Statement>	
+		</mus:U182_has_music_format_statement>	
+
+		<mus:U182_has_music_format_statement>
+			<mus:M163_Music_Format_Statement>
 				<rdfs:label>partition de poche</rdfs:label>
 			</mus:M163_Music_Format_Statement>	
 		</mus:U182_has_music_format_statement>	
@@ -191,6 +212,9 @@
 		-->
 
 		<!-- 610$a $b Prendre la valeur de 610$a lorsque 610$b=03 (code signifiant que le descripteur est typé comme un nom géographique) -->
+
+		<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
 		<!--
 		<mus:U65_has_geographical_context>
 			<mus:M40_Context>
@@ -201,6 +225,9 @@
 
 		<!-- mus:U12_has_genre -->
 		<!-- Prendre la valeur de 610$a lorsque 610$b=04 (code signifiant que le descripteur est typé comme un genre musical) -->
+
+		<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
 	 	<mus:U12_has_genre>
 	 		<mus:M5_Genre>
 	 			<rdfs:label>Mélodie</rdfs:label> 
@@ -209,10 +236,16 @@
 	 	
 
 	 	<!-- Prendre la valeur de 610$a pour les toutes les occurrences où le 610$b est différent 03, 04, 06, 06b, 06c -->
+
+	 	<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
 		<mus:U19_is_categorized_as>
 			<mus:M19_Categorization>
 				<rdfs:label>19 ème siècle</rdfs:label>
-			</mus:M19_Categorization>	
+			</mus:M19_Categorization>		
+		</mus:U19_is_categorized_as>
+
+		<mus:U19_is_categorized_as>	
 			<mus:M19_Categorization>
 				<rdfs:label>Musique de salon</rdfs:label>
 			</mus:M19_Categorization>		
@@ -221,103 +254,23 @@
 
 		<!-- 600 $a $b Faire un lien vers l’autorité personne -->
 		<!--
-		<ecrm:P129_is_about>
-			<ecrm:E21_Person rdf:about=""/>
-		</ecrm:P129_is_about>	
+		<ecrm:P129_is_about rdf:resource="http://...." />
 		-->
 
 		<!-- 601 $a $b Faire un lien vers l’autorité collectivité -->
 		<!--
-		<ecrm:P129_is_about>
-			<ecrm:E39_Actor rdf:about=""/>
-		</ecrm:P129_is_about>	
+		<ecrm:P129_is_about rdf:resource="http://...." />	
 		-->
 
 		<!-- 333$a Transcrire ici le contenu complet de la sous-zone. Pour la conversion vers le référentiel, se reporter à la partie sur la nomenclature. -->
 		<!--
-		<ecrm:P103_was_intended_for>
-			<mus:M60_Intended_Audience rdf:about=""/>
-		</ecrm:P103_was_intended_for>	
+		<ecrm:P103_was_intended_for rdf:resource="http://...." />
 		-->
 
 		<!-- 330$a  324$a  327$a Concaténer chacune de ces sous-zones en les séparant par un point et une espace. -->
 		<!--
-		<ecrm:P3_has_note></ecrm:P3_has_note>	
+		<ecrm:P3_has_note>...</ecrm:P3_has_note>	
 		-->
-
-		<!-- Description de l’activité d’édition F30 Publication Event pour le 911$a -->
-		<efrbroo:F30_Publication_Event/>
-			<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
-			<mus:R24_created>
-				<rdfs:label>Musica Americana</rdfs:label>
-			</mus:R24_created>	
-
-			<!-- 214 $d
-				et, si le 214$d n’est pas renseigné: 210 $d
-				Cas 1 : 
-					la sous-zone ne comporte qu’une année, reprendre les données telles quelles. 
-				Cas 2 : 
-					Si la sous-zone $d comporte une chaîne de caractères qui précède l’année (Ex : “cop.”, “copyright”, “DL”) et qui a une valeur autre que “impr.”, ne conserver que l’année. 
-				Cas 3 : 
-					Ne pas conserver les années qui sont précédées de la mention “impr.”
-			-->
-			<!--
-			<ecrm:P4_has_time-span>
-				<ecrm:E52_Time-Span>
-					<rdfs:label></rdfs:label>
-				</ecrm:E52_Time-Span>	
-			</ecrm:P4_has_time-span>
-			-->
-
-			<ecrm:P9_consists_of>		
-				<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
-				<ecrm:E7_Activity>
-					<!-- 911$a Lien vers l’autorité collectivité éditeur -->
-					<ecrm:P14_carried_out_by>
-						<ecrm:E39_Actor rdf:resource="http://data.doremus.org/vocabulary/Musica Americana"/>					
-					</ecrm:P14_carried_out_by>	
-					<!-- en dure -->
-					<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
-					<mus:U31_had_function>
-						<mus:M31_Actor_Function rdf:resource="http://data.doremus.org/vocabulary/function/editor"/>
-					</mus:U31_had_function>					
-				</ecrm:E7_Activity>	
-			</ecrm:P9_consists_of>	
-		</efrbroo:F30_Publication_Event>	
-
-		<!-- Description de l’activité de composition, d’arrangement, d’édition scientifique, etc. F30 Publication Event pour 700, 701, 702, 710, 711, 712.  -->
-		<efrbroo:F30_Publication_Event/>	
-			
-			<!-- Créer une instance de  F30 Publication Event si la notice comporte au moins une zone 
-				  700, 701, 702, 710, 711, 12.  -->
-			<efrbroo:R24_created>
-				<rdfs:label>Ellie Anne</rdfs:label>
-			</efrbroo:R24_created>
-			
-			<!-- Créer une instance de E7 Activité pour chaque zone 700, 701, 710, 711, 712 -->
-			<ecrm:P9_consists_of>
-				<ecrm:E7_Activity>			
-					<!-- 700, 701, 702$a Lien vers une autorité personne -->
-					<ecrm:P14_carried_out_by>
-						<ecrm:E21_Person>
-							<rdfs:label>Duque,Ellie Anne</rdfs:label>
-						</mus:E21_Person>
-
-
-						<!-- 710, 711, 712$a Lien vers une autorité collectivité
-						<ecrm:E39_Actor></ecrm:E39_Actor>
-						-->
-
-					</ecrm:P14_carried_out_by>	
-						
-					<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
-					<mus:U31_had_function>
-						<mus:M31_Actor_Function rdf:resource="http://data.doremus.org/vocabulary/function/author"/>
-					</mus:U31_had_function> 
-				</ecrm:E7_Activity>
-			</ecrm:P9_consists_of>	
-		</efrbroo:F30_Publication_Event>
-
 
 		<!-- Parties de partitions M167 Publication Expression Fragment -->
 		<!-- UNI5:462$3
@@ -325,83 +278,26 @@
 
 				Les informations détaillant la partie sont présentes dans la notice de dépouillement UNI45 dont l’identifiant est mentionné dans l’UNI5 en 462$3
  		-->
- 		<P148_has_component>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096273</rdfs:label>
+
+ 		<ecrm:P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment rdf:about="http://data.philharmoniedeparis.fr/0070318/0096273">
+ 				<!-- on peut retrouver les même éléments XML que pour la partition "mère" -->
  			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096277</rdfs:label>
+ 		</ecrm:P148_has_component>
+
+ 		<ecrm:P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment rdf:about="http://data.philharmoniedeparis.fr/0070318/0096277">
+ 				<!-- on peut retrouver les même éléments XML que pour la partition "mère" -->
  			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096280</rdfs:label>
+ 		</ecrm:P148_has_component>
+
+ 		<ecrm:P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment rdf:about="http://data.philharmoniedeparis.fr/0070318/0096280">
+ 				<!-- on peut retrouver les même éléments XML que pour la partition "mère" -->
  			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096283</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096285</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096347</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096288</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096290</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096293</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096297</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096300</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096344</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096303</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096305</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096307</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096310</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096314</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096319</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment> 	
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096324</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096326</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096329</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096330</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096339</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096333</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 			<mus:M167_Publication_Expression_Fragment>
- 				<rdfs:label>0096335</rdfs:label>
- 			</mus:M167_Publication_Expression_Fragment>
- 		</P148_has_component>	
+ 		</ecrm:P148_has_component>
+
+ 		<!-- etc pour chaque sous-notice UNI:45 -->
 
 
  		<mus:U13_has_casting>
@@ -409,147 +305,76 @@
 	 		<!-- Mapping du nombre total d’exécutants -->
 	 		<!-- prendre le maximun de $t, sera le Nombre total d’exécutants -->
 	 		<mus:M6_Casting>
-	 			<mus:U48_foresees_quantity_of_actors>
-	 				<!-- Le total sera la somme de $t ? -->
-	 				<ecrm:E60_Number>2</ecrm:E60_Number>
-	 			</mus:U48_foresees_quantity_of_actors>	
+	 			<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mus:U48_foresees_quantity_of_actors>	
 	 			
 
 		 		<!-- Création des M23 Casting Detail (cas simple):  -->
 		 		<mus:U23_has_casting_detail>
 		 			<mus:M23_Casting_Detail>
-		 				<mus:U2_foresees_use_of_medium_of_performance>
-		 					<!-- Example: 940$a -->
-		 					<!-- soprano(1) -->
-		 					<mus:M14_Medium_Of_Performance>
-		 						<rdfs:label>soprano</rdfs:label>
-		 					</mus:M14_Medium_Of_Performance>
-		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="...." />
+
 		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
 		 					<!--
-		 				<mus:U90_foresees_creation_or_performance_mode>
-		 					<mus:M50_Creation_or_Performance_Mode>
-		 					</mus:M50_Creation_or_Performance_Mode>	
-		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				<mus:U90_foresees_creation_or_performance_mode rdf:resource="...." />
 		 				-->
 
 		 				<!-- soprano(1) -->
-		 				<mus:U30_foresees_quantity_of_mop>
-		 					<ecrm:E60_Number>1</ecrm:E60_Number>
-		 				</mus:U30_foresees_quantity_of_mop>
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
 
 		 				<!-- Voix(1) 940$x-->
 		 				<!--
-		 				<ecrm:P3_has_note>
-		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
-		 				</ecrm:P3_has_note>
+		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
 		 				-->
 
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
 		 				<!-- Voix(1) 940$t-->
 		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
-
-		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
-		 				<!-- <mus:U36_foresees_responsibility> -->
 		 			
 		 			</mus:M23_Casting_Detail>	
 		 			<mus:M23_Casting_Detail>
-		 				<mus:U2_foresees_use_of_medium_of_performance>		 					
-		 					<!-- 945$a flûte_traversière(1) -->
-		 					<mus:M14_Medium_Of_Performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/wfl"/>
-		 					<rdfs:preflabel>4093</rdfs:preflabel>
-		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				<!-- 945$a flûte_traversière(1) -->
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/wfl" />
 		 				
 		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
 		 				<!--
-		 				<mus:U90_foresees_creation_or_performance_mode>
-		 					<mus:M50_Creation_or_Performance_Mode + URI>
-		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				<mus:U90_foresees_creation_or_performance_mode rdf:resource="...." />
 		 				-->
 
 		 				<!-- flûte_traversière(1) -->
-		 				<mus:U30_foresees_quantity_of_mop>
-		 					<ecrm:E60_Number>1</ecrm:E60_Number>
-		 				</mus:U30_foresees_quantity_of_mop>
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
 
 		 				<!--
-		 				<ecrm:P3_has_note>
-		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
-		 				</ecrm:P3_has_note>
+		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
 		 				-->
 
-		 				<!-- Voix(1) 940$t
-		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
-
+		 				<!-- Voix(1) 940$t -->
 		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
-		 				<!-- <mus:U36_foresees_responsibility> -->
-
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
 
 		 			</mus:M23_Casting_Detail>	
 		 			<mus:M23_Casting_Detail>
-		 				<mus:U2_foresees_use_of_medium_of_performance>
-		 					
-		 					<!-- 949$a piano(1) -->
-		 					<mus:M14_Medium_Of_Performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/kpf"/>
-		 					<rdfs:preflabel>2299</rdfs:preflabel>
-		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				<!-- 949$a piano(1) -->
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/kpf" />
 		 				
 		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
 		 				<!--
-		 				<mus:U90_foresees_creation_or_performance_mode>
-		 					<mus:M50_Creation_or_Performance_Mode + URI>
-		 				</mus:U90_foresees_creation_or_performance_mode>
+		 				<mus:U90_foresees_creation_or_performance_mode rdf:resource="...." />
 		 				-->
 
 
-		 				<mus:U30_foresees_quantity_of_mop>
-		 					<ecrm:E60_Number>1</ecrm:E60_Number>
-		 				</mus:U30_foresees_quantity_of_mop>
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
 
 		 				<!-- Voix(1) 940$x-->
 		 				<!--
-		 				<ecrm:P3_has_note>
-		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
-		 				</ecrm:P3_has_note>
+		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
 		 				-->
-
-		 				<!-- Voix(1) 940$t
-		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
-
-		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
-		 				<!-- <mus:U36_foresees_responsibility> -->
 		 				
 		 			</mus:M23_Casting_Detail>	
 		 			<mus:M23_Casting_Detail>
-		 				<mus:U2_foresees_use_of_medium_of_performance>	 					
-		 					
-		 					<!-- 950$a guitare(1) -->
-		 					<mus:M14_Medium_Of_Performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/tgu"/>
-		 					<rdfs:preflabel>3237</rdfs:preflabel>
-		 				</mus:U2_foresees_use_of_medium_of_performance>	
+		 				<!-- 950$a guitare(1) -->
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/tgu" />	
 
-		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
-		 				<!--
-		 				<mus:U90_foresees_creation_or_performance_mode>
-		 					<mus:M50_Creation_or_Performance_Mode + URI>
-		 				</mus:U90_foresees_creation_or_performance_mode>
-		 				-->
-
-		 				<mus:U30_foresees_quantity_of_mop>
-		 					<ecrm:E60_Number>1</ecrm:E60_Number>
-		 				</mus:U30_foresees_quantity_of_mop>
-
-		 				<!-- Voix(1) 940$x-->
-		 				<!--
-		 				<ecrm:P3_has_note>
-		 					<ecrm:E62_String>indéterminée</ecrm:E62_String>
-		 				</ecrm:P3_has_note>
-		 				-->
-
-		 				<!-- Voix(1) 940$t
-		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
-
-		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
-		 				<!-- <mus:U36_foresees_responsibility> -->		 				
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>	 				
 		 			</mus:M23_Casting_Detail>	
 		 		</mus:U23_has_casting_detail>
 		 	
@@ -571,4 +396,55 @@
 			</mus:M6_Casting>
 		</mus:U13_has_casting>
 	</efrbroo:F24_Publication_Expression>
+
+
+	<!-- Description de l’activité d’édition F30 Publication Event pour le 911$a -->
+	<efrbroo:F30_Publication_Event>
+		<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
+		<!-- Lien vers la Publication Expression de Partition -->
+		<mus:R24_created rdf:resource="http://data.philharmoniedeparis.fr/0070318" />
+
+		<!-- 214 $d
+			et, si le 214$d n’est pas renseigné: 210 $d
+			Cas 1 : 
+				la sous-zone ne comporte qu’une année, reprendre les données telles quelles. 
+			Cas 2 : 
+				Si la sous-zone $d comporte une chaîne de caractères qui précède l’année (Ex : “cop.”, “copyright”, “DL”) et qui a une valeur autre que “impr.”, ne conserver que l’année. 
+			Cas 3 : 
+				Ne pas conserver les années qui sont précédées de la mention “impr.”
+		-->
+		<!--
+		<ecrm:P4_has_time-span>
+			<ecrm:E52_Time-Span>
+				<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">...</ecrm:P82_at_some_time_within>
+			</ecrm:E52_Time-Span>	
+		</ecrm:P4_has_time-span>
+		-->
+
+		<ecrm:P9_consists_of>		
+			<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
+			<ecrm:E7_Activity>
+				<!-- 911$a Lien vers l’autorité collectivité éditeur -->
+				<ecrm:P14_carried_out_by rdf:resource="..." />
+
+				<!-- en dure -->
+				<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
+				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/editor" />				
+			</ecrm:E7_Activity>	
+		</ecrm:P9_consists_of>	
+
+		<!-- Description de l’activité de composition, d’arrangement, d’édition scientifique, etc. F30 Publication Event pour 700, 701, 702, 710, 711, 712.  -->
+
+		<!-- Créer une instance de E7 Activité pour chaque zone 700, 701, 710, 711, 712 -->
+		<ecrm:P9_consists_of>
+			<ecrm:E7_Activity>			
+				<!-- 700, 701, 702$a Lien vers une autorité personne -->
+				<ecrm:P14_carried_out_by rdf:resource="..." />
+					
+				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
+				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
+			</ecrm:E7_Activity>
+		</ecrm:P9_consists_of>	
+	</efrbroo:F30_Publication_Event>	
+
 </rdf:RDF>
