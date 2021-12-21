@@ -5,27 +5,406 @@
 	xmlns:ecrm="http://erlangen-crm.org/current/"
 >
 
-<efrbroo:F24_Publication_Expression rdf:about="http://data.philharmoniedeparis.fr/0070318">
-	<!-- en dur -->
-	<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
-	<!--
-	<ecrm:P72_has_language>
-		<ecrm:E56_Language>
-			<rdfs:label>FR</rdfs:label>
-		</ecrm:E56_Language>
-	</ecrm:P72_has_language>
-	-->
-	<mus:U170_has_title_statement>
-		<mus:M156_Title_Statement>
-			<rdfs:label>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)</rdfs:label>
-		</mus:M156_Title_Statement>
-	</mus:U170_has_title_statement>
-	<mus:U172_has_statement_of_responsibility_relating_to_title>
-		<mus:M157_Statement_of_Responsibility>
-			<rdfs:label>Ellie Anne Duque</rdfs:label>
-		</mus:M157_Statement_of_Responsibility>
-	</mus:U172_has_statement_of_responsibility_relating_to_title>
-</efrbroo:F24_Publication_Expression>
+	<efrbroo:F24_Publication_Expression rdf:about="http://data.philharmoniedeparis.fr/0070318">
+		<!-- en dur -->
+		<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
+		<!--
+		<ecrm:P72_has_language>
+			<ecrm:E56_Language>
+				<rdfs:label>FR</rdfs:label>
+			</ecrm:E56_Language>
+		</ecrm:P72_has_language>
+		-->
+
+		
+		<ecrm:P1_is_identified_by>
+			<!-- Créer un nouvel identifiant à chaque fois que l’une de ces zones est remplie : 
+				UNI5 : notice id
+				UNI5 : 010$a
+				UNI5 : 013$a
+		 	-->
+			<ecrm:E42_Identifier>
+				<rdfs:label>958-95698-3-8</rdfs:label>
+			</ecrm:E42_Identifier>
+
+			<!-- UNI5 : notice id
+					UNI5 : 010$a
+					UNI5 : 013$a
+
+				Indiquer “CMPP-ALOES”
+				Indiquer “ISBN” pour l’identifiant décrit en 010
+				Indiquer “ISMN” pour l’identifiant décrit en 013
+		 	-->
+			<ecrm:P2_has_type>
+				<ecrm:E55_Type>
+					<rdfs:label>ISBN</rdfs:label>
+				</ecrm:E55_Type>	
+			</ecrm:P2_has_type>
+
+			<!-- UNI5 : 010$a 
+				 UNI5 : notice id
+				 UNI5 : 010$a
+				 UNI5 : 013$a
+			-->
+			<ecrm:E62_String>958-95698-3-8</ecrm:E62_String>	
+
+		</ecrm:P1_is_identified_by>
+
+		<!-- Cas 1 : 
+				Respecter l'ordre des sous-zones et générer une ponctuation entre elles, en faisant précéder 
+				- le $e de deux points, précédés et suivis d'un espace ( : ) 
+				- le $h d'un point suivi d'un espace (. )
+				- le $i d'une virgule suivie d'un espace (, ) s'il suit un $h, ou d'un point suivi d'un espace (. ) en l'absence de $h
+
+			 Cas 2 : 
+				Ne pas prendre en compte les $e qui suivent un $d
+	 	-->
+		<mus:U170_has_title_statement>
+			<mus:M156_Title_Statement>
+				<rdfs:label>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)</rdfs:label>
+			</mus:M156_Title_Statement>
+		</mus:U170_has_title_statement>
+		
+		<!-- UNI5:200$f (;) 200$g -->
+		<mus:U172_has_statement_of_responsibility_relating_to_title>
+			<mus:M157_Statement_of_Responsibility>
+				<rdfs:label>Ellie Anne Duque</rdfs:label>
+			</mus:M157_Statement_of_Responsibility>
+		</mus:U172_has_statement_of_responsibility_relating_to_title>
+
+		<!-- 200$d Créer autant de titres parallèles qu’il y a de sous-zones $d.  Si un $e suit un $d, alors concaténer les deux en les séparant par un ( ; ) -->
+		<!--
+		<mus:U168_has_parallel_title>
+			<ecrm:E35_Title>
+				<rdfs:label>Symphony No. 2 : in D major</rdfs:label>
+			</ecrm:E35_Title>		
+		</mus:U168_has_parallel_title>	
+		-->
+
+		<!-- 449$a  Générer une ponctuation entre le contenu des sous-zones : un ( / ) si le $a est suivi d’un $f -->
+		<!--
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title>
+				<rdfs:label>Le sacre du printemps / Igor Stravinsky</rdfs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title>	
+		-->
+
+		<!-- 541$a -->
+		<!-- Générer une ponctuation entre le contenu des sous-zones : deux ( : ) si le $a est suivi d'un $e -->
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title>
+				<rdfs:label>La musique dans les publications colombiennes du 19ème siècle (1848-1860)</rdfs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title> 
 
 
+		<!-- UNI5:541 $a $e
+			Générer une ponctuation entre le contenu des sous-zones : deux ( : ) si le $a est suivi d'un $e UNI5:500$3
+			
+			La zone 500 contient un lien vers le titre uniforme musical (notice d’autorité de type AIC14).
+			Si une notice comporte une ou plusieurs zones 500, récupérer les informations dans la notice d’autorité (AIC14) et les intégrer en variante de titre.
+			Chaque zone 144 ou 444 remplie dans la notice d’autorité doit donner lieu à une nouvelle variante de titre.
+
+			Cette variante de titre est composée de deux parties : 
+
+			a- Nom du compositeur : 
+				Données : AIC14:322$a $m
+
+				→ séparer le 322$a et le 322$m par une virgule, si le $m est rempli.
+				  Faire suivre par un point et un tiret (. -)
+
+			b- Nom de l’oeuvre :
+				Données : 
+				AIC14:144 ou AIC14:444
+				$a $c $e $g $h $i $j $k $n $p $q $r $t $u.
+
+				AIC14:444 ou AIC14:444
+				 $a $c $e $g $h $i $j $k $n $p $r $t $u.
+
+			Cas 1- si 144 ou 444 $g, $c, $h et $i sont vides (le plus courant  pour reconstituer un TUM ) :  
+				  
+				concaténer les sous-zones suivantes  (si elles sont remplies), en respectant l'ordre indiqué et en séparant chaque occurence par un point et un espace : 
+
+				$a. $r. $n. $k. $p. $t. $u
+
+				puis (si $e, $j ou $q ne sont pas vides), ajouter à la suite : une parenthèse, chaque occurrence non vides (séparées par un point-virgule) de $e; $q); $j puis fermer la parenthèse. 		
+
+			Cas 2- si  $i ou $h sont remplis mais que $g ou $c sont vides :
+				Reprendre les instructions précédentes et ajouter à la fin, séparés par un point et un espace : $h. $i. 
+
+			Cas 3- si $g ou $c ne sont pas vides :   
+
+				$a. $g. $c. $i. $h. $r. $n. $k. $p. $t . $u
+
+			(si besoin, voici la signification des sous-champs : $a (titre), $c (Titre original de l'oeuvre), $e (qualificatif), $g (Auteur du thème adapté), $h (Numéro de partie), $i (titre de partie), $j (année), $k (cat.thématique), $n (n° d'ordre), $p (opus), $q (version), $r (instrumentation),  $t (tonalité), $u (surnom).
+
+			c- Elément additionnel présent dans la notice de la partition
+			Dans la notice UNI5, un qualificatif est parfois ajouté à la suite du titre uniforme musical en 500$w. 
+			Lorsque c’est le cas, l’ajouter dans la variante de titre, à la suite des autres formes.:  
+		-->
+		<!--
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title>
+				<refs:label>
+					Cas 1 : "Moussorski, Modeste. - [Boris Godunov (Opéra ; 1869)]”
+					Cas 2 : "Wagner, Richard. - [Das Liebesverbot. WWV 38. Ouvertüre]"
+					Cas 3 : "Liszt, Franz. - [Paraphrases. Verdi, Giuseppe. I Lombardi. Salve Marie de Jerusalem. Piano. S431]"
+					Cas 4 : “Dutilleux, Henri. - [Blackbird. Piano] Arrangement pour hautbois, percussion, contrebasse et clavecin
+				</refs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title>	
+		-->
+
+		<!-- 205$a -->
+		<!--
+		<mus:U176_has_edition_statement>
+			<mus:M159_Edition_Statement>
+				<rdfs:label>2e éd. révisée</rdfs:label>
+			</mus:M159_Edition_Statement>	
+		</mus:U176_has_edition_statement>
+		-->
+
+		<!-- 208$a.  et 200 $e s’il contient l’une des valeurs suivantes - partition de poche - tablature - réduction -->
+		<!--
+		<mus:U182_has_music_format_statement>
+			<mus:M163_Music_Format_Statement>
+				<rdfs:label>réduction piano et chant</rdfs:label>
+				<rdfs:label>partition de poche</rdfs:label>
+			</mus:M163_Music_Format_Statement>	
+		</mus:U182_has_music_format_statement>	
+		-->
+
+		<!-- 214 $a $c $d et, si le 214 n’est pas renseigné: 
+			210$a $c $d
+
+			Respecter l'ordre des sous-zones et générer une ponctuation entre elles, en faisant précéder  : 
+			- les $c par deux points (:)
+			- les $d par une virgule (,)
+	 	-->
+	 	<!--
+		<mus:U184_has_publication_statement>
+			<mus:M160_Publication_Statement>
+				<rdfs:label>Paris : Billaudot, cop. 2021</rdfs:label>
+			</mus:M160_Publication_Statement>	
+		</mus:U184_has_publication_statement>
+		-->
+
+		<!-- 610$a $b Prendre la valeur de 610$a lorsque 610$b=03 (code signifiant que le descripteur est typé comme un nom géographique) -->
+		<!--
+		<mus:U65_has_geographical_context>
+			<mus:M40_Context>
+				<rdfs:label></rdfs:label>	
+			</mus:M40_Context>
+		</mus:U65_has_geographical_context>	
+		-->
+
+		<!-- mus:U12_has_genre -->
+		<!-- Prendre la valeur de 610$a lorsque 610$b=04 (code signifiant que le descripteur est typé comme un genre musical) -->
+	 	<mus:U12_has_genre>
+	 		<mus:M5_Genre>
+	 			<rdfs:label>Mélodie</rdfs:label> 
+	 		</mus:M5_Genre>
+	 	</mus:U12_has_genre>	
+	 	
+
+	 	<!-- Prendre la valeur de 610$a pour les toutes les occurrences où le 610$b est différent 03, 04, 06, 06b, 06c -->
+		<mus:U19_is_categorized_as>
+			<mus:M19_Categorization>
+				<rdfs:label>19 ème siècle</rdfs:label>
+			</mus:M19_Categorization>	
+			<mus:M19_Categorization>
+				<rdfs:label>Musique de salon</rdfs:label>
+			</mus:M19_Categorization>		
+		</mus:U19_is_categorized_as>	
+
+
+		<!-- 600 $a $b Faire un lien vers l’autorité personne -->
+		<!--
+		<ecrm:P129_is_about>
+			<ecrm:E21_Person rdf:about=""/>
+		</ecrm:P129_is_about>	
+		-->
+
+		<!-- 601 $a $b Faire un lien vers l’autorité collectivité -->
+		<!--
+		<ecrm:P129_is_about>
+			<ecrm:E39_Actor rdf:about=""/>
+		</ecrm:P129_is_about>	
+		-->
+
+		<!-- 333$a Transcrire ici le contenu complet de la sous-zone. Pour la conversion vers le référentiel, se reporter à la partie sur la nomenclature. -->
+		<!--
+		<ecrm:P103_was_intended_for>
+			<mus:M60_Intended_Audience rdf:about=""/>
+		</ecrm:P103_was_intended_for>	
+		-->
+
+		<!-- 330$a  324$a  327$a Concaténer chacune de ces sous-zones en les séparant par un point et une espace. -->
+		<!--
+		<ecrm:P3_has_note></ecrm:P3_has_note>	
+		-->
+
+		<!-- Description de l’activité d’édition F30 Publication Event pour le 911$a -->
+		<efrbroo:F30_Publication_Event/>
+			<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
+			<mus:R24_created>
+				<rdfs:label>Musica Americana</rdfs:label>
+			</mus:R24_created>	
+
+			<!-- 214 $d
+				et, si le 214$d n’est pas renseigné: 210 $d
+				Cas 1 : 
+					la sous-zone ne comporte qu’une année, reprendre les données telles quelles. 
+				Cas 2 : 
+					Si la sous-zone $d comporte une chaîne de caractères qui précède l’année (Ex : “cop.”, “copyright”, “DL”) et qui a une valeur autre que “impr.”, ne conserver que l’année. 
+				Cas 3 : 
+					Ne pas conserver les années qui sont précédées de la mention “impr.”
+			-->
+			<!--
+			<ecrm:P4_has_time-span>
+				<ecrm:E52_Time-Span>
+					<rdfs:label></rdfs:label>
+				</ecrm:E52_Time-Span>	
+			</ecrm:P4_has_time-span>
+			-->
+
+			<ecrm:P9_consists_of>		
+				<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
+				<ecrm:E7_Activity>
+					<!-- 911$a Lien vers l’autorité collectivité éditeur -->
+					<ecrm:P14_carried_out_by>
+						<ecrm:E39_Actor rdf:resource="http://data.doremus.org/vocabulary/Musica Americana"/>					
+					</ecrm:P14_carried_out_by>	
+					<!-- en dure -->
+					<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
+					<mus:U31_had_function>
+						<mus:M31_Actor_Function rdf:resource="http://data.doremus.org/vocabulary/function/editor"/>
+					</mus:U31_had_function>					
+				</ecrm:E7_Activity>	
+			</ecrm:P9_consists_of>	
+		</efrbroo:F30_Publication_Event>	
+
+		<!-- Description de l’activité de composition, d’arrangement, d’édition scientifique, etc. F30 Publication Event pour 700, 701, 702, 710, 711, 712.  -->
+		<efrbroo:F30_Publication_Event/>	
+			
+			<!-- Créer une instance de  F30 Publication Event si la notice comporte au moins une zone 
+				  700, 701, 702, 710, 711, 12.  -->
+			<efrbroo:R24_created>
+				<rdfs:label>Ellie Anne</rdfs:label>
+			</efrbroo:R24_created>
+			
+			<!-- Créer une instance de E7 Activité pour chaque zone 700, 701, 710, 711, 712 -->
+			<ecrm:P9_consists_of>
+				<ecrm:E7_Activity>			
+					<!-- 700, 701, 702$a Lien vers une autorité personne -->
+					<ecrm:P14_carried_out_by>
+						<ecrm:E21_Person>
+							<rdfs:label>Duque,Ellie Anne</rdfs:label>
+						</mus:E21_Person>
+
+
+						<!-- 710, 711, 712$a Lien vers une autorité collectivité
+						<ecrm:E39_Actor></ecrm:E39_Actor>
+						-->
+
+					</ecrm:P14_carried_out_by>	
+						
+					<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
+					<mus:U31_had_function>
+						<mus:M31_Actor_Function rdf:resource="http://data.doremus.org/vocabulary/function/author"/>
+					</mus:U31_had_function> 
+				</ecrm:E7_Activity>
+			</ecrm:P9_consists_of>	
+		</efrbroo:F30_Publication_Event>
+
+
+		<!-- Parties de partitions M167 Publication Expression Fragment -->
+		<!-- UNI5:462$3
+				Pour chaque champ 462 présent dans une notice UNI5, créer une partie de partition.
+
+				Les informations détaillant la partie sont présentes dans la notice de dépouillement UNI45 dont l’identifiant est mentionné dans l’UNI5 en 462$3
+ 		-->
+ 		<P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096273</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096277</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096280</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096283</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096285</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096347</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096288</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096290</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096293</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096297</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096300</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096344</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096303</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096305</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096307</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096310</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096314</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096319</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment> 	
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096324</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096326</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096329</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096330</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096339</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096333</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 			<mus:M167_Publication_Expression_Fragment>
+ 				<rdfs:label>0096335</rdfs:label>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 		</P148_has_component>	
+
+
+ 		
+
+	</efrbroo:F24_Publication_Expression>
 </rdf:RDF>
