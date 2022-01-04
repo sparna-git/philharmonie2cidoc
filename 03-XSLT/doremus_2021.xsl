@@ -7,6 +7,7 @@
 	xmlns:mus="http://data.doremus.org/ontology#"
 	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
 	xmlns:ecrm="http://erlangen-crm.org/current/"
+	xmlns:sparnaf="http://data.sparna.fr/function/sparnaf#"
 >
  
  	<!-- Import URI stylesheet -->
@@ -41,6 +42,7 @@
 							UNI5 : 010$a
 							UNI5 : 013$a
 					 -->
+					 <xsl:comment> Identifiant UNI5  </xsl:comment>
 					 <ecrm:P1_is_identified_by>
 						<ecrm:E42_Identifier>
 							<rdfs:label><xsl:value-of select="@id"/></rdfs:label>
@@ -61,7 +63,9 @@
 					</ecrm:P1_is_identified_by>
 				</xsl:if>
 							
-				<xsl:apply-templates select="champs[@UnimarcTag != '911' and @UnimarcTag != '700']" />
+				<xsl:apply-templates select="champs[
+													not(index-of(('700','701','702','710','711','712','911'),@UnimarcTag))													
+													]" />
 			
 			</efrbroo:F24_Publication_Expression>
 			
@@ -78,6 +82,7 @@
 	
 					<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
 					<!-- Lien vers la Publication Expression de Partition -->
+					<xsl:comment> Lien vers la Publication Expression de Partition </xsl:comment>
 					<mus:R24_created rdf:resource="{mus:URI-F24_Expression(@id)}" />
 					
 					<!-- 911 -->
@@ -85,6 +90,11 @@
 					
 					<!-- 700, 701, 702, 710, 711, 712 -->
 					<xsl:apply-templates select="champs[@UnimarcTag = '700']" mode="Activity_Event"/>
+					<xsl:apply-templates select="champs[@UnimarcTag = '701']" mode="Activity_Event"/>
+					<xsl:apply-templates select="champs[@UnimarcTag = '702']" mode="Activity_Event"/>
+					<xsl:apply-templates select="champs[@UnimarcTag = '710']" mode="Activity_Event"/>
+					<xsl:apply-templates select="champs[@UnimarcTag = '711']" mode="Activity_Event"/>
+					<xsl:apply-templates select="champs[@UnimarcTag = '712']" mode="Activity_Event"/>
 					
 				</efrbroo:F30_Publication_Event>
 				
@@ -141,6 +151,7 @@
 		
 		 
 		<xsl:if test="$data_a">
+			<xsl:comment> Title  UNI5:200 </xsl:comment>
 			<mus:U170_has_title_statement>
 				<mus:M156_Title_Statement>
 					<rdfs:label><xsl:value-of select="concat($data_a,$data_e,$data_h,$data_i)"/></rdfs:label>
@@ -276,6 +287,11 @@
 				<xsl:value-of select="SOUSCHAMP[@UnimarcSubfield ='330$a']/data"/>
 			</xsl:if>
 		</xsl:variable>
+		
+		<xsl:comment> Note </xsl:comment>
+		<ecrm:P3_has_note><xsl:value-of select="concat(sparnaf:isTrue($data_324),sparnaf:isTrue($data_327),sparnaf:isTrue($data_330))"/></ecrm:P3_has_note>
+		
+		
 	</xsl:template>	
 	
 	
@@ -331,14 +347,30 @@
 		<!--
 		<ecrm:P129_is_about rdf:resource="http://...." />
 		-->	
+		
+		<xsl:if test="SOUSCHAMP[@UnimarcSubfield ='600$a']/data and SOUSCHAMP[@UnimarcSubfield ='600$b']/data">
+			<ecrm:P129_is_about>
+				<E21_Person>
+					<rdfs:label><xsl:value-of select="concat(SOUSCHAMP[@UnimarcSubfield ='600$a']/data,',',SOUSCHAMP[@UnimarcSubfield ='600$b']/data)"/></rdfs:label>
+				</E21_Person>
+			</ecrm:P129_is_about>
+		</xsl:if>
 	</xsl:template>
 	
 	<!-- 601 -->
 	<xsl:template match="champs[@UnimarcTag='601']">
-		<!-- 600 $a $b Faire un lien vers l’autorité personne -->
-		<!--
+		
+		<!-- Faire un lien vers l’autorité collectivité
 		<ecrm:P129_is_about rdf:resource="http://...." />
 		-->	
+		<xsl:comment> Lien vers l’autorité collectivité </xsl:comment>
+		<xsl:if test="SOUSCHAMP[@UnimarcSubfield ='601$a']/data or SOUSCHAMP[@UnimarcSubfield ='601$b']/data">
+			<ecrm:P129_is_about>
+				<E39_Actor>
+					<rdfs:label><xsl:value-of select="concat(SOUSCHAMP[@UnimarcSubfield ='601$a']/data,',',SOUSCHAMP[@UnimarcSubfield ='601$b']/data)"/></rdfs:label>
+				</E39_Actor>
+			</ecrm:P129_is_about>
+		</xsl:if>		
 	</xsl:template>
 	
 	
@@ -407,14 +439,14 @@
 			<xsl:if test="$data_has_time_210_d">
 				<ecrm:P4_has_time-span>
 					<ecrm:E52_Time-Span>
-						<xsl:value-of select="ecrm:has_time(../@id,normalize-space($data_has_time_210_d))"/>
+						<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="ecrm:has_time(../@id,normalize-space($data_has_time_210_d))"/></ecrm:P82_at_some_time_within>
 					</ecrm:E52_Time-Span>
 				</ecrm:P4_has_time-span>
 			</xsl:if>
 			<xsl:if test="$data_has_time_214_d">
 				<ecrm:P4_has_time-span>
 					<ecrm:E52_Time-Span>
-						<xsl:value-of select="ecrm:has_time(../@id,normalize-space($data_has_time_214_d))"/>
+						<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="ecrm:has_time(../@id,normalize-space($data_has_time_214_d))"/></ecrm:P82_at_some_time_within>
 					</ecrm:E52_Time-Span>
 				</ecrm:P4_has_time-span>
 			</xsl:if>
@@ -424,7 +456,8 @@
 				<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
 				<ecrm:E7_Activity>
 					<!-- 911$a Lien vers l’autorité collectivité éditeur -->
-					<ecrm:P14_carried_out_by rdf:resource="..." />
+					<xsl:comment>Lien vers l’autorité collectivité éditeur</xsl:comment>
+					<ecrm:P14_carried_out_by rdf:resource="{concat('...',SOUSCHAMP[@UnimarcSubfield ='911$3']/data)}" />
 	
 					<!-- en dure -->
 					<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
@@ -519,6 +552,60 @@
 	</xsl:template>
 	
 	
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield = '208$a']">
+		<!-- 208$a. et 
+			 200$e s’il contient l’une des valeurs suivantes
+			- partition de poche
+			- tablature
+			- réduction 
+		-->
+		<xsl:if test=".">
+			<xsl:comment> 208$a </xsl:comment>
+			<mus:U182_has_music_format_statement>
+				<mus:M163_Music_Format_Statement>
+					<rdfs:label><xsl:value-of select="normalize-space(.)"/></rdfs:label>
+				</mus:M163_Music_Format_Statement>	
+			</mus:U182_has_music_format_statement>
+		</xsl:if>
+		
+		<xsl:variable name="data_200e" select="../../champs[@UnimarcTag='200']/SOUSCHAMP[@UnimarcSubfield ='200$e']/data"/>
+		<xsl:for-each select="$data_200e">
+			<xsl:variable name="data200e" select="normalize-space(.)"/>
+			<xsl:message>Valeur 208a: <xsl:value-of select="normalize-space(.)"/>,Valeur 200e: <xsl:value-of select="$data200e"/></xsl:message>
+			<xsl:if test="contains($data200e,'partition de poche') or 
+					  contains($data200e,'tablature') or
+					  contains($data200e,'réduction')">
+				<xsl:comment> 200$e - partition de poche, tablature, réduction </xsl:comment>
+				<mus:U182_has_music_format_statement>
+					<mus:M163_Music_Format_Statement>
+						<rdfs:label><xsl:value-of select="$data_200e"/></rdfs:label>
+					</mus:M163_Music_Format_Statement>	
+				</mus:U182_has_music_format_statement>					  
+			</xsl:if>
+			
+		</xsl:for-each>
+	</xsl:template>
+	
+	<!-- Parties de partitions M167 Publication Expression Fragment -->
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='462$3']">
+		<!-- UNI5:462$3
+				Pour chaque champ 462 présent dans une notice UNI5, créer une partie de partition.
+				Les informations détaillant la partie sont présentes dans la notice de dépouillement UNI45
+				dont l’identifiant est mentionné dans l’UNI5 en 462$3
+ 		-->
+ 		
+ 		<xsl:variable name="partition" select="normalize-space(.)"/>
+ 		<xsl:if test="$partition">
+	 		<xsl:comment> Parties de partitions </xsl:comment>
+	 		<ecrm:P148_has_component>
+	 			<mus:M167_Publication_Expression_Fragment rdf:about="{concat(mus:URI-F24_Expression(../../@id),'/',$partition)}">
+	 				<!-- on peut retrouver les même éléments XML que pour la partition "mère" -->
+	 			</mus:M167_Publication_Expression_Fragment>
+	 		</ecrm:P148_has_component>
+	 	</xsl:if>
+	</xsl:template>
+	
+	
 	<!-- 500$3 lien vers le titre uniforme musical (notice d’autorité de type AIC14).-->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='500$3']">
 		<xsl:variable name="idAIC14" select="normalize-space(.)"/>
@@ -529,69 +616,43 @@
 			séparer le 322$a et le 322$m par une virgule, si le $m est rempli.
 			Faire suivre par un point et un tiret (. -)
 			 -->
-		<xsl:variable name="AIC14_compositeur" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'322')"/>
-		
-		<!-- b- Nom de l’oeuvre : -->
-		<xsl:variable name="AIC14_oeuvre_144" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'144')"/>
-		<xsl:message>Ref <xsl:value-of select="../../@id"/>,AIC <xsl:value-of select="$idAIC14"/>,Oeuvre144 <xsl:value-of select="$AIC14_oeuvre_144"/></xsl:message>
+		<xsl:variable name="AIC14_compositeur" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'322','')"/>
 		
 		
-		<xsl:variable name="AIC14_oeuvre_444" select="'1'"/>
+		<xsl:variable name="qualificatif" select="../SOUSCHAMP[@UnimarcSubfield ='500$w']"/>
+		<!-- b- Nom de l’oeuvre : --> 
+		<xsl:variable name="AIC14_oeuvre_144" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'144',$qualificatif)"/>
+		<xsl:variable name="AIC14_oeuvre_444" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'444',$qualificatif)"/>
 		
-		<!--  Regles  -->
-		<!-- Données : 
-			AIC14:144 ou AIC14:444 {$a $c $e $g $h $i $j $k $n $p $q $r $t $u.}			
-			AIC14:444 ou AIC14:444 {$a $c $e $g $h $i $j $k $n $p $r $t $u.}
-			
-			Cas 1- si 144 ou 444 $g, $c, $h et $i sont vides (le plus courant pour reconstituer un TUM ) : 
-			 * concaténer les sous-zones suivantes (si elles sont remplies), en respectant l'ordre indiqué et en séparant 
-			 	chaque occurence par un point et un espace : {$a. $r. $n. $k. $p. $t. $u}
-			
-				puis (si $e, $j ou $q ne sont pas vides), ajouter à la suite : une parenthèse, 
-				chaque occurrence non vides (séparées par un point-virgule) de $e; $q); $j puis fermer la parenthèse. 
-			
-			Cas 2- si $i ou $h sont remplis mais que $g ou $c sont vides :
-				Reprendre les instructions précédentes et ajouter à la fin, séparés par un point et un espace : $h. $i. 
-			
-			Cas 3- si $g ou $c ne sont pas vides : {$a. $g. $c. $i. $h. $r. $n. $k. $p. $t . $u}
-			
-			si besoin, voici la signification des sous-champs : 
-					$a (titre), 
-					$c (Titre original de l'oeuvre), 
-					$e (qualificatif), $g (Auteur du thème adapté), 
-					$h (Numéro de partie), $i (titre de partie), 
-					$j (année), $k (cat.thématique), 
-					$n (n° d'ordre), 
-					$p (opus), 
-					$q (version), 
-					$r (instrumentation), 
-					$t (tonalité), 
-					$u (surnom).
-			
-				c- Elément additionnel présent dans la notice de la partition
-				Dans la notice UNI5, un qualificatif est parfois ajouté à la suite du titre uniforme musical en 500$w. 
-				Lorsque c’est le cas, l’ajouter dans la variante de titre, à la suite des autres formes.: ??
- 			-->
+		<xsl:message>Notice <xsl:value-of select="../../@id"/>, Code AIC14 <xsl:value-of select="$idAIC14"/>, Data_144 <xsl:value-of select="$AIC14_oeuvre_144"/> </xsl:message>
+		<xsl:message>Notice <xsl:value-of select="../../@id"/>, Code AIC14 <xsl:value-of select="$idAIC14"/>, Data_444 <xsl:value-of select="$AIC14_oeuvre_444"/> </xsl:message>
 		
 		
-		<!--  
-		<xsl:message>Validar_function <xsl:value-of select="mus:Titre_Uniforme_Musical_result(../@id,$idAIC14,$AIC14_oeuvre_144)"/></xsl:message>
-		-->
-		 
+		<xsl:comment> Nom du compositeur + Nom de l’oeuvre  </xsl:comment>
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title>
+				<rdfs:label>
+					<xsl:value-of select="concat($AIC14_compositeur,'. - ',$AIC14_oeuvre_144)"/>	
+				</rdfs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title>
+		
 	</xsl:template>
-	
 	
 	<!-- Activitiy Event 700$a -->
 	<!-- 700, 701, 702$a Lien vers une autorité personne -->	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='700$a']" mode="Activity_Event">
 		
+		<xsl:variable name="idPerson" select="../SOUSCHAMP[@UnimarcSubfield='700$3']/data"/>
+		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='700$4']/data"/>
+		
 		<xsl:comment>700$a Lien vers une autorité personne</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="..." />
+				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idPerson)}" />
 				
-				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
+				<!-- 700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
 			</ecrm:E7_Activity>
 		</ecrm:P9_consists_of>							
@@ -600,13 +661,15 @@
 	<!-- Activitiy Event 701$a -->
 	<!-- 700, 701, 702$a Lien vers une autorité personne -->	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='701$a']" mode="Activity_Event">
+		
+		<xsl:variable name="idPerson" select="../SOUSCHAMP[@UnimarcSubfield='701$3']/data"/>
+		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='701$4']/data"/>
 		<xsl:comment>701$a Lien vers une autorité personne</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="..." />
-				
-				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
+				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idPerson)}" />
+				<!-- 700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
 			</ecrm:E7_Activity>
 		</ecrm:P9_consists_of>							
@@ -615,11 +678,13 @@
 	<!-- Activitiy Event 702$a -->
 	<!-- 700, 701, 702$a Lien vers une autorité personne -->	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='702$a']" mode="Activity_Event">
+	
+		<xsl:variable name="idPerson" select="../SOUSCHAMP[@UnimarcSubfield='702$3']/data"/>
 		<xsl:comment>702$a Lien vers une autorité personne</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="..." />
+				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idPerson)}" />
 				
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
@@ -631,11 +696,14 @@
 	<!-- Activitiy Event 700$a -->
 	<!-- 710, 711, 712$a Lien vers une autorité collectivité --> 	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='710$a']" mode="Activity_Event">
+	
+		<xsl:variable name="idCollectivite" select="../SOUSCHAMP[@UnimarcSubfield='710$3']/data"/>
+		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='710$4']/data"/>
 		<xsl:comment>710$a Lien vers une autorité collectivité</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="..." />
+				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idCollectivite)}" />
 				
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
@@ -646,11 +714,14 @@
 	<!-- Activitiy Event 711$a -->
 	<!-- 710, 711, 712$a Lien vers une autorité collectivité -->	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='711$a']" mode="Activity_Event">
+	
+		<xsl:variable name="idCollectivite" select="../SOUSCHAMP[@UnimarcSubfield='711$3']/data"/>
+		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='711$4']/data"/>
 		<xsl:comment>711$a Lien vers une autorité collectivité</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="..." />
+				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idCollectivite)}" />
 				
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
@@ -661,11 +732,13 @@
 	<!-- Activitiy Event 712$a -->
 	<!-- 710, 711, 712$a Lien vers une autorité collectivité -->	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='712$a']" mode="Activity_Event">
+	
+		<xsl:variable name="idCollectivite" select="../SOUSCHAMP[@UnimarcSubfield='712$3']/data"/>
 		<xsl:comment>712$a Lien vers une autorité collectivité</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="..." />
+				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idCollectivite)}" />
 				
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
