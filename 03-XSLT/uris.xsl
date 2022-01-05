@@ -24,6 +24,21 @@
 		<xsl:value-of select="concat('http://data.philharmoniedeparis.fr/',$idReferenceNotice)" />
 	</xsl:function>
 	
+	<xsl:function name="mus:reference_personne">
+		<xsl:param name="idReference" />
+		<xsl:value-of select="concat('http://data.phlharmonie/AIC1/',$idReference)"/>
+	</xsl:function>
+	
+	<xsl:function name="mus:reference_collectivite">
+		<xsl:param name="idReference" />
+		<xsl:value-of select="concat('http://data.phlharmonie/AIC2/',$idReference)"/>
+	</xsl:function>
+	
+	<xsl:function name="mus:reference_thesaurus">
+		<xsl:param name="idReference" />
+		<xsl:value-of select="concat('http://data.phlharmonie/AIC90/',$idReference)"/>
+	</xsl:function>
+	
 	<!--  -->
 	<xsl:function name="ecrm:has_time">
 		<xsl:param name="idNotice"/>

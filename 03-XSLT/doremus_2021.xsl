@@ -289,7 +289,7 @@
 		</xsl:variable>
 		
 		<xsl:comment> Note </xsl:comment>
-		<ecrm:P3_has_note><xsl:value-of select="concat(sparnaf:isTrue($data_324),sparnaf:isTrue($data_327),sparnaf:isTrue($data_330))"/></ecrm:P3_has_note>
+		<ecrm:P3_has_note><xsl:value-of select="concat(sparnaf:isTrue($data_330),sparnaf:isTrue($data_324),sparnaf:isTrue($data_327))"/></ecrm:P3_has_note>
 		
 		
 	</xsl:template>	
@@ -341,82 +341,7 @@
 		</xsl:if>
 	</xsl:template>
 	
-	<!-- 600 -->
-	<xsl:template match="champs[@UnimarcTag='600']">
-		<!-- 600 $a $b Faire un lien vers l’autorité personne -->
-		<!--
-		<ecrm:P129_is_about rdf:resource="http://...." />
-		-->	
-		
-		<xsl:if test="SOUSCHAMP[@UnimarcSubfield ='600$a']/data and SOUSCHAMP[@UnimarcSubfield ='600$b']/data">
-			<ecrm:P129_is_about>
-				<E21_Person>
-					<rdfs:label><xsl:value-of select="concat(SOUSCHAMP[@UnimarcSubfield ='600$a']/data,',',SOUSCHAMP[@UnimarcSubfield ='600$b']/data)"/></rdfs:label>
-				</E21_Person>
-			</ecrm:P129_is_about>
-		</xsl:if>
-	</xsl:template>
 	
-	<!-- 601 -->
-	<xsl:template match="champs[@UnimarcTag='601']">
-		
-		<!-- Faire un lien vers l’autorité collectivité
-		<ecrm:P129_is_about rdf:resource="http://...." />
-		-->	
-		<xsl:comment> Lien vers l’autorité collectivité </xsl:comment>
-		<xsl:if test="SOUSCHAMP[@UnimarcSubfield ='601$a']/data or SOUSCHAMP[@UnimarcSubfield ='601$b']/data">
-			<ecrm:P129_is_about>
-				<E39_Actor>
-					<rdfs:label><xsl:value-of select="concat(SOUSCHAMP[@UnimarcSubfield ='601$a']/data,',',SOUSCHAMP[@UnimarcSubfield ='601$b']/data)"/></rdfs:label>
-				</E39_Actor>
-			</ecrm:P129_is_about>
-		</xsl:if>		
-	</xsl:template>
-	
-	
-	
-	<!-- 610 -->
-	<xsl:template match="champs[@UnimarcTag='610']">
-		
-		<xsl:variable name="data_b" select="SOUSCHAMP[@UnimarcSubfield ='610$b']/data"/>
-		
-		<xsl:if test="SOUSCHAMP[@UnimarcSubfield ='610$a']">
-			<xsl:choose>
-				<!-- Prendre la valeur de 610$a lorsque 610$b=03 (code signifiant que le descripteur est typé comme un nom géographique) -->
-				<xsl:when test="$data_b = '03'">
-					<mus:U65_has_geographical_context>
-						<mus:M40_Context>
-							<rdfs:label><xsl:value-of select="SOUSCHAMP[@UnimarcSubfield='610$a']/data"/></rdfs:label>	
-						</mus:M40_Context>
-					</mus:U65_has_geographical_context>	
-				</xsl:when>
-				<!-- Prendre la valeur de 610$a lorsque 610$b=04 (code signifiant que le descripteur est typé comme un genre musical) -->
-				<xsl:when test="$data_b = '04'">
-					<mus:U12_has_genre>
-	 					<mus:M5_Genre>
-				 			<rdfs:label><xsl:value-of select="SOUSCHAMP[@UnimarcSubfield='610$a']/data"/></rdfs:label> 
-				 		</mus:M5_Genre>
-				 	</mus:U12_has_genre>
-				</xsl:when>
-				<!-- Prendre la valeur de 610$a pour les toutes les occurrences où le 610$b est différent 03, 04, 06, 06b, 06c -->
-				<xsl:when test="$data_b != '03' 
-							    or 
-							    $data_b !='04' 
-							    or
-							    $data_b != '06'
-							    or 
-							    $data_b !='06b'
-							    or 
-							    $data_b !='06c'">
-					<mus:U19_is_categorized_as>
-						<mus:M19_Categorization>
-							<rdfs:label><xsl:value-of select="SOUSCHAMP[@UnimarcSubfield='610$a']/data"/></rdfs:label>
-						</mus:M19_Categorization>		
-					</mus:U19_is_categorized_as>
-				</xsl:when>
-			</xsl:choose>
-		</xsl:if>		
-	</xsl:template>
 	
 	<!-- Event 	
 		Créer une instance de F30 Publication Event si la notice comporte au moins un champ 911.	
@@ -436,19 +361,25 @@
 			<xsl:variable name="data_has_time_210_d" select="../champs[@UnimarcTag='210']/SOUSCHAMP[@UnimarcSubfield='210$d'][1]"/>
 			<xsl:variable name="data_has_time_214_d" select="../champs[@UnimarcTag='214']/SOUSCHAMP[@UnimarcSubfield='214$d'][1]"/>
 			
-			<xsl:if test="$data_has_time_210_d">
-				<ecrm:P4_has_time-span>
-					<ecrm:E52_Time-Span>
-						<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="ecrm:has_time(../@id,normalize-space($data_has_time_210_d))"/></ecrm:P82_at_some_time_within>
-					</ecrm:E52_Time-Span>
-				</ecrm:P4_has_time-span>
+			<xsl:if test="$data_has_time_210_d != '' or string-length($data_has_time_210_d) &gt; 0">
+				<xsl:variable name="data_year_210" select="ecrm:has_time(../@id,normalize-space($data_has_time_210_d))"/>
+				<xsl:if test="$data_year_210">
+					<ecrm:P4_has_time-span>
+						<ecrm:E52_Time-Span>
+							<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="$data_year_210"/></ecrm:P82_at_some_time_within>
+						</ecrm:E52_Time-Span>
+					</ecrm:P4_has_time-span>
+				</xsl:if>
 			</xsl:if>
-			<xsl:if test="$data_has_time_214_d">
-				<ecrm:P4_has_time-span>
-					<ecrm:E52_Time-Span>
-						<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="ecrm:has_time(../@id,normalize-space($data_has_time_214_d))"/></ecrm:P82_at_some_time_within>
-					</ecrm:E52_Time-Span>
-				</ecrm:P4_has_time-span>
+			<xsl:if test="$data_has_time_214_d != '' or string-length($data_has_time_214_d) &gt; 0">
+				<xsl:variable name="data_year_214" select="ecrm:has_time(../@id,normalize-space($data_has_time_210_d))"/>
+				<xsl:if test="$data_year_214">
+					<ecrm:P4_has_time-span>
+						<ecrm:E52_Time-Span>
+							<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="$data_year_214"/></ecrm:P82_at_some_time_within>
+						</ecrm:E52_Time-Span>
+					</ecrm:P4_has_time-span>
+				</xsl:if>
 			</xsl:if>
 			
 			<xsl:comment>Description de l’activité d’édition F30 Publication Event pour le 911$a</xsl:comment>
@@ -457,7 +388,7 @@
 				<ecrm:E7_Activity>
 					<!-- 911$a Lien vers l’autorité collectivité éditeur -->
 					<xsl:comment>Lien vers l’autorité collectivité éditeur</xsl:comment>
-					<ecrm:P14_carried_out_by rdf:resource="{concat('...',SOUSCHAMP[@UnimarcSubfield ='911$3']/data)}" />
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite(SOUSCHAMP[@UnimarcSubfield ='911$3']/data)}" />
 	
 					<!-- en dure -->
 					<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
@@ -624,9 +555,10 @@
 		<xsl:variable name="AIC14_oeuvre_144" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'144',$qualificatif)"/>
 		<xsl:variable name="AIC14_oeuvre_444" select="mus:Titre_Uniforme_Musical(../../@id,$idAIC14,'444',$qualificatif)"/>
 		
+		<!--  
 		<xsl:message>Notice <xsl:value-of select="../../@id"/>, Code AIC14 <xsl:value-of select="$idAIC14"/>, Data_144 <xsl:value-of select="$AIC14_oeuvre_144"/> </xsl:message>
 		<xsl:message>Notice <xsl:value-of select="../../@id"/>, Code AIC14 <xsl:value-of select="$idAIC14"/>, Data_444 <xsl:value-of select="$AIC14_oeuvre_444"/> </xsl:message>
-		
+		-->
 		
 		<xsl:comment> Nom du compositeur + Nom de l’oeuvre  </xsl:comment>
 		<mus:U68_has_variant_title>
@@ -639,18 +571,62 @@
 		
 	</xsl:template>
 	
+	
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='600$3']">
+		<xsl:comment> 600$3 Lien vers l’autorité </xsl:comment>
+		<ecrm:P129_is_about rdf:resource="{mus:reference_personne(normalize-space(.))}"/>
+	</xsl:template>
+	
+	
+	<!-- 601 -->
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='601$3']">		
+		<!-- Faire un lien vers l’autorité collectivité -->
+		<xsl:comment> Lien vers l’autorité collectivité </xsl:comment>	
+		<ecrm:P129_is_about rdf:resource="{mus:reference_collectivite(normalize-space(.))}" />		
+	</xsl:template>
+	
+	
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='610$b']">
+		<xsl:variable name="data_b" select="./data"/>
+		<xsl:variable name="data_610_3" select="../SOUSCHAMP[@UnimarcSubfield ='610$3']/data"/>
+		<xsl:if test="$data_b = '03'">
+			<xsl:for-each select="$data_610_3">
+				<xsl:comment> 603 Geographical </xsl:comment>
+				<mus:U65_has_geographical_context rdf:resource="{mus:reference_thesaurus(.)}"/>
+			</xsl:for-each>
+		</xsl:if>
+		
+		<xsl:if test="$data_b = '04'">
+			<xsl:for-each select="$data_610_3">
+				<xsl:comment> 604 Genre </xsl:comment>
+				<mus:U12_has_genre rdf:resource="{mus:reference_thesaurus($data_610_3)}"/>
+			</xsl:for-each>
+		</xsl:if>
+		
+		<xsl:if test="not(index-of(('03','04','06','06b','06c'),$data_b))">
+			<xsl:for-each select="$data_610_3">
+				<xsl:comment>  </xsl:comment>
+				<mus:U19_is_categorized_as rdf:resource="{mus:reference_thesaurus(.)}"/>
+			</xsl:for-each>
+		</xsl:if>		
+	</xsl:template>
+	
+	
+	
 	<!-- Activitiy Event 700$a -->
 	<!-- 700, 701, 702$a Lien vers une autorité personne -->	
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='700$a']" mode="Activity_Event">
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='700$3']" mode="Activity_Event">
 		
-		<xsl:variable name="idPerson" select="../SOUSCHAMP[@UnimarcSubfield='700$3']/data"/>
 		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='700$4']/data"/>
 		
 		<xsl:comment>700$a Lien vers une autorité personne</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idPerson)}" />
+				<xsl:for-each select="./data">
+					<xsl:variable name="id700_3" select="."/>
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_personne($id700_3)}" />
+				</xsl:for-each>
 				
 				<!-- 700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
@@ -660,7 +636,7 @@
 	
 	<!-- Activitiy Event 701$a -->
 	<!-- 700, 701, 702$a Lien vers une autorité personne -->	
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='701$a']" mode="Activity_Event">
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='701$3']" mode="Activity_Event">
 		
 		<xsl:variable name="idPerson" select="../SOUSCHAMP[@UnimarcSubfield='701$3']/data"/>
 		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='701$4']/data"/>
@@ -668,7 +644,10 @@
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idPerson)}" />
+				<xsl:for-each select="./data">
+					<xsl:variable name="id701_3" select="."/>
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_personne($id701_3)}" />
+				</xsl:for-each>
 				<!-- 700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
 			</ecrm:E7_Activity>
@@ -677,15 +656,16 @@
 	
 	<!-- Activitiy Event 702$a -->
 	<!-- 700, 701, 702$a Lien vers une autorité personne -->	
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='702$a']" mode="Activity_Event">
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='702$3']" mode="Activity_Event">
 	
-		<xsl:variable name="idPerson" select="../SOUSCHAMP[@UnimarcSubfield='702$3']/data"/>
 		<xsl:comment>702$a Lien vers une autorité personne</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
 				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idPerson)}" />
-				
+				<xsl:for-each select="./data">
+					<xsl:variable name="id702_3" select="."/>
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_personne($id702_3)}" />
+				</xsl:for-each>
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
 			</ecrm:E7_Activity>
@@ -693,18 +673,17 @@
 	</xsl:template>
 	
 	
-	<!-- Activitiy Event 700$a -->
 	<!-- 710, 711, 712$a Lien vers une autorité collectivité --> 	
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='710$a']" mode="Activity_Event">
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='710$3']" mode="Activity_Event">
 	
-		<xsl:variable name="idCollectivite" select="../SOUSCHAMP[@UnimarcSubfield='710$3']/data"/>
 		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='710$4']/data"/>
 		<xsl:comment>710$a Lien vers une autorité collectivité</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
-				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idCollectivite)}" />
-				
+				<xsl:for-each select="./data">
+					<xsl:variable name="id710_3" select="."/>
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite($id710_3)}" />
+				</xsl:for-each>
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
 			</ecrm:E7_Activity>
@@ -713,16 +692,17 @@
 	
 	<!-- Activitiy Event 711$a -->
 	<!-- 710, 711, 712$a Lien vers une autorité collectivité -->	
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='711$a']" mode="Activity_Event">
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='711$3']" mode="Activity_Event">
 	
-		<xsl:variable name="idCollectivite" select="../SOUSCHAMP[@UnimarcSubfield='711$3']/data"/>
 		<xsl:variable name="idFunction" select="../SOUSCHAMP[@UnimarcSubfield='711$4']/data"/>
 		<xsl:comment>711$a Lien vers une autorité collectivité</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
-				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idCollectivite)}" />
 				
+				<xsl:for-each select="./data">
+					<xsl:variable name="id711_3" select="."/>
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite($id711_3)}" />
+				</xsl:for-each>
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
 			</ecrm:E7_Activity>
@@ -731,14 +711,16 @@
 	
 	<!-- Activitiy Event 712$a -->
 	<!-- 710, 711, 712$a Lien vers une autorité collectivité -->	
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='712$a']" mode="Activity_Event">
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='712$3']" mode="Activity_Event">
 	
-		<xsl:variable name="idCollectivite" select="../SOUSCHAMP[@UnimarcSubfield='712$3']/data"/>
 		<xsl:comment>712$a Lien vers une autorité collectivité</xsl:comment>
 		<ecrm:P9_consists_of>
 			<ecrm:E7_Activity>			
-				<!-- 700, 701, 702$a Lien vers une autorité personne -->
-				<ecrm:P14_carried_out_by rdf:resource="{concat('...',$idCollectivite)}" />
+				
+				<xsl:for-each select="./data">
+					<xsl:variable name="id712_3" select="."/>
+					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite($id712_3)}" />
+				</xsl:for-each>
 				
 				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
 				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
