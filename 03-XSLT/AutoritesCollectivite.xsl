@@ -14,10 +14,6 @@
 	xmlns:dcterms="http://purl.org/dc/terms/">
 
 	<xsl:output indent="yes" method="xml" />
-	
-	<!-- Variable -->
-	<xsl:variable name="sURI">http://fake.philharmoniedeparis.fr/</xsl:variable> 
-
 
 	<xsl:template match="/">
 		<xsl:apply-templates />
@@ -33,7 +29,7 @@
 	<!-- Id's -->
 	<xsl:template match="NOTICE">
 
-		<edm:Agent rdf:about="{concat($sURI,replace(@type,':',''),'/',@id)}">
+		<edm:Agent rdf:about="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',@id)}">
 			<!-- prefLabel -->
 			<xsl:apply-templates select="champs[@UnimarcTag = '110']/SOUSCHAMP[@UnimarcSubfield ='110$a']" mode="prefLabel" />
 			<!-- altLabel -->

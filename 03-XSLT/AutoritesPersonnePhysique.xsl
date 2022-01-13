@@ -28,7 +28,7 @@
 	</xsl:template>
 
 	<xsl:template match="NOTICE">
-		<edm:Agent rdf:about="{concat('http://fake.philharmoniedeparis.fr/',replace(@type,':',''),'/',@id)}">
+		<edm:Agent rdf:about="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',@id)}">
 			<!-- prefLabel -->
 			<xsl:apply-templates select="champs[@UnimarcTag = '100'][SOUSCHAMP/@UnimarcSubfield ='100$a']" />
 			<!-- altLabel -->
