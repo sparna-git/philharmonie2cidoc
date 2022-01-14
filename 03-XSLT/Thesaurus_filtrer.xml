@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CONCERT>
+	<FILTER_VIDEO id="1100468" label="Boîte à outil (dossier en ligne)">
+	</FILTER_VIDEO>	
+	<FILTER_VIDEO id="1096184" label="Catégorie de contenu (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1096229" label="Exposition (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1080363" label="Fonds Démos">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1032654" label="Indexation approfondie">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1099364" label="Instrument (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1100239" label="Instrument jazz (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1117464" label="Jeunes et familles (sélection de contenus)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1080361" label="Musique savante occidentale">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1099365" label="Oeuvre (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1019076" label="Oeuvre incontournable du Musée de la musique">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1080362" label="Oeuvre liée à une personne célèbre">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1082914" label="Ouvrage numérisé">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="0974556" label="Partition en ligne">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1101068" label="Pièce participative (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1100238" label="Portrait de compositeur (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1100237" label="Portrait de facteur (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1100236" label="Portrait de jazzman (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1099366" label="Portrait (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1104196" label="Présentation de concert (dossier en ligne)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1080360" label="Traitement documentaire (Philharmonie)">
+	</FILTER_VIDEO>
+	<FILTER_VIDEO id="1096186" label="Zoom sur (dossier en ligne)">
+	</FILTER_VIDEO>
+</CONCERT>
