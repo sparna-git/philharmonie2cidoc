@@ -392,7 +392,7 @@
 	
 					<!-- en dure -->
 					<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
-					<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/editor" />				
+					<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/publisher" />				
 				</ecrm:E7_Activity>	
 			</ecrm:P9_consists_of>
 			
