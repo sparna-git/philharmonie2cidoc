@@ -8,35 +8,94 @@
 	xmlns:mus="http://data.doremus.org/ontology#"
 	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
 	xmlns:ecrm="http://erlangen-crm.org/current/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
 
-	<!-- Call sources files -->
+	<!-- Call sources files XML -->
 	<xsl:param name="SHARED_XML_DIR">.</xsl:param>
 	
 	<!-- AIC14 -->
-	<xsl:param name="AIC14_file"
-		select="document(concat($SHARED_XML_DIR,'/', 'ExportTUM-pretty.xml'))/NOTICES" />
+	<xsl:param name="AIC14_file" select="document(concat($SHARED_XML_DIR,'/', 'ExportTUM-pretty.xml'))/NOTICES" />
 	
+	<!-- Call sources files RDF -->
+	<xsl:param name="SHARED_RDF_DIR">../07-CONTROLLED_VOCABULARIES_RDF-XML</xsl:param>
+	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />
+	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mop-mimo.rdf'))/rdf:RDF" />
+	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mop-iaml.rdf'))/rdf:RDF" />
+	
+	
+	<!-- URIS Class -->
 
-	
-	<xsl:function name="mus:URI-F24_Expression">
+	<!-- URI Publication Expression -->
+	<xsl:function name="mus:URI-Publication_Expression">
 		<xsl:param name="idReferenceNotice" />
-		<xsl:value-of select="concat('http://data.philharmoniedeparis.fr/',$idReferenceNotice)" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice)" />
 	</xsl:function>
 	
+	<!-- URI Publication Event-->
+	<xsl:function name="mus:URI-Publication_Event">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#event')" />
+	</xsl:function>
+	
+	<!-- URI Publication_Expression_Fragment -->
+	<xsl:function name="mus:URI-Publication_Expression_Fragment">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idReferencePartition" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'/',$idReferencePartition)" />
+	</xsl:function>
+	
+	<!-- URI Publication_Expression Casting -->
+	<xsl:function name="mus:URI-Casting">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idCasting" />
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#casting_',$idCasting)" />
+	</xsl:function>
+	
+	<!-- URI Publication_Expression Casting Detail -->
+	<xsl:function name="mus:URI-Casting_Detail">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idCasting" />
+		<xsl:param name="idCastingDetail" />
+		<xsl:value-of select="concat(mus:URI-Casting($idReferenceNotice,$idCasting),'/detail_',$idCastingDetail)" />
+	</xsl:function>
+	
+	
+	<!-- URI Activity -->
+	<xsl:function name="mus:URI-Activity">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idActivity" />
+		<xsl:value-of select="concat(mus:URI-Publication_Event($idReferenceNotice),'/activity/',$idActivity)" />
+	</xsl:function>
+	
+	
+	<!-- URI Actor Function -->
+	<xsl:function name="mus:URI-Actor_Function">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idActivity" />
+		<xsl:param name="idFunction" />
+		<xsl:value-of select="concat(mus:URI-Activity($idReferenceNotice,$idActivity),'/function/',$idFunction)" />
+	</xsl:function>
+	
+	
+	<!-- URI Personne -->
 	<xsl:function name="mus:reference_personne">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('http://data.phlharmonie/AIC1/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
 	</xsl:function>
 	
+	<!-- URI Collectivité -->
 	<xsl:function name="mus:reference_collectivite">
 		<xsl:param name="idReference" />
 		<xsl:value-of select="concat('http://data.phlharmonie/AIC2/',$idReference)"/>
 	</xsl:function>
 	
+	
+	<!-- URI Thesaurus -->
 	<xsl:function name="mus:reference_thesaurus">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('http://data.phlharmonie/AIC90/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
 	</xsl:function>
 	
 	<!--  -->
@@ -349,6 +408,7 @@
 		</xsl:choose>
 	</xsl:function>
 	
+	<!-- function for the validate if the variable not empty -->
 	<xsl:function name="sparnaf:isTrue">
 		<xsl:param name="valeur"/>
 		<xsl:choose>
@@ -358,6 +418,7 @@
 		</xsl:choose>
 	</xsl:function>
 	
+	<!-- building the value concated with the parentheses -->
 	<xsl:function name="sparnaf:isTrueParenthesis">
 		<xsl:param name="valeur"/>
 		<xsl:if test="$valeur !=''">
@@ -365,8 +426,134 @@
 				<xsl:variable name="data" select="."/>
 				<xsl:value-of select="concat($data,';')"/>
 			</xsl:for-each>
-		</xsl:if>
+		</xsl:if>		
+	</xsl:function>
+
+
+	<xsl:function name="mus:DataCastingDetail_a">
+		<xsl:param name="data"/>
+		<xsl:value-of select="normalize-space(substring-before($data,'('))"/>		
+	</xsl:function>
+	
+	<xsl:function name="mus:NoInstrument">
+		<xsl:param name="data"/>
+		<xsl:variable name="Valeur_str_int" select="normalize-space(substring-before(substring-after($data,'('),')'))"/>
+		<xsl:choose>
+			<xsl:when test="number($Valeur_str_int)">
+				<xsl:value-of select="$Valeur_str_int"/>
+			</xsl:when>
+			<xsl:when test="$Valeur_str_int='9+'">
+				<xsl:value-of select="99"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:message>L'information <xsl:value-of select="$data"/>, ne contien pas un No d'Instrument. </xsl:message>
+			</xsl:otherwise>
+		</xsl:choose>		
+	</xsl:function>
+	
+	<xsl:function name="mus:NiveauDifficulte">
+		<xsl:param name="idText"/>
+		<xsl:for-each select="$Niveau_difficulte/skos:Concept/skos:altLabel">
+			<xsl:if test="contains($idText,normalize-space(.))">
+				<xsl:variable name="idCle_text" select="normalize-space(
+														substring($idText,
+																  string-length(substring-before($idText,normalize-space(.)))+1,
+																  string-length(normalize-space(.))+1
+																  )
+																)"/>
+				<xsl:choose>
+					<xsl:when test="normalize-space(.)=$idCle_text">
+						<xsl:value-of select="normalize-space($Niveau_difficulte/skos:Concept[
+												skos:altLabel=$idCle_text
+												]/skos:prefLabel)"/>
+						
+					</xsl:when>	
+					<xsl:otherwise>
+						<xsl:message>Le contenu du niveua du text <xsl:value-of select="$idText"/>, ne se trouve pas dans le réferentiel.</xsl:message>
+					</xsl:otherwise>				
+				</xsl:choose>
+			</xsl:if>					
+		</xsl:for-each>
+	</xsl:function>
+
+	<!-- Mimo RDF -->
+	<xsl:function name="mus:medium_vocabulary">
+		<xsl:param name="idMedium"/>
+		<xsl:variable name="idMedium_input">
+			<xsl:choose>
+				<xsl:when test="contains($idMedium,'_')"><xsl:value-of select="translate($idMedium,'_',' ')"/></xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$idMedium"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:choose>
+			<!-- Match -->
+			<xsl:when test="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$idMedium_input]"><xsl:value-of select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$idMedium_input]/@rdf:about"/></xsl:when>
+			<xsl:when test="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=lower-case($idMedium_input)]"><xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$idMedium_input]/@rdf:about"/></xsl:when>
+			<!-- not match and finding the similarity value mimo or iaml-->			
+			<xsl:when test="not($mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$idMedium_input]) and
+						not($iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$idMedium_input])">
+				<xsl:variable name="mimo_data_similarity">
+					<xsl:for-each select="$mimo_vocab/skos:Concept/skos:prefLabel[@xml:lang='fr']">
+						<xsl:variable name="idPrefLabel" select="normalize-space(.)"/>
+						<xsl:if test="contains($idMedium_input,$idPrefLabel)">
+							<xsl:message>ValidarContainer MIMO: <xsl:value-of select="$idMedium_input"/>'-'<xsl:value-of select="$idPrefLabel"/></xsl:message>
+						</xsl:if>															
+					</xsl:for-each>
+				</xsl:variable>
+				<xsl:if test="string-length($mimo_data_similarity)=0">
+					<xsl:message>ValidarContainer IALM:</xsl:message>
+					<xsl:for-each select="$iaml_vocab/skos:Concept/skos:prefLabel[@xml:lang='fr']">
+						<xsl:variable name="idPrefLabel" select="normalize-space(.)"/>						
+						<xsl:choose>
+							<xsl:when test="lower-case($idMedium_input)=$idPrefLabel">
+								<xsl:message>ValidarContainer equal IALM: <xsl:value-of select="$idMedium_input"/>'-'<xsl:value-of select="$idPrefLabel"/></xsl:message>
+								<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$idMedium_input]/@rdf:about"/>
+							</xsl:when>
+							<xsl:when test="contains(lower-case($idMedium_input),$idPrefLabel)">
+								<xsl:message>ValidarContainer IALM: <xsl:value-of select="$idMedium_input"/>'-'<xsl:value-of select="$idPrefLabel"/></xsl:message>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:for-each>
+				</xsl:if>
+			</xsl:when>			
+			<xsl:otherwise><xsl:value-of select="$idMedium_input"/></xsl:otherwise>
+		</xsl:choose>	
+	</xsl:function>
+	
+	<xsl:function name="mus:casting_alternatif_note">
+		<xsl:param name="text"/>
+		<xsl:variable name="isValid" select="1"/>
+		<xsl:choose>
+			<xsl:when test="count(contains($text,'ou')) = 1">
+				<xsl:variable name="npositionWord" select="index-of(tokenize($text,' '),'ou')"/>
+				<xsl:if test="$npositionWord &gt; 1">
+					<xsl:value-of select="$text"/>
+				</xsl:if>				
+			</xsl:when>
+			<xsl:when test="count(contains($text,'ou')) &gt; 1">
+				<xsl:value-of select="$text"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:function>
 		
+	
+	<xsl:function name="sparnaf:isNumber">
+		<xsl:param name="Valeur"/>
+		<xsl:variable name="result" select="0"/>
+		<xsl:choose>
+			<xsl:when test="string($Valeur) = 'NaN' or string-length($Valeur)=0">
+				<xsl:value-of select="number($result)"/>								
+			</xsl:when>
+			<xsl:when test="(string($Valeur) &gt; 'A' and string($Valeur) &lt; 'Z') or (string($Valeur) &gt; 'a' and string($Valeur) &lt; 'z')">
+				<xsl:message>La valeur n'est pas un chiffre <xsl:value-of select="$Valeur"/>.</xsl:message>
+				<xsl:value-of select="number($result)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="number($Valeur)"/>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:function>
 
 </xsl:stylesheet>
