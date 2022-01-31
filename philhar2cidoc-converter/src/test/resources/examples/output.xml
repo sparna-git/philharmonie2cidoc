@@ -5,9 +5,10 @@
 	xmlns:ecrm="http://erlangen-crm.org/current/"
 >
 
-	<efrbroo:F24_Publication_Expression rdf:about="http://data.philharmoniedeparis.fr/0070318">
+	<efrbroo:F24_Publication_Expression rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318">
 		<!-- en dur -->
 		<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
+		
 		<!--
 		<ecrm:P72_has_language>
 			<ecrm:E56_Language>
@@ -23,7 +24,7 @@
 				UNI5 : 010$a
 				UNI5 : 013$a
 		 	-->
-			<ecrm:E42_Identifier>
+			<ecrm:E42_Identifier rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#identifier-ISBN">
 				<rdfs:label>958-95698-3-8</rdfs:label>
 
 				<!-- UNI5 : notice id
@@ -34,34 +35,17 @@
 					Indiquer “ISBN” pour l’identifiant décrit en 010
 					Indiquer “ISMN” pour l’identifiant décrit en 013
 			 	-->
-				<ecrm:P2_has_type>
-					<ecrm:E55_Type>
-						<rdfs:label>ISBN</rdfs:label>
-					</ecrm:E55_Type>	
-				</ecrm:P2_has_type>
+				<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISBN" />
 
 			</ecrm:E42_Identifier>
 		</ecrm:P1_is_identified_by>
 
 		<ecrm:P1_is_identified_by>
-			<ecrm:E42_Identifier>
-				<rdfs:label>0070318</rdfs:label>
-				<ecrm:P2_has_type>
-					<ecrm:E55_Type>
-						<rdfs:label>CMPP-ALOES</rdfs:label>
-					</ecrm:E55_Type>	
-				</ecrm:P2_has_type>
-			</ecrm:E42_Identifier>
-		</ecrm:P1_is_identified_by>
-
-		<!-- Avec un vocabulaire de types d'identifiants : 
-		<ecrm:P1_is_identified_by>
-			<ecrm:E42_Identifier>
+			<ecrm:E42_Identifier rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#identifier-CMPP-ALOES">
 				<rdfs:label>0070318</rdfs:label>
 				<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES" />
 			</ecrm:E42_Identifier>
 		</ecrm:P1_is_identified_by>
-		-->
 
 		<!-- Cas 1 : 
 				Respecter l'ordre des sous-zones et générer une ponctuation entre elles, en faisant précéder 
@@ -73,14 +57,14 @@
 				Ne pas prendre en compte les $e qui suivent un $d
 	 	-->
 		<mus:U170_has_title_statement>
-			<mus:M156_Title_Statement>
+			<mus:M156_Title_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#title">
 				<rdfs:label>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)</rdfs:label>
 			</mus:M156_Title_Statement>
 		</mus:U170_has_title_statement>
 		
 		<!-- UNI5:200$f (;) 200$g -->
 		<mus:U172_has_statement_of_responsibility_relating_to_title>
-			<mus:M157_Statement_of_Responsibility>
+			<mus:M157_Statement_of_Responsibility rdf:anout="https://ark.philharmoniedeparis.fr/ark/49250/0070318#responsibility">
 				<rdfs:label>Ellie Anne Duque</rdfs:label>
 			</mus:M157_Statement_of_Responsibility>
 		</mus:U172_has_statement_of_responsibility_relating_to_title>
@@ -331,6 +315,8 @@
 		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 		 			
 		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 		<mus:U23_has_casting_detail>
 		 			<mus:M23_Casting_Detail>
 		 				<!-- 945$a flûte_traversière(1) -->
 		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/wfl" />
@@ -351,7 +337,9 @@
 		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
 		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
 
-		 			</mus:M23_Casting_Detail>	
+		 			</mus:M23_Casting_Detail>
+		 		</mus:U23_has_casting_detail>	
+		 		<mus:U23_has_casting_detail>
 		 			<mus:M23_Casting_Detail>
 		 				<!-- 949$a piano(1) -->
 		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/kpf" />
@@ -369,7 +357,9 @@
 		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
 		 				-->
 		 				
-		 			</mus:M23_Casting_Detail>	
+		 			</mus:M23_Casting_Detail>
+		 		</mus:U23_has_casting_detail>
+		 		<mus:U23_has_casting_detail>	
 		 			<mus:M23_Casting_Detail>
 		 				<!-- 950$a guitare(1) -->
 		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/tgu" />	
@@ -377,24 +367,41 @@
 		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>	 				
 		 			</mus:M23_Casting_Detail>	
 		 		</mus:U23_has_casting_detail>
-		 	
-
-
-		 		<!-- Casting alternatif -->
-		 		<!-- note $x “hautbois ou cor anglais et trompette” - utiliser le “ou” pour construire le casting alternatif  -->
-		 		<mus:U23_has_casting_detail>
-		 			<mus:M23_Casting_Detail>
-		 			</mus:M23_Casting_Detail>
-		 			<mus:M23_Casting_Detail>
-		 			</mus:M23_Casting_Detail>
-		 			<mus:M23_Casting_Detail>
-		 			</mus:M23_Casting_Detail>
-		 			<mus:M23_Casting_Detail>
-		 			</mus:M23_Casting_Detail>	
-		 		</mus:U23_has_casting_detail>	
-
 			</mus:M6_Casting>
 		</mus:U13_has_casting>
+
+
+
+ 		<!-- Casting alternatif -->
+ 		<!-- note $x “hautbois ou cor anglais et trompette” - utiliser le “ou” pour construire le casting alternatif  -->
+ 		
+		<!-- hautbois -->
+ 		<mus:U13_has_casting>
+ 			<mus:M6_Casting>
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://...hautbois..." />	
+
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>	
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 	<mus:M6_Casting>
+ 		</mus:U13_has_casting>
+
+ 		<!-- cor anglais et trompette -->
+ 		<mus:U13_has_casting>
+ 			<mus:M6_Casting>
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://...cor anglais..." />
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://...trompette..." />
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 	<mus:M6_Casting>
+ 		</mus:U13_has_casting>
+
+
 	</efrbroo:F24_Publication_Expression>
 
 
