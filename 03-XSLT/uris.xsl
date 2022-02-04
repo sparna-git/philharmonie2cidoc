@@ -33,6 +33,64 @@
 		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice)" />
 	</xsl:function>
 	
+	<!-- URI Identifier -->
+	<xsl:function name="mus:URI-Identifier">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idIdentifier" />
+		<xsl:param name="idTypeIdentifier" />		
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',$idIdentifier)" />
+	</xsl:function>
+	
+	<!-- URI Title -->
+	<xsl:function name="mus:URI-Title">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence" />
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-statement_',$idSequence)" />
+	</xsl:function>
+	
+	<!-- URI Title Parallel-->
+	<xsl:function name="mus:URI-Title_parallel">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence" />
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-parallel_',$idSequence)" />
+	</xsl:function>
+	
+	<!-- URI Title Variant -->
+	<xsl:function name="mus:URI-Title_variant">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence" />
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-variant_',$idSequence)" />
+	</xsl:function>
+	
+	<!-- URI Responsibility -->
+	<xsl:function name="mus:URI-Responsability">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence" />
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#responsibility_',$idSequence)" />
+	</xsl:function>
+	
+	<!-- URI Edition Statement-->
+	<xsl:function name="mus:URI-Edition_Statement">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence"/>
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#edition_',$idSequence)" />
+	</xsl:function>
+	
+	<!-- URI Format-->
+	<xsl:function name="mus:URI-Format">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence"/>
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#format_',$idSequence)" />
+	</xsl:function>
+	
+	<!-- URI Publication-->
+	<xsl:function name="mus:URI-Publication">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idSequence"/>
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#publication_',$idSequence)" />
+	</xsl:function>
+	
+	
 	<!-- URI Publication Event-->
 	<xsl:function name="mus:URI-Publication_Event">
 		<xsl:param name="idReferenceNotice" />
@@ -43,7 +101,7 @@
 	<xsl:function name="mus:URI-Publication_Expression_Fragment">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idReferencePartition" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'/',$idReferencePartition)" />
+		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#subpart_',$idReferencePartition)" />
 	</xsl:function>
 	
 	<!-- URI Publication_Expression Casting -->
@@ -524,18 +582,38 @@
 	
 	<xsl:function name="mus:casting_alternatif_note">
 		<xsl:param name="text"/>
-		<xsl:variable name="isValid" select="1"/>
-		<xsl:choose>
-			<xsl:when test="count(contains($text,'ou')) = 1">
-				<xsl:variable name="npositionWord" select="index-of(tokenize($text,' '),'ou')"/>
-				<xsl:if test="$npositionWord &gt; 1">
-					<xsl:value-of select="$text"/>
-				</xsl:if>				
-			</xsl:when>
-			<xsl:when test="count(contains($text,'ou')) &gt; 1">
-				<xsl:value-of select="$text"/>
-			</xsl:when>
-		</xsl:choose>
+		<xsl:if test="contains($text,'ou')">
+			<xsl:variable name="npositionWord" select="index-of(tokenize($text,' '),'ou')"/>
+			<xsl:choose>
+				<xsl:when test="$npositionWord = 1">
+					<xsl:value-of select="0"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:message>Mots id: <xsl:value-of select="$text"/></xsl:message>
+					<xsl:for-each select="tokenize($text,'ou ')">
+						<xsl:variable name="mots" select="normalize-space(.)"/>
+						<xsl:choose>
+							<xsl:when test="contains($mots,'(') or contains($mots,')')">
+								<xsl:message>Le mots trouve n'est pas valide pour le traiter: <xsl:value-of select="$mots"/> 
+							</xsl:message></xsl:when>
+							<xsl:otherwise>
+							<!--  <xsl:value-of select="concat($mots,',')"/> -->
+								<xsl:choose>
+									<xsl:when test="not(contains($mots,'et'))">
+										<xsl:message>Mots <xsl:value-of select="$mots"/>, Valeur trouve: <xsl:value-of select="mus:medium($mots)"/></xsl:message>
+									</xsl:when>
+									<xsl:when test="contains($mots,'et')">
+										<xsl:for-each select="tokenize($mots,'et')">
+											<xsl:message>Mots <xsl:value-of select="."/>, Valeur trouve:  <xsl:value-of select="mus:medium(.)"/></xsl:message>
+										</xsl:for-each>
+									</xsl:when>
+								</xsl:choose>																
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>					
+		</xsl:if>			
 	</xsl:function>
 		
 	
@@ -555,5 +633,82 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
-
+	
+	<xsl:function name="sparnaf:split_text">
+		<xsl:param name="text"/>
+		<!-- Tokenize premier validation -->		
+		<xsl:variable name="source" select="tokenize($text,'ou')"/>
+		<!-- Translate chaque mot, ici saura une space pour embellir -->
+		<xsl:variable name="mot_refuser" select="('ou','et',',','.')" as="xsd:string*"/>
+		<!-- Nettoyer données -->
+		<xsl:variable name="result_split">
+			<xsl:for-each select="$source">
+				<xsl:variable name="mot" select="normalize-space(.)"/>
+				<xsl:variable name="notExist_mot">
+					<xsl:for-each select="$mot_refuser">
+						<xsl:if test="normalize-space(.) = $mot">
+							<xsl:value-of select="'1'"/>
+						</xsl:if>
+					</xsl:for-each>			
+				</xsl:variable>
+				<xsl:if test="$notExist_mot != '1'">
+					<xsl:value-of select="concat($mot,',')"/>		
+				</xsl:if>			
+			</xsl:for-each>
+		</xsl:variable>
+		<xsl:choose>
+			<xsl:when test="$result_split">
+				<xsl:value-of select="substring($result_split,1,(string-length($result_split)-1))"/>
+			</xsl:when>
+		</xsl:choose>		
+	</xsl:function>
+	
+	<xsl:function name="sparnaf:validate_text">
+		<xsl:param name="text"/>
+		<xsl:choose>
+			<xsl:when test="normalize-space($text)">
+			
+			</xsl:when>
+		</xsl:choose>
+	</xsl:function>
+	
+	
+	<!-- chercher l'instrument ou la voix -->
+	<xsl:function name="mus:medium">
+		<xsl:param name="mots_medium"/>
+		<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($mots_medium)"/>
+		<xsl:variable name="iaml_medium_simple" select="mus:iaml_vocabulary_simple($mots_medium)"/>
+		<xsl:choose>
+			<xsl:when test="not($mimo_medium_simple) and not($iaml_medium_simple)">
+				<xsl:message>Le medium ne se trouve pas dans l'information de vocabularie <xsl:value-of select="$mots_medium"/></xsl:message>
+			</xsl:when>
+			<xsl:when test="$mimo_medium_simple">
+				<xsl:value-of select="$mimo_medium_simple"/>
+			</xsl:when>
+			<xsl:when test="$iaml_medium_simple">
+				<xsl:value-of select="$mimo_medium_simple"/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:function>
+	
+	<xsl:function name="mus:mimo_vocabulary_simple">
+		<xsl:param name="mots_instrument"/>
+		<xsl:value-of select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
+	</xsl:function>
+	
+	<xsl:function name="mus:iaml_vocabulary_simple">
+		<xsl:param name="mots_instrument"/>
+		<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
+	</xsl:function>
+	
+	<xsl:function name="mus:mimo_vocabulary_complex">
+		<xsl:param name="mots_instrument"/>
+		<xsl:choose>
+			<xsl:when test="contains($mots_instrument,' ')">
+				<xsl:for-each select="1"></xsl:for-each>
+			</xsl:when>
+		</xsl:choose>
+		<xsl:value-of select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
+	</xsl:function>
+	
 </xsl:stylesheet>
