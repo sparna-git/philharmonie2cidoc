@@ -17,13 +17,14 @@
 	
 	<!-- AIC14 -->
 	<xsl:param name="AIC14_file" select="document(concat($SHARED_XML_DIR,'/', 'ExportTUM-pretty.xml'))/NOTICES" />
+	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/languages/language" />
 	
 	<!-- Call sources files RDF -->
 	<xsl:param name="SHARED_RDF_DIR">../07-CONTROLLED_VOCABULARIES_RDF-XML</xsl:param>
 	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />
 	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mop-mimo.rdf'))/rdf:RDF" />
 	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mop-iaml.rdf'))/rdf:RDF" />
-	
+	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'databnf_role_avec-alignement-philharmonie.rdf'))/rdf:RDF" />
 	
 	<!-- URIS Class -->
 
@@ -37,57 +38,98 @@
 	<xsl:function name="mus:URI-Identifier">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idIdentifier" />
-		<xsl:param name="idTypeIdentifier" />		
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',$idIdentifier)" />
+		<xsl:param name="idTypeIdentifier" />
+		<xsl:param name="typeNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',$idIdentifier)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat('/identifier_',$idTypeIdentifier,'_',$idIdentifier)"/></xsl:when>
+		</xsl:choose>
+		
 	</xsl:function>
 	
 	<!-- URI Title -->
 	<xsl:function name="mus:URI-Title">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence" />
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-statement_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-statement_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/title-statement_',$idSequence)" /></xsl:when>
+		</xsl:choose>
+		
 	</xsl:function>
 	
 	<!-- URI Title Parallel-->
 	<xsl:function name="mus:URI-Title_parallel">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence" />
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-parallel_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-parallel_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/title-parallel_',$idSequence)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	<!-- URI Title Variant -->
 	<xsl:function name="mus:URI-Title_variant">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence" />
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-variant_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#title-variant_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/title-variant_',$idSequence)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	<!-- URI Responsibility -->
 	<xsl:function name="mus:URI-Responsability">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence" />
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#responsibility_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#responsibility_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/responsibility_',$idSequence)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	<!-- URI Edition Statement-->
 	<xsl:function name="mus:URI-Edition_Statement">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence"/>
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#edition_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#edition_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/edition_',$idSequence)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	<!-- URI Format-->
 	<xsl:function name="mus:URI-Format">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence"/>
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#format_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#format_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/format_',$idSequence)" /></xsl:when>
+		</xsl:choose>
 	</xsl:function>
 	
 	<!-- URI Publication-->
 	<xsl:function name="mus:URI-Publication">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idSequence"/>
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#publication_',$idSequence)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#publication_',$idSequence)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/publication_',$idSequence)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	
@@ -95,6 +137,14 @@
 	<xsl:function name="mus:URI-Publication_Event">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#event')" />
+	</xsl:function>
+	
+	<!-- URI Publication Event - Activity -->
+	<xsl:function name="mus:URI-Publication_Event_Activity">
+		<xsl:param name="idReferenceNotice" />
+		<xsl:param name="idPersonne" />
+		<xsl:param name="idfunction" />
+		<xsl:value-of select="concat(mus:URI-Publication_Event($idReferenceNotice),'/activity_',$idPersonne,'_',$idfunction)" />
 	</xsl:function>
 	
 	<!-- URI Publication_Expression_Fragment -->
@@ -108,7 +158,12 @@
 	<xsl:function name="mus:URI-Casting">
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idCasting" />
-		<xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#casting_',$idCasting)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Publication_Expression($idReferenceNotice),'#casting_',$idCasting)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/casting_',$idCasting)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	<!-- URI Publication_Expression Casting Detail -->
@@ -116,7 +171,12 @@
 		<xsl:param name="idReferenceNotice" />
 		<xsl:param name="idCasting" />
 		<xsl:param name="idCastingDetail" />
-		<xsl:value-of select="concat(mus:URI-Casting($idReferenceNotice,$idCasting),'/detail_',$idCastingDetail)" />
+		<xsl:param name="typeNotice" />
+		<xsl:param name="idNotice" />
+		<xsl:choose>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat(mus:URI-Casting($idReferenceNotice,$idCasting,'UNI:5',''),'/detail_',$idCastingDetail)" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idNotice,$idReferenceNotice),'/casting_',$idCasting,'/detail_',$idCastingDetail)" /></xsl:when>
+		</xsl:choose>		
 	</xsl:function>
 	
 	
@@ -147,6 +207,26 @@
 	<xsl:function name="mus:reference_collectivite">
 		<xsl:param name="idReference" />
 		<xsl:value-of select="concat('http://data.phlharmonie/AIC2/',$idReference)"/>
+	</xsl:function>
+	
+	<xsl:function name="mus:role_vocab">
+		<xsl:param name="idfunction"/>
+		<xsl:variable name="source" select="$rol_vocab/Concept/*"/>
+		<xsl:message>Resultat query RDF Role: <xsl:value-of select="$source"/></xsl:message>
+		<xsl:choose>
+			<xsl:when test="count($source)=1">
+				<xsl:value-of select="$source"/>
+			</xsl:when>
+			<xsl:when test="count($source) &gt; 1">
+				<xsl:message>L'id: <xsl:value-of select="$idfunction"/>, a trouvé deux valeurs, on prendra seulement 1.</xsl:message>
+				<xsl:value-of select="$source[1]"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:message>
+					Warning!!, L'id: <xsl:value-of select="$idfunction"/>, ne se trouve pas dans la source d'information du vocabularies. 
+				</xsl:message>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:function>
 	
 	
@@ -621,7 +701,7 @@
 		<xsl:param name="Valeur"/>
 		<xsl:variable name="result" select="0"/>
 		<xsl:choose>
-			<xsl:when test="string($Valeur) = 'NaN' or string-length($Valeur)=0">
+			<xsl:when test="string($Valeur) = 'NaN'">
 				<xsl:value-of select="number($result)"/>								
 			</xsl:when>
 			<xsl:when test="(string($Valeur) &gt; 'A' and string($Valeur) &lt; 'Z') or (string($Valeur) &gt; 'a' and string($Valeur) &lt; 'z')">
@@ -709,6 +789,27 @@
 			</xsl:when>
 		</xsl:choose>
 		<xsl:value-of select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
+	</xsl:function>
+	
+	<!-- translation language -->
+	<xsl:function name="mus:Lookup_Language_3LettersCode">
+		<xsl:param name="idCode" />
+		<xsl:variable name="language" select="$language_codes[
+			a3b = $idCode or
+			a3t = $idCode
+		]"/>
+		<xsl:choose>
+			<xsl:when test="count($language) = 0">
+				<xsl:message>Warning : cannot find language "<xsl:value-of select="$idCode" /></xsl:message>
+			</xsl:when>
+			<xsl:when test="count($language) &gt; 1">
+				<xsl:message>Warning : find <xsl:value-of select="count($language)" /> languages with code "<xsl:value-of select="$idCode" /> - Taking first one.</xsl:message>
+				<xsl:value-of select="concat('http://lexvo.org/id/iso639-3/',$language[1]/a3t)"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat('http://lexvo.org/id/iso639-3/',$language[1]/a3t)"/>
+			</xsl:otherwise>
+		</xsl:choose>	
 	</xsl:function>
 	
 </xsl:stylesheet>
