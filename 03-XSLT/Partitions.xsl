@@ -8,6 +8,7 @@
 	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
 	xmlns:ecrm="http://erlangen-crm.org/current/"
 	xmlns:sparnaf="http://data.sparna.fr/function/sparnaf#"
+	xmlns:schema="http://schema.org/" exclude-result-prefixes="xsl"
 >
  
  	<!-- Format -->
@@ -54,9 +55,8 @@
 				<xsl:apply-templates select="champs[
 													not(index-of(('700','701','702','710','711','712','911'),@UnimarcTag))													
 													]" />
-													
-				 
-				<!--   	-->								
+				
+				<!--  Format Partitions 	-->								
 				<xsl:apply-templates select="champs['462']" mode="Fragment"/>
 				
 			</efrbroo:F24_Publication_Expression>
@@ -74,7 +74,7 @@
 	
 					<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
 					<!-- Lien vers la Publication Expression de Partition -->
-					<xsl:comment> Lien vers la Publication Expression de Partition </xsl:comment>
+					
 					<mus:R24_created rdf:resource="{mus:URI-Publication_Expression(@id)}" />
 					
 					<xsl:apply-templates select="champs[@UnimarcTag = '911' or
@@ -380,8 +380,8 @@
 	-->	
 	<xsl:template match="champs[@UnimarcTag='911']">
 	
-			<!-- 214$d or 210$d  -->
-			<!-- 214 $d
+		<!-- 214$d or 210$d  -->
+		<!-- 214 $d
 				et, si le 214$d n’est pas renseigné: 210 $d
 				Cas 1 : 
 					la sous-zone ne comporte qu’une année, reprendre les données telles quelles. 
@@ -389,48 +389,43 @@
 					Si la sous-zone $d comporte une chaîne de caractères qui précède l’année (Ex : “cop.”, “copyright”, “DL”) et qui a une valeur autre que “impr.”, ne conserver que l’année. 
 				Cas 3 : 
 					Ne pas conserver les années qui sont précédées de la mention “impr.”
-			-->
+		-->
 			
-			<xsl:variable name="idNotice" select="../@id"/>
-			<xsl:variable name="source" select="SOUSCHAMP[@UnimarcSubfield ='911$3']/data"/>
-			<xsl:variable name="data_has_time_210_d" select="../champs[@UnimarcTag='210']/SOUSCHAMP[@UnimarcSubfield='210$d'][1]"/>
-			<xsl:variable name="data_has_time_214_d" select="../champs[@UnimarcTag='214']/SOUSCHAMP[@UnimarcSubfield='214$d'][1]"/>
-			
-			<xsl:if test="$data_has_time_210_d != '' or string-length($data_has_time_210_d) &gt; 0">
-				<xsl:variable name="data_year_210" select="ecrm:has_time($idNotice,normalize-space($data_has_time_210_d))"/>
-				<xsl:if test="$data_year_210">
-					<ecrm:P4_has_time-span>
-						<ecrm:E52_Time-Span>
-							<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="$data_year_210"/></ecrm:P82_at_some_time_within>
-						</ecrm:E52_Time-Span>
-					</ecrm:P4_has_time-span>
-				</xsl:if>
+		<xsl:variable name="idNotice" select="../@id"/>
+		<xsl:variable name="source" select="SOUSCHAMP[@UnimarcSubfield ='911$3']/data"/>
+		<xsl:variable name="data_has_time_210_d" select="../champs[@UnimarcTag='210']/SOUSCHAMP[@UnimarcSubfield='210$d'][1]"/>
+		<xsl:variable name="data_has_time_214_d" select="../champs[@UnimarcTag='214']/SOUSCHAMP[@UnimarcSubfield='214$d'][1]"/>
+		
+		<xsl:if test="$data_has_time_210_d != '' or string-length($data_has_time_210_d) &gt; 0">
+			<xsl:variable name="data_year_210" select="ecrm:has_time($idNotice,normalize-space($data_has_time_210_d))"/>
+			<xsl:if test="$data_year_210">
+				<ecrm:P4_has_time-span>
+					<ecrm:E52_Time-Span>
+						<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="$data_year_210"/></ecrm:P82_at_some_time_within>
+					</ecrm:E52_Time-Span>
+				</ecrm:P4_has_time-span>
 			</xsl:if>
-			<xsl:if test="$data_has_time_214_d != '' or string-length($data_has_time_214_d) &gt; 0">
-				<xsl:variable name="data_year_214" select="ecrm:has_time($idNotice,normalize-space($data_has_time_210_d))"/>
-				<xsl:if test="$data_year_214">
-					<ecrm:P4_has_time-span>
-						<ecrm:E52_Time-Span>
-							<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="$data_year_214"/></ecrm:P82_at_some_time_within>
-						</ecrm:E52_Time-Span>
-					</ecrm:P4_has_time-span>
-				</xsl:if>
+		</xsl:if>
+		<xsl:if test="$data_has_time_214_d != '' or string-length($data_has_time_214_d) &gt; 0">
+			<xsl:variable name="data_year_214" select="ecrm:has_time($idNotice,normalize-space($data_has_time_210_d))"/>
+			<xsl:if test="$data_year_214">
+				<ecrm:P4_has_time-span>
+					<ecrm:E52_Time-Span>
+						<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"><xsl:value-of select="$data_year_214"/></ecrm:P82_at_some_time_within>
+					</ecrm:E52_Time-Span>
+				</ecrm:P4_has_time-span>
 			</xsl:if>
+		</xsl:if>
 			
-			<xsl:comment>Description de l’activité d’édition F30 Publication Event pour le 911$a</xsl:comment>
-			<ecrm:P9_consists_of>		
-				<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
-				<ecrm:E7_Activity rdf:about="{mus:URI-Publication_Event_Activity($idNotice,$source,'publisher')}">
-					<!-- 911$a Lien vers l’autorité collectivité éditeur -->
-					<xsl:comment>Lien vers l’autorité collectivité éditeur</xsl:comment>
-					<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite(SOUSCHAMP[@UnimarcSubfield ='911$3']/data)}" />
-	
-					<!-- en dure -->
-					<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
-					<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/publisher" />				
-				</ecrm:E7_Activity>	
-			</ecrm:P9_consists_of>
-			
+		<ecrm:P9_consists_of>		
+			<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
+			<ecrm:E7_Activity rdf:about="{mus:URI-Publication_Event_Activity($idNotice,$source,'publisher')}">
+				<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite(SOUSCHAMP[@UnimarcSubfield ='911$3']/data)}" />
+				<!-- en dure -->
+				<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
+				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/publisher" />				
+			</ecrm:E7_Activity>	
+		</ecrm:P9_consists_of>			
 	</xsl:template>	
 	
 	<!-- ******* CASTING ******* -->
@@ -476,14 +471,10 @@
 		<xsl:if test="SOUSCHAMP[@UnimarcSubfield='954$t']/data">
 			<xsl:comment> M6 Casting </xsl:comment>
 			<mus:U13_has_casting>
-				<mus:M6_Casting rdf:resource="{mus:URI-Casting($idNotice,$positionCasting,$typeNotice,$idNoticeMere)}">
+				<mus:M6_Casting rdf:about="{mus:URI-Casting($idNotice,$positionCasting,$typeNotice,$idNoticeMere)}">
 					
 					<!-- U48 foresees quantity of actors  -->
-					<mus:U48_foresees_quantity_of_actors>
-						<E60_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">
-							<xsl:value-of select="$NoInstuments"/>
-						</E60_Number>				
-					</mus:U48_foresees_quantity_of_actors>
+					<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="$NoInstuments"/></mus:U48_foresees_quantity_of_actors>
 					
 					<!-- Création des M23 Casting Detail (cas simples) : -->
 					<xsl:if test="$VoixSolistes_a or
@@ -571,9 +562,11 @@
 	<!-- UNI5:101$a -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='101$a']">
 		<xsl:if test="mus:Lookup_Language_3LettersCode(normalize-space(data))">
+			
+			<ecrm:E56_Language rdf:resource="{mus:Lookup_Language_3LettersCode(normalize-space(data))}"/>				
+			<!--  
 			<ecrm:P72_has_language>
-				<ecrm:E56_Language rdf:resource="{mus:Lookup_Language_3LettersCode(normalize-space(data))}"/>				
-			</ecrm:P72_has_language>
+			</ecrm:P72_has_language>-->
 		</xsl:if>
 	</xsl:template>
 	
@@ -688,11 +681,19 @@
 					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='449']"/>
 	 				<!--  -->
 	 				<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='541']"/>
+		 			<!-- Le titre uniforme musical -->
+					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='503']/SOUSCHAMP[@UnimarcSubfield ='503$3']"/>
+		 			<!-- l’autorité -->
+					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='600']/SOUSCHAMP[@UnimarcSubfield ='600$3']"/>
+					<!-- l’autorité collectivité -->
+					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='601']/SOUSCHAMP[@UnimarcSubfield ='601$3']"/>
+		 			<!-- Context,Genre,Categorization   -->
+					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='610']/SOUSCHAMP[@UnimarcSubfield ='610$b']"/>
 		 			
 		 			
-		 			<!-- Casting 
+		 			<!-- Casting -->
 		 			<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='954']"/>
-	 			-->
+	 			
 	 			</mus:M167_Publication_Expression_Fragment>
 	 		</ecrm:P148_has_component>
  			
@@ -744,15 +745,14 @@
 	
 	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='600$3']">
-		<xsl:comment> 600$3 Lien vers l’autorité </xsl:comment>
+		<!-- Lien vers l’autorité -->
 		<ecrm:P129_is_about rdf:resource="{mus:reference_personne(normalize-space(.))}"/>
 	</xsl:template>
 	
 	
 	<!-- 601 -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='601$3']">		
-		<!-- Faire un lien vers l’autorité collectivité -->
-		<xsl:comment> Lien vers l’autorité collectivité </xsl:comment>	
+		<!-- Lien vers l’autorité collectivité -->
 		<ecrm:P129_is_about rdf:resource="{mus:reference_collectivite(normalize-space(.))}" />		
 	</xsl:template>
 	
@@ -781,7 +781,7 @@
 		</xsl:if>		
 	</xsl:template>
 	
-	<!-- Activitiy Event -->
+	<!-- Activitiy Event 700 -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='700$3' or
 								   @UnimarcSubfield='701$3' or
 								   @UnimarcSubfield='702$3' or
@@ -824,7 +824,6 @@
 				<xsl:if test="index-of(('700$3','701$3','710$3','711$3'),@UnimarcSubfield)">
 					<xsl:if test="$function">
 						<xsl:for-each select="$idFunction">
-							<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Activity: <xsl:value-of select="$idLocal"/>, Data: <xsl:value-of select="normalize-space(.)"/> </xsl:message>
 							<xsl:if test="mus:role_vocab(normalize-space(.))">
 								<mus:U31_had_function rdf:resource="{mus:role_vocab(normalize-space(.))}" />
 							</xsl:if>
@@ -861,12 +860,19 @@
 		<mus:U23_has_casting_detail>
 			<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$index,$typeNotice,$idNoticeMere)}">
 				
-				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium_vocabulary(mus:DataCastingDetail_a(data))}"/>		
-					
+				<xsl:if test="mus:medium(mus:extrait_medium(data))">
+					<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium(mus:extrait_medium(data))}"/>
+				</xsl:if>
+						
+				
+				<!-- ????????? -->
+				<mus:U90_foresees_creation_or_performance_mode></mus:U90_foresees_creation_or_performance_mode>
+				
 				<mus:U30_foresees_quantity_of_mop>
 					<mus:E60_Number><xsl:value-of select="mus:NoInstrument(data)"/></mus:E60_Number>
-				</mus:U30_foresees_quantity_of_mop>
+				</mus:U30_foresees_quantity_of_mop>				
 				
+				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 				
 				<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='942$x']/data"/>
 				<xsl:if test="$note">
@@ -919,8 +925,7 @@
 									(champs[@UnimarcTag='462']/SOUSCHAMP[@UnimarcSubfield ='462$3']/data=$idNotice)
 															]/@id"/>
 			</xsl:if>
-		</xsl:variable>
-		
+		</xsl:variable>	
 		
 		<!-- Generation d'id -->
 		<xsl:variable name="id" select="generate-id()"/>
@@ -928,11 +933,21 @@
 		<mus:U23_has_casting_detail>
 			<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$id,$typeNotice,$idNoticeMere)}">
 			
-				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium_vocabulary(mus:DataCastingDetail_a(data))}"/>
-		
-				<mus:U30_foresees_quantity_of_mop>
-					<mus:E60_Number><xsl:value-of select="mus:NoInstrument(data)"/></mus:E60_Number>
-				</mus:U30_foresees_quantity_of_mop>
+				<xsl:comment>Medium : <xsl:value-of select="mus:extrait_medium(data)"/>, Valuer Vocabulary : <xsl:value-of select="mus:medium_vocabulary(mus:extrait_medium(data))"/></xsl:comment>
+				<xsl:choose>
+					<xsl:when test="@UnimarcSubfield='940$a' and
+							 substring-before(data,'(') = 'voix' and
+							 ../SOUSCHAMP[@UnimarcSubfield='941$a']">
+						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:if test="mus:medium(mus:extrait_medium(data))">
+							<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium(mus:extrait_medium(data))}"/>
+						</xsl:if>
+					</xsl:otherwise>
+				</xsl:choose>
+				
+				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
 				
 				
 				<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='940$x' or 

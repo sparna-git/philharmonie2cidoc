@@ -211,8 +211,8 @@
 	
 	<xsl:function name="mus:role_vocab">
 		<xsl:param name="idfunction"/>
-		<xsl:variable name="source" select="$rol_vocab/Concept/*"/>
-		<xsl:message>Resultat query RDF Role: <xsl:value-of select="$source"/></xsl:message>
+		<xsl:variable name="source" select="$rol_vocab/rdf:Description[
+										skos:notation[@rdf:datatype='https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie']=$idfunction]/@rdf:about"/>		
 		<xsl:choose>
 			<xsl:when test="count($source)=1">
 				<xsl:value-of select="$source"/>
@@ -568,7 +568,7 @@
 	</xsl:function>
 
 
-	<xsl:function name="mus:DataCastingDetail_a">
+	<xsl:function name="mus:extrait_medium">
 		<xsl:param name="data"/>
 		<xsl:value-of select="normalize-space(substring-before($data,'('))"/>		
 	</xsl:function>
@@ -629,7 +629,7 @@
 			<!-- Match -->
 			<xsl:when test="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$idMedium_input]"><xsl:value-of select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$idMedium_input]/@rdf:about"/></xsl:when>
 			<xsl:when test="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=lower-case($idMedium_input)]"><xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$idMedium_input]/@rdf:about"/></xsl:when>
-			<!-- not match and finding the similarity value mimo or iaml-->			
+			<!-- not match and finding the similarity value mimo or iaml		
 			<xsl:when test="not($mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$idMedium_input]) and
 						not($iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$idMedium_input])">
 				<xsl:variable name="mimo_data_similarity">
@@ -655,7 +655,8 @@
 						</xsl:choose>
 					</xsl:for-each>
 				</xsl:if>
-			</xsl:when>			
+			</xsl:when>
+			-->				
 			<xsl:otherwise><xsl:value-of select="$idMedium_input"/></xsl:otherwise>
 		</xsl:choose>	
 	</xsl:function>
@@ -760,7 +761,7 @@
 		<xsl:variable name="iaml_medium_simple" select="mus:iaml_vocabulary_simple($mots_medium)"/>
 		<xsl:choose>
 			<xsl:when test="not($mimo_medium_simple) and not($iaml_medium_simple)">
-				<xsl:message>Le medium ne se trouve pas dans l'information de vocabularie <xsl:value-of select="$mots_medium"/></xsl:message>
+				<xsl:message>Le medium : <xsl:value-of select="$mots_medium"/> ,ne se trouve pas dans l'information de vocabularie mimo ou iaml. </xsl:message>
 			</xsl:when>
 			<xsl:when test="$mimo_medium_simple">
 				<xsl:value-of select="$mimo_medium_simple"/>
@@ -773,12 +774,26 @@
 	
 	<xsl:function name="mus:mimo_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:value-of select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
+		<xsl:variable name="mimo_resultat" select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
+		<xsl:choose>
+			<xsl:when test="count($mimo_resultat) = 1"><xsl:value-of select="$mimo_resultat"/></xsl:when>
+			<xsl:when test="count($mimo_resultat) &gt; 1">
+				<xsl:message>Le medium: <xsl:value-of select="$mots_instrument"/> à trouvé 2 resultat, On prends le premier resultat. </xsl:message>
+				<xsl:value-of select="$mimo_resultat[1]"/>
+			</xsl:when>
+		</xsl:choose>			
 	</xsl:function>
 	
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
+		<xsl:variable name="ialm_resultat" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
+		<xsl:choose>
+			<xsl:when test="count($ialm_resultat) = 1"><xsl:value-of select="$ialm_resultat"/></xsl:when>
+			<xsl:when test="count($ialm_resultat) &gt; 1">
+				<xsl:message>Le medium: <xsl:value-of select="$mots_instrument"/> à trouvé 2 resultat, On prends le premier resultat. </xsl:message>
+				<xsl:value-of select="$ialm_resultat[1]"/>
+			</xsl:when>
+		</xsl:choose>
 	</xsl:function>
 	
 	<xsl:function name="mus:mimo_vocabulary_complex">
