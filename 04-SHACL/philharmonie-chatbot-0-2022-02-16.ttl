@@ -1,0 +1,480 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ecrm: <http://erlangen-crm.org/current/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mus: <http://data.doremus.org/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shacl-play: <https://shacl-play.sparna.fr/ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.doremus.org/shapes/mus> a owl:Ontology;
+  rdfs:label "FRBR-EP Application Profile";
+  owl:versionInfo "0" .
+
+efrbroo:F24_Publication_Expression a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex379 .
+
+_:node1fs170frex379 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+efrbroo:F24_Publication_Expression sh:nodeKind sh:IRI;
+  sh:pattern "^https://ark.philharmoniedeparis.fr/ark/49250/[0-9]*?$";
+  sh:property mus:P10, mus:P11, mus:P12, mus:P13, mus:P14, mus:P15, mus:P16, mus:P17,
+    mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23, mus:P24, mus:P25, mus:P9 .
+
+efrbroo:F30_Publication_Event a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex380 .
+
+_:node1fs170frex380 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
+  sh:pattern "^https://ark.philharmoniedeparis.fr/ark/49250/[0-9]*#event";
+  sh:property mus:P44, mus:P45, mus:P46 .
+
+ecrm:E7_Activity a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex381 .
+
+_:node1fs170frex381 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+ecrm:E7_Activity sh:nodeKind sh:IRI;
+  sh:property mus:P48, mus:P49 .
+
+mus:M6_Casting a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex382 .
+
+_:node1fs170frex382 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M6_Casting sh:nodeKind sh:IRI;
+  sh:property mus:P51, mus:P52 .
+
+mus:M23_Casting_Detail a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex383 .
+
+_:node1fs170frex383 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M23_Casting_Detail sh:nodeKind sh:IRI;
+  sh:property mus:P54, mus:P55, mus:P56, mus:P57, mus:P58, mus:P59 .
+
+mus:M156_Title_Statement a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex384 .
+
+_:node1fs170frex384 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M156_Title_Statement sh:nodeKind sh:IRI;
+  sh:property mus:P61 .
+
+mus:M157_Statement_of_Responsibility a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex385 .
+
+_:node1fs170frex385 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
+  sh:property mus:P63 .
+
+ecrm:E35_Title a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex386 .
+
+_:node1fs170frex386 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+ecrm:E35_Title sh:nodeKind sh:IRI;
+  sh:property mus:P65 .
+
+mus:M159_Edition_Statement a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex387 .
+
+_:node1fs170frex387 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M159_Edition_Statement sh:nodeKind sh:IRI;
+  sh:property mus:P67 .
+
+mus:M163_Music_Format_Statement a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex388 .
+
+_:node1fs170frex388 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
+  sh:property mus:P69 .
+
+mus:M160_Publication_Statement a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex389 .
+
+_:node1fs170frex389 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M160_Publication_Statement sh:nodeKind sh:IRI;
+  sh:property mus:P71 .
+
+ecrm:E42_Identifier a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex390 .
+
+_:node1fs170frex390 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+ecrm:E42_Identifier sh:nodeKind sh:IRI;
+  sh:property mus:P73, mus:P74 .
+
+ecrm:E52_Time-Span a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex391 .
+
+_:node1fs170frex391 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+ecrm:E52_Time-Span sh:nodeKind sh:IRI;
+  sh:property mus:P76 .
+
+mus:M167_Publication_Expression_Fragment a rdfs:Class, sh:NodeShape;
+  sh:closed true;
+  sh:ignoredProperties _:node1fs170frex392 .
+
+_:node1fs170frex392 rdf:first rdf:type;
+  rdf:rest rdf:nil .
+
+mus:M167_Publication_Expression_Fragment sh:nodeKind sh:IRI;
+  sh:property mus:P27, mus:P28, mus:P29, mus:P30, mus:P31, mus:P32, mus:P33, mus:P34,
+    mus:P35, mus:P36, mus:P37, mus:P38, mus:P39, mus:P40, mus:P41, mus:P42 .
+
+mus:P9 sh:maxCount 1;
+  sh:name "U227 has content type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U227_has_content_type .
+
+mus:P10 sh:maxCount 1;
+  sh:name "P72 has language"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P72_has_language .
+
+mus:P11 sh:class mus:M156_Title_Statement;
+  sh:maxCount 1;
+  sh:name "U170 has title statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U170_has_title_statement .
+
+mus:P12 sh:class mus:M157_Statement_of_Responsibility;
+  sh:maxCount 1;
+  sh:name "U172 has statement of responsibility relating to title"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U172_has_statement_of_responsibility_relating_to_title .
+
+mus:P13 sh:class ecrm:E35_Title;
+  sh:maxCount 1;
+  sh:name "U168 has parallel title"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U168_has_parallel_title .
+
+mus:P14 sh:class ecrm:E35_Title;
+  sh:maxCount 1;
+  sh:name "U68 has variant title"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U68_has_variant_title .
+
+mus:P15 sh:class mus:M159_Edition_Statement;
+  sh:maxCount 1;
+  sh:name "U176 has edition statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U176_has_edition_statement .
+
+mus:P16 sh:class mus:M163_Music_Format_Statement;
+  sh:maxCount 1;
+  sh:name "U182 has music format statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U182_has_music_format_statement .
+
+mus:P17 sh:class mus:M160_Publication_Statement;
+  sh:maxCount 1;
+  sh:name "U184 has publication statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U184_has_publication_statement .
+
+mus:P18 sh:name "U65 has geographical context"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U65_has_geographical_context .
+
+mus:P19 sh:name "U12 has genre"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U12_has_genre .
+
+mus:P20 sh:name "U19 is categorized as"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U19_is_categorized_as .
+
+mus:P21 sh:name "P129 is about"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P129_is_about .
+
+mus:P22 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:name "P3 has note"@en;
+  sh:nodeKind sh:Literal;
+  sh:path ecrm:P3_has_note .
+
+mus:P23 sh:class ecrm:E42_Identifier;
+  sh:name "P1 is identified by"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P1_is_identified_by .
+
+mus:P24 sh:class mus:M167_Publication_Expression_Fragment;
+  sh:name "P148 has component"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P148_has_component .
+
+mus:P25 sh:class mus:M6_Casting;
+  sh:name "U13 has casting"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U13_has_casting .
+
+mus:P27 sh:maxCount 1;
+  sh:name "U227 has content type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U227_has_content_type .
+
+mus:P28 sh:maxCount 1;
+  sh:name "P72 has language"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P72_has_language .
+
+mus:P29 sh:class mus:M156_Title_Statement;
+  sh:maxCount 1;
+  sh:name "U170 has title statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U170_has_title_statement .
+
+mus:P30 sh:class mus:M157_Statement_of_Responsibility;
+  sh:maxCount 1;
+  sh:name "U172 has statement of responsibility relating to title"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U172_has_statement_of_responsibility_relating_to_title .
+
+mus:P31 sh:class ecrm:E35_Title;
+  sh:maxCount 1;
+  sh:name "U168 has parallel title"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U168_has_parallel_title .
+
+mus:P32 sh:class ecrm:E35_Title;
+  sh:maxCount 1;
+  sh:name "U68 has variant title"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U68_has_variant_title .
+
+mus:P33 sh:class mus:M159_Edition_Statement;
+  sh:maxCount 1;
+  sh:name "U176 has edition statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U176_has_edition_statement .
+
+mus:P34 sh:class mus:M163_Music_Format_Statement;
+  sh:maxCount 1;
+  sh:name "U182 has music format statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U182_has_music_format_statement .
+
+mus:P35 sh:class mus:M160_Publication_Statement;
+  sh:maxCount 1;
+  sh:name "U184 has publication statement"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U184_has_publication_statement .
+
+mus:P36 sh:name "U65 has geographical context"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U65_has_geographical_context .
+
+mus:P37 sh:name "U12 has genre"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U12_has_genre .
+
+mus:P38 sh:name "U19 is categorized as"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U19_is_categorized_as .
+
+mus:P39 sh:name "P129 is about"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P129_is_about .
+
+mus:P40 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:name "P3 has note"@en;
+  sh:nodeKind sh:Literal;
+  sh:path ecrm:P3_has_note .
+
+mus:P41 sh:class ecrm:E42_Identifier;
+  sh:name "P1 is identified by"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P1_is_identified_by .
+
+mus:P42 sh:class mus:M6_Casting;
+  sh:name "U13 has casting"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U13_has_casting .
+
+mus:P44 sh:class efrbroo:F24_Publication_Expression;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "R24 created"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:R24_created .
+
+mus:P45 sh:class ecrm:E7_Activity;
+  sh:name "P9 consists of"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P9_consists_of .
+
+mus:P46 sh:class ecrm:E52_Time-Span;
+  sh:maxCount 1;
+  sh:name "P4 has time-span"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P4_has_time-span .
+
+mus:P48 sh:name "P14 carried out by"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P14_carried_out_by .
+
+mus:P49 sh:name "U31 had function"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U31_had_function .
+
+mus:P51 skos:example "E60 Number “3”"@en;
+  sh:datatype xsd:integer;
+  sh:maxCount 1;
+  sh:name "U48 foresees quantity of actors"@en;
+  sh:nodeKind sh:Literal;
+  sh:path mus:U48_foresees_quantity_of_actors .
+
+mus:P52 sh:class mus:M23_Casting_Detail;
+  sh:minCount 1;
+  sh:name "M23 Casting Detail"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U23_has_casting_detail .
+
+mus:P54 skos:example "type = saxophone alto (MIMO)"@en;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "U2 foresees use of medium of performance"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U2_foresees_use_of_medium_of_performance .
+
+mus:P55 sh:maxCount 1;
+  sh:name "P103 was intended for"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P103_was_intended_for .
+
+mus:P56 sh:maxCount 1;
+  sh:name "U90 foresees creation or performance mode"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U90_foresees_creation_or_performance_mode .
+
+mus:P57 skos:example "E60 Number “1”"@en;
+  sh:datatype xsd:integer;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "U30 foresees quantity of mop"@en;
+  sh:nodeKind sh:Literal;
+  sh:path mus:U30_foresees_quantity_of_mop .
+
+mus:P58 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:name "P3 has note"@en;
+  sh:nodeKind sh:Literal;
+  sh:path ecrm:P3_has_note .
+
+mus:P59 sh:maxCount 1;
+  sh:name "U36 foresees responsibility"@en;
+  sh:nodeKind sh:IRI;
+  sh:path mus:U36_foresees_responsibility .
+
+mus:P61 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "label"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P63 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "label"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P65 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "label"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P67 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "label"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P69 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "label"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P71 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "label"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P73 sh:datatype xsd:string;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "P1 is identified by"@en;
+  sh:nodeKind sh:Literal;
+  sh:path rdfs:label .
+
+mus:P74 sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "P2 has type"@en;
+  sh:nodeKind sh:IRI;
+  sh:path ecrm:P2_has_type .
+
+mus:P76 sh:datatype xsd:gYear;
+  sh:maxCount 1;
+  sh:minCount 1;
+  sh:name "P4 has time-span"@en;
+  sh:nodeKind sh:Literal;
+  sh:path ecrm:P82_at_some_time_within .

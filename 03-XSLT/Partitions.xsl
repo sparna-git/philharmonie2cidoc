@@ -550,7 +550,7 @@
 		
 		<xsl:if test="$typeNotice = 'UNI:5'">
 			<ecrm:P1_is_identified_by>
-				<ecrm:E42_Identifier rdf:about="mus:URI-Identifier($idNotice,data,'ISMN',../../@type)">				
+				<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier($idNotice,data,'ISMN',../../@type)}">				
 					<rdfs:label><xsl:value-of select="data"/></rdfs:label>
 					
 				 	<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISMN" />				
