@@ -1,0 +1,34 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.philharmoniedeparis.fr/edudational-level> dct:created "2021-11-18T00:00:00.000Z"^^xsd:dateTime;
+  dct:publisher "Philharmonie de Paris";
+  dct:rights "copyright Philharmonie de Paris 2021";
+  dct:title "niveau éducatif"@en .
+
+<https://data.philharmoniedeparis.fr/educational-level/INIT> dct:created "2021-08-10"^^xsd:date;
+  owl:deprecated false;
+  skos:altLabel "Eveil"@fr;
+  skos:prefLabel "Initiation"@fr .
+
+<https://data.philharmoniedeparis.fr/educational-level/cycle-1> dct:created "2021-08-10"^^xsd:date;
+  owl:deprecated false;
+  skos:altLabel "1e année"@fr, "1e-2e années"@fr, "1e-2e-3e années"@fr, "1er cycle"@fr,
+    "1ère année"@fr, "2e année"@fr, "2e-3e années"@fr, "3e année"@fr, "3e-4e années"@fr,
+    "4e année"@fr, "débutant"@fr;
+  skos:prefLabel "1er cycle"@fr .
+
+<https://data.philharmoniedeparis.fr/educational-level/cycle-2> dct:created "2021-08-10"^^xsd:date;
+  owl:deprecated false;
+  skos:altLabel "2e cycle"@fr, "4e année"@fr, "4e-5e années"@fr, "5e année"@fr, "5e-6e années"@fr,
+    "5e-6e-7e années"@fr, "6e année"@fr, "6e-7e années"@fr, "7e année"@fr;
+  skos:prefLabel "2e cycle"@fr .
+
+<https://data.philharmoniedeparis.fr/educational-level/cycle-3> dct:created "2021-08-10"^^xsd:date;
+  owl:deprecated false;
+  skos:altLabel "10e année"@fr, "3e cycle"@fr, "7e année"@fr, "7e-8e années"@fr, "8e année"@fr,
+    "8e-9e années"@fr, "9e année"@fr;
+  skos:prefLabel "3e cycle"@fr .
