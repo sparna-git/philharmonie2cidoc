@@ -738,7 +738,7 @@
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield = '333$a']" mode="NiveauDificulte">
 		<xsl:variable name="Niveau" select="normalize-space(.)"/>
 		<xsl:if test="mus:NiveauDifficulte($Niveau)">
-			<mus:M60_Intended_Audience rdf:resource="{mus:NiveauDifficulte($Niveau)}"/>
+			<ecrm:P103_was_intended_for rdf:resource="{mus:NiveauDifficulte($Niveau)}"/>
 		</xsl:if>
 	</xsl:template>
 	
@@ -1052,6 +1052,7 @@
 				</xsl:variable>
 				
 				
+				<xsl:comment>Instrument: <xsl:value-of select="$data_instrument"/></xsl:comment>
 				<xsl:choose>
 					<xsl:when test="mus:medium($data_instrument)"><mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium($data_instrument)}"/></xsl:when>
 					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>
@@ -1090,6 +1091,7 @@
 	</xsl:template>
 	
 	
+	<!-- Casting Alternatif -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='940$x' or 
 								   @UnimarcSubfield='941$x' or
 								   @UnimarcSubfield='943$x' or
@@ -1102,11 +1104,8 @@
 								   @UnimarcSubfield='951$x' or
 								   @UnimarcSubfield='952$x' or
 								   @UnimarcSubfield='953$x' or
-								   @UnimarcSubfield='956$x']" mode="casting_alternatif">
-		
-		
-		<xsl:variable name="currentDocument" select="."/>
-		
+								   @UnimarcSubfield='956$x']" mode="casting_alternatif">		
+		<xsl:variable name="currentDocument" select="."/>		
 		
 		<xsl:variable name="idNotice" select="../../@id"/>
 		<xsl:variable name="typeNotice" select="../../@type"/>
@@ -1122,123 +1121,287 @@
 		<xsl:variable name="data_source" select="normalize-space(.)"/>
 		<xsl:variable name="data_medium" select="sparnaf:split_text($data_source)"/>
 		
-		<xsl:variable name="idSousChamp" select="concat(substring-before(@UnimarcSubfield,'$x'),'$a')"/>
-		<xsl:variable name="total_instrument" select="../SOUSCHAMP[@UnimarcSubfield=$idSousChamp]/data"/>
-		
 		<xsl:comment>:::::: Casting alternatif: Notice: <xsl:value-of select="$idNotice"/>, Input: <xsl:value-of select="$data_source"/></xsl:comment>
 		<xsl:comment>Split: <xsl:value-of select="sparnaf:split_text($data_source)"/></xsl:comment>
+		
+		
 		
 		<xsl:if test="$data_medium and $data_medium != '0'">
 			<xsl:for-each select="$data_medium">
 				<xsl:variable name="source_alternatif" select="normalize-space(.)"/>
 				<!-- Generation d'id -->
 				<xsl:variable name="id" select="generate-id()"/>
-				<xsl:variable name="idCastingAlternatif" select="generate-id()"/>
+				<xsl:variable name="idCastingAlternatif" select="position()"/>
 				
 				<xsl:comment>Medium Alternatif: <xsl:value-of select="$source_alternatif"/></xsl:comment>
 				
 				<mus:U13_has_casting>
 					<mus:M6_Casting rdf:about="{mus:URI-Casting($idNotice,$idCastingAlternatif,$typeNotice,$idNoticeMere)}">
-						
-						
-						<!-- repeter les casting detail de $a -->
-						<!-- Casting Detail Simple -->
-						<xsl:apply-templates select="$currentDocument/../../champs[(@UnimarcTag='940' and SOUSCHAMP[@UnimarcSubfield='940$a']) or
-																				   (@UnimarcTag='941' and SOUSCHAMP[@UnimarcSubfield='941$a']) or
-																				   (@UnimarcTag='942' and SOUSCHAMP[@UnimarcSubfield='942$a']) or
-																				   (@UnimarcTag='943' and SOUSCHAMP[@UnimarcSubfield='943$a']) or
-																				   (@UnimarcTag='945' and SOUSCHAMP[@UnimarcSubfield='945$a']) or
-																				   (@UnimarcTag='946' and SOUSCHAMP[@UnimarcSubfield='946$a']) or
-																				   (@UnimarcTag='947' and SOUSCHAMP[@UnimarcSubfield='947$a']) or
-																				   (@UnimarcTag='948' and SOUSCHAMP[@UnimarcSubfield='948$a']) or
-																				   (@UnimarcTag='949' and SOUSCHAMP[@UnimarcSubfield='949$a']) or
-																				   (@UnimarcTag='950' and SOUSCHAMP[@UnimarcSubfield='950$a']) or
-																				   (@UnimarcTag='951' and SOUSCHAMP[@UnimarcSubfield='951$a']) or
-																				   (@UnimarcTag='952' and SOUSCHAMP[@UnimarcSubfield='952$a']) or
-																				   (@UnimarcTag='953' and SOUSCHAMP[@UnimarcSubfield='953$a']) or
-																				   (@UnimarcTag='956' and SOUSCHAMP[@UnimarcSubfield='956$a'])
+					
+						<!-- Afficher l'instrument pour le casting alternatif 
+						<xsl:apply-templates select="$currentDocument/../../champs[(@UnimarcTag='940' and (SOUSCHAMP[@UnimarcSubfield='940$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='941' and (SOUSCHAMP[@UnimarcSubfield='941$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='942' and (SOUSCHAMP[@UnimarcSubfield='942$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='943' and (SOUSCHAMP[@UnimarcSubfield='943$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='945' and (SOUSCHAMP[@UnimarcSubfield='945$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='946' and (SOUSCHAMP[@UnimarcSubfield='946$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='947' and (SOUSCHAMP[@UnimarcSubfield='947$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='948' and (SOUSCHAMP[@UnimarcSubfield='948$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='949' and (SOUSCHAMP[@UnimarcSubfield='949$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='950' and (SOUSCHAMP[@UnimarcSubfield='950$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='951' and (SOUSCHAMP[@UnimarcSubfield='951$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='952' and (SOUSCHAMP[@UnimarcSubfield='952$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='953' and (SOUSCHAMP[@UnimarcSubfield='953$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif))) or
+																				   (@UnimarcTag='956' and (SOUSCHAMP[@UnimarcSubfield='956$a']/lower-case(translate(normalize-space(substring-before(data,'(')),'_',' ')) = lower-case($source_alternatif)))
 																					]" mode="casting_detail">
 							<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
 						</xsl:apply-templates>
-						
-						
-						<!-- Casting detail pour chaque note  -->
-						<xsl:choose>
-							<xsl:when test="contains($source_alternatif,',')">
-								<xsl:for-each select="tokenize($source_alternatif,',')">
-									<mus:U23_has_casting_detail>
-										<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCastingAlternatif,$id,$typeNotice,$idNoticeMere)}">
-								
-											
-											<xsl:variable name="data" select="normalize-space(.)"/>
-											<xsl:comment>Medium: <xsl:value-of select="$data"/></xsl:comment>
-											
-											<xsl:if test="mus:medium(normalize-space($data))">
-												<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium(normalize-space($data))}"/>
-												
-												<xsl:variable name="quantity_value">
-													<xsl:for-each select="$total_instrument">										
-														<xsl:variable name="trouve_medium" select="normalize-space(.)"/>
-														<xsl:if test="normalize-space(substring-before($trouve_medium,'('))=$data">
-															<xsl:value-of select="substring-before(substring-after($trouve_medium,'('),')')"/>
-														</xsl:if>											
-													</xsl:for-each>
-												</xsl:variable>
-											
-												<xsl:choose>
-													<xsl:when test="string-length($quantity_value) &gt; 0">
-														<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="$quantity_value"/></mus:U30_foresees_quantity_of_mop>
-													</xsl:when>
-													<xsl:otherwise>
-														<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
-													</xsl:otherwise>
-												</xsl:choose>												
-											</xsl:if>
-											
-										</mus:M23_Casting_Detail>
-									</mus:U23_has_casting_detail>		
-								</xsl:for-each>	
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:if test="mus:medium(normalize-space($source_alternatif))">
-									<mus:U23_has_casting_detail>
-										<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCastingAlternatif,$id,$typeNotice,$idNoticeMere)}">
-											<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium(normalize-space($source_alternatif))}"/>
-											
-											
-											<xsl:variable name="quantity_value">
-													<xsl:for-each select="$total_instrument">										
-														<xsl:variable name="trouve_medium" select="normalize-space(.)"/>
-														<xsl:if test="normalize-space(substring-before($trouve_medium,'('))=$source_alternatif">
-															<xsl:value-of select="substring-before(substring-after($trouve_medium,'('),')')"/>
-														</xsl:if>											
-													</xsl:for-each>
-												</xsl:variable>
-											
-												<xsl:choose>
-													<xsl:when test="string-length($quantity_value) &gt; 0">
-														<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="$quantity_value"/></mus:U30_foresees_quantity_of_mop>
-													</xsl:when>
-													<xsl:otherwise>
-														<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
-													</xsl:otherwise>
-												</xsl:choose>
-											
-										</mus:M23_Casting_Detail>
-									</mus:U23_has_casting_detail>	
-								</xsl:if>
-							</xsl:otherwise>
-						</xsl:choose>
+						-->
+						<!-- 940 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 941 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='941']/SOUSCHAMP[@UnimarcSubfield='941$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='941']/SOUSCHAMP[@UnimarcSubfield='941$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 942 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 943 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='943']/SOUSCHAMP[@UnimarcSubfield='943$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='943']/SOUSCHAMP[@UnimarcSubfield='943$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 945 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='945']/SOUSCHAMP[@UnimarcSubfield='945$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='945']/SOUSCHAMP[@UnimarcSubfield='945$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 946 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='946']/SOUSCHAMP[@UnimarcSubfield='946$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='946']/SOUSCHAMP[@UnimarcSubfield='946$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 947 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='947']/SOUSCHAMP[@UnimarcSubfield='947$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='947']/SOUSCHAMP[@UnimarcSubfield='947$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 948 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='948']/SOUSCHAMP[@UnimarcSubfield='948$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='948']/SOUSCHAMP[@UnimarcSubfield='948$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 949 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='949']/SOUSCHAMP[@UnimarcSubfield='949$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='949']/SOUSCHAMP[@UnimarcSubfield='949$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 950 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='950']/SOUSCHAMP[@UnimarcSubfield='950$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:message><xsl:value-of select="$data_originale"/></xsl:message>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:message>Output: <xsl:value-of select="$data_originale"/></xsl:message>
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='950']/SOUSCHAMP[@UnimarcSubfield='950$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 951 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='951']/SOUSCHAMP[@UnimarcSubfield='951$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='951']/SOUSCHAMP[@UnimarcSubfield='951$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 952 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='952']/SOUSCHAMP[@UnimarcSubfield='952$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='952']/SOUSCHAMP[@UnimarcSubfield='952$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 953 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='953']/SOUSCHAMP[@UnimarcSubfield='953$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='953']/SOUSCHAMP[@UnimarcSubfield='953$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
+						<!-- 956 -->
+						<xsl:for-each select="$currentDocument/../../champs[@UnimarcTag='956']/SOUSCHAMP[@UnimarcSubfield='956$a']/data">
+							<xsl:variable name="data_originale" select="."/>
+							<xsl:variable name="data_transformer" select="lower-case(translate(normalize-space(substring-before($data_originale,'(')),'_',' '))"/>
+							<xsl:variable name="trouve_instrument_note">
+								<xsl:for-each select="$data_medium">
+									<xsl:if test="$data_transformer = lower-case(normalize-space(.)) and lower-case(normalize-space(.)) != lower-case($source_alternatif)">
+										<xsl:value-of select="1"/>										
+									</xsl:if>
+								</xsl:for-each>
+							</xsl:variable>
+							<xsl:if test="$trouve_instrument_note != '1'">
+								<xsl:apply-templates select="$currentDocument/../../champs[@UnimarcTag='956']/SOUSCHAMP[@UnimarcSubfield='956$a']/self::*[data = $data_originale]" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$idCastingAlternatif"/>
+								</xsl:apply-templates>
+							</xsl:if>
+						</xsl:for-each>
 						
 					</mus:M6_Casting>
 				</mus:U13_has_casting>
 			</xsl:for-each>
 		</xsl:if>
-		
-		
-		
-		
-		
 	</xsl:template>
 	
 	

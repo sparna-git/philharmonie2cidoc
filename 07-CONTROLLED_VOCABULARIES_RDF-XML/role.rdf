@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:schema="http://schema.org/"
+	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+	xmlns:skosthes="http://purl.org/iso25964/skos-thes#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:qb="http://purl.org/linked-data/cube#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:sh="http://www.w3.org/ns/shacl#"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+<skos:ConceptScheme rdf:about="http://data.bnf.fr/vocabulary/roles">
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/120"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/140"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/150"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/190"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/210"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/212"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/236"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/240"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/250"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/290"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/300"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/305"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/330"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/360"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/390"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/40"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/410"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/420"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/450"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/460"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/490"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/50"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/500"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/530"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/540"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/545"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/550"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/560"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/570"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/60"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/620"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/640"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/65"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/651"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/660"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/665"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/675"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/710"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/72"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/723"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/727"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/740"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/760"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/770"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/780"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/790"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/800"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/90"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m01"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m05"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m13"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m17"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m21"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m25"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m29"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m37"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m45"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m53"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m57"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m61"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m65"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m77"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m81"/>
+	<skos:hasTopConcept rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m86"/>
+</skos:ConceptScheme>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/120">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">120</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dessinateur de la reliure</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/140">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">140</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dessinateur de la jaquette</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/150">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">150</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dessinateur de l'ex-libris</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/190">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">190</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">censeur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/210">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">210</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commentateur en audiovisuel</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/212">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">212</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commentateur de texte écrit</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/236">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">236</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compositeur de l'oeuvre principale</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/240">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">240</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compositeur typographe</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/250">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">250</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chef d'orchestre ou de choeur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/290">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">290</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auteur de la dédicace</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/300">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">300</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">réalisateur de film, metteur en scène</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/305">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">305</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctorant</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/330">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">330</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auteur prétendu</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/360">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">360</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aquafortiste</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/390">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">390</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">propriétaire précédent</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/40">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">40</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interprète principal</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/410">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">410</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dessinateur sur ordinateur, technicien graphique</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/420">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">420</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">personne honorée</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/450">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">450</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signataire de la présentation</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/460">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">460</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">personne interviewée</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/490">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">490</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">titulaire des droits (premier détenteur)</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/50">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">50</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cessionnaire de droits</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/500">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">500</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concesseur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/530">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">530</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graveur sur métal</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/540">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">540</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contrôleur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/545">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">545</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musicien</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/550">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">550</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrateur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/560">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">560</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">créateur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/570">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">570</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autres</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/60">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">60</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nom associé</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/620">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">620</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imprimeur de gravures</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/640">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">640</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">correcteur d'épreuves</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/65">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">65</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commissaire-priseur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/651">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">651</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">directeur de publication</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/660">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">660</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destinataire</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/665">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">665</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">producteur de disque</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/675">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">675</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">critique</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/710">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">710</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attaché de presse, rédacteur, secrétaire</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/72">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">72</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auteur de citation</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/723">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">723</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commanditaire</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/727">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">727</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">directeur de thèse</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/740">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">740</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dessinateur de caractères d'imprimerie</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/760">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">760</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graveur sur bois</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/770">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">770</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auteur du matériel d'accompagnement</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/780">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">780</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acteur,exécutant</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/790">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">790</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conférencier</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/800">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">800</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intervenant</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/90">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">90</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auteur du script, du dialogue</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m01">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m01</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bibliographie</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m05">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m05</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cadences</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m13">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m13</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coups d'archet</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m17">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m17</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Directeur d'études</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m21">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m21</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Directeur de publication</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m25">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m25</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documentation</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m29">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m29</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doigtés</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m37">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m37</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indications pédales</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m45">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m45</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notateur</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m53">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m53</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ornementation</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m57">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m57</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Registration</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m61">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m61</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Réalisation (musique)</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m65">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m65</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Réalisation de la basse continue</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m77">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m77</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Révision</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m81">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m81</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tablatures</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m86">
+	<skos:inScheme rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+	<skos:notation rdf:datatype="https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie">m86</skos:notation>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatique musicale</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://data.bnf.fr/vocabulary/roles"/>
+</skos:Concept>
+
+</rdf:RDF>

@@ -22,9 +22,9 @@
 	<!-- Call sources files RDF -->
 	<xsl:param name="SHARED_RDF_DIR">../07-CONTROLLED_VOCABULARIES_RDF-XML</xsl:param>
 	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />
-	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mop-mimo.rdf'))/rdf:RDF" />
-	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mop-iaml.rdf'))/rdf:RDF" />
-	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'databnf_role_avec-alignement-philharmonie.rdf'))/rdf:RDF" />
+	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF" />
+	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF" />
+	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF" />
 	
 	<!-- URIS Class -->
 
@@ -587,7 +587,7 @@
 	<xsl:function name="mus:NiveauDifficulte">
 		<xsl:param name="idText"/>
 		<xsl:variable name="inputNiveau" select="normalize-space(substring-before(substring-after($idText,'Niveau '),' dans'))"/>
-		<xsl:variable name="match_niveau" select="$Niveau_difficulte/skos:Concept[skos:altLabel=$inputNiveau]/@rdf:about"/>
+		<xsl:variable name="match_niveau" select="$Niveau_difficulte/skos:Concept[skos:altLabel[xml:lang='fr']=$inputNiveau]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($match_niveau) = 1">
 				<xsl:value-of select="$match_niveau"/>
@@ -688,10 +688,13 @@
 		<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($mot_medium)"/>
 		<xsl:variable name="iaml_medium_simple" select="mus:iaml_vocabulary_simple($mot_medium)"/>
 		<xsl:choose>
-			<xsl:when test="$mimo_medium_simple">
+			<xsl:when test="$mimo_medium_simple and $iaml_medium_simple">
 				<xsl:value-of select="$mimo_medium_simple"/>
 			</xsl:when>
-			<xsl:when test="$iaml_medium_simple">
+			<xsl:when test="$mimo_medium_simple and not($iaml_medium_simple)">
+				<xsl:value-of select="$mimo_medium_simple"/>
+			</xsl:when>
+			<xsl:when test="not($mimo_medium_simple) and $iaml_medium_simple">
 				<xsl:value-of select="$iaml_medium_simple"/>
 			</xsl:when>
 			<xsl:otherwise>
@@ -702,7 +705,7 @@
 	
 	<xsl:function name="mus:mimo_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="mimo_resultat" select="$mimo_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
+		<xsl:variable name="mimo_resultat" select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($mimo_resultat) = 1"><xsl:value-of select="$mimo_resultat"/></xsl:when>
 			<xsl:when test="count($mimo_resultat) &gt; 1">
@@ -714,7 +717,21 @@
 	
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
+		<!--  
 		<xsl:variable name="ialm_resultat" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument or skos:prefLabel[@xml:lang='fr']=normalize-space(tokenize($mots_instrument,' ')[1])]/@rdf:about"/>
+		-->
+		<xsl:variable name="ialm_resultat">
+			<xsl:choose>
+				<xsl:when test="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]">
+					<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
+				</xsl:when>
+				<!--  
+				<xsl:when test="not($iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]) and $iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=normalize-space(tokenize($mots_instrument,' ')[1])]">
+					<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=normalize-space(tokenize($mots_instrument,' ')[1])]/@rdf:about"/>
+				</xsl:when>
+				-->
+			</xsl:choose>
+		</xsl:variable>	
 		<xsl:choose>
 			<xsl:when test="count($ialm_resultat) = 1"><xsl:value-of select="$ialm_resultat"/></xsl:when>
 			<xsl:when test="count($ialm_resultat) &gt; 1">
@@ -729,55 +746,49 @@
 	<!-- funtion utilisé par le casting alternatif -->
 	<xsl:function name="sparnaf:split_text">
 		<xsl:param name="text"/>
-		<xsl:choose>
-			<xsl:when test="(contains($text,'ou ') and not(contains($text,' et ')))">
-				<xsl:variable name="npositionWord" select="index-of(tokenize($text,' '),'ou')"/>
+		<xsl:variable name="text_clean" select="translate($text,',.()','')"/>
+		<xsl:if test="contains($text_clean,' ou ') and (index-of(tokenize($text_clean,' '),'ou') &gt; 1)">
+			<xsl:for-each select="tokenize($text_clean,' ou ')">
+				<xsl:variable name="instrument" select="normalize-space(.)"/>
 				<xsl:choose>
-					<xsl:when test="$npositionWord = 1">
-						<xsl:value-of select="0"/>
+					<xsl:when test="string-length(mus:medium(lower-case($instrument))) &gt; 1">
+						<xsl:value-of select="$instrument"/>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:for-each select="tokenize($text,'ou ')">
-							<xsl:variable name="mots" select="normalize-space(.)"/>
-							<xsl:choose>
-								<xsl:when test="contains($mots,'(') or contains($mots,')')">
-									<xsl:message>Le mots n'est pas valide pour le traiter: <xsl:value-of select="$mots"/></xsl:message>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="."/>											
-								</xsl:otherwise>
-							</xsl:choose>
-						</xsl:for-each>
-					</xsl:otherwise>
-				</xsl:choose>				
-			</xsl:when>
-			<xsl:when test="(contains($text,'ou ') and contains($text,' et '))">
-				<xsl:variable name="npositionWord" select="index-of(tokenize($text,' '),'ou')"/>
-				<xsl:choose>
-					<xsl:when test="$npositionWord = 1">
-						<xsl:value-of select="0"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:variable name="var_list_avant_Et" select="substring-before($text,' et ')"/>
-						<xsl:variable name="var_list_apres_Et" select="substring-after($text,' et ')"/>
-						<xsl:for-each select="tokenize($var_list_avant_Et,' ou ')">
-							<xsl:variable name="source" select="normalize-space(.)"/>
-							<xsl:choose>
-								<xsl:when test="contains($var_list_apres_Et,' ou ')">
-									<xsl:for-each select="tokenize($var_list_apres_Et,' ou ')">
-										<xsl:variable name="instrument_relation" select="normalize-space(.)"/>
-										<xsl:value-of select="concat($source,',',$instrument_relation)"/>																		
-									</xsl:for-each>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="concat($source,',',$var_list_apres_Et)"/>
-								</xsl:otherwise>
-							</xsl:choose>						
-						</xsl:for-each>
+						<xsl:variable name="split2">
+							<xsl:for-each select="tokenize($instrument,' ')">
+								<xsl:variable name="instrument_split_space" select="."/>
+								<xsl:variable name="existe_catalogo" select="mus:medium(lower-case($instrument_split_space))"/>
+								<xsl:if test="string-length($existe_catalogo) &gt; 0">
+									<xsl:value-of select="$instrument_split_space"/>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:variable>
+						<xsl:if test="$split2">
+							<xsl:value-of select="$split2"/>
+						</xsl:if>
 					</xsl:otherwise>
 				</xsl:choose>
-			</xsl:when>
-		</xsl:choose>		
+			</xsl:for-each>
+		</xsl:if>
+		<!--  
+		<xsl:choose>
+			<xsl:when test="contains($text_clean,' ou ')">
+				<xsl:variable name="npositionWord" select="index-of(tokenize($text_clean,' '),'ou')"/>
+				<xsl:choose>
+					<xsl:when test="$npositionWord = 1">
+						<xsl:value-of select="0"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:for-each select="tokenize($text_clean,' ou ')">
+							<xsl:variable name="mots" select="normalize-space(.)"/>
+							<xsl:value-of select="$mots"/>
+						</xsl:for-each>											
+					</xsl:otherwise>
+				</xsl:choose>				
+			</xsl:when>			
+		</xsl:choose>
+		-->		
 	</xsl:function>
 	
 	
