@@ -5,14 +5,17 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:phil="https://data.philharmoniedeparis.fr/"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-<rdf:Description rdf:about="https://data.philharmoniedeparis.fr/educational-level/INIT">
+<skos:Concept rdf:about="https://data.philharmoniedeparis.fr/educational-level/INIT">
 	<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-08-10</dct:created>
 	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
 	<skos:altLabel xml:lang="fr">Eveil</skos:altLabel>
+	<skos:inScheme rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
 	<skos:prefLabel xml:lang="fr">Initiation</skos:prefLabel>
-</rdf:Description>
-<rdf:Description rdf:about="https://data.philharmoniedeparis.fr/educational-level/cycle-1">
+	<skos:topConceptOf rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://data.philharmoniedeparis.fr/educational-level/cycle-1">
 	<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-08-10</dct:created>
 	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
 	<skos:altLabel xml:lang="fr">1e année</skos:altLabel>
@@ -26,9 +29,11 @@
 	<skos:altLabel xml:lang="fr">3e-4e années</skos:altLabel>
 	<skos:altLabel xml:lang="fr">4e année</skos:altLabel>
 	<skos:altLabel xml:lang="fr">débutant</skos:altLabel>
+	<skos:inScheme rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
 	<skos:prefLabel xml:lang="fr">1er cycle</skos:prefLabel>
-</rdf:Description>
-<rdf:Description rdf:about="https://data.philharmoniedeparis.fr/educational-level/cycle-2">
+	<skos:topConceptOf rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://data.philharmoniedeparis.fr/educational-level/cycle-2">
 	<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-08-10</dct:created>
 	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
 	<skos:altLabel xml:lang="fr">2e cycle</skos:altLabel>
@@ -40,9 +45,11 @@
 	<skos:altLabel xml:lang="fr">6e année</skos:altLabel>
 	<skos:altLabel xml:lang="fr">6e-7e années</skos:altLabel>
 	<skos:altLabel xml:lang="fr">7e année</skos:altLabel>
+	<skos:inScheme rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
 	<skos:prefLabel xml:lang="fr">2e cycle</skos:prefLabel>
-</rdf:Description>
-<rdf:Description rdf:about="https://data.philharmoniedeparis.fr/educational-level/cycle-3">
+	<skos:topConceptOf rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://data.philharmoniedeparis.fr/educational-level/cycle-3">
 	<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-08-10</dct:created>
 	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:deprecated>
 	<skos:altLabel xml:lang="fr">10e année</skos:altLabel>
@@ -52,13 +59,20 @@
 	<skos:altLabel xml:lang="fr">8e année</skos:altLabel>
 	<skos:altLabel xml:lang="fr">8e-9e années</skos:altLabel>
 	<skos:altLabel xml:lang="fr">9e année</skos:altLabel>
+	<skos:inScheme rdf:resource="https://data.philharmoniedeparis.fr/edudational-level"/>
 	<skos:prefLabel xml:lang="fr">3e cycle</skos:prefLabel>
-</rdf:Description>
-<rdf:Description rdf:about="https://data.philharmoniedeparis.fr/edudational-level">
-	<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-18T00:00:00.000Z</dct:created>
-	<dct:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philharmonie de Paris</dct:publisher>
-	<dct:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copyright Philharmonie de Paris 2021</dct:rights>
-	<dct:title xml:lang="en">niveau éducatif</dct:title>
-</rdf:Description>
+	<skos:topConceptOf>
+		<skos:ConceptScheme rdf:about="https://data.philharmoniedeparis.fr/edudational-level">
+			<dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-11-18T00:00:00.000Z</dct:created>
+			<dct:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philharmonie de Paris</dct:publisher>
+			<dct:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copyright Philharmonie de Paris 2021</dct:rights>
+			<dct:title xml:lang="en">niveau éducatif</dct:title>
+			<skos:hasTopConcept rdf:resource="https://data.philharmoniedeparis.fr/educational-level/INIT"/>
+			<skos:hasTopConcept rdf:resource="https://data.philharmoniedeparis.fr/educational-level/cycle-1"/>
+			<skos:hasTopConcept rdf:resource="https://data.philharmoniedeparis.fr/educational-level/cycle-2"/>
+			<skos:hasTopConcept rdf:resource="https://data.philharmoniedeparis.fr/educational-level/cycle-3"/>
+		</skos:ConceptScheme>
+	</skos:topConceptOf>
+</skos:Concept>
 
 </rdf:RDF>

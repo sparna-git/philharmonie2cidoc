@@ -2500,7 +2500,7 @@ skos:prefLabel "bass trombone"@en,
     skos:altLabel "bigornia"@es,
         "yunke"@es,
         "amboss"@de,
-        "ambosse"@de;
+        "ambosse"@de ;
     skos:broader <http://data.doremus.org/vocabulary/iaml/mop/p> ;
     skos:editorialNote "English term is preferred globally." ;
     skos:exactMatch <http://iflastandards.info/ns/unimarc/terms/mop/pan> ;
@@ -5081,7 +5081,7 @@ skos:prefLabel "bass trombone"@en,
     skos:exactMatch <http://iflastandards.info/ns/unimarc/terms/mop/tsi> ;
     skos:inScheme <http://data.doremus.org/vocabulary/iaml/mop/> ;
     skos:definition "Large, fretted long-necked lute" ;
-    skos:altLabel "sitar"@en;
+    skos:altLabel "sitar"@en ;
     skos:prefLabel "sitār"@en,
         "sitar"@fi,
         "sitar"@sv,

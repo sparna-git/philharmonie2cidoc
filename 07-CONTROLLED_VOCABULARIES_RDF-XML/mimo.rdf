@@ -3,9 +3,9 @@
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:xml="http://www.w3.org/XML/1998/namespace"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:phil="https://data.philharmoniedeparis.fr/"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 <skos:ConceptScheme rdf:about="http://www.mimo-db.eu/InstrumentsKeywords#">
 	<skos:hasTopConcept rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/2354"/>
@@ -46183,7 +46183,7 @@
 	<skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligawa</skos:altLabel>
 	<skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legawa</skos:altLabel>
 	<skos:broader rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/4116"/>
-	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A kind of horn (conical profile), made from a branch that is cut along in two halves, then each is hollowed, and finally both are put back together with the help of pitch and&#xD;
+	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A kind of horn (conical profile), made from a branch that is cut along in two halves, then each is hollowed, and finally both are put back together with the help of pitch and&#xD;
 			metal hoops; formerly used as a signal instrument (mainly in herding); since 19th c. used during Advent and watchnight service on Christmas Eve (mainly in north-east and east regions of&#xD;
 			Poland); nowadays as part of folk revival</skos:definition>
 	<skos:exactMatch rdf:resource="http://www.mimo-db.eu/HornbostelAndSachs/347"/>
@@ -46193,7 +46193,7 @@
 <skos:Concept rdf:about="http://www.mimo-db.eu/InstrumentsKeywords/8388">
 	<skos:broader rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/4370"/>
 	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A kind of trumpet (straight labrosone) with a conical profile, made from a trunk of a young tree that is cut along in two halves, then each is hollowed, and finally both are&#xD;
-			put back together with the help of pitch; formerly used for apotropaic purposes (while making the ritual uproar) and signalling (shepherds, fishermen, firefighters, to signal the beginning&#xD;
+			put back together with the help of pitch; formerly used for apotropaic purposes (while making the ritual uproar) and signalling (shepherds, fishermen, firefighters, to signal the beginning&#xD;
 			of rituals and ceremonies); nowadays as part of folk revival; a symbol of Cassubians' ethnic identity (Kaszuby, the region of Poland)</skos:definition>
 	<skos:exactMatch rdf:resource="http://www.mimo-db.eu/HornbostelAndSachs/344"/>
 	<skos:inScheme rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords#"/>
@@ -46202,7 +46202,7 @@
 <skos:Concept rdf:about="http://www.mimo-db.eu/InstrumentsKeywords/8389">
 	<skos:broader rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/3745"/>
 	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A polish bagpipe from Podhale region. A mouth blown instrument; four voices; has a short triple chanter-drone pipe (5+1 fingerholes) and a long drone pipe ending in a&#xD;
-			hyperbolic bell (of a clarinet type); all pipes with cylindrical bores; bag made from a goat's whole skin; formerly played solo (by shepherds, wandering musicians), nowadays in folk&#xD;
+			hyperbolic bell (of a clarinet type); all pipes with cylindrical bores; bag made from a goat's whole skin; formerly played solo (by shepherds, wandering musicians), nowadays in folk&#xD;
 			revival, sometimes included in Podhale bands. The ability to build and play the Podhale bagpipe, or goat, were included on the National List of Intangible Cultural&#xD;
 			Heritage</skos:definition>
 	<skos:inScheme rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords#"/>
@@ -46213,7 +46213,7 @@
 	<skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kozioł biały</skos:altLabel>
 	<skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dudy wielkopolskie</skos:altLabel>
 	<skos:broader rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/3745"/>
-	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bagpipe with 16th c. roots; the biggest of Polish bagpipes with the lowest tuning and an elegiac sound; traditional element of folk bands in west Greater Poland (along with&#xD;
+	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bagpipe with 16th c. roots; the biggest of Polish bagpipes with the lowest tuning and an elegiac sound; traditional element of folk bands in west Greater Poland (along with&#xD;
 			violins and, after World War I, an E-flat clarinet)</skos:definition>
 	<skos:exactMatch rdf:resource="http://www.mimo-db.eu/HornbostelAndSachs/326"/>
 	<skos:inScheme rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords#"/>
@@ -46295,7 +46295,7 @@
 	<skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angkuoch</skos:altLabel>
 	<skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angkuoc</skos:altLabel>
 	<skos:broader rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/2861"/>
-	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guimbarde originaire du Cambodge. Il en existe deux sortes : la première, en métal, possède une languette hétéroglotte alourdie à son extrémité par une boule de cire. La&#xD;
+	<skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guimbarde originaire du Cambodge. Il en existe deux sortes : la première, en métal, possède une languette hétéroglotte alourdie à son extrémité par une boule de cire. La&#xD;
 			deuxième, fabriquée en bambou, a une languette idioglotte</skos:definition>
 	<skos:inScheme rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords#"/>
 	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankuoc</skos:prefLabel>

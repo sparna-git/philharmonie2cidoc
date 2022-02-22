@@ -203,10 +203,10 @@
 		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
 	</xsl:function>
 	
-	<!-- URI Collectivité ? Valider-->
+	<!-- URI Collectivité -->
 	<xsl:function name="mus:reference_collectivite">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('http://data.phlharmonie/AIC2/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
 	</xsl:function>
 	
 	<xsl:function name="mus:role_vocab">
@@ -312,21 +312,22 @@
 				<xsl:variable name="Balise_u" select="concat($idBalise,'$','u')"/>
 				<xsl:choose>					
 					<xsl:when test="$Count = 1">
-						<xsl:variable name="oeuvre_data_a"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_c"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]/data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_a"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_c"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]/normalize-space(data)"/></xsl:if></xsl:variable>
 						
-						<xsl:variable name="oeuvre_data_g"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]/data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_g"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]/normalize-space(data)"/></xsl:if></xsl:variable>
 							
-						<xsl:variable name="oeuvre_data_h"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_i"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]/data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_h"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_i"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]/normalize-space(data)"/></xsl:if></xsl:variable>
 						
-						<xsl:variable name="oeuvre_data_k"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_k]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_k]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_n"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_p"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_q"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_r"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_t"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]/data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_u"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]"><xsl:value-of select="normalize-space($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]/data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_k"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_k]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_k]/data"/></xsl:if></xsl:variable>
+						
+						<xsl:variable name="oeuvre_data_n"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_p"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_q"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_r"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_t"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_u"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]/normalize-space(data)"/></xsl:if></xsl:variable>
 							 
 						<xsl:choose>
 							<!-- Données : 
@@ -586,8 +587,8 @@
 	
 	<xsl:function name="mus:NiveauDifficulte">
 		<xsl:param name="idText"/>
-		<xsl:variable name="inputNiveau" select="normalize-space(substring-before(substring-after($idText,'Niveau '),' dans'))"/>
-		<xsl:variable name="match_niveau" select="$Niveau_difficulte/skos:Concept[skos:altLabel[xml:lang='fr']=$inputNiveau]/@rdf:about"/>
+		<xsl:variable name="inputNiveau" select="normalize-space(substring-after(substring-before($idText,' dans'),'Niveau '))"/>
+		<xsl:variable name="match_niveau" select="$Niveau_difficulte/skos:Concept[skos:altLabel=$inputNiveau]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($match_niveau) = 1">
 				<xsl:value-of select="$match_niveau"/>
@@ -717,21 +718,7 @@
 	
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<!--  
-		<xsl:variable name="ialm_resultat" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument or skos:prefLabel[@xml:lang='fr']=normalize-space(tokenize($mots_instrument,' ')[1])]/@rdf:about"/>
-		-->
-		<xsl:variable name="ialm_resultat">
-			<xsl:choose>
-				<xsl:when test="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]">
-					<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
-				</xsl:when>
-				<!--  
-				<xsl:when test="not($iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]) and $iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=normalize-space(tokenize($mots_instrument,' ')[1])]">
-					<xsl:value-of select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=normalize-space(tokenize($mots_instrument,' ')[1])]/@rdf:about"/>
-				</xsl:when>
-				-->
-			</xsl:choose>
-		</xsl:variable>	
+		<xsl:variable name="ialm_resultat" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>		
 		<xsl:choose>
 			<xsl:when test="count($ialm_resultat) = 1"><xsl:value-of select="$ialm_resultat"/></xsl:when>
 			<xsl:when test="count($ialm_resultat) &gt; 1">
@@ -741,7 +728,40 @@
 		</xsl:choose>
 	</xsl:function>
 	
-	
+	<xsl:function name="mus:chercher_medium_complex">
+		<xsl:param name="mots_medium"/>
+		<xsl:variable name="mot_medium">
+			<xsl:choose>
+				<xsl:when test="contains($mots_medium,'_')">
+					<xsl:value-of select="normalize-space(translate($mots_medium,'_',' '))"/>										
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="normalize-space($mots_medium)"/>
+				</xsl:otherwise>
+			</xsl:choose>		
+		</xsl:variable>
+		
+		<!-- Mimo -->
+		<xsl:variable name="mimo_vocabulary" select="$mimo_vocab/skos:Concept[lower-case(skos:prefLabel[@xml:lang='fr'])=tokenize($mot_medium,' ')[1]]/@rdf:about"/>
+		
+		<!-- ialm -->
+		<xsl:variable name="iaml_vocabulary" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=tokenize($mot_medium,' ')[1]]/@rdf:about"/>
+		
+		<xsl:choose>
+			<xsl:when test="$mimo_vocabulary and $iaml_vocabulary">
+				<xsl:value-of select="$mimo_vocabulary[1]"/>
+			</xsl:when>
+			<xsl:when test="$mimo_vocabulary and $iaml_vocabulary=''">
+				<xsl:value-of select="$mimo_vocabulary[1]"/>
+			</xsl:when>
+			<xsl:when test="$mimo_vocabulary='' and $iaml_vocabulary!=''">
+				<xsl:value-of select="$iaml_vocabulary[1]"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:message>Le medium : <xsl:value-of select="$mots_medium"/> ,ne se trouve pas dans l'information de vocabularie mimo ou iaml. </xsl:message>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:function>
 	
 	<!-- funtion utilisé par le casting alternatif -->
 	<xsl:function name="sparnaf:split_text">
@@ -770,25 +790,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
-		</xsl:if>
-		<!--  
-		<xsl:choose>
-			<xsl:when test="contains($text_clean,' ou ')">
-				<xsl:variable name="npositionWord" select="index-of(tokenize($text_clean,' '),'ou')"/>
-				<xsl:choose>
-					<xsl:when test="$npositionWord = 1">
-						<xsl:value-of select="0"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:for-each select="tokenize($text_clean,' ou ')">
-							<xsl:variable name="mots" select="normalize-space(.)"/>
-							<xsl:value-of select="$mots"/>
-						</xsl:for-each>											
-					</xsl:otherwise>
-				</xsl:choose>				
-			</xsl:when>			
-		</xsl:choose>
-		-->		
+		</xsl:if>		
 	</xsl:function>
 	
 	
