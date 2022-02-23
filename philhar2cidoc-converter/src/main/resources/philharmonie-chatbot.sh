@@ -37,7 +37,7 @@ do
 	
 	VOC_NAME=$(basename $d .ttl)
 	
-	# java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize --input $d -o $DIR_VOCABULARIES/$VOC_NAME.rdf
+	java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize --input $d -o $DIR_VOCABULARIES/$VOC_NAME.rdf
 done
 
 
@@ -57,8 +57,10 @@ do
 	java -Xmx2048M -jar saxon-he-10.1.jar \
 		-s:$DIR_PARTITIONS_SOURCE/$FILENAME.xml \
 		-xsl:$XSLT_DIR/Partitions.xsl \
-		-o:$OUTPUT_FOLDER/$FILENAME.rdf >> $LOG_FOLDER/philharmonie_chatbot.tsv 2>&1
+		-o:$OUTPUT_FOLDER/$FILENAME.rdf > $LOG_FOLDER/philharmonie_chatbot.log 2>&1
 
 done
 
-echo "Step 1 - Converting xml file to rdf file" $start_xml_rdf "-" $end_xml_rdf
+export end_xml_rdf="$(date +"%r")"
+
+echo "Step 1 - Converting xml file to rdf file from " $start_xml_rdf " to " $end_xml_rdf

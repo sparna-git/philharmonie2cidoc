@@ -14,7 +14,9 @@
 
 	<!-- AIC14 -->
 	<xsl:param name="TUM_DIR">../input/tum</xsl:param>
+	
 	<xsl:param name="AIC14_file" select="document(concat($TUM_DIR,'/', 'ExportTUM.xml'))/NOTICES" />
+	
 	<!--
 	<xsl:param name="AIC14_file"><test>toto</test></xsl:param>
 	-->
@@ -25,11 +27,13 @@
 	
 	<!-- Call sources files RDF -->
 	<xsl:param name="SHARED_RDF_DIR">../work/controlled_vocabularies_rdf-xml</xsl:param>
-	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />
+	
+	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />	
 	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF" />
 	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF" />
 	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF" />
 	
+
 	<!--
 	<xsl:param name="Niveau_difficulte"><test>toto</test></xsl:param>
 	<xsl:param name="mimo_vocab"><test>toto</test></xsl:param>
