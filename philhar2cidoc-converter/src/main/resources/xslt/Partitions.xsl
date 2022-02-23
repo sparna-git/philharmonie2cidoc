@@ -90,8 +90,9 @@
 				
 			</xsl:if>
 			
-			
+			<!--
 			<xsl:message>***** Notice <xsl:value-of select="@id"/>, Temps: <xsl:value-of select="$time_start"/> - <xsl:value-of select="current-time()"/> *****</xsl:message>
+			-->
 			
 			
 		</xsl:if>

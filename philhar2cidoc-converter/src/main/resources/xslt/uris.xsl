@@ -15,6 +15,9 @@
 	<!-- AIC14 -->
 	<xsl:param name="TUM_DIR">../input/tum</xsl:param>
 	<xsl:param name="AIC14_file" select="document(concat($TUM_DIR,'/', 'ExportTUM.xml'))/NOTICES" />
+	<!--
+	<xsl:param name="AIC14_file"><test>toto</test></xsl:param>
+	-->
 
 	<!-- Languages -->
 	<xsl:param name="SHARED_XML_DIR">.</xsl:param>
@@ -26,6 +29,14 @@
 	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF" />
 	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF" />
 	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF" />
+	
+	<!--
+	<xsl:param name="Niveau_difficulte"><test>toto</test></xsl:param>
+	<xsl:param name="mimo_vocab"><test>toto</test></xsl:param>
+	<xsl:param name="iaml_vocab"><test>toto</test></xsl:param>
+	<xsl:param name="rol_vocab"><test>toto</test></xsl:param>
+	-->
+	
 	
 	<!-- URIS Class -->
 
@@ -219,13 +230,11 @@
 				<xsl:value-of select="$source"/>
 			</xsl:when>
 			<xsl:when test="count($source) &gt; 1">
-				<xsl:message>L'id: <xsl:value-of select="$idfunction"/>, a trouvé deux valeurs, on prendra seulement 1.</xsl:message>
+				<xsl:message>Warning - ID <xsl:value-of select="$idfunction"/> was found <xsl:value-of select="count($source)" /> times in role vocabulary</xsl:message>
 				<xsl:value-of select="$source[1]"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>
-					Warning!!, L'id: <xsl:value-of select="$idfunction"/>, ne se trouve pas dans la source d'information du vocabularies. 
-				</xsl:message>
+				<xsl:message>Warning - ID <xsl:value-of select="$idfunction"/> not found in role vocabulary</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -254,7 +263,7 @@
 				<xsl:value-of select="$data_Time"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Noticie <xsl:value-of select="$idNotice"/>,La valeur n'est pas une valeur de type d'année: <xsl:value-of select="$data_find_year"/> </xsl:message>
+				<xsl:message>Warning - Notice <xsl:value-of select="$idNotice"/>, value is not a year of length 4 : '<xsl:value-of select="$data_find_year"/>' </xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -543,7 +552,7 @@
 				
 			</xsl:when>			
 			<xsl:otherwise>
-				<xsl:message>Noticie <xsl:value-of select="$idNotice"/>,Le code AIC14: <xsl:value-of select="$idAIC14"/>, ne se trouve pas dans le fichier.</xsl:message>
+				<xsl:message>Warning - Notice <xsl:value-of select="$idNotice"/> AIC14 code '<xsl:value-of select="$idAIC14"/>' cannot be found in AIC14 file.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -581,7 +590,7 @@
 				<xsl:value-of select="99"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>L'information <xsl:value-of select="$data"/>, ne contien pas un No d'Instrument. </xsl:message>
+				<xsl:message>Warning - The string '<xsl:value-of select="$data"/>' does not contain an instrument number.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>		
 	</xsl:function>
@@ -595,11 +604,11 @@
 				<xsl:value-of select="$match_niveau"/>
 			</xsl:when>
 			<xsl:when test="count($match_niveau) &gt; 1">
-				<xsl:message>L'information: <xsl:value-of select="$inputNiveau"/> à trouvé 2 resultat, On prends le premier resultat. </xsl:message>
+				<xsl:message>Warning - lookup for level '<xsl:value-of select="$inputNiveau"/>' found <xsl:value-of select="count($match_niveau)" /> values, taking the first one.</xsl:message>
 				<xsl:value-of select="$match_niveau[1]"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Le contenu du niveua: <xsl:value-of select="$idText"/>, ne se trouve pas dans le réferentiel.</xsl:message>
+				<xsl:message>Warning - lookup for level '<xsl:value-of select="$idText"/>' cannot be found in vocabulary.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>	
 	</xsl:function>
@@ -665,7 +674,7 @@
 				<xsl:value-of select="number($result)"/>								
 			</xsl:when>
 			<xsl:when test="(string($Valeur) &gt; 'A' and string($Valeur) &lt; 'Z') or (string($Valeur) &gt; 'a' and string($Valeur) &lt; 'z')">
-				<xsl:message>La valeur n'est pas un chiffre <xsl:value-of select="$Valeur"/>.</xsl:message>
+				<xsl:message>Warning - Value is not a number : '<xsl:value-of select="$Valeur"/>'</xsl:message>
 				<xsl:value-of select="number($result)"/>
 			</xsl:when>
 			<xsl:otherwise>
@@ -700,7 +709,7 @@
 				<xsl:value-of select="$iaml_medium_simple"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Le medium : <xsl:value-of select="$mots_medium"/> ,ne se trouve pas dans l'information de vocabularie mimo ou iaml. </xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in MIMO or IAML.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -711,7 +720,7 @@
 		<xsl:choose>
 			<xsl:when test="count($mimo_resultat) = 1"><xsl:value-of select="$mimo_resultat"/></xsl:when>
 			<xsl:when test="count($mimo_resultat) &gt; 1">
-				<xsl:message>Le medium: <xsl:value-of select="$mots_instrument"/> à trouvé 2 resultat, On prends le premier resultat. </xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($mimo_resultat)" /> times in MIMO, taking the first one.</xsl:message>
 				<xsl:value-of select="$mimo_resultat[1]"/>
 			</xsl:when>
 		</xsl:choose>			
@@ -723,7 +732,7 @@
 		<xsl:choose>
 			<xsl:when test="count($ialm_resultat) = 1"><xsl:value-of select="$ialm_resultat"/></xsl:when>
 			<xsl:when test="count($ialm_resultat) &gt; 1">
-				<xsl:message>Le medium: <xsl:value-of select="$mots_instrument"/> à trouvé 2 resultat, On prends le premier resultat. </xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($ialm_resultat)" /> times in IAML, taking the first one.</xsl:message>
 				<xsl:value-of select="$ialm_resultat[1]"/>
 			</xsl:when>
 		</xsl:choose>
@@ -759,7 +768,7 @@
 				<xsl:value-of select="$iaml_vocabulary[1]"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Le medium : <xsl:value-of select="$mots_medium"/> ,ne se trouve pas dans l'information de vocabularie mimo ou iaml. </xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in MIMO or IAML.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -804,10 +813,10 @@
 		]"/>
 		<xsl:choose>
 			<xsl:when test="count($language) = 0">
-				<xsl:message>Warning : cannot find language "<xsl:value-of select="$idCode" /></xsl:message>
+				<xsl:message>Warning - cannot find language "<xsl:value-of select="$idCode" /> in vocabulary.</xsl:message>
 			</xsl:when>
 			<xsl:when test="count($language) &gt; 1">
-				<xsl:message>Warning : find <xsl:value-of select="count($language)" /> languages with code "<xsl:value-of select="$idCode" /> - Taking first one.</xsl:message>
+				<xsl:message>Warning - find <xsl:value-of select="count($language)" /> languages with code "<xsl:value-of select="$idCode" /> - Taking first one.</xsl:message>
 				<xsl:value-of select="concat('http://lexvo.org/id/iso639-3/',$language[1]/a3t)"/>
 			</xsl:when>
 			<xsl:otherwise>
