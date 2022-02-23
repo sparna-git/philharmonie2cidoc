@@ -12,11 +12,12 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
 
-	<!-- Call sources files XML -->
-	<xsl:param name="SHARED_XML_DIR">.</xsl:param>
-	
 	<!-- AIC14 -->
-	<xsl:param name="AIC14_file" select="document(concat($SHARED_XML_DIR,'/', 'ExportTUM-pretty.xml'))/NOTICES" />
+	<xsl:param name="TUM_DIR">../input/tum</xsl:param>
+	<xsl:param name="AIC14_file" select="document(concat($TUM_DIR,'/', 'ExportTUM.xml'))/NOTICES" />
+
+	<!-- Languages -->
+	<xsl:param name="SHARED_XML_DIR">.</xsl:param>
 	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/languages/language" />
 	
 	<!-- Call sources files RDF -->
