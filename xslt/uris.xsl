@@ -20,7 +20,7 @@
 	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/languages/language" />
 	
 	<!-- Call sources files RDF -->
-	<xsl:param name="SHARED_RDF_DIR">../07-CONTROLLED_VOCABULARIES_RDF-XML</xsl:param>
+	<xsl:param name="SHARED_RDF_DIR">../work/controlled_vocabularies_rdf-xml</xsl:param>
 	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />
 	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF" />
 	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF" />

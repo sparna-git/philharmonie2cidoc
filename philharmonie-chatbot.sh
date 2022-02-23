@@ -1,35 +1,43 @@
-# Prerequisites :
-# sudo apt install python3-venv python3-pip
 
-export dir_home=$(dirname $0)
+export HOME=$(dirname $0)
 
-export xml_output_file=$dir_home/10-XML
-export rdf_output_folder=$dir_home/05-RDF
-export log_file=$dir_home/20-log
-export xsl_stylesheet=$dir_home/03-XSLT
-export dir_vocabularies_source=$dir_home/01-CONTROLLED_VOCABULARIES
-export dir_vocabularies=$dir_home/07-CONTROLLED_VOCABULARIES_RDF-XML
+# inputs
+export INPUT_FOLDER=$HOME/input
+export DIR_VOCABULARIES_SOURCE=$INPUT_FOLDER/controlled_vocabularies
+export DIR_PARTITIONS_SOURCE=$INPUT_FOLDER/partitions
+
+# work
+export WORK_FOLDER=$HOME/work
+export LOG_FOLDER=$WORK_FOLDER/logs
+export DIR_VOCABULARIES=$WORK_FOLDER/controlled_vocabularies_rdf-xml
+
+# output
+export OUTPUT_FOLDER=$HOME/output
+
+# XSLT
+export XSLT_DIR=$HOME/xslt
 
 
-# Creation the folders 
 
-mkdir $xml_output_file
-mkdir $rdf_output_folder
-mkdir $log_file
-mkdir $dir_vocabularies
 
-rm -rf $dir_vocabularies/*.rdf
-rm -rf $rdf_output_folder/*.rdf
+# Create the folders 
+
+mkdir $OUTPUT_FOLDER
+mkdir $WORK_FOLDER
+mkdir $LOG_FOLDER
+mkdir $DIR_VOCABULARIES
+
+rm -rf $DIR_VOCABULARIES/*.rdf
+rm -rf $OUTPUT_FOLDER/*.rdf
 
 #conversion des fichiers ttl à fichiers rdf's
 
-for d in $dir_vocabularies_source/*;
+for d in $DIR_VOCABULARIES_SOURCE/*;
 do
 	
-	Vocabularies_name=$(basename $d .ttl)
+	VOC_NAME=$(basename $d .ttl)
 	
-	java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar \
-	serialize --input $d -o $dir_vocabularies/$Vocabularies_name.rdf
+	# java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize --input $d -o $DIR_VOCABULARIES/$VOC_NAME.rdf
 done
 
 
@@ -40,15 +48,16 @@ echo "#######################################################################"
 echo "###  Etape 1 - Transformer des fichier xml à fichier RDF   		 ###"
 echo "#######################################################################"
 
-for f in $(find $xml_output_file -name '*.xml');
+for f in $(find $DIR_PARTITIONS_SOURCE -name '*.xml');
 do
+	echo "Converting $f..."
 
 	FILENAME=$(basename $f .xml)
 
 	java -Xmx2048M -jar saxon-he-10.1.jar \
-		-s:$xml_output_file/$FILENAME.xml \
-		-xsl:$xsl_stylesheet/Partitions.xsl \
-		-o:$rdf_output_folder/philharmonie_chatbot.rdf >> $log_file/philharmonie_chatbot.tsv 2>&1
+		-s:$DIR_PARTITIONS_SOURCE/$FILENAME.xml \
+		-xsl:$XSLT_DIR/Partitions.xsl \
+		-o:$OUTPUT_FOLDER/$FILENAME.rdf >> $LOG_FOLDER/philharmonie_chatbot.tsv 2>&1
 
 done
 
