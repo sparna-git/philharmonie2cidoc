@@ -804,11 +804,12 @@
  		
  		<xsl:variable name="idNotice" select="../../@id"/>
  		<xsl:variable name="partition" select="normalize-space(.)"/>
- 		
- 		<!-- Reading Notice UNI45 -->
- 		<xsl:variable name="current_Notice45" select="//TYPREG/TYPREG[@type='UNI:45']/NOTICE[@id=$partition]"/>
- 		
+ 				
  		<xsl:if test="$partition">
+
+ 			<!-- Reading Notice UNI45 -->
+			<xsl:variable name="current_Notice45" select="../../../TYPREG[@type='UNI:45']/NOTICE[@id=$partition]"/>
+
  			<xsl:comment> Parties de partitions </xsl:comment>
 	 		<ecrm:P148_has_component>
 	 			<mus:M167_Publication_Expression_Fragment rdf:about="{mus:URI-Publication_Expression_Fragment($idNotice,$partition)}">
