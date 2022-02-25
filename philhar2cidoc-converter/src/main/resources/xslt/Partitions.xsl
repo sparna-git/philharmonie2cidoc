@@ -662,15 +662,13 @@
 			</xsl:choose>
 		</xsl:variable>
 		 
-		<xsl:if test="$typeNotice = 'UNI:5'">
-			<ecrm:P1_is_identified_by>
-				<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier($idNotice,$idIdentifier,'ISBN',../../@type)}">				
-					<rdfs:label><xsl:value-of select="data"/></rdfs:label>
-					
-				 	<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISBN" />				
-				</ecrm:E42_Identifier>	
-			</ecrm:P1_is_identified_by>
-		</xsl:if>
+		<ecrm:P1_is_identified_by>
+			<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier($idNotice,$idIdentifier,'ISBN',../../@type)}">				
+				<rdfs:label><xsl:value-of select="data"/></rdfs:label>
+				<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISBN" />				
+			</ecrm:E42_Identifier>	
+		</ecrm:P1_is_identified_by>
+		
 	</xsl:template>
 	
 	<!-- 013$a Identifier -->
@@ -693,15 +691,12 @@
 			</xsl:choose>
 		</xsl:variable>
 				
-		<xsl:if test="$typeNotice = 'UNI:5'">
-			<ecrm:P1_is_identified_by>
-				<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier($idNotice,$idIdentifier,'ISMN',../../@type)}">				
-					<rdfs:label><xsl:value-of select="$idIdentifier"/></rdfs:label>
-					
-				 	<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISMN" />				
-				</ecrm:E42_Identifier>	
-			</ecrm:P1_is_identified_by>
-		</xsl:if>
+		<ecrm:P1_is_identified_by>
+			<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier($idNotice,$idIdentifier,'ISMN',../../@type)}">				
+				<rdfs:label><xsl:value-of select="$idIdentifier"/></rdfs:label>
+			 	<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISMN" />				
+			</ecrm:E42_Identifier>	
+		</ecrm:P1_is_identified_by>		
 	</xsl:template>
 	
 	<!-- UNI5:101$a -->
@@ -786,8 +781,8 @@
 	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield = '333$a']" mode="NiveauDificulte">
 		<xsl:variable name="Niveau" select="normalize-space(.)"/>
-		<xsl:if test="mus:NiveauDifficulte($Niveau)">
-			<ecrm:P103_was_intended_for rdf:resource="{mus:NiveauDifficulte($Niveau)}"/>
+		<xsl:if test="mus:NiveauDificulte($Niveau)">
+			<ecrm:P103_was_intended_for rdf:resource="{mus:NiveauDificulte($Niveau)}"/>
 		</xsl:if>
 	</xsl:template>
 	
@@ -945,7 +940,7 @@
 					<xsl:value-of select="count($idFunction)"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="$idFunction"/>
+					<xsl:value-of select="translate($idFunction,' ','')"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -1106,8 +1101,30 @@
 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
 				
 				
+				<!-- P103 was intended for 333$a
+				<xsl:apply-templates select="../../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>-->
 				<!-- P103 was intended for 333$a-->
-				<xsl:apply-templates select="../../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>
+				<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
+				<xsl:if test="boolean($NiveauDificulte)">
+					<xsl:for-each select="$NiveauDificulte">
+						<xsl:variable name="texte" select="normalize-space(.)"/>
+						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument <xsl:value-of select="$data_instrument"/>,Dificulte: <xsl:value-of select="mus:NiveauDificulte_instrument($texte)"/></xsl:message>
+						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
+						<xsl:choose>
+							<xsl:when test="boolean($instrument_niveau_dificulte)">
+								<xsl:for-each select="$instrument_niveau_dificulte">
+									<xsl:variable name="instrument" select="normalize-space(.)"/>
+									<xsl:if test="$data_instrument = $instrument">
+										<xsl:if test="mus:NiveauDificulte($texte)">
+											<ecrm:P103_was_intended_for rdf:resource="{mus:NiveauDificulte($texte)}"/>
+										</xsl:if>
+									</xsl:if>
+								</xsl:for-each>						
+							</xsl:when>
+						</xsl:choose>												
+					</xsl:for-each>
+				</xsl:if>
+				
 				
 				<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='940$x' or 
 								   @UnimarcSubfield='941$x' or
