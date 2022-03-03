@@ -15,7 +15,7 @@
 	<!-- AIC14 -->
 	<xsl:param name="TUM_DIR">../input/tum</xsl:param>
 	
-	<xsl:variable name="AIC14_file" select="document(concat($TUM_DIR,'/', 'ExportTUM.xml'))/*/NOTICE" />
+	<xsl:param name="AIC14_file" select="document(concat($TUM_DIR,'/', 'ExportTUM.xml'))/*/NOTICE" />
 	
 	<!--
 	<xsl:param name="AIC14_file"><test>toto</test></xsl:param>
@@ -23,21 +23,17 @@
 
 	<!-- Languages -->
 	<xsl:param name="SHARED_XML_DIR">.</xsl:param>
-	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/languages/language" />
+	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/*/language" />
 	
 	<!-- Call sources files RDF -->
 	<xsl:param name="SHARED_RDF_DIR">../work/controlled_vocabularies_rdf-xml</xsl:param>
 	
-	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF" />	
-	<xsl:variable name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/*/skos:Concept" />
-	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF" />
-	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF" />
+	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/*/skos:Concept" />	
+	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/*/skos:Concept" />
+	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/*/skos:Concept" />
+	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/*/rdf:Description" />
 	
-	 <!--  
-	<xsl:variable name="mimo_vocabulary" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/*/skos:Concept"/>
--->
-	
-
+	 
 	<!--
 	<xsl:param name="Niveau_difficulte"><test>toto</test></xsl:param>
 	<xsl:param name="mimo_vocab"><test>toto</test></xsl:param>
@@ -231,8 +227,8 @@
 	
 	<xsl:function name="mus:role_vocab">
 		<xsl:param name="idfunction"/>
-		<xsl:variable name="source" select="$rol_vocab/rdf:Description[
-										skos:notation[@rdf:datatype='https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie']=$idfunction]/@rdf:about"/>		
+		<xsl:variable name="source" select="$rol_vocab[
+										 skos:notation[@rdf:datatype='https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie']=$idfunction]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($source)=1">
 				<xsl:value-of select="$source"/>
@@ -286,8 +282,8 @@
 		<!-- $AIC14_file/NOTICE[@id = $idAIC14 and @type='AIC:14']/champs[@UnimarcTag=$idBalise] -->
 		<xsl:choose>
 			<xsl:when test="$idBalise = '322'">	
-				<xsl:variable name="count322" select="count($AIC14_file[@id = $idAIC14 and @type='AIC:14']/champs[@UnimarcTag=$idBalise])"/>
-				
+				<!--  <xsl:variable name="count322" select="count($AIC14_file[@id = $idAIC14]/champs[@UnimarcTag=$idBalise])"/> -->
+				<xsl:variable name="count322" select="count($metadata)"/>
 				<xsl:variable name="data_result">
 					<xsl:choose>
 						<xsl:when test="$count322 = 1">
@@ -314,7 +310,8 @@
 				</xsl:choose>
 			</xsl:when>
 			<xsl:when test="$idBalise = '144' or $idBalise ='444'">
-				<xsl:variable name="Count" select="count($AIC14_file[@id = $idAIC14 and @type='AIC:14']/champs[@UnimarcTag=$idBalise])"/>
+				<xsl:variable name="Count" select="count($metadata)"/>
+				<!-- <xsl:variable name="Count" select="count($AIC14_file[@id = $idAIC14 and @type='AIC:14']/champs[@UnimarcTag=$idBalise])"/>  -->
 				<xsl:variable name="Balise_a" select="concat($idBalise,'$','a')"/>
 				<xsl:variable name="Balise_c" select="concat($idBalise,'$','c')"/>
 				<xsl:variable name="Balise_e" select="concat($idBalise,'$','e')"/>
@@ -555,10 +552,8 @@
 														']')"/>						 	 
 						 	 </xsl:when>				 	
 						</xsl:choose>
-					</xsl:when>
-					
-				</xsl:choose>
-				
+					</xsl:when>					
+				</xsl:choose>				
 			</xsl:when>			
 			<xsl:otherwise>
 				<xsl:message>Warning - Notice <xsl:value-of select="$idNotice"/> AIC14 code '<xsl:value-of select="$idAIC14"/>' cannot be found in AIC14 file.</xsl:message>
@@ -607,7 +602,7 @@
 	<xsl:function name="mus:NiveauDificulte">
 		<xsl:param name="idText"/>
 		<xsl:variable name="inputNiveau" select="normalize-space(substring-after(substring-before($idText,' dans'),'Niveau '))"/>
-		<xsl:variable name="match_niveau" select="$Niveau_difficulte/skos:Concept[skos:altLabel=$inputNiveau]/@rdf:about"/>
+		<xsl:variable name="match_niveau" select="$Niveau_difficulte[skos:altLabel=$inputNiveau]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($match_niveau) = 1">
 				<xsl:value-of select="$match_niveau"/>
@@ -622,46 +617,57 @@
 		</xsl:choose>	
 	</xsl:function>
 
+
+
 	<xsl:function name="mus:NiveauDificulte_instrument">
 		<xsl:param name="idText"/>
 		<!-- Assign ' to the $quote variable. -->
     	<xsl:variable name="quote">'</xsl:variable>
-		<xsl:variable name="inputNiveau" select="normalize-space(translate(substring-after($idText,' dans'),',()[]',''))"/>
+		<xsl:variable name="inputNiveau" select="normalize-space(translate(substring-after($idText,' dans'),',()[]',''))"/>		
 		<xsl:variable name="instrument_dans_niveau">
 			<xsl:for-each select="tokenize($inputNiveau,' ')">
 				<xsl:variable name="data" select="normalize-space(.)"/>
-				<xsl:variable name="_data_">
-					<xsl:choose>
-						<xsl:when test="contains($data,$quote)">
-							<xsl:value-of select="translate($data,$quote,'')"/>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="$data"/>
-						</xsl:otherwise>
-					</xsl:choose>
-				</xsl:variable>
-				<xsl:variable name="instrument_simple">				
-					<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($_data_)"/>
-					<xsl:variable name="iaml_medium_simple" select="mus:iaml_vocabulary_simple($_data_)"/>
-					<xsl:choose>
-						<xsl:when test="$mimo_medium_simple and $iaml_medium_simple">
-							<xsl:value-of select="$_data_"/>
-						</xsl:when>
-						<xsl:when test="$mimo_medium_simple and not($iaml_medium_simple)">
-							<xsl:value-of select="$_data_"/>
-						</xsl:when>
-						<xsl:when test="not($mimo_medium_simple) and $iaml_medium_simple">
-							<xsl:value-of select="$_data_"/>
-						</xsl:when>
-					</xsl:choose>
-				</xsl:variable>
-				<xsl:if test="boolean($instrument_simple)">
-					<xsl:value-of select="$instrument_simple"/>
+				
+				<xsl:if test="not(index-of(('$quote10','ans','avec','la'),$data))">
+					<xsl:variable name="_data_">
+						<xsl:choose>
+							<xsl:when test="contains($data,$quote)">
+								<xsl:value-of select="translate($data,$quote,'')"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="$data"/>
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:variable name="instrument_simple">	
+								
+						<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($_data_)"/>
+						
+						<xsl:variable name="iaml_medium_simple">
+							<xsl:if test="$mimo_medium_simple !=''">
+								<xsl:value-of select="mus:iaml_vocabulary_simple($_data_)"/>
+							</xsl:if>
+						</xsl:variable>
+						 
+						<xsl:choose>
+							<xsl:when test="$mimo_medium_simple!=''">
+								<xsl:value-of select="$_data_"/>
+							</xsl:when>
+							<xsl:when test="$iaml_medium_simple!=''">
+								<xsl:value-of select="$_data_"/>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:variable>
+					<xsl:if test="$instrument_simple!=''">
+						<xsl:value-of select="$instrument_simple"/>
+					</xsl:if>
 				</xsl:if>
+				
+				
 			</xsl:for-each>
 		</xsl:variable>
 		<xsl:choose>
-			<xsl:when test="boolean($instrument_dans_niveau)"><xsl:value-of select="$instrument_dans_niveau"/></xsl:when>
+			<xsl:when test="$instrument_dans_niveau!=''"><xsl:value-of select="$instrument_dans_niveau"/></xsl:when>
 			<xsl:otherwise>Warning - The phrase in difficulted nivel '<xsl:value-of select="$idText"/>' cannot be found an instrument.</xsl:otherwise>
 		</xsl:choose>				
 	</xsl:function>
@@ -701,16 +707,18 @@
 				</xsl:otherwise>
 			</xsl:choose>		
 		</xsl:variable>
-		<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($mot_medium)"/>
-		<xsl:variable name="iaml_medium_simple" select="mus:iaml_vocabulary_simple($mot_medium)"/>
+		
+		<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($mot_medium)"/>		
+		<xsl:variable name="iaml_medium_simple">
+			<xsl:if test="not(boolean($mimo_medium_simple))">
+				<xsl:value-of select="mus:iaml_vocabulary_simple($mot_medium)"/>	
+			</xsl:if>
+		</xsl:variable>
 		<xsl:choose>
-			<xsl:when test="$mimo_medium_simple and $iaml_medium_simple">
+			<xsl:when test="boolean($mimo_medium_simple)">
 				<xsl:value-of select="$mimo_medium_simple"/>
 			</xsl:when>
-			<xsl:when test="$mimo_medium_simple and not($iaml_medium_simple)">
-				<xsl:value-of select="$mimo_medium_simple"/>
-			</xsl:when>
-			<xsl:when test="not($mimo_medium_simple) and $iaml_medium_simple">
+			<xsl:when test="boolean($iaml_medium_simple)">
 				<xsl:value-of select="$iaml_medium_simple"/>
 			</xsl:when>
 			<xsl:otherwise>
@@ -721,7 +729,10 @@
 	
 	<xsl:function name="mus:mimo_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="mimo_resultat" select="$mimo_vocab[lower-case(skos:prefLabel[@xml:lang='fr'])=$mots_instrument]/@rdf:about"/>
+		<xsl:variable name="first_lettre_upper">
+			<xsl:value-of select="concat(upper-case(substring($mots_instrument,1,1)),substring($mots_instrument,2,string-length($mots_instrument)))"/>
+		</xsl:variable>
+		<xsl:variable name="mimo_resultat" select="$mimo_vocab[skos:prefLabel[@xml:lang='fr']=$first_lettre_upper]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($mimo_resultat) = 1"><xsl:value-of select="$mimo_resultat"/></xsl:when>
 			<xsl:when test="count($mimo_resultat) &gt; 1">
@@ -733,7 +744,7 @@
 	
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="ialm_resultat" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>		
+		<xsl:variable name="ialm_resultat" select="$iaml_vocab[skos:prefLabel=$mots_instrument]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($ialm_resultat) = 1"><xsl:value-of select="$ialm_resultat"/></xsl:when>
 			<xsl:when test="count($ialm_resultat) &gt; 1">
@@ -755,27 +766,103 @@
 				</xsl:otherwise>
 			</xsl:choose>		
 		</xsl:variable>
-		
-		<!-- Mimo -->
-		<xsl:variable name="mimo_vocabulary" select="$mimo_vocab[lower-case(skos:prefLabel[@xml:lang='fr'])=tokenize($mot_medium,' ')[1]]/@rdf:about"/>
-		
-		<!-- ialm -->
-		<xsl:variable name="iaml_vocabulary" select="$iaml_vocab/skos:Concept[skos:prefLabel[@xml:lang='fr']=tokenize($mot_medium,' ')[1]]/@rdf:about"/>
-		
+		<xsl:message>Instrument: <xsl:value-of select="$mot_medium"/></xsl:message>
+		<xsl:variable name="mimo_vocabulary" select="sparnaf:ComplexInstrument_mimo($mot_medium)"/>
+		<xsl:message>Resultat Mimo: <xsl:value-of select="$mimo_vocabulary"/></xsl:message>
+		<xsl:variable name="iaml_vocabulary" select="sparnaf:ComplexInstrument_iaml($mot_medium)"/>
+		<xsl:message>Resultat Iaml: <xsl:value-of select="$iaml_vocabulary"/></xsl:message>
+		<!--  
+		<xsl:variable name="instrument_mimo_trouve" select="string-length(substring-before($mimo_vocabulary[1],'_'))"/>
+		<xsl:variable name="instrument_iaml_trouve" select="string-length(substring-before($iaml_vocabulary[1],'_'))"/>
+		-->
+		<xsl:variable name="instrument_mimo_trouve" select="string-length($mimo_vocabulary)"/>
+		<xsl:variable name="instrument_iaml_trouve" select="string-length($iaml_vocabulary)"/>
+				
+		<xsl:variable name="instrument_trouve">	
+			<xsl:choose>
+				<xsl:when test="$instrument_mimo_trouve &gt;= $instrument_iaml_trouve">
+					<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>
+					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in MIMO with the similarity: '<xsl:value-of select="$mimo_vocabulary"/>-<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>'</xsl:message>'
+				</xsl:when>
+				<xsl:when test="$instrument_mimo_trouve &lt; $instrument_iaml_trouve">
+					<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>
+					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in IAML with the similarity: '<xsl:value-of select="$iaml_vocabulary"/>-<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>'</xsl:message>'
+				</xsl:when>
+			</xsl:choose>		
+		</xsl:variable>
 		<xsl:choose>
-			<xsl:when test="$mimo_vocabulary and $iaml_vocabulary">
-				<xsl:value-of select="$mimo_vocabulary[1]"/>
-			</xsl:when>
-			<xsl:when test="$mimo_vocabulary and $iaml_vocabulary=''">
-				<xsl:value-of select="$mimo_vocabulary[1]"/>
-			</xsl:when>
-			<xsl:when test="$mimo_vocabulary='' and $iaml_vocabulary!=''">
-				<xsl:value-of select="$iaml_vocabulary[1]"/>
-			</xsl:when>
-			<xsl:otherwise>
+			<xsl:when test="$instrument_trouve !=''">
+				<xsl:value-of select="$instrument_trouve[1]"/>				
+			</xsl:when>			
+			<xsl:when test="$mimo_vocabulary='' and $iaml_vocabulary=''">
 				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in MIMO or IAML.</xsl:message>
-			</xsl:otherwise>
+			</xsl:when>
 		</xsl:choose>
+	</xsl:function>
+	
+	<xsl:function name="sparnaf:ComplexInstrument_mimo">
+		<xsl:param name="NameInstrument"/>
+		<xsl:variable name="result">
+			<xsl:for-each select="1 to string-length($NameInstrument)">
+				<xsl:variable name="mot" select="substring($NameInstrument,1,(string-length($NameInstrument)-position()))"/>
+				<xsl:variable name="vocabulary_instrument">
+					<xsl:if test="$mot != ''">
+						<xsl:value-of select="$mimo_vocab[lower-case(skos:prefLabel[@xml:lang='fr'])=$mot]/@rdf:about"/>
+					</xsl:if>
+				</xsl:variable>
+				<xsl:choose>
+						<xsl:when test="$vocabulary_instrument='' and position()=last()">						
+						</xsl:when>
+						<xsl:when test="$vocabulary_instrument!=''">
+							<xsl:value-of select="$mot"/>	
+							<xsl:sort select="$mot" order="descending" />								
+						</xsl:when>					
+					</xsl:choose>
+			</xsl:for-each>			
+		</xsl:variable>
+		<xsl:if test="$result != ''">
+			<xsl:choose>
+				<xsl:when test="count($result) &gt; 1">
+					<xsl:value-of select="tokenize($result,'')[1]"/>	
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$result"/>					
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
+	</xsl:function>
+	
+	
+	<xsl:function name="sparnaf:ComplexInstrument_iaml">
+		<xsl:param name="NameInstrument"/>
+		<xsl:variable name="result">
+			<xsl:for-each select="1 to string-length($NameInstrument)">
+				<xsl:variable name="mot" select="substring($NameInstrument,1,(string-length($NameInstrument)-position()))"/>
+				<xsl:variable name="vocabulary_instrument">	
+					<xsl:if test="$mot != ''">
+						<xsl:value-of select="$iaml_vocab[skos:prefLabel=$mot]/@rdf:about"/>
+					</xsl:if>
+				</xsl:variable>	
+				<xsl:choose>
+					<xsl:when test="$vocabulary_instrument='' and position()=last()">						
+					</xsl:when>
+					<xsl:when test="$vocabulary_instrument!=''">
+						<xsl:value-of select="string-join($mot,';')"/>
+						<xsl:sort select="$mot" order="descending" />											
+					</xsl:when>					
+				</xsl:choose>
+			</xsl:for-each>			
+		</xsl:variable>
+		<xsl:if test="$result != ''">
+			<xsl:choose>
+				<xsl:when test="count($result) &gt; 1">
+					<xsl:value-of select="tokenize($result,'')[1]"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$result"/>					
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>
 	</xsl:function>
 	
 	<!-- funtion utilisé par le casting alternatif -->

@@ -1003,12 +1003,21 @@
 					</xsl:choose>
 				</xsl:variable>
 				
+				
+				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
+				<xsl:variable name="medium_instrument_complex">
+					<xsl:if test="$medium_instrument = ''">
+						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>
+					</xsl:if>
+				</xsl:variable>
+				 
+				
 				<xsl:choose>
-					<xsl:when test="mus:medium($data_instrument) != ''">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium($data_instrument)}"/>
+					<xsl:when test="$medium_instrument != ''">
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument}"/>
 					</xsl:when>
-					<xsl:when test="mus:medium($data_instrument) = '' and mus:chercher_medium_complex($data_instrument)">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:chercher_medium_complex($data_instrument)}"/>
+					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex">
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument_complex}"/>
 					</xsl:when>
 					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>				
 				</xsl:choose>
@@ -1085,12 +1094,20 @@
 					</xsl:choose>
 				</xsl:variable>
 				
+				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
+				<xsl:variable name="medium_instrument_complex">
+					<xsl:if test="$medium_instrument = ''">
+						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>
+					</xsl:if>
+				</xsl:variable>
+				 
+				
 				<xsl:choose>
-					<xsl:when test="mus:medium($data_instrument) != ''">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:medium($data_instrument)}"/>
+					<xsl:when test="$medium_instrument != ''">
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument}"/>
 					</xsl:when>
-					<xsl:when test="mus:medium($data_instrument) = '' and mus:chercher_medium_complex($data_instrument)">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{mus:chercher_medium_complex($data_instrument)}"/>
+					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex">
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument_complex}"/>
 					</xsl:when>
 					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>				
 				</xsl:choose>

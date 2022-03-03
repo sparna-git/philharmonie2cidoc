@@ -5,6 +5,9 @@ export HOME=$(dirname $0)
 export INPUT_FOLDER=$HOME/input
 export DIR_VOCABULARIES_SOURCE=$INPUT_FOLDER/controlled_vocabularies
 export DIR_PARTITIONS_SOURCE=$INPUT_FOLDER/partitions
+export DIR_PERSONNE_SOURCE=$INPUT_FOLDER/personne
+export DIR_COLLECTIVITE_SOURCE=$INPUT_FOLDER/collectivites
+export DIR_THESAURUS_SOURCE=$INPUT_FOLDER/thesaurus
 
 # work
 export WORK_FOLDER=$HOME/work
@@ -42,6 +45,28 @@ done
 
 
 export start_xml_rdf="$(date +"%r")"
+
+
+# Others vocabularies files for converts
+
+echo "Converting ExportAutoritesCollectivites..." &>> transform.log
+java -Xmx2048M -jar saxon-he-10.1.jar \
+		-s:$DIR_COLLECTIVITE_SOURCE/ExportAutoritesCollectivites.xml \
+		-xsl:$XSLT_DIR/AutoritesCollectivite.xsl \
+		-o:$OUTPUT_FOLDER/AutoritesCollectivite.rdf &>> $LOG_FOLDER/transform_collectivites.log
+
+echo "Converting ExportAutoritesPersonnePhysique..." &>> transform.log
+java -Xmx2048M -jar saxon-he-10.1.jar \
+		-s:$DIR_PERSONNE_SOURCE/ExportAutoritesPersonnePhysique.xml \
+		-xsl:$XSLT_DIR/AutoritesPersonnePhysique.xsl \
+		-o:$OUTPUT_FOLDER/AutoritesPersonnePhysique.rdf &>> $LOG_FOLDER/transform_personne.log
+
+echo "Converting ExportThesaurus..." &>> transform.log
+java -Xmx2048M -jar saxon-he-10.1.jar \
+		-s:$DIR_THESAURUS_SOURCE/ExportThesaurus.xml \
+		-xsl:$XSLT_DIR/Thesaurus.xsl \
+		-o:$OUTPUT_FOLDER/ExportThesaurus.rdf &>> $LOG_FOLDER/transform_thesaurus.log
+
 
 # Step 1 - Convert xml file to rdf file
 echo "#######################################################################"
