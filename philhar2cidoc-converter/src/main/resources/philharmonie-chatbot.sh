@@ -54,7 +54,7 @@ do
 
 	FILENAME=$(basename $f .xml)
 
-	java -Xmx2048M -jar saxon-he-10.1.jar \
+	java -Xmx4048M -jar saxon-he-10.1.jar \
 		-s:$DIR_PARTITIONS_SOURCE/$FILENAME.xml \
 		-xsl:$XSLT_DIR/Partitions.xsl \
 		-o:$OUTPUT_FOLDER/$FILENAME.rdf > $LOG_FOLDER/philharmonie_chatbot.log 2>&1
