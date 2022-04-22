@@ -1014,10 +1014,10 @@
 				
 				<xsl:choose>
 					<xsl:when test="$medium_instrument != ''">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument}"/>
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
 					</xsl:when>
 					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument_complex}"/>
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
 					</xsl:when>
 					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>				
 				</xsl:choose>
@@ -1104,10 +1104,10 @@
 				
 				<xsl:choose>
 					<xsl:when test="$medium_instrument != ''">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument}"/>
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
 					</xsl:when>
 					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{$medium_instrument_complex}"/>
+						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
 					</xsl:when>
 					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>				
 				</xsl:choose>

@@ -57,8 +57,8 @@
 		<xsl:param name="idTypeIdentifier" />
 		<xsl:param name="typeNotice" />
 		<xsl:choose>
-			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',$idIdentifier)" /></xsl:when>
-			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat('/identifier_',$idTypeIdentifier,'_',$idIdentifier)"/></xsl:when>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat('/identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))"/></xsl:when>
 		</xsl:choose>
 		
 	</xsl:function>
@@ -729,10 +729,7 @@
 	
 	<xsl:function name="mus:mimo_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="first_lettre_upper">
-			<xsl:value-of select="concat(upper-case(substring($mots_instrument,1,1)),substring($mots_instrument,2,string-length($mots_instrument)))"/>
-		</xsl:variable>
-		<xsl:variable name="mimo_resultat" select="$mimo_vocab[skos:prefLabel[@xml:lang='fr']=$first_lettre_upper]/@rdf:about"/>
+		<xsl:variable name="mimo_resultat" select="$mimo_vocab[upper-case(skos:prefLabel[@xml:lang='fr'])=upper-case($mots_instrument)]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($mimo_resultat) = 1"><xsl:value-of select="$mimo_resultat"/></xsl:when>
 			<xsl:when test="count($mimo_resultat) &gt; 1">
@@ -782,11 +779,11 @@
 			<xsl:choose>
 				<xsl:when test="$instrument_mimo_trouve &gt;= $instrument_iaml_trouve">
 					<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>
-					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in MIMO with the similarity: '<xsl:value-of select="$mimo_vocabulary"/>-<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>'</xsl:message>'
+					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in MIMO with the similarity: '<xsl:value-of select="$mimo_vocabulary"/>-<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>'</xsl:message>
 				</xsl:when>
 				<xsl:when test="$instrument_mimo_trouve &lt; $instrument_iaml_trouve">
 					<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>
-					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in IAML with the similarity: '<xsl:value-of select="$iaml_vocabulary"/>-<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>'</xsl:message>'
+					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in IAML with the similarity: '<xsl:value-of select="$iaml_vocabulary"/>-<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>'</xsl:message>
 				</xsl:when>
 			</xsl:choose>		
 		</xsl:variable>
@@ -816,7 +813,7 @@
 						<xsl:when test="$vocabulary_instrument!=''">
 							<xsl:value-of select="$mot"/>	
 							<xsl:sort select="$mot" order="descending" />								
-						</xsl:when>					
+						</xsl:when>
 					</xsl:choose>
 			</xsl:for-each>			
 		</xsl:variable>
