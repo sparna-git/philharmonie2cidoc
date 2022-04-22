@@ -16,7 +16,7 @@
 	<xsl:output indent="yes" method="xml" />
 	
 	<!-- Variable -->
-	<xsl:variable name="sURI">http://fake.philharmoniedeparis.fr/</xsl:variable> 
+	<xsl:variable name="sURI">https://ark.philharmoniedeparis.fr/ark/49250/</xsl:variable> 
 
 
 	<xsl:template match="/">
@@ -32,8 +32,8 @@
 
 	<!-- Id's -->
 	<xsl:template match="NOTICE">
-
-		<edm:Agent rdf:about="{concat($sURI,replace(@type,':',''),'/',@id)}">
+		<!-- concat($sURI,replace(@type,':',''),'/',@id) -->
+		<edm:Agent rdf:about="{concat($sURI,@id)}">
 			<!-- prefLabel -->
 			<xsl:apply-templates select="champs[@UnimarcTag = '110']/SOUSCHAMP[@UnimarcSubfield ='110$a']" mode="prefLabel" />
 			<!-- altLabel -->
