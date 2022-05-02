@@ -25,75 +25,85 @@
 			<xsl:apply-templates />
 		</rdf:RDF>
 	</xsl:template>
+
+	<xsl:template match="NOTICES">
+		<xsl:apply-templates select="TYPREG" />
+	</xsl:template>
 	
+	<!--
+		<NOTICES>
+			<TYPREG type="UNI:5">
+				<NOTICE type="UNI:5">
+
+				</NOTICE>
+				<TYPREG type="UNI:45">
+					<NOTICE type="UNI:45">
+
+					</NOTICE>
+				</TYPREG>
+			</TYPREG>
+		</NOTICES>
+	-->
+
 	<xsl:template match="NOTICES/TYPREG">
-		<xsl:apply-templates />
+		<xsl:apply-templates select="NOTICE" />
 	</xsl:template>
 	
 	
-	<xsl:template match="NOTICE">
-		<xsl:if test="@type = 'UNI:5'">
-			<xsl:message>:::::Notice <xsl:value-of select="@id"/></xsl:message>
-			<xsl:variable name="time_start" select="current-time()"/>
+	<xsl:template match="NOTICE[@type = 'UNI:5']">		
+		<xsl:message>::::: Notice <xsl:value-of select="@id"/> :::::</xsl:message>
+		
+		<efrbroo:F24_Publication_Expression rdf:about="{mus:URI-Publication_Expression(@id)}">
 			
-			<efrbroo:F24_Publication_Expression rdf:about="{mus:URI-Publication_Expression(@id)}">
-				
-				<!-- en dur -->
-				<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
-				
-				<!-- Créer un nouvel identifiant à chaque fois que l’une de ces zones est remplie : 
-							UNI5 : notice id							
-					 -->
-				<xsl:if test="@type = 'UNI:5'">
-					<ecrm:P1_is_identified_by>
-						<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier(@id,@id,'CMPP-ALOES',@type)}">
-							<rdfs:label><xsl:value-of select="@id"/></rdfs:label>
-								<!-- UNI5 : notice id - Indiquer “CMPP-ALOES” -->
-							<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES"/>								
-						</ecrm:E42_Identifier>
-					</ecrm:P1_is_identified_by>				
-				</xsl:if>
-				
-				<xsl:apply-templates select="champs[
-													not(index-of(('700','701','702','710','711','712','911'),@UnimarcTag))													
-													]" />
-				
-				<!--  Format Partitions 	-->								
-				<xsl:apply-templates select="champs['462']" mode="Fragment"/>
-				
-			</efrbroo:F24_Publication_Expression>
+			<!-- en dur -->
+			<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
 			
-			<xsl:if test="champs[@UnimarcTag = '700' or 
-								 @UnimarcTag = '701' or 
-								 @UnimarcTag = '702' or
-								 @UnimarcTag = '710' or
-								 @UnimarcTag = '711' or
-								 @UnimarcTag = '712' or			
-								 @UnimarcTag = '911']">
-				
-				<!-- Description de l’activité d’édition F30 Publication Event pour le 911$a -->
-				<efrbroo:F30_Publication_Event rdf:about="{mus:URI-Publication_Event(@id)}">
-	
-					<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
-					<!-- Lien vers la Publication Expression de Partition -->
-					
-					<mus:R24_created rdf:resource="{mus:URI-Publication_Expression(@id)}" />
-					
-					<xsl:apply-templates select="champs[@UnimarcTag = '911' or
-														@UnimarcTag = '700' or
-														@UnimarcTag = '701' or
-														@UnimarcTag = '702' or
-														@UnimarcTag = '710' or
-														@UnimarcTag = '711' or
-														@UnimarcTag = '712']"/>
-				</efrbroo:F30_Publication_Event>
-				
+			<!-- Créer un nouvel identifiant à chaque fois que l’une de ces zones est remplie : 
+						UNI5 : notice id							
+				 -->
+			<xsl:if test="@type = 'UNI:5'">
+				<ecrm:P1_is_identified_by>
+					<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier(@id,@id,'CMPP-ALOES',@type)}">
+						<rdfs:label><xsl:value-of select="@id"/></rdfs:label>
+							<!-- UNI5 : notice id - Indiquer “CMPP-ALOES” -->
+						<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES"/>								
+					</ecrm:E42_Identifier>
+				</ecrm:P1_is_identified_by>				
 			</xsl:if>
 			
-			<!--
-			<xsl:message>***** Notice <xsl:value-of select="@id"/>, Temps: <xsl:value-of select="$time_start"/> - <xsl:value-of select="current-time()"/> *****</xsl:message>
-			-->
+			<xsl:apply-templates select="champs[
+				not(index-of(('700','701','702','710','711','712','911'),@UnimarcTag))
+			]" />
 			
+			<!--  Parties de Partitions -->								
+			<xsl:apply-templates select="../TYPREG[@type='UNI:45']/NOTICE[@type='UNI:45']" />
+			
+		</efrbroo:F24_Publication_Expression>
+		
+		<xsl:if test="champs[@UnimarcTag = '700' or 
+							 @UnimarcTag = '701' or 
+							 @UnimarcTag = '702' or
+							 @UnimarcTag = '710' or
+							 @UnimarcTag = '711' or
+							 @UnimarcTag = '712' or			
+							 @UnimarcTag = '911']">
+			
+			<!-- Description de l’activité d’édition F30 Publication Event pour le 911$a -->
+			<efrbroo:F30_Publication_Event rdf:about="{mus:URI-Publication_Event(@id)}">
+
+				<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
+				<!-- Lien vers la Publication Expression de Partition -->
+				
+				<mus:R24_created rdf:resource="{mus:URI-Publication_Expression(@id)}" />
+				
+				<xsl:apply-templates select="champs[@UnimarcTag = '911' or
+													@UnimarcTag = '700' or
+													@UnimarcTag = '701' or
+													@UnimarcTag = '702' or
+													@UnimarcTag = '710' or
+													@UnimarcTag = '711' or
+													@UnimarcTag = '712']"/>
+			</efrbroo:F30_Publication_Event>
 			
 		</xsl:if>
 	</xsl:template>
@@ -189,7 +199,6 @@
 		
 		<xsl:if test="$data_a">
 			<xsl:variable name="idTitleStatement" select="count(ancestor::root/preceding-sibling::champs[@UnimarcTag='200']/SOUSCHAMP[@UnimarcSubfield ='200$a'])+1"/>
-			<xsl:comment>Sequence Title Statement: <xsl:value-of select="$idSequence"/> ::::::</xsl:comment>
 			<mus:U170_has_title_statement>
 				<mus:M156_Title_Statement rdf:about="{mus:URI-Title($idNotice,$idTitleStatement,$typeNotice,$idNoticeMere)}">
 					<rdfs:label><xsl:value-of select="concat($data_a,$data_e,$data_h,$data_i)"/></rdfs:label>
@@ -788,62 +797,49 @@
 	
 	
 	<!-- Parties de partitions M167 Publication Expression Fragment -->
-	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='462$3']" mode="Fragment">
-		<!-- UNI5:462$3
-				Pour chaque champ 462 présent dans une notice UNI5, créer une partie de partition.
-				Les informations détaillant la partie sont présentes dans la notice de dépouillement UNI45
-				dont l’identifiant est mentionné dans l’UNI5 en 462$3
- 		
- 			<xsl:variable name="idCompteur" select="count(preceding::SOUSCHAMP[@UnimarcSubfield ='462$3'])+1"/>
- 		-->
- 		
- 		<xsl:variable name="idNotice" select="../../@id"/>
- 		<xsl:variable name="partition" select="normalize-space(.)"/>
- 				
- 		<xsl:if test="$partition">
+	<xsl:template match="NOTICE[@type = 'UNI:45']">
+ 		<xsl:variable name="idNotice" select="../../NOTICE[@type='UNI:5']/@id"/>
+ 		<xsl:comment>::: Sous-notice <xsl:value-of select="$idNotice"/>/<xsl:value-of select="@id"/> :::</xsl:comment>
+ 		<xsl:message>::: Sous-notice <xsl:value-of select="$idNotice"/>/<xsl:value-of select="@id"/> :::</xsl:message>
 
- 			<!-- Reading Notice UNI45 -->
-			<xsl:variable name="current_Notice45" select="../../../TYPREG[@type='UNI:45']/NOTICE[@id=$partition]"/>
-
- 			<xsl:comment> Parties de partitions </xsl:comment>
-	 		<ecrm:P148_has_component>
-	 			<mus:M167_Publication_Expression_Fragment rdf:about="{mus:URI-Publication_Expression_Fragment($idNotice,$partition)}">
- 		
-		 			<!-- Language -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='101']/SOUSCHAMP[@UnimarcSubfield ='101$a']"/>
-		 			<!-- Title Statement and Responsability -->
-		 			<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='200']"/>
-		 			<!-- M159_Edition_Statement -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='205']/SOUSCHAMP[@UnimarcSubfield ='205$a']"/>
-					<!-- M163_Music_Format_Statement -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='208']/SOUSCHAMP[@UnimarcSubfield = '208$a']"/>		 			
-		 			<!--  -->
-		 			<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='210' or @UnimarcTag='214']"/>
-	 				<!--  -->
-	 				<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='324' or @UnimarcTag='327' or @UnimarcTag='330']"/>
-					<!--  -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='449']"/>
-	 				<!--  -->
-	 				<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='541']"/>
-		 			<!-- Le titre uniforme musical -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='503']/SOUSCHAMP[@UnimarcSubfield ='503$3']"/>
-		 			<!-- l’autorité -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='600']/SOUSCHAMP[@UnimarcSubfield ='600$3']"/>
-					<!-- l’autorité collectivité -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='601']/SOUSCHAMP[@UnimarcSubfield ='601$3']"/>
-		 			<!-- Context,Genre,Categorization   -->
-					<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='610']/SOUSCHAMP[@UnimarcSubfield ='610$b']"/>
-		 			
-		 			
-		 			<!-- Casting -->
-		 			<xsl:apply-templates select="$current_Notice45/champs[@UnimarcTag='954']"/>
-		 			
+ 		<ecrm:P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment rdf:about="{mus:URI-Publication_Expression_Fragment($idNotice,@id)}">
+		
+	 			<!-- Language -->
+				<xsl:apply-templates select="champs[@UnimarcTag='101']/SOUSCHAMP[@UnimarcSubfield ='101$a']"/>
+	 			<!-- Title Statement and Responsability -->
+	 			<xsl:apply-templates select="champs[@UnimarcTag='200']"/>
+	 			<!-- M159_Edition_Statement -->
+				<xsl:apply-templates select="champs[@UnimarcTag='205']/SOUSCHAMP[@UnimarcSubfield ='205$a']"/>
+				<!-- M163_Music_Format_Statement -->
+				<xsl:apply-templates select="champs[@UnimarcTag='208']/SOUSCHAMP[@UnimarcSubfield = '208$a']"/>		 			
+	 			<!--  -->
+	 			<xsl:apply-templates select="champs[@UnimarcTag='210' or @UnimarcTag='214']"/>
+ 				<!--  -->
+ 				<xsl:apply-templates select="champs[@UnimarcTag='324' or @UnimarcTag='327' or @UnimarcTag='330']"/>
+				<!--  -->
+				<xsl:apply-templates select="champs[@UnimarcTag='449']"/>
+ 				<!--  -->
+ 				<xsl:apply-templates select="champs[@UnimarcTag='541']"/>
+	 			<!-- Le titre uniforme musical -->
+				<xsl:apply-templates select="champs[@UnimarcTag='503']/SOUSCHAMP[@UnimarcSubfield ='503$3']"/>
+	 			<!-- l’autorité -->
+				<xsl:apply-templates select="champs[@UnimarcTag='600']/SOUSCHAMP[@UnimarcSubfield ='600$3']"/>
+				<!-- l’autorité collectivité -->
+				<xsl:apply-templates select="champs[@UnimarcTag='601']/SOUSCHAMP[@UnimarcSubfield ='601$3']"/>
+	 			<!-- Context,Genre,Categorization   -->
+				<xsl:apply-templates select="champs[@UnimarcTag='610']/SOUSCHAMP[@UnimarcSubfield ='610$b']"/>
 	 			
-	 			</mus:M167_Publication_Expression_Fragment>
-	 		</ecrm:P148_has_component>
+	 			
+	 			<!-- Casting -->
+	 			<xsl:apply-templates select="champs[@UnimarcTag='954']"/>
+	 			
  			
- 		</xsl:if>
+ 			</mus:M167_Publication_Expression_Fragment>
+ 		</ecrm:P148_has_component>
+
 	</xsl:template>
+
 	
 	
 	<!-- 500$3 lien vers le titre uniforme musical (notice d’autorité de type AIC14).-->
@@ -1123,18 +1119,19 @@
 				<xsl:apply-templates select="../../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>-->
 				<!-- P103 was intended for 333$a-->
 				<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
-				<xsl:if test="boolean($NiveauDificulte)">
+				<xsl:if test="$NiveauDificulte">
 					<xsl:for-each select="$NiveauDificulte">
 						<xsl:variable name="texte" select="normalize-space(.)"/>
-						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument <xsl:value-of select="$data_instrument"/>,Dificulte: <xsl:value-of select="mus:NiveauDificulte_instrument($texte)"/></xsl:message>
 						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
+						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Difficulte: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>						
 						<xsl:choose>
 							<xsl:when test="boolean($instrument_niveau_dificulte)">
 								<xsl:for-each select="$instrument_niveau_dificulte">
 									<xsl:variable name="instrument" select="normalize-space(.)"/>
 									<xsl:if test="$data_instrument = $instrument">
-										<xsl:if test="mus:NiveauDificulte($texte)">
-											<ecrm:P103_was_intended_for rdf:resource="{mus:NiveauDificulte($texte)}"/>
+										<xsl:variable name="niveauDifficulte" select="mus:NiveauDificulte($texte)" />
+										<xsl:if test="$niveauDifficulte">
+											<ecrm:P103_was_intended_for rdf:resource="{$niveauDifficulte}"/>
 										</xsl:if>
 									</xsl:if>
 								</xsl:for-each>						
@@ -1195,7 +1192,7 @@
 		<xsl:variable name="data_medium" select="sparnaf:split_text($data_source)"/>
 		
 		<xsl:if test="$data_medium and $data_medium != '0'">
-			<xsl:comment>:::::: Casting alternatif: Notice: <xsl:value-of select="$idNotice"/>, Input: <xsl:value-of select="$data_source"/></xsl:comment>
+			<xsl:comment>Casting alternatif: Notice: <xsl:value-of select="$idNotice"/>, Input: <xsl:value-of select="$data_source"/></xsl:comment>
 			<xsl:for-each select="$data_medium">
 				<xsl:variable name="source_alternatif" select="normalize-space(.)"/>
 				<!-- Generation d'id -->
@@ -1452,7 +1449,10 @@
 	</xsl:template>
 	
 	
-	<!-- affichage seulement les resultat -->
+	<!-- aby default, discard all unmatched text -->
 	<xsl:template match="text()" mode="#all"></xsl:template>
+
+	<!-- Overwrite built-in template to match all unmatched elements and discard them -->
+	<xsl:template match="*" mode="#all" />
 
 </xsl:stylesheet>

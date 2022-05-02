@@ -26,12 +26,12 @@
 	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/*/language" />
 	
 	<!-- Call sources files RDF -->
-	<xsl:param name="SHARED_RDF_DIR">../work/controlled_vocabularies_rdf-xml</xsl:param>
+	<xsl:param name="SHARED_RDF_DIR">../work/vocabulaires_rdf-xml</xsl:param>
 	
-	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/*/skos:Concept" />	
-	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/*/skos:Concept" />
-	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/*/skos:Concept" />
-	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/*/rdf:Description" />
+	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF/skos:Concept" />	
+	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF/skos:Concept" />
+	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF/skos:Concept" />
+	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF/rdf:Description" />
 	
 	 
 	<!--
@@ -612,7 +612,7 @@
 				<xsl:value-of select="$match_niveau[1]"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Warning - lookup for level '<xsl:value-of select="$idText"/>' cannot be found in vocabulary.</xsl:message>
+				<xsl:message>Warning - lookup for level '<xsl:value-of select="$inputNiveau"/>' cannot be found in vocabulary.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>	
 	</xsl:function>
@@ -667,8 +667,12 @@
 			</xsl:for-each>
 		</xsl:variable>
 		<xsl:choose>
-			<xsl:when test="$instrument_dans_niveau!=''"><xsl:value-of select="$instrument_dans_niveau"/></xsl:when>
-			<xsl:otherwise>Warning - The phrase in difficulted nivel '<xsl:value-of select="$idText"/>' cannot be found an instrument.</xsl:otherwise>
+			<xsl:when test="$instrument_dans_niveau!=''">
+				<xsl:value-of select="$instrument_dans_niveau"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:message>Warning - Cannot find an instrument in difficulty level '<xsl:value-of select="$idText"/>'.</xsl:message>
+			</xsl:otherwise>
 		</xsl:choose>				
 	</xsl:function>
 	
@@ -741,12 +745,12 @@
 	
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="ialm_resultat" select="$iaml_vocab[skos:prefLabel=$mots_instrument]/@rdf:about"/>
+		<xsl:variable name="iaml_resultat" select="$iaml_vocab[skos:prefLabel=$mots_instrument]/@rdf:about"/>
 		<xsl:choose>
-			<xsl:when test="count($ialm_resultat) = 1"><xsl:value-of select="$ialm_resultat"/></xsl:when>
-			<xsl:when test="count($ialm_resultat) &gt; 1">
-				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($ialm_resultat)" /> times in IAML, taking the first one.</xsl:message>
-				<xsl:value-of select="$ialm_resultat[1]"/>
+			<xsl:when test="count($iaml_resultat) = 1"><xsl:value-of select="$iaml_resultat"/></xsl:when>
+			<xsl:when test="count($iaml_resultat) &gt; 1">
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($iaml_resultat)" /> times in IAML, taking the first one.</xsl:message>
+				<xsl:value-of select="$iaml_resultat[1]"/>
 			</xsl:when>
 		</xsl:choose>
 	</xsl:function>
@@ -763,11 +767,11 @@
 				</xsl:otherwise>
 			</xsl:choose>		
 		</xsl:variable>
-		<xsl:message>Instrument: <xsl:value-of select="$mot_medium"/></xsl:message>
+		<xsl:message>Info - Complex Instrument Lookup on '<xsl:value-of select="$mot_medium"/>'</xsl:message>
 		<xsl:variable name="mimo_vocabulary" select="sparnaf:ComplexInstrument_mimo($mot_medium)"/>
-		<xsl:message>Resultat Mimo: <xsl:value-of select="$mimo_vocabulary"/></xsl:message>
+		<xsl:message>Resultat MIMO: <xsl:value-of select="$mimo_vocabulary"/></xsl:message>
 		<xsl:variable name="iaml_vocabulary" select="sparnaf:ComplexInstrument_iaml($mot_medium)"/>
-		<xsl:message>Resultat Iaml: <xsl:value-of select="$iaml_vocabulary"/></xsl:message>
+		<xsl:message>Resultat IAML: <xsl:value-of select="$iaml_vocabulary"/></xsl:message>
 		<!--  
 		<xsl:variable name="instrument_mimo_trouve" select="string-length(substring-before($mimo_vocabulary[1],'_'))"/>
 		<xsl:variable name="instrument_iaml_trouve" select="string-length(substring-before($iaml_vocabulary[1],'_'))"/>
@@ -778,13 +782,15 @@
 		<xsl:variable name="instrument_trouve">	
 			<xsl:choose>
 				<xsl:when test="$instrument_mimo_trouve &gt;= $instrument_iaml_trouve">
-					<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>
-					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in MIMO with the similarity: '<xsl:value-of select="$mimo_vocabulary"/>-<xsl:value-of select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>'</xsl:message>
+					<xsl:variable name="result" select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>
+					<xsl:message>Info - The medium: '<xsl:value-of select="$mot_medium"/>' is found in MIMO with match: label='<xsl:value-of select="$mimo_vocabulary"/>' URI='<xsl:value-of select="$result"/>'</xsl:message>
+					<xsl:value-of select="$result"/>
 				</xsl:when>
-				<xsl:when test="$instrument_mimo_trouve &lt; $instrument_iaml_trouve">
-					<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>
-					<xsl:message>Warning: The medium: '<xsl:value-of select="$mot_medium"/>' is found in IAML with the similarity: '<xsl:value-of select="$iaml_vocabulary"/>-<xsl:value-of select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>'</xsl:message>
-				</xsl:when>
+				<xsl:otherwise>
+					<xsl:variable name="result" select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>
+					<xsl:message>Info - The medium: '<xsl:value-of select="$mot_medium"/>' is found in IAML with match: label='<xsl:value-of select="$iaml_vocabulary"/>' URI='<xsl:value-of select="$result"/>'</xsl:message>
+					<xsl:value-of select="$result"/>
+				</xsl:otherwise>
 			</xsl:choose>		
 		</xsl:variable>
 		<xsl:choose>
@@ -896,13 +902,19 @@
 	<!-- translation language -->
 	<xsl:function name="mus:Lookup_Language_3LettersCode">
 		<xsl:param name="idCode" />
-		<xsl:variable name="language" select="$language_codes[
-			a3b = $idCode or
-			a3t = $idCode
-		]"/>
+		<xsl:variable name="language">
+			<!-- hardcode value 'ooo' to avoid unnecessary lookups -->
+			<xsl:if test="$idCode != 'ooo'">
+				<xsl:value-of select="$language_codes[
+					a3b = $idCode or
+					a3t = $idCode
+				]"/>
+			</xsl:if>
+		</xsl:variable>
+		
 		<xsl:choose>
 			<xsl:when test="count($language) = 0">
-				<xsl:message>Warning - cannot find language "<xsl:value-of select="$idCode" /> in vocabulary.</xsl:message>
+				<xsl:message>Warning - cannot find language '<xsl:value-of select="$idCode" />' in vocabulary.</xsl:message>
 			</xsl:when>
 			<xsl:when test="count($language) &gt; 1">
 				<xsl:message>Warning - find <xsl:value-of select="count($language)" /> languages with code "<xsl:value-of select="$idCode" /> - Taking first one.</xsl:message>
