@@ -29,7 +29,8 @@
 	</xsl:template>
 
 	<xsl:template match="NOTICE">
-		<skos:Concept rdf:about="{concat('http://fake.philharmoniedeparis.fr/',replace(@type,':',''),'/',@id)}">
+		<!-- concat('http://fake.philharmoniedeparis.fr/',replace(@type,':',''),'/',@id) -->
+		<skos:Concept rdf:about="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',@id)}">
 			<xsl:apply-templates />
 		</skos:Concept>
 	</xsl:template>
