@@ -91,7 +91,7 @@ do
 	java -Xmx8048M -jar saxon-he-10.1.jar \
 		-s:$DIR_PARTITIONS_SOURCE/$FILENAME.xml \
 		-xsl:$XSLT_DIR/Partitions.xsl \
-		-o:$OUTPUT_FOLDER/$FILENAME.rdf > $LOG_FOLDER/Partitions.log 2>&1
+		-o:$OUTPUT_FOLDER/$FILENAME.rdf > $LOG_FOLDER/Partitions-$FILENAME.log 2>&1
 
 done
 
