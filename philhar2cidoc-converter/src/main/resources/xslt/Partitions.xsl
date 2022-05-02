@@ -646,8 +646,9 @@
 		</xsl:if>		
 	</xsl:template>
 	
-	<xsl:template match="champs">
-		<xsl:apply-templates/>
+	<!-- By default, for any champs not matched above, recurse down on SOUSCHAMP -->
+	<xsl:template match="champs" mode="#all">
+		<xsl:apply-templates mode="#current" />
 	</xsl:template>
 	
 	

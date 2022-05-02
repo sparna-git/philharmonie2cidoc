@@ -28,10 +28,10 @@
 	<!-- Call sources files RDF -->
 	<xsl:param name="SHARED_RDF_DIR">../work/vocabulaires_rdf-xml</xsl:param>
 	
-	<xsl:param name="Niveau_difficulte" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF/skos:Concept" />	
+	<xsl:param name="educational-level_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF/*" />	
 	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF/skos:Concept" />
 	<xsl:param name="iaml_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'iaml.rdf'))/rdf:RDF/skos:Concept" />
-	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF/rdf:Description" />
+	<xsl:param name="rol_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'role.rdf'))/rdf:RDF/skos:Concept" />
 	
 	 
 	<!--
@@ -602,7 +602,7 @@
 	<xsl:function name="mus:NiveauDificulte">
 		<xsl:param name="idText"/>
 		<xsl:variable name="inputNiveau" select="normalize-space(substring-after(substring-before($idText,' dans'),'Niveau '))"/>
-		<xsl:variable name="match_niveau" select="$Niveau_difficulte[skos:altLabel=$inputNiveau]/@rdf:about"/>
+		<xsl:variable name="match_niveau" select="$educational-level_vocab[skos:altLabel=$inputNiveau]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($match_niveau) = 1">
 				<xsl:value-of select="$match_niveau"/>
