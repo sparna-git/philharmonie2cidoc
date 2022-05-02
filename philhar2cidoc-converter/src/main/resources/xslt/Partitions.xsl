@@ -131,8 +131,6 @@
 			</xsl:if>
 		</xsl:variable>
 		
-		<xsl:variable name="idSequence" select="count(preceding::champs[@UnimarcTag='200']/SOUSCHAMP[@UnimarcSubfield ='200$a'])"/>
-		
 		<xsl:variable name="data_a">
 			<xsl:if test="SOUSCHAMP[@UnimarcSubfield ='200$a']">
 				<xsl:value-of select="SOUSCHAMP[@UnimarcSubfield ='200$a']/data"/>
@@ -198,7 +196,7 @@
 		
 		
 		<xsl:if test="$data_a">
-			<xsl:variable name="idTitleStatement" select="count(ancestor::root/preceding-sibling::champs[@UnimarcTag='200']/SOUSCHAMP[@UnimarcSubfield ='200$a'])+1"/>
+			<xsl:variable name="idTitleStatement" select="count(preceding-sibling::champs[@UnimarcTag='200'])+1"/>
 			<mus:U170_has_title_statement>
 				<mus:M156_Title_Statement rdf:about="{mus:URI-Title($idNotice,$idTitleStatement,$typeNotice,$idNoticeMere)}">
 					<rdfs:label><xsl:value-of select="concat($data_a,$data_e,$data_h,$data_i)"/></rdfs:label>
@@ -224,7 +222,8 @@
 		</xsl:variable>
 		
 		<xsl:if test="$data_f or $data_g">
-			<xsl:variable name="sequence" select="number($idSequence)+1"/>	
+			<xsl:variable name="sequence" select="count(preceding-sibling::champs[@UnimarcTag='200'])+1"/>
+
 			<mus:U172_has_statement_of_responsibility_relating_to_title>
 				<mus:M157_Statement_of_Responsibility rdf:about="{mus:URI-Responsability($idNotice,$sequence,$typeNotice,$idNoticeMere)}">
 					<rdfs:label><xsl:value-of select="concat($data_f,$data_g)"/></rdfs:label>
@@ -629,13 +628,13 @@
 								<xsl:if test="$FamBois_a or $FamSaxo_a or $FamCuivre_a or $FamPercussions_a or $FamClaviers_a or
 												  $FamCordesPincees_a or $FamCordesFrottees_a or $InstrumentsDivers_a or $Electro_a or $Ensemble_a">
 									<xsl:apply-templates select="../champs[@UnimarcTag='942']" mode="Instruments_solistes">
-										<xsl:with-param name="idCasting" select="$positionCasting"/>
+										<xsl:with-param name="idCasting" select="$positionCasting" tunnel="yes" />
 									</xsl:apply-templates>
 								</xsl:if>
 									
 								<!-- Casting Detail -->
 								<xsl:apply-templates select="../*" mode="casting_detail">
-									<xsl:with-param name="idCasting" select="$positionCasting"/>							
+									<xsl:with-param name="idCasting" select="$positionCasting" tunnel="yes" />							
 								</xsl:apply-templates>						
 								
 							</xsl:if>
@@ -975,7 +974,7 @@
 	
 	<!-- Casting Detail Simple 942 -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='942$a']" mode="Instruments_solistes">
-		<xsl:param name="idCasting"/>
+		<xsl:param name="idCasting" tunnel="yes" />
 				
 		<xsl:variable name="typeNotice" select="../../@type"/>
 		<xsl:variable name="idNotice" select="../../@id"/>
@@ -984,8 +983,7 @@
 				<xsl:value-of select="$idNotice/../../../NOTICE/@id"/>
 			</xsl:if>
 		</xsl:variable>
-		
-		<xsl:variable name="idCompteur" select="count(preceding::SOUSCHAMP[@UnimarcSubfield='942$a'])+1"/>
+
 		<!-- Generation d'id -->
 		<xsl:variable name="index" select="generate-id()"/>
 		
@@ -1068,7 +1066,8 @@
 								   @UnimarcSubfield='952$a' or
 								   @UnimarcSubfield='953$a' or
 								   @UnimarcSubfield='956$a']" mode="casting_detail">
-		<xsl:param name="idCasting"/>
+		
+		<xsl:param name="idCasting" tunnel="yes" />
 		
 		<xsl:variable name="idNotice" select="../../@id"/>
 		<xsl:variable name="typeNotice" select="../../@type"/>
@@ -1080,7 +1079,7 @@
 		
 		<!-- Generation d'id -->
 		<xsl:variable name="id" select="generate-id()"/>
-		<xsl:comment>Notice: <xsl:value-of select="$idNotice"/>, IdCasting: <xsl:value-of select="@UnimarcSubfield"/></xsl:comment>
+		<xsl:comment>Notice: <xsl:value-of select="$idNotice"/>, SOUSCHAMP: <xsl:value-of select="@UnimarcSubfield"/>, idCasting: <xsl:value-of select="$idCasting"/></xsl:comment>
 		<mus:U23_has_casting_detail>
 			<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$id,$typeNotice,$idNoticeMere)}">
 			
