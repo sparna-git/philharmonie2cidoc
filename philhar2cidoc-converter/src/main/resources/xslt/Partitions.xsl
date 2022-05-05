@@ -58,9 +58,8 @@
 			<!-- en dur -->
 			<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
 			
-			<!-- Créer un nouvel identifiant à chaque fois que l’une de ces zones est remplie : 
-						UNI5 : notice id							
-				 -->
+			<!-- Créer un nouvel identifiant à chaque fois que l’une de ces zones est remplie : UNI5 : notice id -->
+			
 			<xsl:if test="@type = 'UNI:5'">
 				<ecrm:P1_is_identified_by>
 					<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier(@id,@id,'CMPP-ALOES',@type)}">
@@ -1001,7 +1000,7 @@
 				
 				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
 				<xsl:variable name="medium_instrument_complex">
-					<xsl:if test="$medium_instrument = ''">
+					<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
 						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>
 					</xsl:if>
 				</xsl:variable>
@@ -1094,8 +1093,8 @@
 				
 				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
 				<xsl:variable name="medium_instrument_complex">
-					<xsl:if test="$medium_instrument = ''">
-						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>
+					<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
+						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>						
 					</xsl:if>
 				</xsl:variable>
 				 
@@ -1129,20 +1128,19 @@
 					<xsl:for-each select="$NiveauDificulte">
 						<xsl:variable name="texte" select="normalize-space(.)"/>
 						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
-						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>						
-						<xsl:choose>
-							<xsl:when test="boolean($instrument_niveau_dificulte)">
-								<xsl:for-each select="$instrument_niveau_dificulte">
-									<xsl:variable name="instrument" select="normalize-space(.)"/>
-									<xsl:if test="$data_instrument = $instrument">
-										<xsl:variable name="niveauDifficulte" select="mus:NiveauDificulte($texte)" />
-										<xsl:if test="$niveauDifficulte">
-											<ecrm:P103_was_intended_for rdf:resource="{$niveauDifficulte}"/>
-										</xsl:if>
+
+						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>
+						<xsl:if test="boolean($instrument_niveau_dificulte)">
+							<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
+								<xsl:variable name="instrument" select="normalize-space(.)"/>								
+								<xsl:if test="$data_instrument = $instrument">
+									<xsl:variable name="niveauDifficulte" select="mus:NiveauDificulte($texte)" />
+									<xsl:if test="$niveauDifficulte">
+										<ecrm:P103_was_intended_for rdf:resource="{$niveauDifficulte}"/>
 									</xsl:if>
-								</xsl:for-each>						
-							</xsl:when>
-						</xsl:choose>												
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:if>																		
 					</xsl:for-each>
 				</xsl:if>
 				
