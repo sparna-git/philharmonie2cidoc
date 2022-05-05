@@ -1011,10 +1011,12 @@
 					<xsl:when test="$medium_instrument != ''">
 						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
 					</xsl:when>
-					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex">
+					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
 						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
 					</xsl:when>
-					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>				
+					<xsl:otherwise>
+						<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
+					</xsl:otherwise>				
 				</xsl:choose>
 				
 				<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
@@ -1100,12 +1102,16 @@
 				
 				<xsl:choose>
 					<xsl:when test="$medium_instrument != ''">
+						<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
 						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
 					</xsl:when>
-					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex">
+					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
+						<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
 						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
 					</xsl:when>
-					<xsl:otherwise><xsl:comment>medium: <xsl:value-of select="$data_instrument"/></xsl:comment></xsl:otherwise>				
+					<xsl:otherwise>
+						<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
+					</xsl:otherwise>				
 				</xsl:choose>
 				
 				<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
@@ -1123,7 +1129,7 @@
 					<xsl:for-each select="$NiveauDificulte">
 						<xsl:variable name="texte" select="normalize-space(.)"/>
 						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
-						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Difficulte: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>						
+						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>						
 						<xsl:choose>
 							<xsl:when test="boolean($instrument_niveau_dificulte)">
 								<xsl:for-each select="$instrument_niveau_dificulte">
