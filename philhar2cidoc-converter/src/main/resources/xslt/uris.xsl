@@ -639,10 +639,8 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
-					<xsl:variable name="instrument_simple">	
-								
-						<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($_data_)"/>
-						
+					<xsl:variable name="instrument_simple">									
+						<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($_data_)"/>						
 						<xsl:variable name="iaml_medium_simple">
 							<xsl:if test="$mimo_medium_simple !=''">
 								<xsl:value-of select="mus:iaml_vocabulary_simple($_data_)"/>
@@ -658,11 +656,11 @@
 							</xsl:when>
 						</xsl:choose>
 					</xsl:variable>
+
 					<xsl:if test="$instrument_simple!=''">
 						<xsl:value-of select="$instrument_simple"/>
 					</xsl:if>
 				</xsl:if>
-				
 				
 			</xsl:for-each>
 		</xsl:variable>
