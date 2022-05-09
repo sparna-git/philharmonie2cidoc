@@ -50,7 +50,7 @@
 
 	<!-- 940$3 -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='940$3']">
-	   <skos:broader rdf:resource="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',normalize-space(.)}" />
+	   <skos:broader rdf:resource="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',normalize-space(.))}" />
 	</xsl:template>
 	
 	<xsl:template match="text()"></xsl:template>

@@ -525,8 +525,7 @@
 		<xsl:variable name="idNotice" select="../@id"/>
 		<xsl:variable name="idNoticeMere">
 			<xsl:if test="$typeNotice ='UNI:45'">
-				<xsl:value-of select="$idNotice/../../../NOTICE/@id"/>
-				
+				<xsl:value-of select="$idNotice/../../../NOTICE/@id"/>				
 			</xsl:if>
 		</xsl:variable>
 		
@@ -538,7 +537,11 @@
 		
 		<xsl:if test="$Valide_Option_Casting = 1">
 		
-			<xsl:variable name="NoInstuments" select="SOUSCHAMP[@UnimarcSubfield='954$t']/sparnaf:isNumber(data)"/>
+			<xsl:variable name="NoInstuments" select="SOUSCHAMP[@UnimarcSubfield='954$t']/data"/>
+			<!-- U48 foresees quantity of actors  -->
+			<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
+				<xsl:value-of select="$NoInstuments"/>
+			</mus:U48_foresees_quantity_of_actors>			
 			
 			<xsl:variable name="VoixSolistes_a" select="../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/data"/>
 			<xsl:variable name="InstrumentSolistes_a" select="../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/data"/>
@@ -559,33 +562,54 @@
 			<!-- Create alternatif -->
 			<!-- Si le total d'instrument est different de  -->
 			<!-- Voix Soliste -->
-			<xsl:variable name="VoixSoliste_TotalInstruments" select="sum(../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>	            
+			<xsl:variable name="VoixSoliste_TotalInstruments" select="sum(../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/sparnaf:isNumber(normalize-space(data)))"/>	            
 			<!-- Instruments solistes -->
-			<xsl:variable name="InstSoliste_TotalInstruments" select="sum(../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="InstSoliste_TotalInstruments" select="sum(../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Choeur -->
-			<xsl:variable name="Choeur_TotalInstruments" select="sum(../champs[@UnimarcTag='941']/SOUSCHAMP[@UnimarcSubfield='941$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="Choeur_TotalInstruments" select="sum(../champs[@UnimarcTag='941']/SOUSCHAMP[@UnimarcSubfield='941$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Gestique -->
-			<xsl:variable name="Gestique_TotalInstruments" select="sum(../champs[@UnimarcTag='943']/SOUSCHAMP[@UnimarcSubfield='943$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="Gestique_TotalInstruments" select="sum(../champs[@UnimarcTag='943']/SOUSCHAMP[@UnimarcSubfield='943$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des bois -->
-			<xsl:variable name="FamBois_TotalInstruments" select="sum(../champs[@UnimarcTag='945']/SOUSCHAMP[@UnimarcSubfield='945$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamBois_TotalInstruments" select="sum(../champs[@UnimarcTag='945']/SOUSCHAMP[@UnimarcSubfield='945$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des saxophones -->
-			<xsl:variable name="FamSax_TotalInstruments" select="sum(../champs[@UnimarcTag='946']/SOUSCHAMP[@UnimarcSubfield='946$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamSax_TotalInstruments" select="sum(../champs[@UnimarcTag='946']/SOUSCHAMP[@UnimarcSubfield='946$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des cuivres -->
-			<xsl:variable name="FamCuivres_TotalInstruments" select="sum(../champs[@UnimarcTag='947']/SOUSCHAMP[@UnimarcSubfield='947$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamCuivres_TotalInstruments" select="sum(../champs[@UnimarcTag='947']/SOUSCHAMP[@UnimarcSubfield='947$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des percussions -->
-			<xsl:variable name="FamPercu_TotalInstruments" select="sum(../champs[@UnimarcTag='948']/SOUSCHAMP[@UnimarcSubfield='948$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamPercu_TotalInstruments" select="sum(../champs[@UnimarcTag='948']/SOUSCHAMP[@UnimarcSubfield='948$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des claviers -->
-			<xsl:variable name="FamClaviers_TotalInstruments" select="sum(../champs[@UnimarcTag='949']/SOUSCHAMP[@UnimarcSubfield='949$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamClaviers_TotalInstruments" select="sum(../champs[@UnimarcTag='949']/SOUSCHAMP[@UnimarcSubfield='949$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des cordes pincées -->
-			<xsl:variable name="FamCordesPincees_TotalInstruments" select="sum(../champs[@UnimarcTag='950']/SOUSCHAMP[@UnimarcSubfield='950$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamCordesPincees_TotalInstruments" select="sum(../champs[@UnimarcTag='950']/SOUSCHAMP[@UnimarcSubfield='950$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Famille des cordes frottées -->
-			<xsl:variable name="FamCordesFrot_TotalInstruments" select="sum(../champs[@UnimarcTag='951']/SOUSCHAMP[@UnimarcSubfield='951$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="FamCordesFrot_TotalInstruments" select="sum(../champs[@UnimarcTag='951']/SOUSCHAMP[@UnimarcSubfield='951$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Instruments divers -->
-			<xsl:variable name="InstDivers_TotalInstruments" select="sum(../champs[@UnimarcTag='952']/SOUSCHAMP[@UnimarcSubfield='952$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="InstDivers_TotalInstruments">
+				<xsl:variable name="filterInstrument" select="normalize-space(substring-before(data,'('))"/>
+				<xsl:choose>
+					<xsl:when test="filterInstrument != 'basse_continue'">
+						<xsl:value-of select="sum(../champs[@UnimarcTag='952']/SOUSCHAMP[@UnimarcSubfield='952$a']/sparnaf:isNumber(normalize-space(data)))"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="sum(0)"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
 			<!-- Electroacoustique -->
-			<xsl:variable name="Electroacoustique_TotalInstruments" select="sum(../champs[@UnimarcTag='953']/SOUSCHAMP[@UnimarcSubfield='953$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>
+			<xsl:variable name="Electroacoustique_TotalInstruments" select="sum(../champs[@UnimarcTag='953']/SOUSCHAMP[@UnimarcSubfield='953$a']/sparnaf:isNumber(normalize-space(data)))"/>
 			<!-- Ensemble -->
-			<xsl:variable name="Ensemble_TotalInstruments" select="sum(../champs[@UnimarcTag='956']/SOUSCHAMP[@UnimarcSubfield='956$a']/number(sparnaf:isNumber(substring-before(substring-after(normalize-space(data),'('),')'))))"/>	
+			<xsl:variable name="Ensemble_TotalInstruments">
+				<xsl:variable name="filterInstrument" select="normalize-space(substring-before(data,'('))"/>
+				<xsl:choose>
+					<xsl:when test="filterInstrument != 'ensemble_instrumental'">
+						<xsl:value-of select="sum(../champs[@UnimarcTag='956']/SOUSCHAMP[@UnimarcSubfield='956$a']/sparnaf:isNumber(normalize-space(data)))"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="sum(0)"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			 	
 			<!-- Total d'instruments  -->
 			<xsl:variable name="sum_total_instruments" select="sum($VoixSoliste_TotalInstruments +
 			            												   $InstSoliste_TotalInstruments +
@@ -602,20 +626,18 @@
 			            												   $Electroacoustique_TotalInstruments +
 			            												   $Ensemble_TotalInstruments
 			            												   )"/>
+			
+			
+			<xsl:message>Notice <xsl:value-of select="$idNotice"/>, Num Instrument <xsl:value-of select="$NoInstuments"/>, Sum total Instrument <xsl:value-of select="$sum_total_instruments"/></xsl:message>
 			<xsl:choose>
 				<xsl:when test="$NoInstuments !=  $sum_total_instruments">
 					<xsl:comment>Casting Alternatif</xsl:comment>
-				 	<xsl:apply-templates select="../*" mode="casting_alternatif"/>
+					<xsl:apply-templates select="../*" mode="casting_alternatif"/>
 				</xsl:when>
 				<xsl:when test="$NoInstuments =  $sum_total_instruments">
 					<!-- Créer une instance de M6 Casting dès que l’une des zones citées ci-dessus est remplie -->
 					<mus:U13_has_casting>
 						<mus:M6_Casting rdf:about="{mus:URI-Casting($idNotice,$positionCasting,$typeNotice,$idNoticeMere)}">
-								
-							<!-- U48 foresees quantity of actors  -->
-							<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
-								<xsl:value-of select="$NoInstuments"/>
-							</mus:U48_foresees_quantity_of_actors>
 								
 							<!-- Création des M23 Casting Detail (cas simples) : -->
 							<xsl:if test="$VoixSolistes_a or $InstrumentSolistes_a or $Choeur_a or  $Gestique_a or
@@ -870,13 +892,27 @@
 		<xsl:variable name="AIC14_oeuvre_444" select="mus:Titre_Uniforme_Musical($idNotice,$idAIC14,'444',$qualificatif)"/>
 		
 		<!-- Nom du compositeur + Nom de l’oeuvre  -->
-		<mus:U68_has_variant_title>
-			<ecrm:E35_Title rdf:about="{mus:URI-Title_variant($idNotice,$idSequence,$typeNotice,$idNoticeMere)}">
-				<rdfs:label>
-					<xsl:value-of select="concat($AIC14_compositeur,'. - ',$AIC14_oeuvre_144)"/>	
-				</rdfs:label>
-			</ecrm:E35_Title>
-		</mus:U68_has_variant_title>
+		<xsl:choose>
+			<xsl:when test="$AIC14_oeuvre_144 != ''">
+				<mus:U68_has_variant_title>
+					<ecrm:E35_Title rdf:about="{mus:URI-Title_variant($idNotice,$idSequence,$typeNotice,$idNoticeMere)}">
+						<rdfs:label>
+							<xsl:value-of select="concat($AIC14_compositeur,'. - ',$AIC14_oeuvre_144)"/>	
+						</rdfs:label>
+					</ecrm:E35_Title>
+				</mus:U68_has_variant_title>	
+			</xsl:when>
+			<xsl:when test="AIC14_oeuvre_444 != ''">
+				<mus:U68_has_variant_title>
+					<ecrm:E35_Title rdf:about="{mus:URI-Title_variant($idNotice,$idSequence,$typeNotice,$idNoticeMere)}">
+						<rdfs:label>
+							<xsl:value-of select="concat($AIC14_compositeur,'. - ',$AIC14_oeuvre_444)"/>	
+						</rdfs:label>
+					</ecrm:E35_Title>
+				</mus:U68_has_variant_title>				
+			</xsl:when>
+		</xsl:choose>
+		
 		
 	</xsl:template>
 	
