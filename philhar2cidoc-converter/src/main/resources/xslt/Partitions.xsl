@@ -628,7 +628,6 @@
 			            												   )"/>
 			
 			
-			<xsl:message>Notice <xsl:value-of select="$idNotice"/>, Num Instrument <xsl:value-of select="$NoInstuments"/>, Sum total Instrument <xsl:value-of select="$sum_total_instruments"/></xsl:message>
 			<xsl:choose>
 				<xsl:when test="$NoInstuments !=  $sum_total_instruments">
 					<xsl:comment>Casting Alternatif</xsl:comment>
@@ -1165,7 +1164,6 @@
 						<xsl:variable name="texte" select="normalize-space(.)"/>
 						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
 
-						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>
 						<xsl:if test="boolean($instrument_niveau_dificulte)">
 							<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
 								<xsl:variable name="instrument" select="normalize-space(.)"/>								
