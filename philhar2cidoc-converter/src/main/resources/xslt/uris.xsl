@@ -47,7 +47,7 @@
 	<!-- URI Publication Expression -->
 	<xsl:function name="mus:URI-Publication_Expression">
 		<xsl:param name="idReferenceNotice" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice)" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice)" />
 	</xsl:function>
 	
 	<!-- URI Identifier -->
@@ -57,7 +57,7 @@
 		<xsl:param name="idTypeIdentifier" />
 		<xsl:param name="typeNotice" />
 		<xsl:choose>
-			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))" /></xsl:when>
 			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat('/identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))"/></xsl:when>
 		</xsl:choose>
 		
@@ -152,7 +152,7 @@
 	<!-- URI Publication Event-->
 	<xsl:function name="mus:URI-Publication_Event">
 		<xsl:param name="idReferenceNotice" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#event')" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice,'#event')" />
 	</xsl:function>
 	
 	<!-- URI Publication Event - Activity -->
@@ -216,13 +216,13 @@
 	<!-- URI Personne -->
 	<xsl:function name="mus:reference_personne">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReference)"/>
 	</xsl:function>
 	
 	<!-- URI Collectivité -->
 	<xsl:function name="mus:reference_collectivite">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReference)"/>
 	</xsl:function>
 	
 	<xsl:function name="mus:role_vocab">
@@ -247,7 +247,7 @@
 	<!-- URI Thesaurus ? Valider -->
 	<xsl:function name="mus:reference_thesaurus">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReference)"/>
 	</xsl:function>
 	
 	<!--  -->
@@ -328,22 +328,25 @@
 				<xsl:variable name="Balise_u" select="concat($idBalise,'$','u')"/>
 				<xsl:choose>					
 					<xsl:when test="$Count = 1">
-						<xsl:variable name="oeuvre_data_a"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_c"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_a"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_a]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_c"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]/data"/></xsl:if></xsl:variable>
 						
-						<xsl:variable name="oeuvre_data_g"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]/normalize-space(data)"/></xsl:if></xsl:variable>
+						
+						<xsl:variable name="oeuvre_data_"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_c]/data"/></xsl:if></xsl:variable>
+						
+						<xsl:variable name="oeuvre_data_g"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_g]/data"/></xsl:if></xsl:variable>
 							
-						<xsl:variable name="oeuvre_data_h"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_i"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_h"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_h]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_i"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_i]/data"/></xsl:if></xsl:variable>
 						
 						<xsl:variable name="oeuvre_data_k"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_k]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_k]/data"/></xsl:if></xsl:variable>
 						
-						<xsl:variable name="oeuvre_data_n"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_p"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_q"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_r"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_t"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]/normalize-space(data)"/></xsl:if></xsl:variable>
-						<xsl:variable name="oeuvre_data_u"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]/normalize-space(data)"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_n"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_n]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_p"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_p]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_q"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_q]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_r"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_r]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_t"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_t]/data"/></xsl:if></xsl:variable>
+						<xsl:variable name="oeuvre_data_u"><xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]"><xsl:value-of select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_u]/data"/></xsl:if></xsl:variable>
 							 
 						<xsl:choose>
 							<!-- Données : 
@@ -432,6 +435,7 @@
 						 		<xsl:if test="$data_a or $data_b ">
 									<xsl:value-of select="concat($data_a,$data_b)"/>
 								</xsl:if>
+								
 						 	</xsl:when>
 						 	<!-- Cas 2
 							
@@ -439,78 +443,88 @@
 								Reprendre les instructions précédentes et ajouter à la fin, séparés par un point et un espace : $h. $i.
 						
 							-->
-						 	<xsl:when test="(string-length($oeuvre_data_i) &gt; 0 or
+							<xsl:when test="(string-length($oeuvre_data_i) &gt; 0 or
 											 string-length($oeuvre_data_h) &gt; 0) and
 											 (string-length($oeuvre_data_g) = 0 or
 											  string-length($oeuvre_data_c) = 0)">
-								<xsl:variable name="data_a">		
-									<xsl:value-of select="normalize-space(
-															concat(
-																sparnaf:isTrue($oeuvre_data_a),
-																sparnaf:isTrue($oeuvre_data_r),
-																sparnaf:isTrue($oeuvre_data_n),
-																sparnaf:isTrue($oeuvre_data_k),
-																sparnaf:isTrue($oeuvre_data_p),
-																sparnaf:isTrue($oeuvre_data_t),
-																sparnaf:isTrue($oeuvre_data_u)
-																)
-															)"/>
-															
-								</xsl:variable>
 								
-								<xsl:variable name="data_b">
-						 			<xsl:variable name="oeuvre_data_e">
-										<xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]">
-											<xsl:variable name="nCount" select="count($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]/data)"/>
-											<xsl:choose>
-												<xsl:when test="$nCount &gt; 1">
-													<xsl:for-each select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]/data">
-														<xsl:variable name="data_e" select="."/>
-															<xsl:value-of select="concat($data_e,';')"/>
-													</xsl:for-each>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="concat($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]/data,';')"/>
-												</xsl:otherwise>
-											</xsl:choose>																														
-										</xsl:if>
+								
+								<!-- Cas 2  -->
+								<xsl:if test="string-length($oeuvre_data_g) = 0 and
+											string-length($oeuvre_data_c) = 0 ">
+								
+									<xsl:variable name="data_a">		
+										<xsl:value-of select="normalize-space(concat(
+																	sparnaf:isTrue($oeuvre_data_a),
+																	sparnaf:isTrue($oeuvre_data_r),
+																	sparnaf:isTrue($oeuvre_data_n),
+																	sparnaf:isTrue($oeuvre_data_k),
+																	sparnaf:isTrue($oeuvre_data_p),
+																	sparnaf:isTrue($oeuvre_data_t),
+																	sparnaf:isTrue($oeuvre_data_u)
+																	)
+																	)"/>
 									</xsl:variable>
+						 		
+							 		<xsl:variable name="data_b">
+							 			<xsl:variable name="oeuvre_data_e">
+											<xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]">
+												<xsl:variable name="nCount" select="count($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]/data)"/>
+												<xsl:choose>
+													<xsl:when test="$nCount &gt; 1">
+														<xsl:for-each select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]/data">
+															<xsl:variable name="data_e" select="."/>
+																<xsl:value-of select="concat($data_e,';')"/>
+														</xsl:for-each>
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_e]/data,';')"/>
+													</xsl:otherwise>
+												</xsl:choose>																														
+											</xsl:if>
+										</xsl:variable>
+											
+										<xsl:variable name="oeuvre_data_j">
+											<xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]">
+												<xsl:variable name="nCount" select="count($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]/data)"/>
+												<xsl:choose>
+													<xsl:when test="$nCount &gt; 1">
+														<xsl:for-each select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]/data">
+															<xsl:variable name="data_j" select="."/>
+																<xsl:value-of select="concat($data_j,';')"/>
+														</xsl:for-each>
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:value-of select="concat($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]/data,';')"/>
+													</xsl:otherwise>
+												</xsl:choose>																														
+											</xsl:if>
+										</xsl:variable>
 										
-									<xsl:variable name="oeuvre_data_j">
-										<xsl:if test="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]">
-											<xsl:variable name="nCount" select="count($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]/data)"/>
-											<xsl:choose>
-												<xsl:when test="$nCount &gt; 1">
-													<xsl:for-each select="$metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]/data">
-														<xsl:variable name="data_j" select="."/>
-															<xsl:value-of select="concat($data_j,';')"/>
-													</xsl:for-each>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="concat($metadata/SOUSCHAMP[@UnimarcSubfield=$Balise_j]/data,';')"/>
-												</xsl:otherwise>
-											</xsl:choose>																														
+										
+										<xsl:if test="string-length($oeuvre_data_e) &gt; 0 or
+												string-length($oeuvre_data_j) &gt; 0 or
+												string-length($oeuvre_data_q) &gt; 0">
+												
+												<xsl:variable name="section2" select="concat(
+															$oeuvre_data_e,
+															sparnaf:isTrueParenthesis($oeuvre_data_g),
+															$oeuvre_data_j
+														)"/>
+												
+												<xsl:if test="$section2">
+														<xsl:value-of select="concat('[(', 
+																				substring($section2,1,string-length($section2)-1),																	
+																			')]')"/>
+												</xsl:if>
 										</xsl:if>
-									</xsl:variable>
-									
-									
-									<xsl:if test="string-length($oeuvre_data_e) &gt; 0 or
-											string-length($oeuvre_data_j) &gt; 0 or
-											string-length($oeuvre_data_q) &gt; 0">
-											
-										<xsl:variable name="section2" select="concat(
-														$oeuvre_data_e,
-														sparnaf:isTrueParenthesis($oeuvre_data_g),
-														$oeuvre_data_j
-													)"/>
-											
-										<xsl:if test="$section2">
-											<xsl:value-of select="concat('[(', 
-																		substring($section2,1,string-length($section2)-1),																	
-																		')]')"/>
-										</xsl:if>
+							 		</xsl:variable>
+						 		
+							 		<xsl:if test="$data_a or $data_b ">
+										<xsl:value-of select="concat($data_a,$data_b,$oeuvre_data_h,'. ',$oeuvre_data_i)"/>
 									</xsl:if>
-								</xsl:variable>						 	
+								</xsl:if>
+														 	
 						 	</xsl:when>	
 						 	<!-- Cas 3
 						 		S i $g ou $c ne sont pas vides :   $a. $g. $c. $i. $h. $r. $n. $k. $p. $t . $u
@@ -683,17 +697,19 @@
 		-->
 	<xsl:function name="sparnaf:isNumber">
 		<xsl:param name="Valeur"/>
-		<xsl:variable name="result" select="0"/>
+		<xsl:variable name="result_default" select="0"/>	
+		<xsl:variable name="result" select="substring-before(substring-after(normalize-space($Valeur),'('),')')"/>
 		<xsl:choose>
-			<xsl:when test="string($Valeur) = 'NaN'">
-				<xsl:value-of select="number($result)"/>								
+			<xsl:when test="$result = 'NaN' or $result =''">
+				<xsl:message>Warning - The input value don't content a instrument number: <xsl:value-of select="$Valeur"/></xsl:message>
+				<xsl:value-of select="number($result_default)"/>
 			</xsl:when>
-			<xsl:when test="(string($Valeur) &gt; 'A' and string($Valeur) &lt; 'Z') or (string($Valeur) &gt; 'a' and string($Valeur) &lt; 'z')">
+			<xsl:when test="(string($result) &gt; 'A' and string($result) &lt; 'Z') or (string($result) &gt; 'a' and string($result) &lt; 'z')">
 				<xsl:message>Warning - Value is not a number : '<xsl:value-of select="$Valeur"/>'</xsl:message>
-				<xsl:value-of select="number($result)"/>
+				<xsl:value-of select="number($result_default)"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="number($Valeur)"/>
+				<xsl:value-of select="number($result)"/>				
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -928,36 +944,6 @@
 		</xsl:choose>	
 	</xsl:function>
 	
-	
-	<!--  
-	<xsl:function name="mus:chercher_medium_relation">
-		<xsl:param name="mots_medium"/>
-		<xsl:variable name="mot_medium">
-			<xsl:choose>
-				<xsl:when test="contains($mots_medium,'_')">
-					<xsl:value-of select="normalize-space(translate($mots_medium,'_',' '))"/>										
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="normalize-space($mots_medium)"/>
-				</xsl:otherwise>
-			</xsl:choose>		
-		</xsl:variable>
-
-		<xsl:for-each select="tokenize($mot_medium)">
-			<xsl:variable name="data" select="normalize-space(.)"/>
-			<xsl:variable name="vocabulary_mimo_iaml">
-				<xsl:value-of select="$mimo_vocab[contains(lower-case(skos:prefLabel[@xml:lang='fr']),$data)]/@rdf:about 
-									  | 
-									  $iaml_vocab/skos:Concept[contai ns(skos:prefLabel[@xml:lang='fr'],$data)]/@rdf:about
-									  "/>				
-			</xsl:variable>
-			<xsl:for-each select="$vocabulary_mimo_iaml">
-				<xsl:message>Demo: <xsl:value-of select="normalize-space(.)"/></xsl:message>
-			</xsl:for-each>
-		</xsl:for-each>
-		<xsl:for-each select="string-length($mot_medium)"></xsl:for-each>
-	</xsl:function>
-	-->
 	
 	<xsl:function name="sparnaf:str_substring_instrument">
 		<xsl:param name="nom_instrument"/>
