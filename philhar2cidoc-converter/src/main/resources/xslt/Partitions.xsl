@@ -603,11 +603,11 @@
 			            												   $Ensemble_TotalInstruments
 			            												   )"/>
 			<xsl:choose>
-				<xsl:when test="$NoInstuments !=  $sum_total_instruments">
-					<xsl:comment>Casting Alternatif</xsl:comment>
+				<xsl:when test="$NoInstuments != $sum_total_instruments">
+					<xsl:comment>Number of total instruments (<xsl:value-of select="$sum_total_instruments" />) is different from 954$t (<xsl:value-of select="$NoInstuments" />) - triggering Casting alternatif</xsl:comment>
 				 	<xsl:apply-templates select="../*" mode="casting_alternatif"/>
 				</xsl:when>
-				<xsl:when test="$NoInstuments =  $sum_total_instruments">
+				<xsl:otherwise>
 					<!-- Créer une instance de M6 Casting dès que l’une des zones citées ci-dessus est remplie -->
 					<mus:U13_has_casting>
 						<mus:M6_Casting rdf:about="{mus:URI-Casting($idNotice,$positionCasting,$typeNotice,$idNoticeMere)}">
@@ -639,7 +639,7 @@
 							</xsl:if>
 						</mus:M6_Casting>
 					</mus:U13_has_casting>				
-				</xsl:when>
+				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:if>		
 	</xsl:template>
@@ -1129,7 +1129,9 @@
 						<xsl:variable name="texte" select="normalize-space(.)"/>
 						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
 
+						<!--
 						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>
+						-->
 						<xsl:if test="boolean($instrument_niveau_dificulte)">
 							<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
 								<xsl:variable name="instrument" select="normalize-space(.)"/>								
@@ -1171,6 +1173,7 @@
 	<!-- Casting Alternatif -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='940$x' or 
 								   @UnimarcSubfield='941$x' or
+								   @UnimarcSubfield='942$x' or
 								   @UnimarcSubfield='943$x' or
 								   @UnimarcSubfield='945$x' or
 								   @UnimarcSubfield='946$x' or 
@@ -1193,9 +1196,10 @@
 		</xsl:variable>	
 		
 		<xsl:variable name="data_source" select="normalize-space(.)"/>
-		<xsl:variable name="data_medium" select="sparnaf:split_text($data_source)"/>
+		<xsl:variable name="data_medium" select="sparnaf:split_and_extract_mediums($data_source)"/>
 		
-		<xsl:if test="$data_medium and $data_medium != '0'">
+		<xsl:choose>
+			<xsl:when test="$data_medium and $data_medium != '0'">
 			<xsl:comment>Casting alternatif: Notice: <xsl:value-of select="$idNotice"/>, Input: <xsl:value-of select="$data_source"/></xsl:comment>
 			<xsl:for-each select="$data_medium">
 				<xsl:variable name="source_alternatif" select="normalize-space(.)"/>
@@ -1449,7 +1453,13 @@
 					</mus:M6_Casting>
 				</mus:U13_has_casting>
 			</xsl:for-each>
-		</xsl:if>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:comment>Casting alternatif: Could not extract any medium from <xsl:value-of select="@UnimarcSubfield" /> '<xsl:value-of select="$data_source" />'</xsl:comment>
+			<xsl:message>Warning : Casting alternatif: Could not extract any medium from <xsl:value-of select="@UnimarcSubfield" /> '<xsl:value-of select="$data_source" />'</xsl:message>
+		</xsl:otherwise>
+		</xsl:choose>
+		
 	</xsl:template>
 	
 	

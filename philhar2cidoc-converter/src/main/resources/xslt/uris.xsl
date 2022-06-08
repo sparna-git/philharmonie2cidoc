@@ -628,7 +628,7 @@
 			<xsl:for-each select="tokenize($inputNiveau,' ')">
 				<xsl:variable name="data" select="normalize-space(.)"/>
 				
-				<xsl:if test="not(index-of(('$quote10','ans','avec','la'),$data))">
+				<xsl:if test="not(index-of(($quote,'ans','avec','la', 'le'),$data))">
 					<xsl:variable name="_data_">
 						<xsl:choose>
 							<xsl:when test="contains($data,$quote)">
@@ -642,14 +642,8 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:variable>
-<<<<<<< HEAD
-					<xsl:variable name="instrument_simple">									
-						<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($_data_)"/>						
-=======
-					
 					<xsl:variable name="instrument_simple">
 						<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple(normalize-space($_data_))"/>
->>>>>>> 68d19fd2724be2e39d47c2bd5b9cde7d38215683
 						<xsl:variable name="iaml_medium_simple">
 							<xsl:if test="$mimo_medium_simple !=''">
 								<xsl:value-of select="mus:iaml_vocabulary_simple($_data_)"/>
@@ -669,10 +663,7 @@
 						<xsl:value-of select="concat($instrument_simple,' ')"/>						
 					</xsl:if>
 				</xsl:if>
-<<<<<<< HEAD
-				
-=======
->>>>>>> 68d19fd2724be2e39d47c2bd5b9cde7d38215683
+
 			</xsl:for-each>
 		</xsl:variable>
 		<xsl:choose>
@@ -819,7 +810,7 @@
 					<xsl:if test="$mot != ''">
 						<xsl:variable name="mimoInstrument" select="$mimo_vocab[lower-case(skos:prefLabel[@xml:lang='fr'])=$mot]/@rdf:about"/>
 						<xsl:if test="$mimoInstrument !=''">
-							<xsl:value-of select="concat($mimoInstrument,' ')"/>
+							<xsl:value-of select="string-join($mimoInstrument,' ')"/>
 						</xsl:if>						
 					</xsl:if>
 				</xsl:variable>
@@ -861,7 +852,7 @@
 					<xsl:when test="$vocabulary_instrument='' and position()=last()">						
 					</xsl:when>
 					<xsl:when test="$vocabulary_instrument!=''">
-						<xsl:value-of select="string-join($mot,';')"/>
+						<xsl:value-of select="string-join($mot,' ')"/>
 						<xsl:sort select="$mot" order="descending" />											
 					</xsl:when>					
 				</xsl:choose>
@@ -880,7 +871,7 @@
 	</xsl:function>
 	
 	<!-- funtion utilisé par le casting alternatif -->
-	<xsl:function name="sparnaf:split_text">
+	<xsl:function name="sparnaf:split_and_extract_mediums">
 		<xsl:param name="text"/>
 		<xsl:variable name="text_clean" select="translate($text,',.()','')"/>
 		<xsl:if test="contains($text_clean,' ou ') and (index-of(tokenize($text_clean,' '),'ou') &gt; 1)">
