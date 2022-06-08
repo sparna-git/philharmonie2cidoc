@@ -47,7 +47,7 @@
 	<!-- URI Publication Expression -->
 	<xsl:function name="mus:URI-Publication_Expression">
 		<xsl:param name="idReferenceNotice" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice)" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice)" />
 	</xsl:function>
 	
 	<!-- URI Identifier -->
@@ -57,7 +57,7 @@
 		<xsl:param name="idTypeIdentifier" />
 		<xsl:param name="typeNotice" />
 		<xsl:choose>
-			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))" /></xsl:when>
+			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))" /></xsl:when>
 			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat('/identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))"/></xsl:when>
 		</xsl:choose>
 		
@@ -152,7 +152,7 @@
 	<!-- URI Publication Event-->
 	<xsl:function name="mus:URI-Publication_Event">
 		<xsl:param name="idReferenceNotice" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReferenceNotice,'#event')" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice,'#event')" />
 	</xsl:function>
 	
 	<!-- URI Publication Event - Activity -->
@@ -216,13 +216,13 @@
 	<!-- URI Personne -->
 	<xsl:function name="mus:reference_personne">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReference)"/>
 	</xsl:function>
 	
 	<!-- URI Collectivité -->
 	<xsl:function name="mus:reference_collectivite">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReference)"/>
 	</xsl:function>
 	
 	<xsl:function name="mus:role_vocab">
@@ -247,7 +247,7 @@
 	<!-- URI Thesaurus ? Valider -->
 	<xsl:function name="mus:reference_thesaurus">
 		<xsl:param name="idReference" />
-		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark/49250/',$idReference)"/>
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReference)"/>
 	</xsl:function>
 	
 	<!--  -->

@@ -29,7 +29,7 @@
 	</xsl:template>
 
 	<xsl:template match="NOTICE">
-		<skos:Concept rdf:about="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',@id)}">
+		<skos:Concept rdf:about="{concat('https://ark.philharmoniedeparis.fr/ark:49250/',@id)}">
 			<xsl:apply-templates />
 		</skos:Concept>
 	</xsl:template>
@@ -50,7 +50,7 @@
 
 	<!-- 940$3 -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='940$3']">
-	   <skos:broader rdf:resource="{concat('https://ark.philharmoniedeparis.fr/ark/49250/',normalize-space(.))}" />
+	   <skos:broader rdf:resource="{concat('https://ark.philharmoniedeparis.fr/ark:49250/',normalize-space(.))}" />
 	</xsl:template>
 	
 	<xsl:template match="text()"></xsl:template>

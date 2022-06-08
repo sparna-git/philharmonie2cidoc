@@ -17,10 +17,7 @@
  	<!-- Import URI stylesheet -->
 	<xsl:import href="uris.xsl" />
 	
- 	<!-- Format -->
-	<xsl:output indent="yes" method="xml" />
-
-	<xsl:template match="/">
+ 	<xsl:template match="/">
 		<rdf:RDF>
 			<xsl:apply-templates />
 		</rdf:RDF>

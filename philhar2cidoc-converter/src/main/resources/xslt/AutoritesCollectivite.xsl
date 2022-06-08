@@ -16,7 +16,7 @@
 	<xsl:output indent="yes" method="xml" />
 	
 	<!-- Root URI -->
-	<xsl:variable name="rootUri">https://ark.philharmoniedeparis.fr/ark/49250/</xsl:variable> 
+	<xsl:variable name="rootUri">https://ark.philharmoniedeparis.fr/ark:49250/</xsl:variable> 
 
 
 	<xsl:template match="/">
