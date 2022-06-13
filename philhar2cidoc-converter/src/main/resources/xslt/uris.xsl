@@ -755,7 +755,7 @@
 				<xsl:value-of select="$mimo_resultat"/>
 			</xsl:when>
 			<xsl:when test="count($mimo_resultat) &gt; 1">
-				<xsl:message>Warning - The medium <xsl:value-of select="$mots_instrument"/> was found <xsl:value-of select="count($mimo_resultat)" /> times in MIMO, taking the first one.</xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($mimo_resultat)" /> times in MIMO, taking the first one (<xsl:value-of select="$mimo_resultat[1]"/>).</xsl:message>
 				<xsl:value-of select="$mimo_resultat[1]"/>
 			</xsl:when>
 		</xsl:choose>			
@@ -767,7 +767,7 @@
 		<xsl:choose>
 			<xsl:when test="count($iaml_resultat) = 1"><xsl:value-of select="$iaml_resultat"/></xsl:when>
 			<xsl:when test="count($iaml_resultat) &gt; 1">
-				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($iaml_resultat)" /> times in IAML, taking the first one.</xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($iaml_resultat)" /> times in IAML, taking the first one (<xsl:value-of select="$iaml_resultat[1]"/>).</xsl:message>
 				<xsl:value-of select="$iaml_resultat[1]"/>
 			</xsl:when>
 		</xsl:choose>

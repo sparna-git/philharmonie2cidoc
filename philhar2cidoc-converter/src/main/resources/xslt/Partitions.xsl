@@ -626,7 +626,8 @@
 			
 			
 			<xsl:choose>
-				<xsl:when test="$NoInstuments != $sum_total_instruments">
+				<!-- number($x) = $x ensures that $x is actually a number -->
+				<xsl:when test="(number($NoInstuments) = number($NoInstuments)) and ($NoInstuments != $sum_total_instruments)">
 					<xsl:comment>Number of total instruments (<xsl:value-of select="$sum_total_instruments" />) is different from 954$t (<xsl:value-of select="$NoInstuments" />) - triggering Casting alternatif</xsl:comment>
 				 	<xsl:apply-templates select="../*" mode="casting_alternatif"/>
 				</xsl:when>
