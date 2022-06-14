@@ -1,0 +1,440 @@
+  <NOTICES>
+  <TYPREG type="UNI:5">
+    <NOTICE id="0087191" type="UNI:5">
+      <champs UnimarcTag="006">
+        <SOUSCHAMP UnimarcSubfield="006$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="006$a">
+          <data>ncm0</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="019">
+        <SOUSCHAMP UnimarcSubfield="019$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$a">
+          <data>UNI5</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$b">
+          <data>L44619</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="071">
+        <SOUSCHAMP UnimarcSubfield="071$">
+          <data>||</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="071$a">
+          <data>UE 14989</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="100">
+        <SOUSCHAMP UnimarcSubfield="100$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="100$a">
+          <data>        d        m  y0fre 0103    ba</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="102">
+        <SOUSCHAMP UnimarcSubfield="102$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="102$a">
+          <data>AT</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="105">
+        <SOUSCHAMP UnimarcSubfield="105$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="105$a">
+          <data>y       000yy</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="200">
+        <SOUSCHAMP UnimarcSubfield="200$">
+          <data>1 </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$a">
+          <data>Nr. 18 : Stop ; Nr. 18 1/2 Stop Pariser Version</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$e">
+          <data>für Orchester</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$f">
+          <data>Karlheinz Stockhausen</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="208">
+        <SOUSCHAMP UnimarcSubfield="208$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="208$a">
+          <data>Conducteur</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="210">
+        <SOUSCHAMP UnimarcSubfield="210$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$a">
+          <data>Wien</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$c">
+          <data>Universal</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$d">
+          <data>cop. 1972</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="215">
+        <SOUSCHAMP UnimarcSubfield="215$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$a">
+          <data>1 conducteur (24 p.)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$d">
+          <data>42x30 cm</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="300">
+        <SOUSCHAMP UnimarcSubfield="300$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="300$a">
+          <data>Préface en allemand, anglais et français. Deux versions. Ecriture en tableaux et graphiques</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="315">
+        <SOUSCHAMP UnimarcSubfield="315$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="315$a">
+          <data>PG</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="345">
+        <SOUSCHAMP UnimarcSubfield="345$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="345$a">
+          <data>Don BPI</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="449">
+        <SOUSCHAMP UnimarcSubfield="449$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$3">
+          <data>1076050</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$a">
+          <data>Stop</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$f">
+          <data>Karlheinz Stockhausen</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="500">
+        <SOUSCHAMP UnimarcSubfield="500$">
+          <data>|0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$3">
+          <data>1076049</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$a">
+          <data>Stop</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$r">
+          <data>pour orchestre</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067139</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Musique contemporaine</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>05</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067731</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>20 ème siècle - 2 ème moitié</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>02</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="700">
+        <SOUSCHAMP UnimarcSubfield="700$">
+          <data> |</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$3">
+          <data>0041375</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$a">
+          <data>Stockhausen</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$b">
+          <data>Karlheinz</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$f">
+          <data>1928-2007</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$4">
+          <data>230</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="801">
+        <SOUSCHAMP UnimarcSubfield="801$">
+          <data> |</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$a">
+          <data>FR</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$b">
+          <data>CRMD</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$c">
+          <data>19991011</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="911">
+        <SOUSCHAMP UnimarcSubfield="911$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$3">
+          <data>0428915</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$a">
+          <data>Universal</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="936">
+        <SOUSCHAMP UnimarcSubfield="936$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="936$a">
+          <data>MP31616</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="945">
+        <SOUSCHAMP UnimarcSubfield="945$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>flûte_traversière(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>flûte_alto(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>petite_clarinette_(mib)1</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>clarinette(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>cor_de_basset(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>clarinette_basse(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>basson(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>hautbois(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$t">
+          <data>8</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$x">
+          <data>6 exéc.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="947">
+        <SOUSCHAMP UnimarcSubfield="947$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="947$a">
+          <data>cor(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="947$a">
+          <data>trombone_ténor-basse(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="947$a">
+          <data>trompette(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="947$a">
+          <data>tuba(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="947$t">
+          <data>4</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="948">
+        <SOUSCHAMP UnimarcSubfield="948$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="948$a">
+          <data>vibraphone(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="948$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="949">
+        <SOUSCHAMP UnimarcSubfield="949$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$a">
+          <data>piano(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="951">
+        <SOUSCHAMP UnimarcSubfield="951$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="951$a">
+          <data>violon(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="951$a">
+          <data>alto(2)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="951$a">
+          <data>violoncelle(2)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="951$t">
+          <data>5</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="953">
+        <SOUSCHAMP UnimarcSubfield="953$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="953$a">
+          <data>dispositif_électro-acoustique</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="953$x">
+          <data>Electronium1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="954">
+        <SOUSCHAMP UnimarcSubfield="954$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$t">
+          <data>18</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$x">
+          <data>5 groupes instrumentaux</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="955">
+        <SOUSCHAMP UnimarcSubfield="955$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$a">
+          <data>1965</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$a">
+          <data>1969</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="956">
+        <SOUSCHAMP UnimarcSubfield="956$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="956$a">
+          <data>ensemble_instrumental(5)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="956$t">
+          <data>5</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="956$x">
+          <data>Nomenclautre instrumentale indiqué uniquement pour la version parisienne. La première version est avec orchestration libre.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="980">
+        <SOUSCHAMP UnimarcSubfield="980$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$a">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$p">
+          <data>instructions de jeu</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="990">
+        <SOUSCHAMP UnimarcSubfield="990$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="990$a">
+          <data>350.6 STO:PG:31616</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="991">
+        <SOUSCHAMP UnimarcSubfield="991$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$b">
+          <data>Hommage BPI</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$d">
+          <data>1999/10</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$e">
+          <data>PS</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$i">
+          <data>0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$j">
+          <data>2</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="997">
+        <SOUSCHAMP UnimarcSubfield="997$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$3">
+          <data>0305335</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$a">
+          <data>NE1060221</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$c">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$d">
+          <data>PG</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$g">
+          <data>350 STO:PG:31616</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$t">
+          <data>PAR</data>
+        </SOUSCHAMP>
+      </champs>
+    </NOTICE>
+  </TYPREG>
+</NOTICES>

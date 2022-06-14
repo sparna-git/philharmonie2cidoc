@@ -699,7 +699,7 @@
 		<xsl:variable name="result" select="substring-before(substring-after(normalize-space($Valeur),'('),')')"/>
 		<xsl:choose>
 			<xsl:when test="$result = 'NaN' or $result =''">
-				<xsl:message>Warning - The input value don't content a instrument number: <xsl:value-of select="$Valeur"/></xsl:message>
+				<xsl:message>Warning - string does not contain a number of instruments in parenthesis: <xsl:value-of select="$Valeur"/></xsl:message>
 				<xsl:value-of select="number($result_default)"/>
 			</xsl:when>
 			<xsl:when test="(string($result) &gt; 'A' and string($result) &lt; 'Z') or (string($result) &gt; 'a' and string($result) &lt; 'z')">
@@ -746,36 +746,34 @@
 	
 	<xsl:function name="mus:mimo_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="mimo_resultat">
-			<xsl:if test="string-length($mots_instrument) &gt; 0">
-				<xsl:value-of select="$mimo_vocab[upper-case(skos:prefLabel[@xml:lang='fr'])=upper-case($mots_instrument)]/@rdf:about"/>
-			</xsl:if>
-		</xsl:variable>
-		<xsl:choose>
-			<xsl:when test="count($mimo_resultat) = 1">
-				<xsl:value-of select="$mimo_resultat"/>
-			</xsl:when>
-			<xsl:when test="count($mimo_resultat) &gt; 1">
-				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($mimo_resultat)" /> times in MIMO, taking the first one (<xsl:value-of select="$mimo_resultat[1]"/>).</xsl:message>
-				<xsl:value-of select="$mimo_resultat[1]"/>
-			</xsl:when>			
-		</xsl:choose>			
+
+		<xsl:if test="string-length($mots_instrument) &gt; 0">
+			<xsl:variable name="mimo_resultat" select="$mimo_vocab[upper-case(skos:prefLabel[@xml:lang='fr'])=upper-case($mots_instrument)]/@rdf:about" />
+
+			<xsl:choose>
+				<xsl:when test="count($mimo_resultat) = 1">
+					<xsl:value-of select="$mimo_resultat"/>
+				</xsl:when>
+				<xsl:when test="count($mimo_resultat) &gt; 1">
+					<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($mimo_resultat)" /> times in MIMO, taking first one (<xsl:value-of select="$mimo_resultat[1]"/>).</xsl:message>
+					<xsl:value-of select="$mimo_resultat[1]"/>
+				</xsl:when>			
+			</xsl:choose>			
+		</xsl:if>
 	</xsl:function>
 	
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
-		<xsl:variable name="iaml_resultat">
-			<xsl:if test="string-length($mots_instrument) &gt; 0">
-				<xsl:value-of select="$iaml_vocab[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about"/>
-			</xsl:if>
-		</xsl:variable>
-		<xsl:choose>
-			<xsl:when test="count($iaml_resultat) = 1"><xsl:value-of select="$iaml_resultat"/></xsl:when>
-			<xsl:when test="count($iaml_resultat) &gt; 1">
-				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($iaml_resultat)" /> times in IAML, taking the first one (<xsl:value-of select="$iaml_resultat[1]"/>).</xsl:message>
-				<xsl:value-of select="$iaml_resultat[1]"/>
-			</xsl:when>			
-		</xsl:choose>
+		<xsl:if test="string-length($mots_instrument) &gt; 0">
+			<xsl:variable name="iaml_resultat" select="$iaml_vocab[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about" />
+			<xsl:choose>
+				<xsl:when test="count($iaml_resultat) = 1"><xsl:value-of select="$iaml_resultat"/></xsl:when>
+				<xsl:when test="count($iaml_resultat) &gt; 1">
+					<xsl:message>Warning - The medium '<xsl:value-of select="$mots_instrument"/>' was found <xsl:value-of select="count($iaml_resultat)" /> times in IAML, taking the first one (<xsl:value-of select="$iaml_resultat[1]"/>).</xsl:message>
+					<xsl:value-of select="$iaml_resultat[1]"/>
+				</xsl:when>			
+			</xsl:choose>
+		</xsl:if>
 	</xsl:function>
 	
 	<xsl:function name="mus:chercher_medium_complex">
