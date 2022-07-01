@@ -27,32 +27,32 @@
 
 efrbroo:F24_Publication_Expression a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex379 .
+  sh:ignoredProperties _:node1g5oj6hp8x7651 .
 
-_:node1fs170frex379 rdf:first rdf:type;
+_:node1g5oj6hp8x7651 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F24_Publication_Expression sh:nodeKind sh:IRI;
-  sh:pattern "^https://ark.philharmoniedeparis.fr/ark/49250/[0-9]*?$";
+  sh:pattern "^https://ark.philharmoniedeparis.fr/ark:49250/[0-9]*?$";
   sh:property mus:P10, mus:P11, mus:P12, mus:P13, mus:P14, mus:P15, mus:P16, mus:P17,
     mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23, mus:P24, mus:P25, mus:P9 .
 
 efrbroo:F30_Publication_Event a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex380 .
+  sh:ignoredProperties _:node1g5oj6hp8x7652 .
 
-_:node1fs170frex380 rdf:first rdf:type;
+_:node1g5oj6hp8x7652 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
-  sh:pattern "^https://ark.philharmoniedeparis.fr/ark/49250/[0-9]*#event";
+  sh:pattern "^https://ark.philharmoniedeparis.fr/ark:49250/[0-9]*#event";
   sh:property mus:P44, mus:P45, mus:P46 .
 
 ecrm:E7_Activity a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex381 .
+  sh:ignoredProperties _:node1g5oj6hp8x7653 .
 
-_:node1fs170frex381 rdf:first rdf:type;
+_:node1g5oj6hp8x7653 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E7_Activity sh:nodeKind sh:IRI;
@@ -60,9 +60,9 @@ ecrm:E7_Activity sh:nodeKind sh:IRI;
 
 mus:M6_Casting a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex382 .
+  sh:ignoredProperties _:node1g5oj6hp8x7654 .
 
-_:node1fs170frex382 rdf:first rdf:type;
+_:node1g5oj6hp8x7654 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M6_Casting sh:nodeKind sh:IRI;
@@ -70,9 +70,9 @@ mus:M6_Casting sh:nodeKind sh:IRI;
 
 mus:M23_Casting_Detail a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex383 .
+  sh:ignoredProperties _:node1g5oj6hp8x7655 .
 
-_:node1fs170frex383 rdf:first rdf:type;
+_:node1g5oj6hp8x7655 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M23_Casting_Detail sh:nodeKind sh:IRI;
@@ -80,9 +80,9 @@ mus:M23_Casting_Detail sh:nodeKind sh:IRI;
 
 mus:M156_Title_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex384 .
+  sh:ignoredProperties _:node1g5oj6hp8x7656 .
 
-_:node1fs170frex384 rdf:first rdf:type;
+_:node1g5oj6hp8x7656 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M156_Title_Statement sh:nodeKind sh:IRI;
@@ -90,9 +90,9 @@ mus:M156_Title_Statement sh:nodeKind sh:IRI;
 
 mus:M157_Statement_of_Responsibility a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex385 .
+  sh:ignoredProperties _:node1g5oj6hp8x7657 .
 
-_:node1fs170frex385 rdf:first rdf:type;
+_:node1g5oj6hp8x7657 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
@@ -100,9 +100,9 @@ mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
 
 ecrm:E35_Title a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex386 .
+  sh:ignoredProperties _:node1g5oj6hp8x7658 .
 
-_:node1fs170frex386 rdf:first rdf:type;
+_:node1g5oj6hp8x7658 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E35_Title sh:nodeKind sh:IRI;
@@ -110,9 +110,9 @@ ecrm:E35_Title sh:nodeKind sh:IRI;
 
 mus:M159_Edition_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex387 .
+  sh:ignoredProperties _:node1g5oj6hp8x7659 .
 
-_:node1fs170frex387 rdf:first rdf:type;
+_:node1g5oj6hp8x7659 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M159_Edition_Statement sh:nodeKind sh:IRI;
@@ -120,9 +120,9 @@ mus:M159_Edition_Statement sh:nodeKind sh:IRI;
 
 mus:M163_Music_Format_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex388 .
+  sh:ignoredProperties _:node1g5oj6hp8x7660 .
 
-_:node1fs170frex388 rdf:first rdf:type;
+_:node1g5oj6hp8x7660 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
@@ -130,9 +130,9 @@ mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
 
 mus:M160_Publication_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex389 .
+  sh:ignoredProperties _:node1g5oj6hp8x7661 .
 
-_:node1fs170frex389 rdf:first rdf:type;
+_:node1g5oj6hp8x7661 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M160_Publication_Statement sh:nodeKind sh:IRI;
@@ -140,9 +140,9 @@ mus:M160_Publication_Statement sh:nodeKind sh:IRI;
 
 ecrm:E42_Identifier a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex390 .
+  sh:ignoredProperties _:node1g5oj6hp8x7662 .
 
-_:node1fs170frex390 rdf:first rdf:type;
+_:node1g5oj6hp8x7662 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E42_Identifier sh:nodeKind sh:IRI;
@@ -150,9 +150,9 @@ ecrm:E42_Identifier sh:nodeKind sh:IRI;
 
 ecrm:E52_Time-Span a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex391 .
+  sh:ignoredProperties _:node1g5oj6hp8x7663 .
 
-_:node1fs170frex391 rdf:first rdf:type;
+_:node1g5oj6hp8x7663 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E52_Time-Span sh:nodeKind sh:IRI;
@@ -160,9 +160,9 @@ ecrm:E52_Time-Span sh:nodeKind sh:IRI;
 
 mus:M167_Publication_Expression_Fragment a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1fs170frex392 .
+  sh:ignoredProperties _:node1g5oj6hp8x7664 .
 
-_:node1fs170frex392 rdf:first rdf:type;
+_:node1g5oj6hp8x7664 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M167_Publication_Expression_Fragment sh:nodeKind sh:IRI;
@@ -192,19 +192,16 @@ mus:P12 sh:class mus:M157_Statement_of_Responsibility;
   sh:path mus:U172_has_statement_of_responsibility_relating_to_title .
 
 mus:P13 sh:class ecrm:E35_Title;
-  sh:maxCount 1;
   sh:name "U168 has parallel title"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U168_has_parallel_title .
 
 mus:P14 sh:class ecrm:E35_Title;
-  sh:maxCount 1;
   sh:name "U68 has variant title"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U68_has_variant_title .
 
 mus:P15 sh:class mus:M159_Edition_Statement;
-  sh:maxCount 1;
   sh:name "U176 has edition statement"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U176_has_edition_statement .
@@ -216,7 +213,6 @@ mus:P16 sh:class mus:M163_Music_Format_Statement;
   sh:path mus:U182_has_music_format_statement .
 
 mus:P17 sh:class mus:M160_Publication_Statement;
-  sh:maxCount 1;
   sh:name "U184 has publication statement"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U184_has_publication_statement .
@@ -238,7 +234,6 @@ mus:P21 sh:name "P129 is about"@en;
   sh:path ecrm:P129_is_about .
 
 mus:P22 sh:datatype xsd:string;
-  sh:maxCount 1;
   sh:name "P3 has note"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P3_has_note .
@@ -281,19 +276,16 @@ mus:P30 sh:class mus:M157_Statement_of_Responsibility;
   sh:path mus:U172_has_statement_of_responsibility_relating_to_title .
 
 mus:P31 sh:class ecrm:E35_Title;
-  sh:maxCount 1;
   sh:name "U168 has parallel title"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U168_has_parallel_title .
 
 mus:P32 sh:class ecrm:E35_Title;
-  sh:maxCount 1;
   sh:name "U68 has variant title"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U68_has_variant_title .
 
 mus:P33 sh:class mus:M159_Edition_Statement;
-  sh:maxCount 1;
   sh:name "U176 has edition statement"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U176_has_edition_statement .
@@ -305,7 +297,6 @@ mus:P34 sh:class mus:M163_Music_Format_Statement;
   sh:path mus:U182_has_music_format_statement .
 
 mus:P35 sh:class mus:M160_Publication_Statement;
-  sh:maxCount 1;
   sh:name "U184 has publication statement"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U184_has_publication_statement .
@@ -327,7 +318,6 @@ mus:P39 sh:name "P129 is about"@en;
   sh:path ecrm:P129_is_about .
 
 mus:P40 sh:datatype xsd:string;
-  sh:maxCount 1;
   sh:name "P3 has note"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P3_has_note .
@@ -338,6 +328,7 @@ mus:P41 sh:class ecrm:E42_Identifier;
   sh:path ecrm:P1_is_identified_by .
 
 mus:P42 sh:class mus:M6_Casting;
+  sh:minCount 1;
   sh:name "U13 has casting"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U13_has_casting .
@@ -360,7 +351,8 @@ mus:P46 sh:class ecrm:E52_Time-Span;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P4_has_time-span .
 
-mus:P48 sh:name "P14 carried out by"@en;
+mus:P48 sh:minCount 1;
+  sh:name "P14 carried out by"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P14_carried_out_by .
 
@@ -371,6 +363,7 @@ mus:P49 sh:name "U31 had function"@en;
 mus:P51 skos:example "E60 Number “3”"@en;
   sh:datatype xsd:integer;
   sh:maxCount 1;
+  sh:minCount 1;
   sh:name "U48 foresees quantity of actors"@en;
   sh:nodeKind sh:Literal;
   sh:path mus:U48_foresees_quantity_of_actors .
@@ -407,7 +400,6 @@ mus:P57 skos:example "E60 Number “1”"@en;
   sh:path mus:U30_foresees_quantity_of_mop .
 
 mus:P58 sh:datatype xsd:string;
-  sh:maxCount 1;
   sh:name "P3 has note"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P3_has_note .

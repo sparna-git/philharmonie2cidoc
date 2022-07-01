@@ -534,11 +534,7 @@
 		
 		<xsl:if test="$Valide_Option_Casting = 1">
 		
-			<xsl:variable name="NoInstuments" select="SOUSCHAMP[@UnimarcSubfield='954$t']/data"/>
-			<!-- U48 foresees quantity of actors  -->
-			<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
-				<xsl:value-of select="$NoInstuments"/>
-			</mus:U48_foresees_quantity_of_actors>			
+			<xsl:variable name="NoInstuments" select="SOUSCHAMP[@UnimarcSubfield='954$t']/data"/>		
 			
 			<xsl:variable name="VoixSolistes_a" select="../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/data"/>
 			<xsl:variable name="InstrumentSolistes_a" select="../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/data"/>
@@ -635,6 +631,11 @@
 					<!-- Créer une instance de M6 Casting dès que l’une des zones citées ci-dessus est remplie -->
 					<mus:U13_has_casting>
 						<mus:M6_Casting rdf:about="{mus:URI-Casting($idNotice,$positionCasting,$typeNotice,$idNoticeMere)}">
+								
+							<!-- U48 foresees quantity of actors  -->
+							<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
+								<xsl:value-of select="$NoInstuments"/>
+							</mus:U48_foresees_quantity_of_actors>		
 								
 							<!-- Création des M23 Casting Detail (cas simples) : -->
 							<xsl:if test="$VoixSolistes_a or $InstrumentSolistes_a or $Choeur_a or  $Gestique_a or
