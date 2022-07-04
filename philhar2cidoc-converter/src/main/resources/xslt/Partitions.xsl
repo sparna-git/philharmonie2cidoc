@@ -1119,15 +1119,11 @@
 		<!-- Generation d'id -->
 		<xsl:variable name="id" select="generate-id()"/>
 		
-		<xsl:if test="not(index-of(('basse_continue','basse continue','ensemble_instrumental','ensemble instrumental'),$data_instrument))">
+		<xsl:if test="not(index-of(('basse_continue','basse continue','Ensemble_instrumental','ensemble_instrumental','ensemble instrumental'),$data_instrument))">
 			<xsl:comment>Notice: <xsl:value-of select="$idNotice"/>, SOUSCHAMP: <xsl:value-of select="@UnimarcSubfield"/>, idCasting: <xsl:value-of select="$idCasting"/></xsl:comment>
 			<mus:U23_has_casting_detail>
 				<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$id,$typeNotice,$idNoticeMere)}">
 				
-					
-					<!-- Used the @UnimarcSubfield in (940, 941, 943, et 956) for the iaml
-						and 945, 946, 947, 948, 949, 950, 951, 952, 953 for the mimo -->
-					
 					<xsl:variable name="mediumInstrument">
 						<xsl:choose>
 							<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
@@ -1167,23 +1163,36 @@
 						</xsl:choose>
 					</xsl:variable>				
 					
+					<!-- if the result  -->
+					<xsl:variable name="vMediumInstrument">
+						<xsl:choose>
+							<xsl:when test="count(tokenize($mediumInstrument,' ')) &gt; 1">
+								<xsl:value-of select="tokenize($mediumInstrument,' ')[1]"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="$mediumInstrument"/>
+							</xsl:otherwise>
+						</xsl:choose>					
+					</xsl:variable>
 					
 					<xsl:choose>
-						<xsl:when test="$mediumInstrument != ''">
+						<xsl:when test="$vMediumInstrument != ''">
 							<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
 							<xsl:choose>
 								<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
 									<!-- IAML -->
-									<mus:P2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($mediumInstrument)}"/>
+									<mus:P2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
 								<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
 									<!-- MIMO -->
-									<P1_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($mediumInstrument)}"/>
+									<mus:P1_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
 							</xsl:choose>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
+							
+							<ecrm:P3_has_note><xsl:value-of select="normalize-space($data_instrument)"/></ecrm:P3_has_note>						
 						</xsl:otherwise>				
 					</xsl:choose>
 					
