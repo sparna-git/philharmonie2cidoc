@@ -535,6 +535,7 @@
 		<xsl:if test="$Valide_Option_Casting = 1">
 		
 			<xsl:variable name="NoInstuments" select="SOUSCHAMP[@UnimarcSubfield='954$t']/data"/>
+			
 			<!-- U48 foresees quantity of actors  -->
 			<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
 				<xsl:value-of select="$NoInstuments"/>
@@ -817,9 +818,7 @@
 	<!-- Parties de partitions M167 Publication Expression Fragment -->
 	<xsl:template match="NOTICE[@type = 'UNI:45']">
  		<xsl:variable name="idNotice" select="../../NOTICE[@type='UNI:5']/@id"/>
- 		<xsl:comment>::: Sous-notice <xsl:value-of select="$idNotice"/>/<xsl:value-of select="@id"/> :::</xsl:comment>
- 		<xsl:message>::: Sous-notice <xsl:value-of select="$idNotice"/>/<xsl:value-of select="@id"/> :::</xsl:message>
-
+ 		
  		<ecrm:P148_has_component>
  			<mus:M167_Publication_Expression_Fragment rdf:about="{mus:URI-Publication_Expression_Fragment($idNotice,@id)}">
 		
@@ -1019,7 +1018,6 @@
 		<!-- Generation d'id -->
 		<xsl:variable name="index" select="generate-id()"/>
 		
-		<xsl:comment>942</xsl:comment>
 		<mus:U23_has_casting_detail>
 			<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$index,$typeNotice,$idNoticeMere)}">
 				
@@ -1111,95 +1109,98 @@
 			</xsl:if>
 		</xsl:variable>	
 		
+		
+		<xsl:variable name="data_instrument">
+			<xsl:choose>
+				<xsl:when test="contains(data,'_')"><xsl:value-of select="translate(normalize-space(substring-before(data,'(')),'_',' ')"/></xsl:when>
+				<xsl:otherwise><xsl:value-of select="normalize-space(substring-before(data,'('))"/></xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
 		<!-- Generation d'id -->
 		<xsl:variable name="id" select="generate-id()"/>
-		<xsl:comment>Notice: <xsl:value-of select="$idNotice"/>, SOUSCHAMP: <xsl:value-of select="@UnimarcSubfield"/>, idCasting: <xsl:value-of select="$idCasting"/></xsl:comment>
-		<mus:U23_has_casting_detail>
-			<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$id,$typeNotice,$idNoticeMere)}">
-			
-				<xsl:variable name="data_instrument">
+		
+		<xsl:if test="not(index-of(('basse_continue','basse continue','ensemble_instrumental','ensemble instrumental'),$data_instrument))">
+			<xsl:comment>Notice: <xsl:value-of select="$idNotice"/>, SOUSCHAMP: <xsl:value-of select="@UnimarcSubfield"/>, idCasting: <xsl:value-of select="$idCasting"/></xsl:comment>
+			<mus:U23_has_casting_detail>
+				<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$id,$typeNotice,$idNoticeMere)}">
+				
+					<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
+					<xsl:variable name="medium_instrument_complex">
+						<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
+							<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>						
+						</xsl:if>
+					</xsl:variable>
+					 
+					
 					<xsl:choose>
-						<xsl:when test="contains(data,'_')"><xsl:value-of select="translate(normalize-space(substring-before(data,'(')),'_',' ')"/></xsl:when>
-						<xsl:otherwise><xsl:value-of select="normalize-space(substring-before(data,'('))"/></xsl:otherwise>
+						<xsl:when test="$medium_instrument != ''">
+							<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
+							<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
+						</xsl:when>
+						<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
+							<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
+							<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
+						</xsl:otherwise>				
 					</xsl:choose>
-				</xsl:variable>
-				
-				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
-				<xsl:variable name="medium_instrument_complex">
-					<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
-						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>						
+					
+					<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
+						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 					</xsl:if>
-				</xsl:variable>
-				 
-				
-				<xsl:choose>
-					<xsl:when test="$medium_instrument != ''">
-						<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
-					</xsl:when>
-					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
-						<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
-					</xsl:otherwise>				
-				</xsl:choose>
-				
-				<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
-					<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
-				</xsl:if>
-				
-				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
-				
-				
-				<!-- P103 was intended for 333$a
-				<xsl:apply-templates select="../../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>-->
-				<!-- P103 was intended for 333$a-->
-				<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
-				<xsl:if test="$NiveauDificulte">
-					<xsl:for-each select="$NiveauDificulte">
-						<xsl:variable name="texte" select="normalize-space(.)"/>
-						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
-
-						<!--
-						<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>
-						-->
-						<xsl:if test="boolean($instrument_niveau_dificulte)">
-							<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
-								<xsl:variable name="instrument" select="normalize-space(.)"/>								
-								<xsl:if test="$data_instrument = $instrument">
-									<xsl:variable name="niveauDifficulte" select="mus:NiveauDificulte($texte)" />
-									<xsl:if test="$niveauDifficulte">
-										<ecrm:P103_was_intended_for rdf:resource="{$niveauDifficulte}"/>
+					
+					<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
+					
+					
+					<!-- P103 was intended for 333$a
+					<xsl:apply-templates select="../../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>-->
+					<!-- P103 was intended for 333$a-->
+					<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
+					<xsl:if test="$NiveauDificulte">
+						<xsl:for-each select="$NiveauDificulte">
+							<xsl:variable name="texte" select="normalize-space(.)"/>
+							<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
+	
+							<!--
+							<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>
+							-->
+							<xsl:if test="boolean($instrument_niveau_dificulte)">
+								<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
+									<xsl:variable name="instrument" select="normalize-space(.)"/>								
+									<xsl:if test="$data_instrument = $instrument">
+										<xsl:variable name="niveauDifficulte" select="mus:NiveauDificulte($texte)" />
+										<xsl:if test="$niveauDifficulte">
+											<ecrm:P103_was_intended_for rdf:resource="{$niveauDifficulte}"/>
+										</xsl:if>
 									</xsl:if>
-								</xsl:if>
-							</xsl:for-each>
-						</xsl:if>																		
-					</xsl:for-each>
-				</xsl:if>
-				
-				
-				<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='940$x' or 
-								   @UnimarcSubfield='941$x' or
-								   @UnimarcSubfield='943$x' or
-								   @UnimarcSubfield='945$x' or
-								   @UnimarcSubfield='946$x' or 
-								   @UnimarcSubfield='947$x' or
-								   @UnimarcSubfield='948$x' or
-								   @UnimarcSubfield='949$x' or
-								   @UnimarcSubfield='950$x' or
-								   @UnimarcSubfield='951$x' or
-								   @UnimarcSubfield='952$x' or
-								   @UnimarcSubfield='953$x' or
-								   @UnimarcSubfield='956$x']/data"/>
-				<xsl:if test="$note">
-					<xsl:for-each select="$note">
-						<ecrm:P3_has_note><xsl:value-of select="normalize-space(.)"/></ecrm:P3_has_note>
-					</xsl:for-each>
-				</xsl:if>				
-			</mus:M23_Casting_Detail>
-		</mus:U23_has_casting_detail>
+								</xsl:for-each>
+							</xsl:if>																		
+						</xsl:for-each>
+					</xsl:if>
+					
+					
+					<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='940$x' or 
+									   @UnimarcSubfield='941$x' or
+									   @UnimarcSubfield='943$x' or
+									   @UnimarcSubfield='945$x' or
+									   @UnimarcSubfield='946$x' or 
+									   @UnimarcSubfield='947$x' or
+									   @UnimarcSubfield='948$x' or
+									   @UnimarcSubfield='949$x' or
+									   @UnimarcSubfield='950$x' or
+									   @UnimarcSubfield='951$x' or
+									   @UnimarcSubfield='952$x' or
+									   @UnimarcSubfield='953$x' or
+									   @UnimarcSubfield='956$x']/data"/>
+					<xsl:if test="$note">
+						<xsl:for-each select="$note">
+							<ecrm:P3_has_note><xsl:value-of select="normalize-space(.)"/></ecrm:P3_has_note>
+						</xsl:for-each>
+					</xsl:if>				
+				</mus:M23_Casting_Detail>
+			</mus:U23_has_casting_detail>
+		</xsl:if>
 	</xsl:template>
 	
 	
