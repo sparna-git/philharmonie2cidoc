@@ -715,6 +715,7 @@
 	<!-- chercher l'instrument ou la voix -->
 	<xsl:function name="mus:medium">
 		<xsl:param name="mots_medium"/>
+		<xsl:param name="medium_type"/>
 		<xsl:variable name="mot_medium">
 			<xsl:choose>
 				<xsl:when test="contains($mots_medium,'_')">
@@ -724,22 +725,23 @@
 					<xsl:value-of select="normalize-space($mots_medium)"/>
 				</xsl:otherwise>
 			</xsl:choose>		
-		</xsl:variable>
-		<xsl:variable name="mimo_medium_simple" select="mus:mimo_vocabulary_simple($mot_medium)"/>
-		<xsl:variable name="iaml_medium_simple">
-			<xsl:if test="$mimo_medium_simple =''">
-				<xsl:value-of select="mus:iaml_vocabulary_simple($mot_medium)"/>
+		</xsl:variable>		
+		<xsl:variable name="medium_simple">
+			<!-- MIMO -->
+			<xsl:if test="$medium_type='MIMO'">
+				<xsl:value-of select="mus:mimo_vocabulary_simple($mot_medium)"/>
+			</xsl:if>
+			<!-- IAML -->
+			<xsl:if test="$medium_type='IAML'">
+				<xsl:value-of select="mus:iaml_vocabulary_simple($mot_medium)"/>			
 			</xsl:if>
 		</xsl:variable>
 		<xsl:choose>
-			<xsl:when test="$mimo_medium_simple!=''">
-				<xsl:value-of select="$mimo_medium_simple"/>
-			</xsl:when>
-			<xsl:when test="$iaml_medium_simple!=''">
-				<xsl:value-of select="$iaml_medium_simple"/>
+			<xsl:when test="$medium_simple!=''">
+				<xsl:value-of select="$medium_simple"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in MIMO or IAML.</xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in '<xsl:value-of select="$medium_type"/>'.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -780,6 +782,7 @@
 	
 	<xsl:function name="mus:chercher_medium_complex">
 		<xsl:param name="mots_medium"/>
+		<xsl:param name="medium_type"/>
 		<xsl:variable name="mot_medium">
 			<xsl:choose>
 				<xsl:when test="contains($mots_medium,'_')">
@@ -791,21 +794,29 @@
 			</xsl:choose>		
 		</xsl:variable>
 		
-		<xsl:variable name="mimo_vocabulary" select="sparnaf:ComplexInstrument_mimo($mot_medium)"/>
-		<xsl:variable name="iaml_vocabulary" select="sparnaf:ComplexInstrument_iaml($mot_medium)"/>
-		
-		<xsl:variable name="instrument_mimo_trouve" select="string-length($mimo_vocabulary)"/>
-		<xsl:variable name="instrument_iaml_trouve" select="string-length($iaml_vocabulary)"/>
+		<xsl:variable name="medium_complex">
+			<xsl:choose>
+				<xsl:when test="$medium_type='MIMO'">
+					<!-- MIMO -->
+					<xsl:value-of select="sparnaf:ComplexInstrument_mimo($mot_medium)"/>
+				</xsl:when>
+				<xsl:when test="$medium_type='IAML'">
+					<!-- IAML -->
+					<xsl:value-of select="sparnaf:ComplexInstrument_iaml($mot_medium)"/>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:variable name="medium_trouve" select="string-length($medium_complex)"/>
 		<xsl:variable name="instrument_trouve">	
 			<xsl:choose>
-				<xsl:when test="$instrument_mimo_trouve &gt; 0">
-					<xsl:variable name="result" select="mus:mimo_vocabulary_simple($mimo_vocabulary)"/>
+				<xsl:when test="($medium_trouve &gt; 0) and $medium_type='MIMO'">
+					<xsl:variable name="result" select="mus:mimo_vocabulary_simple($medium_complex)"/>
 					<xsl:if test="$result != ''">
 						<xsl:value-of select="$result"/>
 					</xsl:if>
 				</xsl:when>
-				<xsl:when test="$instrument_iaml_trouve &gt; 0">
-					<xsl:variable name="result" select="mus:iaml_vocabulary_simple($iaml_vocabulary)"/>
+				<xsl:when test="($medium_trouve &gt; 0) and $medium_type='IAML'">
+					<xsl:variable name="result" select="mus:iaml_vocabulary_simple($medium_complex)"/>
 					<xsl:if test="$result != ''">
 						<xsl:value-of select="$result"/>
 					</xsl:if>
@@ -817,7 +828,7 @@
 				<xsl:value-of select="$instrument_trouve[1]"/>				
 			</xsl:when>			
 			<xsl:otherwise>
-				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in MIMO or IAML.</xsl:message>
+				<xsl:message>Warning - The medium '<xsl:value-of select="$mots_medium"/>' cannot be found in '<xsl:value-of select="$medium_type"/>'.</xsl:message>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
@@ -894,19 +905,20 @@
 	<!-- funtion utilisé par le casting alternatif -->
 	<xsl:function name="sparnaf:split_and_extract_mediums">
 		<xsl:param name="text"/>
+		<xsl:param name="medium_type"/>
 		<xsl:variable name="text_clean" select="translate($text,',.()','')"/>
 		<xsl:if test="contains($text_clean,' ou ') and (index-of(tokenize($text_clean,' '),'ou') &gt; 1)">
 			<xsl:for-each select="tokenize($text_clean,' ou ')">
 				<xsl:variable name="instrument" select="normalize-space(.)"/>
 				<xsl:choose>
-					<xsl:when test="string-length(mus:medium(lower-case($instrument))) &gt; 1">
+					<xsl:when test="string-length(mus:medium(lower-case($instrument),$medium_type)) &gt; 1">
 						<xsl:value-of select="$instrument"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:variable name="split2">
 							<xsl:for-each select="tokenize($instrument,' ')">
 								<xsl:variable name="instrument_split_space" select="."/>
-								<xsl:variable name="existe_catalogo" select="mus:medium(lower-case($instrument_split_space))"/>
+								<xsl:variable name="existe_catalogo" select="mus:medium(lower-case($instrument_split_space),$medium_type)"/>
 								<xsl:if test="string-length($existe_catalogo) &gt; 0">
 									<xsl:value-of select="$instrument_split_space"/>
 								</xsl:if>

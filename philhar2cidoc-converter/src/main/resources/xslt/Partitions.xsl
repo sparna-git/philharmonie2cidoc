@@ -1029,10 +1029,10 @@
 				</xsl:variable>
 				
 				
-				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
+				<xsl:variable name="medium_instrument" select="mus:medium($data_instrument,'MIMO')"/>
 				<xsl:variable name="medium_instrument_complex">
 					<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
-						<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>
+						<xsl:value-of select="mus:chercher_medium_complex($data_instrument,'MIMO')"/>
 					</xsl:if>
 				</xsl:variable>
 				 
@@ -1124,27 +1124,69 @@
 			<mus:U23_has_casting_detail>
 				<mus:M23_Casting_Detail rdf:about="{mus:URI-Casting_Detail($idNotice,$idCasting,$id,$typeNotice,$idNoticeMere)}">
 				
-					<xsl:variable name="medium_instrument" select="mus:medium($data_instrument)"/>
-					<xsl:variable name="medium_instrument_complex">
-						<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
-							<xsl:value-of select="mus:chercher_medium_complex($data_instrument)"/>						
-						</xsl:if>
-					</xsl:variable>
-					 
+					
+					<!-- Used the @UnimarcSubfield in (940, 941, 943, et 956) for the iaml
+						and 945, 946, 947, 948, 949, 950, 951, 952, 953 for the mimo -->
+					
+					<xsl:variable name="mediumInstrument">
+						<xsl:choose>
+							<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
+								<!-- IAML -->
+								<xsl:variable name="medium_instrument" select="mus:medium($data_instrument,'IAML')"/>
+								<xsl:variable name="medium_instrument_complex">
+									<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
+										<xsl:value-of select="mus:chercher_medium_complex($data_instrument,'IAML')"/>						
+									</xsl:if>
+								</xsl:variable>
+								<xsl:choose>
+									<xsl:when test="$medium_instrument != ''">
+										<xsl:value-of select="$medium_instrument"/>
+									</xsl:when>
+									<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
+										<xsl:value-of select="$medium_instrument_complex"/>
+									</xsl:when>
+								</xsl:choose>
+							</xsl:when>
+							<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
+								<!-- MIMO -->
+								<xsl:variable name="medium_instrument" select="mus:medium($data_instrument,'MIMO')"/>
+								<xsl:variable name="medium_instrument_complex">
+									<xsl:if test="$medium_instrument = '' and $data_instrument != ''">
+										<xsl:value-of select="mus:chercher_medium_complex($data_instrument,'MIMO')"/>						
+									</xsl:if>
+								</xsl:variable>
+								<xsl:choose>
+									<xsl:when test="$medium_instrument != ''">
+										<xsl:value-of select="$medium_instrument"/>
+									</xsl:when>
+									<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
+										<xsl:value-of select="$medium_instrument_complex"/>
+									</xsl:when>
+								</xsl:choose>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:variable>				
+					
 					
 					<xsl:choose>
-						<xsl:when test="$medium_instrument != ''">
+						<xsl:when test="$mediumInstrument != ''">
 							<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
-							<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
-						</xsl:when>
-						<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
-							<xsl:comment> <xsl:value-of select="$data_instrument"/> </xsl:comment>
-							<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
+							<xsl:choose>
+								<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
+									<!-- IAML -->
+									<mus:P2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($mediumInstrument)}"/>
+								</xsl:when>
+								<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
+									<!-- MIMO -->
+									<P1_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($mediumInstrument)}"/>
+								</xsl:when>
+							</xsl:choose>
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
 						</xsl:otherwise>				
 					</xsl:choose>
+					
 					
 					<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
 						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
@@ -1230,7 +1272,18 @@
 		</xsl:variable>	
 		
 		<xsl:variable name="data_source" select="normalize-space(.)"/>
-		<xsl:variable name="data_medium" select="sparnaf:split_and_extract_mediums($data_source)"/>
+		<xsl:variable name="data_medium">
+			<xsl:choose>
+				<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
+					<!-- IAML -->
+					<xsl:value-of select="sparnaf:split_and_extract_mediums($data_source,'IAML')"/>
+				</xsl:when>
+				<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
+					<!-- MIMO -->
+					<xsl:value-of select="sparnaf:split_and_extract_mediums($data_source,'MIMO')"/>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:variable>
 		
 		<xsl:choose>
 			<xsl:when test="$data_medium and $data_medium != '0'">
