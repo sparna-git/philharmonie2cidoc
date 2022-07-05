@@ -24,12 +24,15 @@
 	<!-- Template racine -->
 	<xsl:template match="NOTICES">
 		<rdf:RDF>
+			<skos:ConceptScheme rdf:about="https://data.philharmoniedeparis.fr/vocabulary/thesaurus">
+			</skos:ConceptScheme>
 			<xsl:apply-templates />
 		</rdf:RDF>
 	</xsl:template>
 
 	<xsl:template match="NOTICE">
 		<skos:Concept rdf:about="{concat('https://ark.philharmoniedeparis.fr/ark:49250/',@id)}">
+			<skos:inScheme rdf:resource="https://data.philharmoniedeparis.fr/vocabulary/thesaurus" />
 			<xsl:apply-templates />
 		</skos:Concept>
 	</xsl:template>
