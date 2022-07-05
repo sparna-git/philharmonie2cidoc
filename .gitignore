@@ -2,3 +2,15 @@
 philhar2cidoc-converter/src/main/resources/output/
 
 philhar2cidoc-converter/src/main/resources/work/
+
+philhar2cidoc-converter/src/main/resources/input/partitions/ExportPartitions-20211201.xml-fixed-pretty.xml
+
+philhar2cidoc-converter/src/main/resources/input_all/ExportPartitions-20211201.xml-fixed.xml
+
+philhar2cidoc-converter/src/main/resources/input_all/ExportPartitions-20211201.xml-fixed.xml.zip
+
+philhar2cidoc-converter/src/main/resources/test.ttl
+
+philhar2cidoc-converter/src/test/resources/examples/0079114.out.xml
+
+philhar2cidoc-converter/src/test/resources/examples/output.xml

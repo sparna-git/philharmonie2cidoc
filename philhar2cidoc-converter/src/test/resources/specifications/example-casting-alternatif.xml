@@ -1,0 +1,488 @@
+  <TYPREG type="UNI:5">
+    <NOTICE id="0109514" type="UNI:5">
+      <champs UnimarcTag="006">
+        <SOUSCHAMP UnimarcSubfield="006$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="006$a">
+          <data>ncm0</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="019">
+        <SOUSCHAMP UnimarcSubfield="019$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$a">
+          <data>UNI5</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$b">
+          <data>L17190</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="071">
+        <SOUSCHAMP UnimarcSubfield="071$">
+          <data>||</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="071$a">
+          <data>NM.100</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="100">
+        <SOUSCHAMP UnimarcSubfield="100$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="100$a">
+          <data>y0fre 0103    ba</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="102">
+        <SOUSCHAMP UnimarcSubfield="102$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="102$a">
+          <data>GB</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="105">
+        <SOUSCHAMP UnimarcSubfield="105$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="105$a">
+          <data>y       000yy</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="200">
+        <SOUSCHAMP UnimarcSubfield="200$">
+          <data>1 </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$a">
+          <data>The Three authentic sonatas</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$b">
+          <data>Musique imprimée</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$e">
+          <data>[No.1] in c min Opus 1 no.8 ; [No.2] in B flat &quot;Fitzwilliam&quot; ; [No.3] in F Opus 1 no.5 : for oboe and basso continuo</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$f">
+          <data>G.F. Handel</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$g">
+          <data>edited by David Lasocki</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="205">
+        <SOUSCHAMP UnimarcSubfield="205$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="205$a">
+          <data>2nd edition</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="208">
+        <SOUSCHAMP UnimarcSubfield="208$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="208$a">
+          <data>Conducteur et partie(s) séparée(s)</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="210">
+        <SOUSCHAMP UnimarcSubfield="210$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$a">
+          <data>London</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$c">
+          <data>Nova Music</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$d">
+          <data>cop. 1979</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="215">
+        <SOUSCHAMP UnimarcSubfield="215$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$a">
+          <data>1 conducteur (19 p.) et 2 parties (2x8 p.)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$d">
+          <data>31x23 cm</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="300">
+        <SOUSCHAMP UnimarcSubfield="300$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="300$a">
+          <data>Commentaire musicologique et note éditoriale en anglais</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="315">
+        <SOUSCHAMP UnimarcSubfield="315$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="315$a">
+          <data>P</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="333">
+        <SOUSCHAMP UnimarcSubfield="333$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="333$a">
+          <data>Niveau 6e-7e années dans '10 ans avec le hautbois'</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="333$a">
+          <data>Niveau 8e-9e années dans '10 ans avec la flûte à bec'</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="345">
+        <SOUSCHAMP UnimarcSubfield="345$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="345$a">
+          <data>Falado</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="345$d">
+          <data>111</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="449">
+        <SOUSCHAMP UnimarcSubfield="449$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$3">
+          <data>0934501</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$a">
+          <data>Sonate pour hautbois et basse continue en do mineur HWV 366</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$f">
+          <data>Georg Friedriech Haendel</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="449">
+        <SOUSCHAMP UnimarcSubfield="449$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$3">
+          <data>0934499</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$a">
+          <data>Sonate pour hautbois et basse continue en fa majeur HWV 363</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="449$f">
+          <data>Georg Friedriech Haendel</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="500">
+        <SOUSCHAMP UnimarcSubfield="500$">
+          <data>|0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$3">
+          <data>0301356</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$a">
+          <data>Sonates</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$r">
+          <data>Hautbois, basse continue</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$s">
+          <data>Op. 1 no 8</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$u">
+          <data>Do mineur</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="500">
+        <SOUSCHAMP UnimarcSubfield="500$">
+          <data>|0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$3">
+          <data>0301353</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$a">
+          <data>Sonates</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$r">
+          <data>Hautbois, basse continue</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$s">
+          <data>Op. 1 no 5</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="500$u">
+          <data>Fa majeur</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="541">
+        <SOUSCHAMP UnimarcSubfield="541$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="541$a">
+          <data>Les trois sonates autentiques pour hautbois et basse continue</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="541$e">
+          <data>sonates en Do mineur Op.1 N°8 ; en Sib majeur &quot;Fitzwilliam&quot; et en Fa majeur Op.1 N°5</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="541$z">
+          <data>eng</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0068838</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Sonate</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>04</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0145870</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>18 ème siècle</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>02</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="700">
+        <SOUSCHAMP UnimarcSubfield="700$">
+          <data>|</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$3">
+          <data>0038705</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$a">
+          <data>Haendel</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$b">
+          <data>Georg Friedrich</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$f">
+          <data>1685-1759</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$4">
+          <data>230</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="702">
+        <SOUSCHAMP UnimarcSubfield="702$">
+          <data>|</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$3">
+          <data>0627256</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$a">
+          <data>Lasocki</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$b">
+          <data>David</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$4">
+          <data>340</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="702">
+        <SOUSCHAMP UnimarcSubfield="702$">
+          <data>|</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$3">
+          <data>0043257</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$a">
+          <data>Madden</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$b">
+          <data>John</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$f">
+          <data>1956-....</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="702$4">
+          <data>m65</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="801">
+        <SOUSCHAMP UnimarcSubfield="801$">
+          <data>|</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$a">
+          <data>FR</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$b">
+          <data>CRMD</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$c">
+          <data>19961030</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="911">
+        <SOUSCHAMP UnimarcSubfield="911$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$3">
+          <data>0440181</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$a">
+          <data>Nova Music</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="936">
+        <SOUSCHAMP UnimarcSubfield="936$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="936$a">
+          <data>MP31184</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="945">
+        <SOUSCHAMP UnimarcSubfield="945$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>hautbois(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="949">
+        <SOUSCHAMP UnimarcSubfield="949$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$a">
+          <data>clavier(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$t">
+          <data>1</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$x">
+          <data>plutôt clavecin</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="952">
+        <SOUSCHAMP UnimarcSubfield="952$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="952$a">
+          <data>basse_continue(2)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="952$t">
+          <data>2</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="952$x">
+          <data>basson ou violoncelle ou viole de gambe et clavier (clavecin)</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="954">
+        <SOUSCHAMP UnimarcSubfield="954$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$t">
+          <data>3</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$x">
+          <data>dont 2 pour la basse continue</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="955">
+        <SOUSCHAMP UnimarcSubfield="955$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$a">
+          <data>1712</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$b">
+          <data>Londres</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="956">
+        <SOUSCHAMP UnimarcSubfield="956$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="956$a">
+          <data>ensemble_instrumental(1)</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="980">
+        <SOUSCHAMP UnimarcSubfield="980$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$a">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$d">
+          <data>1707, 1712</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$q">
+          <data>4.11 /4.19</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="990">
+        <SOUSCHAMP UnimarcSubfield="990$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="990$a">
+          <data>113.9 HAE:P:31184</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="991">
+        <SOUSCHAMP UnimarcSubfield="991$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$d">
+          <data>1999/09</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$e">
+          <data>PS /HR</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$f">
+          <data>24/09/99</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$i">
+          <data>0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$j">
+          <data>2</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="997">
+        <SOUSCHAMP UnimarcSubfield="997$">
+          <data/>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$3">
+          <data>0328955</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$a">
+          <data>NE1042955</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$c">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$d">
+          <data>PEDAGO</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$g">
+          <data>113.9 HAE:P:31184</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$t">
+          <data>PAR</data>
+        </SOUSCHAMP>
+      </champs>
+    </NOTICE>
+  </TYPREG>

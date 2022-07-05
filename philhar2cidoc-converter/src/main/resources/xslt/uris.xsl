@@ -228,7 +228,7 @@
 	<xsl:function name="mus:role_vocab">
 		<xsl:param name="idfunction"/>
 		<xsl:variable name="source" select="$rol_vocab[
-										 skos:notation[@rdf:datatype='https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie']=$idfunction]/@rdf:about"/>
+										 skos:notation[@rdf:datatype='https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie']=$idfunction]/@rdf:about"/>
 		<xsl:choose>
 			<xsl:when test="count($source)=1">
 				<xsl:value-of select="$source"/>
