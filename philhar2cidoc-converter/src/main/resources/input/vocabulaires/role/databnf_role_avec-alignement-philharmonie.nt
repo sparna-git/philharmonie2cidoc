@@ -86,7 +86,7 @@
 <http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#notation> "1030"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#note> "Terme rejet\u00E9 : Chanteur\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chanteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#notation> "721"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#notation> "721"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Singer"@en .
 <http://data.bnf.fr/vocabulary/roles/r1030/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Terme rejet\u00E9 : Chanteur\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1031/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -131,7 +131,7 @@
 <http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
 <http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#altLabel> "Corps de ballet"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#altLabel> "Danseur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#notation> "274"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>.
+<http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#notation> "274"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>.
 <http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#altLabel> "Ensemble chor\u00E9graphique"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r1060/> <http://www.w3.org/2004/02/skos/core#notation> "1060"^^<http://www.w3.org/2001/XMLSchema#integer> .
@@ -153,7 +153,7 @@
 <http://data.bnf.fr/vocabulary/roles/r1080/> <http://www.w3.org/2004/02/skos/core#notation> "1080"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r1080/> <http://www.w3.org/2004/02/skos/core#note> "Terme rejet\u00E9 : Chef de ch\u0153ur\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1080/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chef de ch\u0153ur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r1080/> <http://www.w3.org/2004/02/skos/core#notation> "195"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r1080/> <http://www.w3.org/2004/02/skos/core#notation> "195"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r1080/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Terme rejet\u00E9 : Chef de ch\u0153ur\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1090/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r1090/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/prf> .
@@ -189,7 +189,7 @@
 <http://data.bnf.fr/vocabulary/roles/r1100/> <http://www.w3.org/2004/02/skos/core#note> "Type de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1100/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Instrumentalist"@en .
 <http://data.bnf.fr/vocabulary/roles/r1100/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Instrumentiste"@fr .
-<http://data.bnf.fr/vocabulary/roles/r1100/> <http://www.w3.org/2004/02/skos/core#notation> "m41"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r1100/> <http://www.w3.org/2004/02/skos/core#notation> "m41"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r1100/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Type de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1101/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r1101/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/itr> .
@@ -906,7 +906,7 @@
 <http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#notation> "140"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : copiste pratiquant une \u00E9criture remarquable par ses qualit\u00E9s esth\u00E9tiques\nType de document : CARTES ET PLANS  / MANUSCRITS ANCIENS  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Calligraphe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#notation> "170"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#notation> "170"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Calligrapher"@en .
 <http://data.bnf.fr/vocabulary/roles/r140/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : copiste pratiquant une \u00E9criture remarquable par ses qualit\u00E9s esth\u00E9tiques\nType de document : CARTES ET PLANS  / MANUSCRITS ANCIENS  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r1400/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1110,7 +1110,7 @@
 <http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#notation> "150"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : auteur d\u2019une repr\u00E9sentation g\u00E9om\u00E9trique conventionnelle, g\u00E9n\u00E9ralement plane, en positions relatives, de ph\u00E9nom\u00E8nes concrets ou abstraits, localisables dans l\u2019espace (Z 44-067 Catalogage des documents cartographiques, septembre 1991)\nType de document : CARTES ET PLANS  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cartographe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#notation> "180"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#notation> "180"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cartographer"@en .
 <http://data.bnf.fr/vocabulary/roles/r150/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : auteur d\u2019une repr\u00E9sentation g\u00E9om\u00E9trique conventionnelle, g\u00E9n\u00E9ralement plane, en positions relatives, de ph\u00E9nom\u00E8nes concrets ou abstraits, localisables dans l\u2019espace (Z 44-067 Catalogage des documents cartographiques, septembre 1991)\nType de document : CARTES ET PLANS  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r1500/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1341,7 +1341,7 @@
 <http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#notation> "160"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#note> "Type de document : IMAGES ANIM\u00C9ES / SPECTACLES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chor\u00E9graphe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#notation> "200"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#notation> "200"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Choreographer"@en .
 <http://data.bnf.fr/vocabulary/roles/r160/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Type de document : IMAGES ANIM\u00C9ES / SPECTACLES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r1600/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1575,7 +1575,7 @@
 <http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#notation> "170"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui] prend une part limit\u00E9e \u00E0 l\u2019\u00E9laboration de l\u2019\u0153uvre d\u2019un autre auteur [ou qui] apporte des compl\u00E9ments \u00E0 l\u2019\u0153uvre d\u2019un autre auteur (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Collaborateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#notation> "m09"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>  .
+<http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#notation> "m09"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>  .
 <http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#notation> "205" .
 <http://data.bnf.fr/vocabulary/roles/r170/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui] prend une part limit\u00E9e \u00E0 l\u2019\u00E9laboration de l\u2019\u0153uvre d\u2019un autre auteur [ou qui] apporte des compl\u00E9ments \u00E0 l\u2019\u0153uvre d\u2019un autre auteur (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1700/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1913,7 +1913,7 @@
 <http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#notation> "1850"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#note> "Terme rejet\u00E9 : Scratches\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Disc jockey"@fr .
-<http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#notation> "303"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#notation> "303"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Performer"@en .
 <http://data.bnf.fr/vocabulary/roles/r1850/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Terme rejet\u00E9 : Scratches\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1924,7 +1924,7 @@
 <http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/2004/02/skos/core#note> "Type de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Performer"@en .
 <http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Remixeur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/2004/02/skos/core#notation> "672"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/2004/02/skos/core#notation> "672"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r1860/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Type de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r1870/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r1870/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/itr> .
@@ -2118,7 +2118,7 @@
 <http://data.bnf.fr/vocabulary/roles/r200/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r200/> <http://www.w3.org/2004/02/skos/core#notation> "200"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r200/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commissaire d'exposition"@fr .
-<http://data.bnf.fr/vocabulary/roles/r200/> <http://www.w3.org/2004/02/skos/core#notation> "273"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r200/> <http://www.w3.org/2004/02/skos/core#notation> "273"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r200/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Curator"@en .
 <http://data.bnf.fr/vocabulary/roles/r2010/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r2010/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/prd> .
@@ -2270,7 +2270,7 @@
 <http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#notation> "210"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui r\u00E9unit des documents dispers\u00E9s (Petit Robert 1, 1984)\u00A0 ; [personne] qui a recueilli et class\u00E9 des textes juridiques ou autres formant une s\u00E9rie chronologique ou syst\u00E9matique compl\u00E8te (Aide-m\u00E9moire de catalogage / Centres de formation professionnelle de biblioth\u00E9caires de Bordeaux et Toulouse, 1977)\u00A0 ; auteur d\u2019une \u0153uvre d\u00E9riv\u00E9e exclusivement compos\u00E9e d\u2019extraits et d\u2019emprunts (AFNOR, Vocabulaire de la documentation, 2e \u00E9d., 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compilateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#notation> "220"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#notation> "220"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compiler"@en .
 <http://data.bnf.fr/vocabulary/roles/r210/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui r\u00E9unit des documents dispers\u00E9s (Petit Robert 1, 1984)\u00A0 ; [personne] qui a recueilli et class\u00E9 des textes juridiques ou autres formant une s\u00E9rie chronologique ou syst\u00E9matique compl\u00E8te (Aide-m\u00E9moire de catalogage / Centres de formation professionnelle de biblioth\u00E9caires de Bordeaux et Toulouse, 1977)\u00A0 ; auteur d\u2019une \u0153uvre d\u00E9riv\u00E9e exclusivement compos\u00E9e d\u2019extraits et d\u2019emprunts (AFNOR, Vocabulaire de la documentation, 2e \u00E9d., 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2100/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2379,7 +2379,7 @@
 <http://data.bnf.fr/vocabulary/roles/r2190/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : concerne maquettes de livres, maquettes d\u2019affiches, maquettes de d\u00E9cors de th\u00E9\u00E2tre\u2026"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2190/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maquettiste"@fr .
 
-<http://data.bnf.fr/vocabulary/roles/r2190/> <http://www.w3.org/2004/02/skos/core#notation> "130"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r2190/> <http://www.w3.org/2004/02/skos/core#notation> "130"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r2190/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Production personnel"@en .
 <http://data.bnf.fr/vocabulary/roles/r2190/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : concerne maquettes de livres, maquettes d\u2019affiches, maquettes de d\u00E9cors de th\u00E9\u00E2tre\u2026"@fr .
 <http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2390,7 +2390,7 @@
 <http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne ou collectivit\u00E9 responsable de la musique compos\u00E9e pour l\u2019ensemble de l\u2019\u0153uvre audiovisuelle. La mention de responsabilit\u00E9 peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : musique de, musique compos\u00E9e par, compositeur, etc. (en anglais\u00A0 : composer) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / IMPRIM\u00C9S   / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Composer"@en .
 <http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compositeur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/2004/02/skos/core#notation> "230"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/2004/02/skos/core#notation> "230"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r220/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne ou collectivit\u00E9 responsable de la musique compos\u00E9e pour l\u2019ensemble de l\u2019\u0153uvre audiovisuelle. La mention de responsabilit\u00E9 peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : musique de, musique compos\u00E9e par, compositeur, etc. (en anglais\u00A0 : composer) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / IMPRIM\u00C9S   / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r2200/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r2200/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/prd> .
@@ -2454,7 +2454,7 @@
 <http://data.bnf.fr/vocabulary/roles/r222/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r222/> <http://www.w3.org/2004/02/skos/core#notation> "222"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r222/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Composer"@en .
-<http://data.bnf.fr/vocabulary/roles/r222/> <http://www.w3.org/2004/02/skos/core#notation> "233"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r222/> <http://www.w3.org/2004/02/skos/core#notation> "233"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r222/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compositeur de l'\u0153uvre adapt\u00E9e"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2220/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r2220/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/prd> .
@@ -2488,7 +2488,7 @@
 <http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/flm> .
 <http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
 <http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2004/02/skos/core#altLabel> "Monteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2004/02/skos/core#notation> "370"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2004/02/skos/core#notation> "370"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2004/02/skos/core#notation> "2230"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r2230/> <http://www.w3.org/2004/02/skos/core#note> "Terme rejet\u00E9 : Monteur\nType de document : IA"@fr .
@@ -2580,7 +2580,7 @@
 <http://data.bnf.fr/vocabulary/roles/r2280/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : (d\u00E9finition qui pourrait \u00EAtre traduite) \u00AB\u00A0 Designer responsible for all the visual aspects of a production (lighting, scenery, costumes etc.)\u00A0 \u00BB (trouv\u00E9e sur le site\u00A0 : http://www.ex.ac.uk/drama/tech/glossar2.html#S)\nType de document : SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2280/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Restager"@en .
 <http://data.bnf.fr/vocabulary/roles/r2280/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sc\u00E9nographe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r2280/> <http://www.w3.org/2004/02/skos/core#notation> "632"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r2280/> <http://www.w3.org/2004/02/skos/core#notation> "632"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r2280/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : (d\u00E9finition qui pourrait \u00EAtre traduite) \u00AB\u00A0 Designer responsible for all the visual aspects of a production (lighting, scenery, costumes etc.)\u00A0 \u00BB (trouv\u00E9e sur le site\u00A0 : http://www.ex.ac.uk/drama/tech/glossar2.html#S)\nType de document : SPE"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2290/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r2290/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/prd> .
@@ -2606,7 +2606,7 @@
 <http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#notation> "230"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui, sous l\u2019impulsion du directeur de cr\u00E9ation, \u00E9labore les th\u00E8mes et les textes des documents publicitaires, \u00E0 partir de l\u2019axe d\u00E9fini par la cellule commerciale de l\u2019agence (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Concepteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#notation> "245"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#notation> "245"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conceptor"@en .
 <http://data.bnf.fr/vocabulary/roles/r230/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui, sous l\u2019impulsion du directeur de cr\u00E9ation, \u00E9labore les th\u00E8mes et les textes des documents publicitaires, \u00E0 partir de l\u2019axe d\u00E9fini par la cellule commerciale de l\u2019agence (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2300/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2628,7 +2628,7 @@
 <http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#notation> "2305"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : Ing\u00E9nieur du son : personne qui m\u00E9lange harmonieusement les enregistrements sonores d\u00E9j\u00E0 s\u00E9lectionn\u00E9s et mont\u00E9s. Il est aussi responsable du mixage qui correspond au travail d\u2019\u00E9talonnage pour l\u2019image (en anglais\u00A0 : sound supervisor)\u00A0 \u00BB (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; Chef op\u00E9rateur du son\u00A0 : personne qui a la responsabilit\u00E9 de l\u2019enregistrement des sons pendant le tournage. La mention peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : son (en anglais\u00A0 : sound supervisor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; Chef monteur son\u00A0 : personne qui a la responsabilit\u00E9 du choix et de l\u2019assemblage des sons (en anglais\u00A0 : supervising sound editor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nTerme rejet\u00E9 : Chef monteur son ; Chef op\u00E9rateur du son\nType de document : IMAGES ANIM\u00C9ES / SON"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ing\u00E9nieur du son"@fr .
-<http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#notation> "670"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#notation> "670"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recording engineer"@en .
 <http://data.bnf.fr/vocabulary/roles/r2305/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : Ing\u00E9nieur du son : personne qui m\u00E9lange harmonieusement les enregistrements sonores d\u00E9j\u00E0 s\u00E9lectionn\u00E9s et mont\u00E9s. Il est aussi responsable du mixage qui correspond au travail d\u2019\u00E9talonnage pour l\u2019image (en anglais\u00A0 : sound supervisor)\u00A0 \u00BB (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; Chef op\u00E9rateur du son\u00A0 : personne qui a la responsabilit\u00E9 de l\u2019enregistrement des sons pendant le tournage. La mention peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : son (en anglais\u00A0 : sound supervisor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; Chef monteur son\u00A0 : personne qui a la responsabilit\u00E9 du choix et de l\u2019assemblage des sons (en anglais\u00A0 : supervising sound editor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nTerme rejet\u00E9 : Chef monteur son ; Chef op\u00E9rateur du son\nType de document : IMAGES ANIM\u00C9ES / SON"@fr .
 <http://data.bnf.fr/vocabulary/roles/r2306/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2650,7 +2650,7 @@
 <http://data.bnf.fr/vocabulary/roles/r2310/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r2310/> <http://www.w3.org/2004/02/skos/core#notation> "2310"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r2310/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Typographe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r2310/> <http://www.w3.org/2004/02/skos/core#notation> "750"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r2310/> <http://www.w3.org/2004/02/skos/core#notation> "750"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r2310/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Typographer"@en .
 <http://data.bnf.fr/vocabulary/roles/r2320/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r2320/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/rbr> .
@@ -2724,7 +2724,7 @@
 <http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#notation> "250"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui apporte sa comp\u00E9tence scientifique \u00E0 la conception et \u00E0 la r\u00E9alisation de l\u2019\u0153uvre audiovisuelle (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nTerme rejet\u00E9 : Conseiller historique ; Conseiller p\u00E9dagogique\nType de document : IMAGES ANIM\u00C9ES / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conseiller scientifique"@fr .
-<http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#notation> "695"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#notation> "695"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Scientific advisor"@en .
 <http://data.bnf.fr/vocabulary/roles/r250/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui apporte sa comp\u00E9tence scientifique \u00E0 la conception et \u00E0 la r\u00E9alisation de l\u2019\u0153uvre audiovisuelle (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nTerme rejet\u00E9 : Conseiller historique ; Conseiller p\u00E9dagogique\nType de document : IMAGES ANIM\u00C9ES / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r260/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2757,7 +2757,7 @@
 <http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#notation> "270"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#note> "\u00C0 ne pas confondre avec \"2340 Scripteur\" ou avec \"4170 Annotations manuscrites\"\nType de document : MANUSCRITS ANCIENS  / Manuscrit moderne et document d\u2019archives / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Copiste"@fr .
-<http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#notation> "700"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#notation> "700"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Scribe"@en .
 <http://data.bnf.fr/vocabulary/roles/r270/> <http://www.w3.org/2004/02/skos/core#scopeNote> "\u00C0 ne pas confondre avec \"2340 Scripteur\" ou avec \"4170 Annotations manuscrites\"\nType de document : MANUSCRITS ANCIENS  / Manuscrit moderne et document d\u2019archives / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r271/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2781,7 +2781,7 @@
 <http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#notation> "280"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#note> "Type de document : MANUSCRITS ANCIENS  / Manuscrit moderne et document d\u2019archives / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Correcteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#notation> "270"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#notation> "270"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Corrector"@en .
 <http://data.bnf.fr/vocabulary/roles/r280/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Type de document : MANUSCRITS ANCIENS  / Manuscrit moderne et document d\u2019archives / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2791,7 +2791,7 @@
 <http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#notation> "290"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne \u00E0 qui une d\u00E9dicace (imprim\u00E9e) est adress\u00E9e\n\u00C0 ne pas confondre avec \"4080 Destinataire de l\u2019envoi\""@fr .
 <http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#prefLabel> "D\u00E9dicataire"@fr .
-<http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#notation> "280"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#notation> "280"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dedicatee"@en .
 <http://data.bnf.fr/vocabulary/roles/r290/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne \u00E0 qui une d\u00E9dicace (imprim\u00E9e) est adress\u00E9e\n\u00C0 ne pas confondre avec \"4080 Destinataire de l\u2019envoi\""@fr .
 <http://data.bnf.fr/vocabulary/roles/r2980/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2860,7 +2860,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3040/> <http://www.w3.org/2004/02/skos/core#note> "\u00C0 r\u00E9server : aux catalogues de vente"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3040/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert"@en .
 <http://data.bnf.fr/vocabulary/roles/r3040/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3040/> <http://www.w3.org/2004/02/skos/core#notation> "365"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3040/> <http://www.w3.org/2004/02/skos/core#notation> "365"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3040/> <http://www.w3.org/2004/02/skos/core#scopeNote> "\u00C0 r\u00E9server : aux catalogues de vente"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ppm> .
@@ -2868,7 +2868,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2004/02/skos/core#notation> "3050"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fabricant du papier"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2004/02/skos/core#notation> "580"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2004/02/skos/core#notation> "580"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3050/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Papermaker"@en .
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/prt> .
@@ -2877,7 +2877,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#notation> "3060"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne ou collectivit\u00E9 responsable des op\u00E9rations mat\u00E9rielles d\u2019impression d\u2019un document (Z 44-077 Catalogage de l\u2019image fixe, septembre 1997)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Imprimeur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#notation> "610"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#notation> "610"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Printer"@en .
 <http://data.bnf.fr/vocabulary/roles/r3060/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne ou collectivit\u00E9 responsable des op\u00E9rations mat\u00E9rielles d\u2019impression d\u2019un document (Z 44-077 Catalogage de l\u2019image fixe, septembre 1997)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3070/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -2978,7 +2978,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3130/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne vis\u00E9e par une] \u00AB\u00A0 mention indiquant le titulaire du droit d\u2019auteur sur la publication et l\u2019ann\u00E9e d\u2019obtention de ce droit\u00A0 \u00BB (Z 44-050 Catalogage des monographies, d\u00E9cembre 1989)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3130/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Copyright holder"@en .
 <http://data.bnf.fr/vocabulary/roles/r3130/> <http://www.w3.org/2004/02/skos/core#prefLabel> "D\u00E9tenteur du copyright ou de protection"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3130/> <http://www.w3.org/2004/02/skos/core#notation> "260"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3130/> <http://www.w3.org/2004/02/skos/core#notation> "260"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3130/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne vis\u00E9e par une] \u00AB\u00A0 mention indiquant le titulaire du droit d\u2019auteur sur la publication et l\u2019ann\u00E9e d\u2019obtention de ce droit\u00A0 \u00BB (Z 44-050 Catalogage des monographies, d\u00E9cembre 1989)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r314/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r314/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/drm> .
@@ -3004,7 +3004,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3150/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : en t\u00E9l\u00E9vision, personne physique qui con\u00E7oit une \u00E9mission et supervise ou accompagne g\u00E9n\u00E9ralement sa r\u00E9alisation. Longtemps, il s\u2019est appel\u00E9 producteur d\u00E9l\u00E9gu\u00E9\u00A0 ; aujourd\u2019hui il est d\u00E9sign\u00E9 sous le terme de producteur artistique. La mention de responsabilit\u00E9 peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : \u00E9mission de, con\u00E7u par, producteur, producteur d\u00E9l\u00E9gu\u00E9, producteur artistique. Au cin\u00E9ma, personne physique qui assume, du point de vue administratImages Fixes  et financier, la responsabilit\u00E9 de bonne fin d\u2019un film. Dans les faits, le r\u00F4le du producteur artistique est plus large et peut comprendre des aspects de responsabilit\u00E9 intellectuelle. Note\u00A0 : lorsque le producteur est une personne morale, il ne peut s\u2019agir que d\u2019une responsabilit\u00E9 commerciale. Il arrive que la personne morale soit repr\u00E9sent\u00E9e par une personne physique. Dans ce cas, il ne faut pas confondre cette mention de responsabilit\u00E9 commerciale avec celle de responsabilit\u00E9 intellectuelle (en anglais\u00A0 : producer) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\u00A0 ; personne ou collectivit\u00E9 ayant la responsabilit\u00E9 financi\u00E8re et/ou administrative des processus physiques d\u2019\u00E9laboration d\u2019une ressource \u00E9lectronique. Il a des fonctions diff\u00E9rentes selon le secteur d\u2019activit\u00E9. (Z 44-082 Catalogage des Ressources \u00E9lectroniques, ao\u00FBt 1999)\nType de document : IA"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3150/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Producer"@en .
 <http://data.bnf.fr/vocabulary/roles/r3150/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Producteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3150/> <http://www.w3.org/2004/02/skos/core#notation> "630"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3150/> <http://www.w3.org/2004/02/skos/core#notation> "630"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3150/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : en t\u00E9l\u00E9vision, personne physique qui con\u00E7oit une \u00E9mission et supervise ou accompagne g\u00E9n\u00E9ralement sa r\u00E9alisation. Longtemps, il s\u2019est appel\u00E9 producteur d\u00E9l\u00E9gu\u00E9\u00A0 ; aujourd\u2019hui il est d\u00E9sign\u00E9 sous le terme de producteur artistique. La mention de responsabilit\u00E9 peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : \u00E9mission de, con\u00E7u par, producteur, producteur d\u00E9l\u00E9gu\u00E9, producteur artistique. Au cin\u00E9ma, personne physique qui assume, du point de vue administratImages Fixes  et financier, la responsabilit\u00E9 de bonne fin d\u2019un film. Dans les faits, le r\u00F4le du producteur artistique est plus large et peut comprendre des aspects de responsabilit\u00E9 intellectuelle. Note\u00A0 : lorsque le producteur est une personne morale, il ne peut s\u2019agir que d\u2019une responsabilit\u00E9 commerciale. Il arrive que la personne morale soit repr\u00E9sent\u00E9e par une personne physique. Dans ce cas, il ne faut pas confondre cette mention de responsabilit\u00E9 commerciale avec celle de responsabilit\u00E9 intellectuelle (en anglais\u00A0 : producer) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\u00A0 ; personne ou collectivit\u00E9 ayant la responsabilit\u00E9 financi\u00E8re et/ou administrative des processus physiques d\u2019\u00E9laboration d\u2019une ressource \u00E9lectronique. Il a des fonctions diff\u00E9rentes selon le secteur d\u2019activit\u00E9. (Z 44-082 Catalogage des Ressources \u00E9lectroniques, ao\u00FBt 1999)\nType de document : IA"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3160/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r3160/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/pro> .
@@ -3072,7 +3072,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#notation> "3210"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne physique ou morale charg\u00E9e par l\u2019\u00E9diteur de la mise \u00E0 disposition du public des exemplaires publi\u00E9s (Z 44-066 Catalogage des enregistrements sonores, d\u00E9cembre 1988) ; personne physique ou morale qui joue le r\u00F4le d\u2019interm\u00E9diaire entre le producteur d\u2019une part, les exploitants d\u2019autre part, pour la distribution des documents cin\u00E9matographiques dans les circuits publics. C\u2019est lui qui assure la duplication, la gestion et l\u2019exp\u00E9dition des copies et du mat\u00E9riel promotionnel (en anglais\u00A0 : distributor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; personne morale qui, par contrat de vente avec l\u2019\u00E9diteur, a la charge de la gestion des stocks et de l\u2019acheminement des exemplaires vers les points de vente (en anglais\u00A0 : videotape distributor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Distributeur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#notation> "310"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#notation> "310"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Distributor"@en .
 <http://data.bnf.fr/vocabulary/roles/r3210/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne physique ou morale charg\u00E9e par l\u2019\u00E9diteur de la mise \u00E0 disposition du public des exemplaires publi\u00E9s (Z 44-066 Catalogage des enregistrements sonores, d\u00E9cembre 1988) ; personne physique ou morale qui joue le r\u00F4le d\u2019interm\u00E9diaire entre le producteur d\u2019une part, les exploitants d\u2019autre part, pour la distribution des documents cin\u00E9matographiques dans les circuits publics. C\u2019est lui qui assure la duplication, la gestion et l\u2019exp\u00E9dition des copies et du mat\u00E9riel promotionnel (en anglais\u00A0 : distributor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; personne morale qui, par contrat de vente avec l\u2019\u00E9diteur, a la charge de la gestion des stocks et de l\u2019acheminement des exemplaires vers les points de vente (en anglais\u00A0 : videotape distributor) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3220/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3110,7 +3110,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3250/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne ou organisme responsable de la publication d\u2019un document (Z 44-050 Catalogage des monographies, d\u00E9cembre 1989) ; personne ou collectivit\u00E9 responsable de la production et de la diffusion d\u2019un document (Z 44-063 Catalogage des publications en s\u00E9rie, juillet 1999) ; personne physique ou morale qui prend l\u2019initiative et la responsabilit\u00E9 de la multiplication de l\u2019enregistrement sonore pour sa mise \u00E0 disposition du public (Z 44-066 Catalogage des enregistrements sonores, d\u00E9cembre 1988) ; personne physique ou morale (cas le plus fr\u00E9quent) qui prend en charge ou commande les op\u00E9rations de duplication de l\u2019enregistrement initialement fix\u00E9 et sa mise en forme (jaquettes, bo\u00EEtiers) afin d\u2019en assurer la publication (en anglais\u00A0 : videotape publisher) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; personne ou collectivit\u00E9 responsable de la publication et parfois aussi de la diffusion d\u2019un document (Z 44-077 Catalogage de l\u2019image fixe, septembre 1997) ; personne ou collectivit\u00E9 responsable de la publication d\u2019un document cartographique (Z 44-067 Catalogage des documents cartographiques, septembre 1991) ; personne ou organisme responsable de la publication d\u2019un document (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993) ; personne ou collectivit\u00E9 responsable du contenu intellectuel de l\u2019\u00E9dition d\u2019une ressource (Z 44-082 Catalogage des Ressources \u00E9lectroniques, ao\u00FBt 1999)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3250/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Publisher"@en .
 <http://data.bnf.fr/vocabulary/roles/r3250/> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u00C9diteur commercial"@fr .
-<http://data.bnf.fr/vocabulary/roles/r3250/> <http://www.w3.org/2004/02/skos/core#notation> "650"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r3250/> <http://www.w3.org/2004/02/skos/core#notation> "650"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r3250/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne ou organisme responsable de la publication d\u2019un document (Z 44-050 Catalogage des monographies, d\u00E9cembre 1989) ; personne ou collectivit\u00E9 responsable de la production et de la diffusion d\u2019un document (Z 44-063 Catalogage des publications en s\u00E9rie, juillet 1999) ; personne physique ou morale qui prend l\u2019initiative et la responsabilit\u00E9 de la multiplication de l\u2019enregistrement sonore pour sa mise \u00E0 disposition du public (Z 44-066 Catalogage des enregistrements sonores, d\u00E9cembre 1988) ; personne physique ou morale (cas le plus fr\u00E9quent) qui prend en charge ou commande les op\u00E9rations de duplication de l\u2019enregistrement initialement fix\u00E9 et sa mise en forme (jaquettes, bo\u00EEtiers) afin d\u2019en assurer la publication (en anglais\u00A0 : videotape publisher) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998) ; personne ou collectivit\u00E9 responsable de la publication et parfois aussi de la diffusion d\u2019un document (Z 44-077 Catalogage de l\u2019image fixe, septembre 1997) ; personne ou collectivit\u00E9 responsable de la publication d\u2019un document cartographique (Z 44-067 Catalogage des documents cartographiques, septembre 1991) ; personne ou organisme responsable de la publication d\u2019un document (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993) ; personne ou collectivit\u00E9 responsable du contenu intellectuel de l\u2019\u00E9dition d\u2019une ressource (Z 44-082 Catalogage des Ressources \u00E9lectroniques, ao\u00FBt 1999)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r3260/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r3260/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/bsl> .
@@ -3132,7 +3132,7 @@
 <http://data.bnf.fr/vocabulary/roles/r3290/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r3290/> <http://www.w3.org/2004/02/skos/core#notation> "3290"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r3290/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bookseller"@en .
-<http://data.bnf.fr/vocabulary/roles/r3290/> <http://www.w3.org/2004/02/skos/core#notation> "160"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>.
+<http://data.bnf.fr/vocabulary/roles/r3290/> <http://www.w3.org/2004/02/skos/core#notation> "160"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>.
 <http://data.bnf.fr/vocabulary/roles/r3290/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Libraire"@fr .
 <http://data.bnf.fr/vocabulary/roles/r33/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r33/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/org> .
@@ -3241,7 +3241,7 @@
 <http://data.bnf.fr/vocabulary/roles/r360/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne ou collectivit\u00E9 responsable du contenu intellectuel de l\u2019\u00E9dition d\u2019un document (Z 44-063 Catalogage des publications en s\u00E9rie)\u00A0 ; personne ou collectivit\u00E9 responsable du contenu intellectuel de l\u2019\u00E9dition d\u2019une ressource (Z 44-082 Catalogage des ressources \u00E9lectroniques, ao\u00FBt 1999)\u00A0 ; [personne] qui \u00E9tablit pour l\u2019impression un texte r\u00E9dig\u00E9 pr\u00E9alablement par une autre personne (Aide-m\u00E9moire de catalogage / Centres de formation professionnelle de biblioth\u00E9caires de Bordeaux et Toulouse, 1977)\u00A0 ; [personne qui] assure la publication ou la pr\u00E9sentation d\u2019une \u0153uvre ou d\u2019un ensemble de documents [ou qui] assure l\u2019actualisation de l\u2019\u0153uvre d\u2019un autre auteur\u00A0 \u2014 cette fonction s\u2019entend au sens intellectuel. Elle peut toutefois s\u2019employer dans certains cas pour les \u00E9diteurs commerciaux\u00A0 ; termes \u00E9quivalents\u00A0 : compilateur, \u00E9dit\u00E9 et traduit par, mise \u00E0 jour par, expert (catalogue de vente), organis\u00E9 par (congr\u00E8s), pr\u00E9sent\u00E9 par, publi\u00E9 par, textes choisis, rassembl\u00E9s ou r\u00E9unis par (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)\nTerme rejet\u00E9 : \u00C9diteur intellectuel"@fr .
 <http://data.bnf.fr/vocabulary/roles/r360/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Editor"@en .
 <http://data.bnf.fr/vocabulary/roles/r360/> <http://www.w3.org/2004/02/skos/core#prefLabel> "\u00C9diteur scientifique"@fr .
-<http://data.bnf.fr/vocabulary/roles/r360/> <http://www.w3.org/2004/02/skos/core#notation> "340"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r360/> <http://www.w3.org/2004/02/skos/core#notation> "340"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r360/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne ou collectivit\u00E9 responsable du contenu intellectuel de l\u2019\u00E9dition d\u2019un document (Z 44-063 Catalogage des publications en s\u00E9rie)\u00A0 ; personne ou collectivit\u00E9 responsable du contenu intellectuel de l\u2019\u00E9dition d\u2019une ressource (Z 44-082 Catalogage des ressources \u00E9lectroniques, ao\u00FBt 1999)\u00A0 ; [personne] qui \u00E9tablit pour l\u2019impression un texte r\u00E9dig\u00E9 pr\u00E9alablement par une autre personne (Aide-m\u00E9moire de catalogage / Centres de formation professionnelle de biblioth\u00E9caires de Bordeaux et Toulouse, 1977)\u00A0 ; [personne qui] assure la publication ou la pr\u00E9sentation d\u2019une \u0153uvre ou d\u2019un ensemble de documents [ou qui] assure l\u2019actualisation de l\u2019\u0153uvre d\u2019un autre auteur\u00A0 \u2014 cette fonction s\u2019entend au sens intellectuel. Elle peut toutefois s\u2019employer dans certains cas pour les \u00E9diteurs commerciaux\u00A0 ; termes \u00E9quivalents\u00A0 : compilateur, \u00E9dit\u00E9 et traduit par, mise \u00E0 jour par, expert (catalogue de vente), organis\u00E9 par (congr\u00E8s), pr\u00E9sent\u00E9 par, publi\u00E9 par, textes choisis, rassembl\u00E9s ou r\u00E9unis par (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)\nTerme rejet\u00E9 : \u00C9diteur intellectuel"@fr .
 <http://data.bnf.fr/vocabulary/roles/r365/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r365/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/> .
@@ -3337,7 +3337,7 @@
 <http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#notation> "40"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui r\u00E9dige un ensemble de phrases critiques ou explicatives destin\u00E9es \u00E0 accompagner un texte pr\u00E9existant (d\u2019apr\u00E8s Petit Robert 1)\nType de document : CARTES ET PLANS  / IMPRIM\u00C9S   / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#notation> "20"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#notation> "20"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotator"@en .
 <http://data.bnf.fr/vocabulary/roles/r40/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui r\u00E9dige un ensemble de phrases critiques ou explicatives destin\u00E9es \u00E0 accompagner un texte pr\u00E9existant (d\u2019apr\u00E8s Petit Robert 1)\nType de document : CARTES ET PLANS  / IMPRIM\u00C9S   / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r400/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3381,7 +3381,7 @@
 <http://data.bnf.fr/vocabulary/roles/r4040/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r4040/> <http://www.w3.org/2004/02/skos/core#notation> "4040"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r4040/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Donateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r4040/> <http://www.w3.org/2004/02/skos/core#notation> "320"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>.
+<http://data.bnf.fr/vocabulary/roles/r4040/> <http://www.w3.org/2004/02/skos/core#notation> "320"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>.
 <http://data.bnf.fr/vocabulary/roles/r4040/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Donor"@en .
 <http://data.bnf.fr/vocabulary/roles/r4050/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r4050/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/art> .
@@ -3438,7 +3438,7 @@
 <http://data.bnf.fr/vocabulary/roles/r410/> <http://www.w3.org/2004/02/skos/core#notation> "410"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r410/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Engraver"@en .
 <http://data.bnf.fr/vocabulary/roles/r410/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Graveur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r410/> <http://www.w3.org/2004/02/skos/core#notation> "350"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r410/> <http://www.w3.org/2004/02/skos/core#notation> "350"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r4100/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r4100/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/dnr> .
 <http://data.bnf.fr/vocabulary/roles/r4100/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
@@ -3510,7 +3510,7 @@
 <http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#notation> "4140"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#note> "\u00C0 r\u00E9server au relieur de l\u2019exemplaire\u00A0 ; pour les reliures d\u2019\u00E9diteur, utiliser le code 2270."@fr .
 <http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Binder"@en .
-<http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#notation> "110"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#notation> "110"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relieur"@fr .
 <http://data.bnf.fr/vocabulary/roles/r4140/> <http://www.w3.org/2004/02/skos/core#scopeNote> "\u00C0 r\u00E9server au relieur de l\u2019exemplaire\u00A0 ; pour les reliures d\u2019\u00E9diteur, utiliser le code 2270."@fr .
 <http://data.bnf.fr/vocabulary/roles/r4150/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3618,7 +3618,7 @@
 <http://data.bnf.fr/vocabulary/roles/r4230/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r4230/> <http://www.w3.org/2004/02/skos/core#notation> "4230"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r4230/> <http://www.w3.org/2004/02/skos/core#prefLabel> "M\u00E9c\u00E8ne"@fr .
-<http://data.bnf.fr/vocabulary/roles/r4230/> <http://www.w3.org/2004/02/skos/core#notation> "400"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r4230/> <http://www.w3.org/2004/02/skos/core#notation> "400"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r424/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r424/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/egr> .
 <http://data.bnf.fr/vocabulary/roles/r424/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
@@ -3652,7 +3652,7 @@
 <http://data.bnf.fr/vocabulary/roles/r430/> <http://www.w3.org/2004/02/skos/core#notation> "430"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r430/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui r\u00E9alise l\u2019adjonction d\u2019accords ou de parties harmoniques \u00E0 une m\u00E9lodie, du chant gr\u00E9gorien, etc. (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r430/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arranger"@en .
-<http://data.bnf.fr/vocabulary/roles/r430/> <http://www.w3.org/2004/02/skos/core#notation> "m33"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r430/> <http://www.w3.org/2004/02/skos/core#notation> "m33"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r430/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui r\u00E9alise l\u2019adjonction d\u2019accords ou de parties harmoniques \u00E0 une m\u00E9lodie, du chant gr\u00E9gorien, etc. (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ill> .
@@ -3661,7 +3661,7 @@
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#notation> "440"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui] ajoute \u00E0 une \u0153uvre des \u00E9l\u00E9ments artistiques inspir\u00E9s par son contenu ou visant \u00E0 le mettre en valeur \u2014 ne s\u2019emploie pas pour les repr\u00E9sentations graphiques de donn\u00E9es scientifiques et techniques\u00A0 ; terme \u00E9quivalent\u00A0 : iconographie par (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#notation> "440"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#notation> "440"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator"@en .
 <http://data.bnf.fr/vocabulary/roles/r440/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui] ajoute \u00E0 une \u0153uvre des \u00E9l\u00E9ments artistiques inspir\u00E9s par son contenu ou visant \u00E0 le mettre en valeur \u2014 ne s\u2019emploie pas pour les repr\u00E9sentations graphiques de donn\u00E9es scientifiques et techniques\u00A0 ; terme \u00E9quivalent\u00A0 : iconographie par (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r441/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3686,7 +3686,7 @@
 <http://data.bnf.fr/vocabulary/roles/r450/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui \u00E9labore et conduit l\u2019entretien avec une ou plusieurs personnes (en anglais\u00A0 : interviewer) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / SON"@fr .
 <http://data.bnf.fr/vocabulary/roles/r450/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interviewer"@en .
 <http://data.bnf.fr/vocabulary/roles/r450/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interviewer"@fr .
-<http://data.bnf.fr/vocabulary/roles/r450/> <http://www.w3.org/2004/02/skos/core#notation> "470"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r450/> <http://www.w3.org/2004/02/skos/core#notation> "470"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r450/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui \u00E9labore et conduit l\u2019entretien avec une ou plusieurs personnes (en anglais\u00A0 : interviewer) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / SON"@fr .
 <http://data.bnf.fr/vocabulary/roles/r460/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r460/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/rpt> .
@@ -3705,7 +3705,7 @@
 <http://data.bnf.fr/vocabulary/roles/r470/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui \u00E9crit le texte dialogu\u00E9 d\u2019une \u0153uvre musicale dramatique [\u2026] (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPECTACLES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r470/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Librettist"@en .
 <http://data.bnf.fr/vocabulary/roles/r470/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Librettiste"@fr .
-<http://data.bnf.fr/vocabulary/roles/r470/> <http://www.w3.org/2004/02/skos/core#notation> "480"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r470/> <http://www.w3.org/2004/02/skos/core#notation> "480"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r470/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui \u00E9crit le texte dialogu\u00E9 d\u2019une \u0153uvre musicale dramatique [\u2026] (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPECTACLES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r471/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r471/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/lbt> .
@@ -3728,7 +3728,7 @@
 <http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#notation> "480"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#note> "Type de document : CARTES ET PLANS  / IMAGES FIXES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithographe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#notation> "510"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#notation> "510"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithographer"@en .
 <http://data.bnf.fr/vocabulary/roles/r480/> <http://www.w3.org/2004/02/skos/core#scopeNote> "Type de document : CARTES ET PLANS  / IMAGES FIXES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r481/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3799,7 +3799,7 @@
 <http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#notation> "50"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne responsable de la version d\u2019une \u0153uvre musicale par additions, suppressions, ou changements dans l\u2019\u00E9criture (en anglais\u00A0 : music arranger) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arranger"@en .
-<http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#notation> "30"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#notation> "30"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrangeur"@fr .
 <http://data.bnf.fr/vocabulary/roles/r50/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne responsable de la version d\u2019une \u0153uvre musicale par additions, suppressions, ou changements dans l\u2019\u00E9criture (en anglais\u00A0 : music arranger) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r500/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3838,7 +3838,7 @@
 <http://data.bnf.fr/vocabulary/roles/r510/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : auteur d\u2019un texte mis en musique. Ce terme ne s\u2019emploie pas pour les auteurs litt\u00E9raires inspirateurs d\u2019une \u0153uvre sans texte (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPECTACLES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r510/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lyricist"@en .
 <http://data.bnf.fr/vocabulary/roles/r510/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Parolier"@fr .
-<http://data.bnf.fr/vocabulary/roles/r510/> <http://www.w3.org/2004/02/skos/core#notation> "520"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r510/> <http://www.w3.org/2004/02/skos/core#notation> "520"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r510/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : auteur d\u2019un texte mis en musique. Ce terme ne s\u2019emploie pas pour les auteurs litt\u00E9raires inspirateurs d\u2019une \u0153uvre sans texte (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / SPECTACLES  / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r520/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r520/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/art> .
@@ -3891,7 +3891,7 @@
 <http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#notation> "530"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : auteur d\u2019une photographie, c\u2019est-\u00E0-dire d\u2019un \u00AB\u00A0 document obtenu par un proc\u00E9d\u00E9 qui fixe, de fa\u00E7on plus ou moins durable dans le temps, une image sur un support sensible \u00E0 l\u2019action de la lumi\u00E8re\u00A0 \u00BB (Z 44-077 Catalogage de l\u2019image fixe, septembre 1997)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Photographe"@fr .
-<http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#notation> "600"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>.
+<http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#notation> "600"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>.
 <http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Photographer"@en .
 <http://data.bnf.fr/vocabulary/roles/r530/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : auteur d\u2019une photographie, c\u2019est-\u00E0-dire d\u2019un \u00AB\u00A0 document obtenu par un proc\u00E9d\u00E9 qui fixe, de fa\u00E7on plus ou moins durable dans le temps, une image sur un support sensible \u00E0 l\u2019action de la lumi\u00E8re\u00A0 \u00BB (Z 44-077 Catalogage de l\u2019image fixe, septembre 1997)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r531/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -3929,7 +3929,7 @@
 <http://data.bnf.fr/vocabulary/roles/r540/> <http://www.w3.org/2004/02/skos/core#notation> "540"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r540/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author of afterword, colophon, etc."@en .
 <http://data.bnf.fr/vocabulary/roles/r540/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Postfacier"@fr .
-<http://data.bnf.fr/vocabulary/roles/r540/> <http://www.w3.org/2004/02/skos/core#notation> "75"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r540/> <http://www.w3.org/2004/02/skos/core#notation> "75"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/aui> .
 <http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
@@ -3937,7 +3937,7 @@
 <http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2004/02/skos/core#notation> "550"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author of introduction, etc.,"@en .
 <http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pr\u00E9facier"@fr .
-<http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2004/02/skos/core#notation> "80"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r550/> <http://www.w3.org/2004/02/skos/core#notation> "80"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r560/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r560/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ins> .
 <http://data.bnf.fr/vocabulary/roles/r560/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
@@ -3990,7 +3990,7 @@
 <http://data.bnf.fr/vocabulary/roles/r600/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui con\u00E7oit, \u00E9crit ou teste des programmes [= unit\u00E9 syntaxique conforme aux r\u00E8gles d\u2019un langage de programmation d\u00E9termin\u00E9, et compos\u00E9e des d\u00E9clarations et instructions n\u00E9cessaires \u00E0 l\u2019ex\u00E9cution d\u2019une fonction ou d\u2019une t\u00E2che ou \u00E0 la r\u00E9solution d\u2019un probl\u00E8me] (ISO/AFNOR, Dictionnaire de l\u2019informatique, 1997)\nType de document : INF"@fr .
 <http://data.bnf.fr/vocabulary/roles/r600/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Programmer"@en .
 <http://data.bnf.fr/vocabulary/roles/r600/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Programmeur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r600/> <http://www.w3.org/2004/02/skos/core#notation> "635"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r600/> <http://www.w3.org/2004/02/skos/core#notation> "635"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r600/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui con\u00E7oit, \u00E9crit ou teste des programmes [= unit\u00E9 syntaxique conforme aux r\u00E8gles d\u2019un langage de programmation d\u00E9termin\u00E9, et compos\u00E9e des d\u00E9clarations et instructions n\u00E9cessaires \u00E0 l\u2019ex\u00E9cution d\u2019une fonction ou d\u2019une t\u00E2che ou \u00E0 la r\u00E9solution d\u2019un probl\u00E8me] (ISO/AFNOR, Dictionnaire de l\u2019informatique, 1997)\nType de document : INF"@fr .
 <http://data.bnf.fr/vocabulary/roles/r610/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r610/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/rsg> .
@@ -4022,7 +4022,7 @@
 <http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#notation> "620"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui] \u00E9labore un document dont il n\u2019a pas la responsabilit\u00E9 [ou qui] dirige l\u2019\u00E9quipe charg\u00E9e de la r\u00E9daction d\u2019une publication en s\u00E9rie\u00A0 ; terme \u00E9quivalent\u00A0 : r\u00E9dacteur en chef (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#prefLabel> "R\u00E9dacteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#notation> "m65"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#notation> "m65"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Redaktor"@en .
 <http://data.bnf.fr/vocabulary/roles/r620/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui] \u00E9labore un document dont il n\u2019a pas la responsabilit\u00E9 [ou qui] dirige l\u2019\u00E9quipe charg\u00E9e de la r\u00E9daction d\u2019une publication en s\u00E9rie\u00A0 ; terme \u00E9quivalent\u00A0 : r\u00E9dacteur en chef (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -4032,7 +4032,7 @@
 <http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#notation> "630"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : auteur du document litt\u00E9raire sur lequel repose l\u2019\u0153uvre audiovisuelle. Le sc\u00E9nario peut \u00EAtre original ou \u00E9crit d\u2019apr\u00E8s une id\u00E9e originale ou l\u2019adaptation d\u2019une \u0153uvre pr\u00E9existante. La mention peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : sc\u00E9nario de, sc\u00E9nariste, \u00E9crit par (en anglais\u00A0 : scenario) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IA"@fr .
 <http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sc\u00E9nariste"@fr .
-<http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#notation> "690"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#notation> "690"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Screenwriter"@en .
 <http://data.bnf.fr/vocabulary/roles/r630/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : auteur du document litt\u00E9raire sur lequel repose l\u2019\u0153uvre audiovisuelle. Le sc\u00E9nario peut \u00EAtre original ou \u00E9crit d\u2019apr\u00E8s une id\u00E9e originale ou l\u2019adaptation d\u2019une \u0153uvre pr\u00E9existante. La mention peut appara\u00EEtre dans le g\u00E9n\u00E9rique sous la forme\u00A0 : sc\u00E9nario de, sc\u00E9nariste, \u00E9crit par (en anglais\u00A0 : scenario) (Z 44-065 Catalogage des vid\u00E9ogrammes, septembre 1998)\nType de document : IA"@fr .
 <http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -4041,7 +4041,7 @@
 <http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/2004/02/skos/core#notation> "640"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sculpteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/2004/02/skos/core#notation> "705"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/2004/02/skos/core#notation> "705"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r640/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sculptor"@en .
 <http://data.bnf.fr/vocabulary/roles/r641/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r641/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/scl> .
@@ -4078,7 +4078,7 @@
 <http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#notation> "650"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : s\u2019applique aux factums, p\u00E9titions, manuscrits"@fr .
 <http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Signataire"@fr .
-<http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#notation> "720"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#notation> "720"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Signer"@en .
 <http://data.bnf.fr/vocabulary/roles/r650/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : s\u2019applique aux factums, p\u00E9titions, manuscrits"@fr .
 <http://data.bnf.fr/vocabulary/roles/r660/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -4108,7 +4108,7 @@
 <http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#notation> "680"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui] transpose un document d\u2019une langue dans une autre (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Traducteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#notation> "730"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#notation> "730"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Translator"@en .
 <http://data.bnf.fr/vocabulary/roles/r680/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui] transpose un document d\u2019une langue dans une autre (Z 44-059 Choix des acc\u00E8s \u00E0 la description bibliographique, d\u00E9cembre 1987)"@fr .
 <http://data.bnf.fr/vocabulary/roles/r690/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -4126,7 +4126,7 @@
 <http://data.bnf.fr/vocabulary/roles/r70/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r70/> <http://www.w3.org/2004/02/skos/core#notation> "70"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r70/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Auteur du texte"@fr .
-<http://data.bnf.fr/vocabulary/roles/r70/> <http://www.w3.org/2004/02/skos/core#notation> "70"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r70/> <http://www.w3.org/2004/02/skos/core#notation> "70"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r70/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author"@en .
 <http://data.bnf.fr/vocabulary/roles/r700/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r700/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/scr> .
@@ -4144,14 +4144,14 @@
 <http://data.bnf.fr/vocabulary/roles/r71/> <http://www.w3.org/2004/02/skos/core#notation> "71"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r71/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Attributed name"@en .
 <http://data.bnf.fr/vocabulary/roles/r71/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Auteur pr\u00E9sum\u00E9 du texte"@fr .
-<http://data.bnf.fr/vocabulary/roles/r71/> <http://www.w3.org/2004/02/skos/core#notation> "63"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r71/> <http://www.w3.org/2004/02/skos/core#notation> "63"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ilu> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/contributor> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2004/02/skos/core#notation> "710"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enlumineur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2004/02/skos/core#notation> "430"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2004/02/skos/core#notation> "430"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r710/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illuminator"@en .
 <http://data.bnf.fr/vocabulary/roles/r711/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r711/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/ilu> .
@@ -4187,7 +4187,7 @@
 <http://data.bnf.fr/vocabulary/roles/r72/> <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.bnf.fr/vocabulary/roles> .
 <http://data.bnf.fr/vocabulary/roles/r72/> <http://www.w3.org/2004/02/skos/core#notation> "72"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r72/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Auteur adapt\u00E9"@fr .
-<http://data.bnf.fr/vocabulary/roles/r72/> <http://www.w3.org/2004/02/skos/core#notation> "100"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r72/> <http://www.w3.org/2004/02/skos/core#notation> "100"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r72/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bibliographic antecedent"@en .
 <http://data.bnf.fr/vocabulary/roles/r720/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r720/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/rev> .
@@ -4211,7 +4211,7 @@
 <http://data.bnf.fr/vocabulary/roles/r730/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui r\u00E9alise une] notation d\u2019une \u0153uvre diff\u00E9rente de la notation originale (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r730/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transcriber"@en .
 <http://data.bnf.fr/vocabulary/roles/r730/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transcripteur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r730/> <http://www.w3.org/2004/02/skos/core#notation> "m85"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>.
+<http://data.bnf.fr/vocabulary/roles/r730/> <http://www.w3.org/2004/02/skos/core#notation> "m85"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>.
 <http://data.bnf.fr/vocabulary/roles/r730/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui r\u00E9alise une] notation d\u2019une \u0153uvre diff\u00E9rente de la notation originale (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r740/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r740/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/> .
@@ -4292,7 +4292,7 @@
 <http://data.bnf.fr/vocabulary/roles/r780/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui r\u00E9alise une] adaptation \u00E0 l\u2019orchestre d\u2019une \u0153uvre non \u00E9crite originalement pour celui-ci (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r780/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adapter"@en .
 <http://data.bnf.fr/vocabulary/roles/r780/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Orchestrateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r780/> <http://www.w3.org/2004/02/skos/core#notation> "m49"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r780/> <http://www.w3.org/2004/02/skos/core#notation> "m49"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r780/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui r\u00E9alise une] adaptation \u00E0 l\u2019orchestre d\u2019une \u0153uvre non \u00E9crite originalement pour celui-ci (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/adp> .
@@ -4302,7 +4302,7 @@
 <http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : [personne qui r\u00E9alise une] contraction et simplification sur deux port\u00E9es, jouable sur un instrument \u00E0 clavier, d\u2019une \u0153uvre \u00E0 plusieurs parties vocales ou instrumentales. S\u2019il existe une partie soliste, elle est normalement conserv\u00E9e sans modification (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adapter"@en .
 <http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Auteur de la r\u00E9duction musicale"@fr .
-<http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2004/02/skos/core#notation> "m73"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie>.
+<http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2004/02/skos/core#notation> "m73"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>.
 <http://data.bnf.fr/vocabulary/roles/r790/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : [personne qui r\u00E9alise une] contraction et simplification sur deux port\u00E9es, jouable sur un instrument \u00E0 clavier, d\u2019une \u0153uvre \u00E0 plusieurs parties vocales ou instrumentales. S\u2019il existe une partie soliste, elle est normalement conserv\u00E9e sans modification (Z 44-069 Catalogage de la Musique imprim\u00E9e, octobre 1993)\nType de document : IMAGES ANIM\u00C9ES / MUSIQUE  / Enregistrement sonore / etc."@fr .
 <http://data.bnf.fr/vocabulary/roles/r80/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r80/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/lbt> .
@@ -4352,7 +4352,7 @@
 <http://data.bnf.fr/vocabulary/roles/r820/> <http://www.w3.org/2004/02/skos/core#notation> "820"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.bnf.fr/vocabulary/roles/r820/> <http://www.w3.org/2004/02/skos/core#note> "D\u00E9finition : personne qui trace les titres et initiales en encre de couleur"@fr .
 <http://data.bnf.fr/vocabulary/roles/r820/> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rubricateur"@fr .
-<http://data.bnf.fr/vocabulary/roles/r820/> <http://www.w3.org/2004/02/skos/core#notation> "680"^^<https://ark.philharmoniedeparis.fr/ark/49250/type/philharmonie> .
+<http://data.bnf.fr/vocabulary/roles/r820/> <http://www.w3.org/2004/02/skos/core#notation> "680"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie> .
 <http://data.bnf.fr/vocabulary/roles/r820/> <http://www.w3.org/2004/02/skos/core#scopeNote> "D\u00E9finition : personne qui trace les titres et initiales en encre de couleur"@fr .
 <http://data.bnf.fr/vocabulary/roles/r83/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://data.bnf.fr/vocabulary/roles/r83/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://id.loc.gov/vocabulary/relators/lbt> .
