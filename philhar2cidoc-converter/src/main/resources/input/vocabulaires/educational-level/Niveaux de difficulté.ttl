@@ -24,8 +24,8 @@ educ:cycle-1 a skos:Concept;
   dct:created "2021-08-10"^^xsd:date;
   owl:deprecated false;
   skos:altLabel "1e année"@fr, "1e-2e années"@fr, "1e-2e-3e années"@fr, "1er cycle"@fr,
-    "1ère année"@fr, "2e année"@fr, "2e-3e années"@fr, "3e année"@fr, "3e-4e années"@fr,
-    "4e année"@fr, "débutant"@fr;
+    "1ère année"@fr, "1ère-2e années"@fr, "2e année"@fr, "2e-3e années"@fr, "3e année"@fr,
+    "3e-4e années"@fr, "4e année"@fr, "débutant"@fr;
   skos:inScheme <https://data.philharmoniedeparis.fr/vocabulary/edudational-level>;
   skos:prefLabel "1er cycle"@fr;
   skos:topConceptOf <https://data.philharmoniedeparis.fr/vocabulary/edudational-level> .

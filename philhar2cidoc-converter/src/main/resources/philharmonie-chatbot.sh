@@ -45,7 +45,7 @@ do
 	
 	VOC_NAME=$(basename $d .ttl)
 	
-	java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize --input $d -o $DIR_VOCABULARIES/$VOC_NAME.rdf
+	java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize -ns skos,http://www.w3.org/2004/02/skos/core# --input $d -o $DIR_VOCABULARIES/$VOC_NAME.rdf
 done
 
 
