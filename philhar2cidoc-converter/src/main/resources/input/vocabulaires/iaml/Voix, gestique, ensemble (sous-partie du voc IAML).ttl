@@ -1,0 +1,102 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://data.doremus.org/vocabulary/iaml/mop/pse> skos:altLabel "objets sonores"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/mml> skos:altLabel "instrument mélodique"@fr .
+
+<https://data.doremus.org/vocabulary/iaml/mop/val> skos:altLabel "alto"@fr, "contralto"@fr .
+
+<https://data.doremus.org/vocabulary/iaml/mop/vbr> skos:altLabel "baryton"@fr, "baryton-basse"@fr .
+
+<https://data.doremus.org/vocabulary/iaml/mop/vbs> skos:altLabel "basse"@fr, "basse bouffe"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vca> skos:altLabel "contralto enfant"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vct> skos:altLabel "contre-ténor"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vso> skos:altLabel "dessus"@fr, "soprano"@fr,
+    "soprano colorature"@fr, "soprano lyrique"@fr, "soprano triplum dans la partition"@fr,
+    "soprano triplum et motetus = contralto dans la partition"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vcv> skos:altLabel "enfant"@fr, "voix enfant"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vhc> skos:altLabel "haute-contre"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vms> skos:altLabel "mezzo-soprano"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vre> skos:altLabel "récitant"@fr, "voix parlée"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vrc> skos:altLabel "récitant enfant"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vrw> skos:altLabel "récitant femme"@fr .
+
+<http://iflastandards.info/ns/unimarc/terms/mop/vrm> skos:altLabel "récitant homme"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/v> skos:altLabel "rôle parlé"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vcs> skos:altLabel "soprano enfant"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vte> skos:altLabel "taille"@fr, "ténor"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vunj> skos:altLabel "voix élevée"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vwo> skos:altLabel "voix femme"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vunl> skos:altLabel "voix grave"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vma> skos:altLabel "voix homme"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/vunk> skos:altLabel "voix moyenne"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zab> skos:altLabel "acrobate"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zat> skos:altLabel "acteur"@fr, "acteur homme"@fr,
+    "comédien"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zac> skos:altLabel "acteur enfant"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zaw> skos:altLabel "acteur femme"@fr,
+    "comédienne"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zas> skos:altLabel "acteur muet"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zda> skos:altLabel "danseur"@fr, "danseurs"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zju> skos:altLabel "jongleur"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/zmi> skos:altLabel "mime"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cun> skos:altLabel "choeur"@fr, "choeur a capella"@fr,
+    "choeur unisson"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cch> skos:altLabel "choeur enfants"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cwo> skos:altLabel "choeur femmes"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cme> skos:altLabel "choeur hommes"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cmi> skos:altLabel "choeur mixte"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cre> skos:altLabel "choeur parlé"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/cve> skos:altLabel "ensemble vocal"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/o> skos:altLabel "ensemble"@fr, "ensemble autre"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/oie> skos:altLabel "ensemble instrumental"@fr .
+
+<https://data.doremus.org/vocabulary/iaml/mop/obr> skos:altLabel "fanfare sans bois"@fr,
+    "harmonie avec bois"@fr, "orchestre de cuivres"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/ope> skos:altLabel "instrumentarium Orff"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/oun> skos:altLabel "orchestre"@fr, "orchestre élèves"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/ost> skos:altLabel "orchestre à cordes"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/och> skos:altLabel "orchestre de chambre"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/owi> skos:altLabel "orchestre de vents"@fr .
+
+<http://data.doremus.org/vocabulary/iaml/mop/ofu> skos:altLabel "orchestre symphonique"@fr .
