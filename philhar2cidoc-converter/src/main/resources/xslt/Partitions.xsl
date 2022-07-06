@@ -730,11 +730,7 @@
 	<!-- UNI5:101$a -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='101$a']">
 		<xsl:if test="mus:Lookup_Language_3LettersCode(normalize-space(data))">
-			<!--
-			<ecrm:E56_Language rdf:resource="{mus:Lookup_Language_3LettersCode(normalize-space(data))}"/>				
-			 -->
 			<ecrm:P72_has_language rdf:resource="{mus:Lookup_Language_3LettersCode(normalize-space(data))}"/>
-			<!-- </ecrm:P72_has_language>-->
 		</xsl:if>
 	</xsl:template>
 	
@@ -822,6 +818,18 @@
  		<ecrm:P148_has_component>
  			<mus:M167_Publication_Expression_Fragment rdf:about="{mus:URI-Publication_Expression_Fragment($idNotice,@id)}">
 		
+				<!-- en dur -->
+				<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
+
+				<!-- son identifiant en dur -->
+				<ecrm:P1_is_identified_by>
+					<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier(@id,@id,'CMPP-ALOES',@type)}">
+						<rdfs:label><xsl:value-of select="@id"/></rdfs:label>
+							<!-- UNI5 : notice id - Indiquer “CMPP-ALOES” -->
+						<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES"/>								
+					</ecrm:E42_Identifier>
+				</ecrm:P1_is_identified_by>	
+
 	 			<!-- Language -->
 				<xsl:apply-templates select="champs[@UnimarcTag='101']/SOUSCHAMP[@UnimarcSubfield ='101$a']"/>
 	 			<!-- Title Statement and Responsability -->
@@ -1181,11 +1189,11 @@
 							<xsl:choose>
 								<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
 									<!-- IAML -->
-									<mus:P2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($vMediumInstrument)}"/>
+									<mus:U2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
 								<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
 									<!-- MIMO -->
-									<mus:P1_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($vMediumInstrument)}"/>
+									<mus:U2_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
 							</xsl:choose>
 						</xsl:when>

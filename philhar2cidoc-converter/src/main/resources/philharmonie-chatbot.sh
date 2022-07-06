@@ -93,6 +93,10 @@ do
 		-xsl:$XSLT_DIR/Partitions.xsl \
 		-o:$OUTPUT_FOLDER/$FILENAME.rdf > $LOG_FOLDER/Partitions-$FILENAME.log 2>&1
 
+	grep "cannot be found in 'MIMO'" $LOG_FOLDER/Partitions-$FILENAME.log | sed 's/Warning - The medium\(.*\) cannot be .*/\1/' | sed "s/'//g" | sort | uniq -c > $LOG_FOLDER/Partitions-$FILENAME-medium-not-found-MIMO.log
+	grep "cannot be found in 'IAML'" $LOG_FOLDER/Partitions-$FILENAME.log | sed 's/Warning - The medium\(.*\) cannot be .*/\1/' | sed "s/'//g" | sort | uniq -c > $LOG_FOLDER/Partitions-$FILENAME-medium-not-found-IAML.log
+	
+
 done
 
 export end_xml_rdf="$(date +"%r")"

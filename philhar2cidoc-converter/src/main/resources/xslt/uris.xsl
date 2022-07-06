@@ -750,7 +750,7 @@
 		<xsl:param name="mots_instrument"/>
 
 		<xsl:if test="string-length($mots_instrument) &gt; 0">
-			<xsl:variable name="mimo_resultat" select="$mimo_vocab[upper-case(skos:prefLabel[@xml:lang='fr'])=upper-case($mots_instrument)]/@rdf:about" />
+			<xsl:variable name="mimo_resultat" select="$mimo_vocab[skos:prefLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mots_instrument)] or skos:altLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mots_instrument)]]/@rdf:about" />
 
 			<xsl:choose>
 				<xsl:when test="count($mimo_resultat) = 1">
@@ -767,7 +767,7 @@
 	<xsl:function name="mus:iaml_vocabulary_simple">
 		<xsl:param name="mots_instrument"/>
 		<xsl:if test="string-length($mots_instrument) &gt; 0">
-			<xsl:variable name="iaml_resultat" select="$iaml_vocab[skos:prefLabel[@xml:lang='fr']=$mots_instrument]/@rdf:about" />
+			<xsl:variable name="iaml_resultat" select="$iaml_vocab[skos:prefLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mots_instrument)] or skos:altLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mots_instrument)]]/@rdf:about" />
 			<xsl:choose>
 				<xsl:when test="count($iaml_resultat) = 1"><xsl:value-of select="$iaml_resultat"/></xsl:when>
 				<xsl:when test="count($iaml_resultat) &gt; 1">
@@ -838,7 +838,7 @@
 				<xsl:variable name="mot" select="substring($NameInstrument,1,(string-length($NameInstrument)-position()))"/>
 				<xsl:variable name="vocabulary_instrument">
 					<xsl:if test="$mot != ''">
-						<xsl:variable name="mimoInstrument" select="$mimo_vocab[lower-case(skos:prefLabel[@xml:lang='fr'])=$mot]/@rdf:about"/>
+						<xsl:variable name="mimoInstrument" select="$mimo_vocab[skos:prefLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mot)] or skos:altLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mot)]]/@rdf:about"/>
 						<xsl:if test="$mimoInstrument !=''">
 							<xsl:value-of select="string-join($mimoInstrument,' ')"/>
 						</xsl:if>						
@@ -875,7 +875,7 @@
 				<xsl:variable name="mot" select="substring($NameInstrument,1,(string-length($NameInstrument)-position()))"/>
 				<xsl:variable name="vocabulary_instrument">	
 					<xsl:if test="$mot != ''">
-						<xsl:value-of select="$iaml_vocab[skos:prefLabel=$mot]/@rdf:about"/>
+						<xsl:value-of select="$iaml_vocab[skos:prefLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mot)] or skos:altLabel[@xml:lang='fr' and upper-case(text()) = upper-case($mot)]]/@rdf:about"/>
 					</xsl:if>
 				</xsl:variable>	
 				<xsl:choose>
@@ -935,14 +935,10 @@
 	<!-- translation language -->
 	<xsl:function name="mus:Lookup_Language_3LettersCode">
 		<xsl:param name="idCode" />
-		<xsl:variable name="language">
-			<!-- hardcode value 'ooo' to avoid unnecessary lookups -->
-			<xsl:if test="$idCode != 'ooo'">
-				<xsl:value-of select="$language_codes[
+		<xsl:variable name="language" select="$language_codes[
 					a3b = $idCode or
 					a3t = $idCode
-				]"/>
-			</xsl:if>
+				]">
 		</xsl:variable>
 		
 		<xsl:choose>
@@ -950,7 +946,7 @@
 				<xsl:message>Warning - cannot find language '<xsl:value-of select="$idCode" />' in vocabulary.</xsl:message>
 			</xsl:when>
 			<xsl:when test="count($language) &gt; 1">
-				<xsl:message>Warning - find <xsl:value-of select="count($language)" /> languages with code "<xsl:value-of select="$idCode" /> - Taking first one.</xsl:message>
+				<xsl:message>Warning - find <xsl:value-of select="count($language)" /> languages with code "<xsl:value-of select="$idCode" />"" - Taking first one.</xsl:message>
 				<xsl:value-of select="concat('http://lexvo.org/id/iso639-3/',$language[1]/a3t)"/>
 			</xsl:when>
 			<xsl:otherwise>
