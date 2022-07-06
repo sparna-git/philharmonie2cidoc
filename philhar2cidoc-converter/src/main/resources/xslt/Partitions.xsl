@@ -643,14 +643,15 @@
 											  $FamClaviers_a or $FamCordesPincees_a or $FamCordesFrottees_a or 
 											  $InstrumentsDivers_a or $Electro_a or $Ensemble_a">
 									
-															
+								<!--  							
 								<xsl:if test="$FamBois_a or $FamSaxo_a or $FamCuivre_a or $FamPercussions_a or $FamClaviers_a or
 												  $FamCordesPincees_a or $FamCordesFrottees_a or $InstrumentsDivers_a or $Electro_a or $Ensemble_a">
 									<xsl:apply-templates select="../champs[@UnimarcTag='942']" mode="Instruments_solistes">
 										<xsl:with-param name="idCasting" select="$positionCasting" tunnel="yes" />
 									</xsl:apply-templates>
 								</xsl:if>
-									
+								-->
+								
 								<!-- Casting Detail -->
 								<xsl:apply-templates select="../*" mode="casting_detail">
 									<xsl:with-param name="idCasting" select="$positionCasting" tunnel="yes" />							
@@ -1074,7 +1075,6 @@
 				
 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>			
 				
-				<!-- P103 was intended for 333$a-->
 				<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
 				<xsl:if test="$NiveauDificulte">
 					<xsl:for-each select="$NiveauDificulte">
