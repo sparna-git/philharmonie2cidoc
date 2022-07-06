@@ -1011,7 +1011,7 @@
 	</xsl:template>	
 	
 	
-	<!-- Casting Detail Simple 942 -->
+	<!-- Casting Detail Simple 942 
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='942$a']" mode="Instruments_solistes">
 		<xsl:param name="idCasting" tunnel="yes" />
 				
@@ -1023,7 +1023,6 @@
 			</xsl:if>
 		</xsl:variable>
 
-		<!-- Generation d'id -->
 		<xsl:variable name="index" select="generate-id()"/>
 		
 		<mus:U23_has_casting_detail>
@@ -1043,31 +1042,58 @@
 						<xsl:value-of select="mus:chercher_medium_complex($data_instrument,'MIMO')"/>
 					</xsl:if>
 				</xsl:variable>
+				
+				<xsl:variable name="instrument942">
+					<xsl:choose>
+						<xsl:when test="$medium_instrument != ''">
+							<xsl:value-of select="$medium_instrument"/>
+						</xsl:when>
+						<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
+							<xsl:value-of select="$medium_instrument_complex"/>
+						</xsl:when>
+					</xsl:choose> 
+				</xsl:variable>
 				 
 				
+				
 				<xsl:choose>
-					<xsl:when test="$medium_instrument != ''">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument)}"/>
-					</xsl:when>
-					<xsl:when test="$medium_instrument = '' and $medium_instrument_complex != ''">
-						<mus:U2_foresees_use_of_medium_of_performance rdf:resource="{normalize-space($medium_instrument_complex)}"/>
+					<xsl:when test="$instrument942 != ''">
+						<mus:U2_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($instrument942)}"/>
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
+						
+						<ecrm:P3_has_note><xsl:value-of select="normalize-space($data_instrument)"/></ecrm:P3_has_note>						
 					</xsl:otherwise>				
 				</xsl:choose>
-				
-				<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
+					
+				<xsl:if test="@UnimarcSubfield='942$a'">
+					<xsl:comment>942</xsl:comment>
 					<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 				</xsl:if>
 				
-				<!-- ????????? 
-				<mus:U90_foresees_creation_or_performance_mode></mus:U90_foresees_creation_or_performance_mode>
-				-->
-				
 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>			
 				
-				<xsl:apply-templates select="../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>
+				<!-- P103 was intended for 333$a-->
+				<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
+				<xsl:if test="$NiveauDificulte">
+					<xsl:for-each select="$NiveauDificulte">
+						<xsl:variable name="texte" select="normalize-space(.)"/>
+						<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
+
+						<xsl:if test="boolean($instrument_niveau_dificulte)">
+							<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
+								<xsl:variable name="instrument" select="normalize-space(.)"/>								
+								<xsl:if test="$data_instrument = $instrument">
+									<xsl:variable name="niveauDifficulte" select="mus:NiveauDificulte($texte)" />
+									<xsl:if test="$niveauDifficulte">
+										<ecrm:P103_was_intended_for rdf:resource="{$niveauDifficulte}"/>
+									</xsl:if>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:if>																		
+					</xsl:for-each>
+				</xsl:if>
 				
 				<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='942$x']/data"/>
 				<xsl:if test="$note">
@@ -1076,12 +1102,13 @@
 			</mus:M23_Casting_Detail>
 		</mus:U23_has_casting_detail>			
 	</xsl:template>
-	
+	-->
 		
 	
 	<!-- Template Generale pour creer une casting simple -->
 	<!-- Voix solistes 940 -->
-	<!-- Instruments Solistes 941 -->
+	<!-- Choeur 941 -->
+	<!-- Instruments solistes 942 -->
 	<!-- Gestique 943 -->
 	<!-- Famille des bois 945 -->
 	<!-- Famille des saxophones 946 -->
@@ -1095,6 +1122,7 @@
 	<!-- Ensemble 956 --> 
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='940$a' or 
 								   @UnimarcSubfield='941$a' or
+								   @UnimarcSubfield='942$a' or
 								   @UnimarcSubfield='943$a' or
 								   @UnimarcSubfield='945$a' or
 								   @UnimarcSubfield='946$a' or 
@@ -1151,7 +1179,7 @@
 									</xsl:when>
 								</xsl:choose>
 							</xsl:when>
-							<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
+							<xsl:when test="index-of(('942$a','945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
 								<!-- MIMO -->
 								<xsl:variable name="medium_instrument" select="mus:medium($data_instrument,'MIMO')"/>
 								<xsl:variable name="medium_instrument_complex">
@@ -1191,7 +1219,7 @@
 									<!-- IAML -->
 									<mus:U2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
-								<xsl:when test="index-of(('945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
+								<xsl:when test="index-of(('942$a','945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
 									<!-- MIMO -->
 									<mus:U2_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
@@ -1204,16 +1232,37 @@
 						</xsl:otherwise>				
 					</xsl:choose>
 					
+					<xsl:if test="@UnimarcSubfield='942$a' and (../SOUSCHAMP[
+						@UnimarcSubfield='945$a'
+						or
+						@UnimarcSubfield='946$a'
+						or
+						@UnimarcSubfield='947$a'
+						or
+						@UnimarcSubfield='948$a'
+						or
+						@UnimarcSubfield='949$a'
+						or
+						@UnimarcSubfield='950$a'
+						or
+						@UnimarcSubfield='951$a'
+						or
+						@UnimarcSubfield='952$a'
+						or
+						@UnimarcSubfield='953$a'
+						or
+						@UnimarcSubfield='956$a'
+					])">
+						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
+					</xsl:if>
 					
-					<xsl:if test="@UnimarcSubfield='940$a' and contains(data,'voix')">
+					<!-- contains(data,'voix') -->
+					<xsl:if test="@UnimarcSubfield='940$a' and (../SOUSCHAMP[@UnimarcSubfield='941$a'])">
 						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 					</xsl:if>
 					
 					<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
 					
-					
-					<!-- P103 was intended for 333$a
-					<xsl:apply-templates select="../../champs[@UnimarcTag='333']" mode="NiveauDificulte"/>-->
 					<!-- P103 was intended for 333$a-->
 					<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
 					<xsl:if test="$NiveauDificulte">
@@ -1221,9 +1270,6 @@
 							<xsl:variable name="texte" select="normalize-space(.)"/>
 							<xsl:variable name="instrument_niveau_dificulte" select="mus:NiveauDificulte_instrument($texte)"/>
 	
-							<!--
-							<xsl:message>Notice: <xsl:value-of select="$idNotice"/>, Instrument '<xsl:value-of select="$data_instrument"/>', Niveau : '<xsl:value-of select="$texte"/>', Instrument extrait du niveau: '<xsl:value-of select="$instrument_niveau_dificulte"/>'</xsl:message>
-							-->
 							<xsl:if test="boolean($instrument_niveau_dificulte)">
 								<xsl:for-each select="tokenize($instrument_niveau_dificulte,' ')">
 									<xsl:variable name="instrument" select="normalize-space(.)"/>								
@@ -1241,6 +1287,7 @@
 					
 					<xsl:variable name="note" select="../SOUSCHAMP[@UnimarcSubfield='940$x' or 
 									   @UnimarcSubfield='941$x' or
+									   @UnimarcSubfield='942$x' or
 									   @UnimarcSubfield='943$x' or
 									   @UnimarcSubfield='945$x' or
 									   @UnimarcSubfield='946$x' or 
