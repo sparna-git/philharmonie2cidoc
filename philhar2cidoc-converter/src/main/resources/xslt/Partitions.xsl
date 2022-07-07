@@ -1232,7 +1232,7 @@
 						</xsl:otherwise>				
 					</xsl:choose>
 					
-					<xsl:if test="@UnimarcSubfield='942$a' and (../SOUSCHAMP[
+					<xsl:if test="@UnimarcSubfield='942$a' and (../../champs/SOUSCHAMP[
 						@UnimarcSubfield='945$a'
 						or
 						@UnimarcSubfield='946$a'
@@ -1257,7 +1257,7 @@
 					</xsl:if>
 					
 					<!-- contains(data,'voix') -->
-					<xsl:if test="@UnimarcSubfield='940$a' and (../SOUSCHAMP[@UnimarcSubfield='941$a'])">
+					<xsl:if test="@UnimarcSubfield='940$a' and (../../champs/SOUSCHAMP[@UnimarcSubfield='941$a'])">
 						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 					</xsl:if>
 					
