@@ -1,0 +1,141 @@
+<!-- ******* CASTING ******* -->
+	<xsl:template match="champs[@UnimarcTag='954']">
+	
+		<!-- Id Notice -->
+		<xsl:variable name="typeNotice" select="../@type"/>
+		<xsl:variable name="idNotice" select="../@id"/>
+		<xsl:variable name="idNoticeMere">
+			<xsl:if test="$typeNotice ='UNI:45'">
+				<xsl:value-of select="$idNotice/../../../NOTICE/@id"/>				
+			</xsl:if>
+		</xsl:variable>
+		
+		<!-- Nombre de balise pour creer le casting -->
+		<xsl:variable name="positionCasting" select="position()"/>
+		
+		<!-- Nombre total d’instrument dans cette famille -->
+		<xsl:variable name="Valide_Option_Casting" select="count(SOUSCHAMP[@UnimarcSubfield='954$t'])"/>
+		
+		<xsl:if test="$Valide_Option_Casting = 1">
+		
+			<xsl:variable name="NoInstuments" select="SOUSCHAMP[@UnimarcSubfield='954$t']/data"/>		
+			
+			<xsl:variable name="VoixSolistes_a" select="../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/data"/>
+			<xsl:variable name="InstrumentSolistes_a" select="../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/data"/>
+			<xsl:variable name="Choeur_a" select="../champs[@UnimarcTag='941']/SOUSCHAMP[@UnimarcSubfield='941$a']/data"/>
+			<xsl:variable name="Gestique_a" select="../champs[@UnimarcTag='943']/SOUSCHAMP[@UnimarcSubfield='943$a']/data"/>
+			<!-- ######## Instruments non solistes ######## -->
+			<xsl:variable name="FamBois_a" select="../champs[@UnimarcTag='945']/SOUSCHAMP[@UnimarcSubfield='945$a']/data"/>
+			<xsl:variable name="FamSaxo_a" select="../champs[@UnimarcTag='946']/SOUSCHAMP[@UnimarcSubfield='946$a']/data"/>
+			<xsl:variable name="FamCuivre_a" select="../champs[@UnimarcTag='947']/SOUSCHAMP[@UnimarcSubfield='947$a']/data"/>
+			<xsl:variable name="FamPercussions_a" select="../champs[@UnimarcTag='948']/SOUSCHAMP[@UnimarcSubfield='948$a']/data"/>
+			<xsl:variable name="FamClaviers_a" select="../champs[@UnimarcTag='949']/SOUSCHAMP[@UnimarcSubfield='949$a']/data"/>
+			<xsl:variable name="FamCordesPincees_a" select="../champs[@UnimarcTag='950']/SOUSCHAMP[@UnimarcSubfield='950$a']/data"/>
+			<xsl:variable name="FamCordesFrottees_a" select="../champs[@UnimarcTag='951']/SOUSCHAMP[@UnimarcSubfield='951$a']/data"/>
+			<xsl:variable name="InstrumentsDivers_a" select="../champs[@UnimarcTag='952']/SOUSCHAMP[@UnimarcSubfield='952$a']/data"/>
+			<xsl:variable name="Electro_a" select="../champs[@UnimarcTag='953']/SOUSCHAMP[@UnimarcSubfield='953$a']/data"/>
+			<xsl:variable name="Ensemble_a" select="../champs[@UnimarcTag='956']/SOUSCHAMP[@UnimarcSubfield='956$a']/data"/>
+			
+			<!-- Create alternatif -->
+			<!-- Si le total d'instrument est different de  -->
+			<!-- Voix Soliste -->
+			<xsl:variable name="VoixSoliste_TotalInstruments" select="sum(../champs[@UnimarcTag='940']/SOUSCHAMP[@UnimarcSubfield='940$a']/sparnaf:isNumber(normalize-space(data)))"/>	            
+			<!-- Instruments solistes -->
+			<xsl:variable name="InstSoliste_TotalInstruments" select="sum(../champs[@UnimarcTag='942']/SOUSCHAMP[@UnimarcSubfield='942$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Choeur -->
+			<xsl:variable name="Choeur_TotalInstruments" select="sum(../champs[@UnimarcTag='941']/SOUSCHAMP[@UnimarcSubfield='941$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Gestique -->
+			<xsl:variable name="Gestique_TotalInstruments" select="sum(../champs[@UnimarcTag='943']/SOUSCHAMP[@UnimarcSubfield='943$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des bois -->
+			<xsl:variable name="FamBois_TotalInstruments" select="sum(../champs[@UnimarcTag='945']/SOUSCHAMP[@UnimarcSubfield='945$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des saxophones -->
+			<xsl:variable name="FamSax_TotalInstruments" select="sum(../champs[@UnimarcTag='946']/SOUSCHAMP[@UnimarcSubfield='946$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des cuivres -->
+			<xsl:variable name="FamCuivres_TotalInstruments" select="sum(../champs[@UnimarcTag='947']/SOUSCHAMP[@UnimarcSubfield='947$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des percussions -->
+			<xsl:variable name="FamPercu_TotalInstruments" select="sum(../champs[@UnimarcTag='948']/SOUSCHAMP[@UnimarcSubfield='948$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des claviers -->
+			<xsl:variable name="FamClaviers_TotalInstruments" select="sum(../champs[@UnimarcTag='949']/SOUSCHAMP[@UnimarcSubfield='949$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des cordes pincées -->
+			<xsl:variable name="FamCordesPincees_TotalInstruments" select="sum(../champs[@UnimarcTag='950']/SOUSCHAMP[@UnimarcSubfield='950$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Famille des cordes frottées -->
+			<xsl:variable name="FamCordesFrot_TotalInstruments" select="sum(../champs[@UnimarcTag='951']/SOUSCHAMP[@UnimarcSubfield='951$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Instruments divers -->
+			<xsl:variable name="InstDivers_TotalInstruments">
+				<xsl:variable name="filterInstrument" select="normalize-space(substring-before(data,'('))"/>
+				<xsl:choose>
+					<xsl:when test="filterInstrument != 'basse_continue'">
+						<xsl:value-of select="sum(../champs[@UnimarcTag='952']/SOUSCHAMP[@UnimarcSubfield='952$a']/sparnaf:isNumber(normalize-space(data)))"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="sum(0)"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			<!-- Electroacoustique -->
+			<xsl:variable name="Electroacoustique_TotalInstruments" select="sum(../champs[@UnimarcTag='953']/SOUSCHAMP[@UnimarcSubfield='953$a']/sparnaf:isNumber(normalize-space(data)))"/>
+			<!-- Ensemble -->
+			<xsl:variable name="Ensemble_TotalInstruments">
+				<xsl:variable name="filterInstrument" select="normalize-space(substring-before(data,'('))"/>
+				<xsl:choose>
+					<xsl:when test="filterInstrument != 'ensemble_instrumental'">
+						<xsl:value-of select="sum(../champs[@UnimarcTag='956']/SOUSCHAMP[@UnimarcSubfield='956$a']/sparnaf:isNumber(normalize-space(data)))"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="sum(0)"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
+			 	
+			<!-- Total d'instruments  -->
+			<xsl:variable name="sum_total_instruments" select="sum($VoixSoliste_TotalInstruments +
+			            												   $InstSoliste_TotalInstruments +
+			            												   $Choeur_TotalInstruments + 
+			            												   $Gestique_TotalInstruments +
+			            												   $FamBois_TotalInstruments +
+			            												   $FamSax_TotalInstruments +
+			            												   $FamCuivres_TotalInstruments +
+			            												   $FamPercu_TotalInstruments +
+			            												   $FamClaviers_TotalInstruments +
+			            												   $FamCordesPincees_TotalInstruments +
+			            												   $FamCordesFrot_TotalInstruments +
+			            												   $InstDivers_TotalInstruments +
+			            												   $Electroacoustique_TotalInstruments +
+			            												   $Ensemble_TotalInstruments
+			            												   )"/>
+			
+			
+			<xsl:choose>
+				<!-- number($x) = $x ensures that $x is actually a number -->
+				<xsl:when test="(number($NoInstuments) = number($NoInstuments)) and ($NoInstuments != $sum_total_instruments)">
+					<xsl:comment>Number of total instruments (<xsl:value-of select="$sum_total_instruments" />) is different from 954$t (<xsl:value-of select="$NoInstuments" />) - triggering Casting alternatif</xsl:comment>
+				 	<xsl:apply-templates select="../*" mode="casting_alternatif"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<!-- Créer une instance de M6 Casting dès que l’une des zones citées ci-dessus est remplie -->
+					<mus:U13_has_casting>
+						<mus:M6_Casting rdf:about="{mus:URI-Casting($idNotice,$positionCasting,$typeNotice,$idNoticeMere)}">
+								
+							<!-- U48 foresees quantity of actors  -->
+							<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
+								<xsl:value-of select="$NoInstuments"/>
+							</mus:U48_foresees_quantity_of_actors>		
+								
+							<!-- Création des M23 Casting Detail (cas simples) : -->
+							<xsl:if test="$VoixSolistes_a or $InstrumentSolistes_a or $Choeur_a or  $Gestique_a or
+											  $FamBois_a or $FamSaxo_a or $FamCuivre_a or $FamPercussions_a or 
+											  $FamClaviers_a or $FamCordesPincees_a or $FamCordesFrottees_a or 
+											  $InstrumentsDivers_a or $Electro_a or $Ensemble_a">
+									
+								<!-- Casting Detail -->
+								<xsl:apply-templates select="../*" mode="casting_detail">
+									<xsl:with-param name="idCasting" select="$positionCasting" tunnel="yes" />							
+								</xsl:apply-templates>						
+								
+							</xsl:if>
+						</mus:M6_Casting>
+					</mus:U13_has_casting>				
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:if>		
+	</xsl:template>
