@@ -1194,7 +1194,14 @@
 						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 					</xsl:if>
 					
-					<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
+					<xsl:choose>
+						<xsl:when test="mus:NoInstrument(data) &gt; 0">
+							<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:comment>source number of instrument 	: <xsl:value-of select="data"/></xsl:comment>	
+						</xsl:otherwise>
+					</xsl:choose>
 					
 					<!-- P103 was intended for 333$a-->
 					<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
