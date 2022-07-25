@@ -1160,8 +1160,9 @@
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:comment>Medium not found: <xsl:value-of select="$data_instrument"/></xsl:comment>
-							
-							<ecrm:P3_has_note><xsl:value-of select="normalize-space($data_instrument)"/></ecrm:P3_has_note>						
+							<xsl:if test="string-length($data_instrument) &gt; 0">
+								<ecrm:P3_has_note><xsl:value-of select="normalize-space($data_instrument)"/></ecrm:P3_has_note>
+							</xsl:if>									
 						</xsl:otherwise>				
 					</xsl:choose>
 					
@@ -1194,7 +1195,14 @@
 						<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
 					</xsl:if>
 					
-					<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
+					<xsl:choose>
+						<xsl:when test="mus:NoInstrument(data) &gt; 0">
+							<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"><xsl:value-of select="mus:NoInstrument(data)"/></mus:U30_foresees_quantity_of_mop>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:comment>source number of instrument: <xsl:value-of select="data"/></xsl:comment>	
+						</xsl:otherwise>
+					</xsl:choose>
 					
 					<!-- P103 was intended for 333$a-->
 					<xsl:variable name="NiveauDificulte" select="../../champs[@UnimarcTag='333']/SOUSCHAMP[@UnimarcSubfield='333$a']/data"/>
@@ -1234,7 +1242,7 @@
 									   @UnimarcSubfield='956$x']/data"/>
 					<xsl:if test="$note">
 						<xsl:for-each select="$note">
-							<ecrm:P3_has_note><xsl:value-of select="normalize-space(.)"/></ecrm:P3_has_note>
+							<ecrm:P3_has_note><xsl:value-of select="normalize-space(.)"/></ecrm:P3_has_note>							
 						</xsl:for-each>
 					</xsl:if>				
 				</mus:M23_Casting_Detail>
