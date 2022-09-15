@@ -14,3 +14,11 @@ philhar2cidoc-converter/src/main/resources/test.ttl
 philhar2cidoc-converter/src/test/resources/examples/0079114.out.xml
 
 philhar2cidoc-converter/src/test/resources/examples/output.xml
+
+90-Livraisons/
+
+validation/
+
+philhar2cidoc-converter/...bfg-report/
+
+philhar2cidoc-converter/bfg-1.14.0.jar

@@ -1,3 +1,4 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -8,6 +9,8 @@
 @prefix mus: <http://data.doremus.org/ontology#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#> .
+@prefix philharshapes: <http://data.philharmoniedeparis.fr/shapes/partitions#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -27,21 +30,22 @@
 
 efrbroo:F24_Publication_Expression a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8094 .
+  sh:ignoredProperties _:node1g8tmdfl9x25311 .
 
-_:node1g797rbj3x8094 rdf:first rdf:type;
+_:node1g8tmdfl9x25311 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F24_Publication_Expression sh:nodeKind sh:IRI;
   sh:pattern "^https://ark.philharmoniedeparis.fr/ark:49250/[0-9]*?$";
   sh:property mus:P10, mus:P11, mus:P12, mus:P13, mus:P14, mus:P15, mus:P16, mus:P17,
-    mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23, mus:P24, mus:P25, mus:P9 .
+    mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23, mus:P24, mus:P25, mus:P9;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 efrbroo:F30_Publication_Event a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8095 .
+  sh:ignoredProperties _:node1g8tmdfl9x25312 .
 
-_:node1g797rbj3x8095 rdf:first rdf:type;
+_:node1g8tmdfl9x25312 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
@@ -50,9 +54,9 @@ efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
 
 ecrm:E7_Activity a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8096 .
+  sh:ignoredProperties _:node1g8tmdfl9x25313 .
 
-_:node1g797rbj3x8096 rdf:first rdf:type;
+_:node1g8tmdfl9x25313 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E7_Activity sh:nodeKind sh:IRI;
@@ -60,99 +64,108 @@ ecrm:E7_Activity sh:nodeKind sh:IRI;
 
 mus:M6_Casting a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8097 .
+  sh:ignoredProperties _:node1g8tmdfl9x25314 .
 
-_:node1g797rbj3x8097 rdf:first rdf:type;
+_:node1g8tmdfl9x25314 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M6_Casting sh:nodeKind sh:IRI;
-  sh:property mus:P51, mus:P52 .
+  sh:property mus:P51, mus:P52;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M23_Casting_Detail a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8098 .
+  sh:ignoredProperties _:node1g8tmdfl9x25315 .
 
-_:node1g797rbj3x8098 rdf:first rdf:type;
+_:node1g8tmdfl9x25315 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M23_Casting_Detail sh:nodeKind sh:IRI;
-  sh:property mus:P54, mus:P55, mus:P56, mus:P57, mus:P58, mus:P59, mus:P60 .
+  sh:property mus:P54, mus:P55, mus:P56, mus:P57, mus:P58, mus:P59, mus:P60;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M156_Title_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8099 .
+  sh:ignoredProperties _:node1g8tmdfl9x25316 .
 
-_:node1g797rbj3x8099 rdf:first rdf:type;
+_:node1g8tmdfl9x25316 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M156_Title_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P62 .
+  sh:property mus:P62;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M157_Statement_of_Responsibility a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8100 .
+  sh:ignoredProperties _:node1g8tmdfl9x25317 .
 
-_:node1g797rbj3x8100 rdf:first rdf:type;
+_:node1g8tmdfl9x25317 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
-  sh:property mus:P64 .
+  sh:property mus:P64;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 ecrm:E35_Title a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8101 .
+  sh:ignoredProperties _:node1g8tmdfl9x25318 .
 
-_:node1g797rbj3x8101 rdf:first rdf:type;
+_:node1g8tmdfl9x25318 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E35_Title sh:nodeKind sh:IRI;
-  sh:property mus:P66 .
+  sh:property mus:P66;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M159_Edition_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8102 .
+  sh:ignoredProperties _:node1g8tmdfl9x25319 .
 
-_:node1g797rbj3x8102 rdf:first rdf:type;
+_:node1g8tmdfl9x25319 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M159_Edition_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P68 .
+  sh:property mus:P68;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M163_Music_Format_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8103 .
+  sh:ignoredProperties _:node1g8tmdfl9x25320 .
 
-_:node1g797rbj3x8103 rdf:first rdf:type;
+_:node1g8tmdfl9x25320 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P70 .
+  sh:property mus:P70;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M160_Publication_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8104 .
+  sh:ignoredProperties _:node1g8tmdfl9x25321 .
 
-_:node1g797rbj3x8104 rdf:first rdf:type;
+_:node1g8tmdfl9x25321 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M160_Publication_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P72 .
+  sh:property mus:P72;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 ecrm:E42_Identifier a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8105 .
+  sh:ignoredProperties _:node1g8tmdfl9x25322 .
 
-_:node1g797rbj3x8105 rdf:first rdf:type;
+_:node1g8tmdfl9x25322 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E42_Identifier sh:nodeKind sh:IRI;
-  sh:property mus:P74, mus:P75 .
+  sh:property mus:P74, mus:P75;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 ecrm:E52_Time-Span a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8106 .
+  sh:ignoredProperties _:node1g8tmdfl9x25323 .
 
-_:node1g797rbj3x8106 rdf:first rdf:type;
+_:node1g8tmdfl9x25323 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E52_Time-Span sh:nodeKind sh:IRI;
@@ -160,14 +173,29 @@ ecrm:E52_Time-Span sh:nodeKind sh:IRI;
 
 mus:M167_Publication_Expression_Fragment a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g797rbj3x8107 .
+  sh:ignoredProperties _:node1g8tmdfl9x25324 .
 
-_:node1g797rbj3x8107 rdf:first rdf:type;
+_:node1g8tmdfl9x25324 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M167_Publication_Expression_Fragment sh:nodeKind sh:IRI;
   sh:property mus:P27, mus:P28, mus:P29, mus:P30, mus:P31, mus:P32, mus:P33, mus:P34,
     mus:P35, mus:P36, mus:P37, mus:P38, mus:P39, mus:P40, mus:P41, mus:P42 .
+
+philharshapes:MIMO a sh:NodeShape;
+  sh:nodeKind sh:IRI;
+  sh:property mus:P79;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
+
+philharshapes:IAML a sh:NodeShape;
+  sh:nodeKind sh:IRI;
+  sh:property mus:P81;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
+
+philharshapes:EducationalLevel a sh:NodeShape;
+  sh:nodeKind sh:IRI;
+  sh:property mus:P83;
+  foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:P9 sh:maxCount 1;
   sh:minCount 1;
@@ -393,18 +421,21 @@ mus:P52 sh:class mus:M23_Casting_Detail;
   sh:path mus:U23_has_casting_detail .
 
 mus:P54 skos:example "type = saxophone alto (MIMO)"@en;
+  sh:class philharshapes:MIMO;
   sh:maxCount 1;
-  sh:name "U2 foresees use of medium of performance"@en;
+  sh:name "P1 foresees use of medium of performance instrument"@en;
   sh:nodeKind sh:IRI;
-  sh:path mus:U2_foresees_use_of_medium_of_performance_instrument .
+  sh:path philhar:P1_foresees_use_of_medium_of_performance_instrument .
 
 mus:P55 skos:example "type = saxophone alto (MIMO)"@en;
+  sh:class philharshapes:IAML;
   sh:maxCount 1;
-  sh:name "U2 foresees use of medium of performance"@en;
+  sh:name "P2 foresees use of medium of performance vocal"@en;
   sh:nodeKind sh:IRI;
-  sh:path mus:U2_foresees_use_of_medium_of_performance_instrument_vocal .
+  sh:path philhar:P2_foresees_use_of_medium_of_performance_vocal .
 
-mus:P56 sh:maxCount 1;
+mus:P56 sh:class philharshapes:EducationalLevel;
+  sh:maxCount 1;
   sh:name "P103 was intended for"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P103_was_intended_for .
@@ -492,3 +523,15 @@ mus:P77 sh:datatype xsd:gYear;
   sh:name "P4 has time-span"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P82_at_some_time_within .
+
+mus:P79 sh:minCount 1;
+  sh:nodeKind sh:IRI;
+  sh:path skos:prefLabel .
+
+mus:P81 sh:minCount 1;
+  sh:nodeKind sh:IRI;
+  sh:path skos:prefLabel .
+
+mus:P83 sh:minCount 1;
+  sh:nodeKind sh:IRI;
+  sh:path skos:prefLabel .
