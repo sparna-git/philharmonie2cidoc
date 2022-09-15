@@ -1,0 +1,265 @@
+<NOTICES>
+    <TYPREG type="UNI:45">
+      <NOTICE id="0826332" type="UNI:45">
+        <champs UnimarcTag="019">
+          <SOUSCHAMP UnimarcSubfield="019$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="019$a">
+            <data>UNI45</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="102">
+          <SOUSCHAMP UnimarcSubfield="102$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="102$a">
+            <data>CH</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="200">
+          <SOUSCHAMP UnimarcSubfield="200$">
+            <data>| </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$a">
+            <data>I Got Rhythm</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$e">
+            <data>für Trompette, Horn, Posaune (Cornet, Es Horn, Euphonium)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$f">
+            <data>George Gerschwin, composition</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="200$g">
+            <data>Jean-François Michel, arrangement</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="333">
+          <SOUSCHAMP UnimarcSubfield="333$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="333$a">
+            <data>Niveau 1er cycle dans "Trios et quatuors avec cuivres" (Ed. Cité de la musique)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="449">
+          <SOUSCHAMP UnimarcSubfield="449$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="449$3">
+            <data>0756954</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="449$a">
+            <data>I Got Rhythm</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="449$f">
+            <data>George Gershwin</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="500">
+          <SOUSCHAMP UnimarcSubfield="500$">
+            <data>||</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="500$3">
+            <data>0756952</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="500$a">
+            <data>I got rhythm</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="500$w">
+            <data>Arrangement</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="541">
+          <SOUSCHAMP UnimarcSubfield="541$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$a">
+            <data>J'ai le rythme</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="541$e">
+            <data>pour trio de cuivres : trompette (ou cornet), cor (en Fa ou en Mib) et trombone (ou euphonium)</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0067996</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Jazz</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>05</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0068318</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Trio</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0146183</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Cuivre (instrument)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>01</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0068570</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Arrangement</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0067730</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>20 ème siècle - 1 ère moitié</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>02</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="610">
+          <SOUSCHAMP UnimarcSubfield="610$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$3">
+            <data>0147356</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$a">
+            <data>Etats-Unis</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="610$b">
+            <data>03</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="700">
+          <SOUSCHAMP UnimarcSubfield="700$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$3">
+            <data>0047613</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$a">
+            <data>Gershwin</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$b">
+            <data>George</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$f">
+            <data>1898-1937</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="700$4">
+            <data>230</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="701">
+          <SOUSCHAMP UnimarcSubfield="701$">
+            <data> |</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$3">
+            <data>0042329</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$a">
+            <data>Michel</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$b">
+            <data>Jean-François</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$f">
+            <data>1957-....</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="701$4">
+            <data>030</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="856">
+          <SOUSCHAMP UnimarcSubfield="856$">
+            <data>|1</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="856$e">
+            <data>||||||||||||</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="935">
+          <SOUSCHAMP UnimarcSubfield="935$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$3">
+            <data>0826343</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$a">
+            <data>Golden Hits : 15 Trios für Trombone, Horn &amp; Trombone (Cornet, Es Horn, Euphonium) / [auteurs divers] ; Jean-François Michel, éditeur scientifique, 1 conducteur (30 p.) + 3 parties (3x13 p.)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="935$b">
+            <data>UNI5</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="947">
+          <SOUSCHAMP UnimarcSubfield="947$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="947$a">
+            <data>trompette(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="947$a">
+            <data>cornet(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="947$a">
+            <data>cor(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="947$a">
+            <data>trombone(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="947$a">
+            <data>euphonium(1)</data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="947$t">
+            <data>3</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="954">
+          <SOUSCHAMP UnimarcSubfield="954$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="954$t">
+            <data>3</data>
+          </SOUSCHAMP>
+        </champs>
+        <champs UnimarcTag="956">
+          <SOUSCHAMP UnimarcSubfield="956$">
+            <data>  </data>
+          </SOUSCHAMP>
+          <SOUSCHAMP UnimarcSubfield="956$a">
+            <data>ensemble_instrumental(1)</data>
+          </SOUSCHAMP>
+        </champs>
+      </NOTICE>
+    </TYPREG>
+</NOTICES>

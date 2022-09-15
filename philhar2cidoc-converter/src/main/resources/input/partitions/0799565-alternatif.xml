@@ -1,0 +1,425 @@
+<NOTICES>
+  <TYPREG type="UNI:5">
+    <NOTICE id="0799565" type="UNI:5">
+      <champs UnimarcTag="019">
+        <SOUSCHAMP UnimarcSubfield="019$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="019$a">
+          <data>UNI5</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="071">
+        <SOUSCHAMP UnimarcSubfield="071$">
+          <data>|0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="071$b">
+          <data>Alry Publications</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="071$a">
+          <data>CM: 14 /CM: 15</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="100">
+        <SOUSCHAMP UnimarcSubfield="100$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="100$a">
+          <data>20070109d||||    uuuy0frey0103    ba</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="102">
+        <SOUSCHAMP UnimarcSubfield="102$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="102$a">
+          <data>GB</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="125">
+        <SOUSCHAMP UnimarcSubfield="125$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="125$a">
+          <data>||</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="127">
+        <SOUSCHAMP UnimarcSubfield="127$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="127$a">
+          <data>||||||</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="128">
+        <SOUSCHAMP UnimarcSubfield="128$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="128$c">
+          <data>||||</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="200">
+        <SOUSCHAMP UnimarcSubfield="200$">
+          <data>| </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$a">
+          <data>Gentle into the night</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$b">
+          <data>Musique imprimée</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$e">
+          <data>for flute, oboe, or clarinet, bassoon and piano</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="200$f">
+          <data>Laura Shur</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="208">
+        <SOUSCHAMP UnimarcSubfield="208$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="208$a">
+          <data>conducteur et parties</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="210">
+        <SOUSCHAMP UnimarcSubfield="210$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$a">
+          <data>Charlotte, (GB)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$c">
+          <data>Alry Publications</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="210$d">
+          <data>cop. 1989</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="215">
+        <SOUSCHAMP UnimarcSubfield="215$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$a">
+          <data>1 conducteur (30 p.) + 4 parties (4x5 p.)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="215$d">
+          <data>28x22 cm</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="300">
+        <SOUSCHAMP UnimarcSubfield="300$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="300$a">
+          <data>Notes sur la pièce, l'interprétation, et notes biographiques en anglais.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="327">
+        <SOUSCHAMP UnimarcSubfield="327$">
+          <data>| </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="327$a">
+          <data>1.- Highlandia ; 2.- Elegy ; 3.- Nocturne ; 4.- Ragtime ; 5.- Yearning</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="333">
+        <SOUSCHAMP UnimarcSubfield="333$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="333$a">
+          <data>Niveau 1er cycle dans "Quatuors" (Ed. Cité de la musique)</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="541">
+        <SOUSCHAMP UnimarcSubfield="541$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="541$a">
+          <data>Doucement vers la nuit</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="541$e">
+          <data>pour 3 flûtes, ou 2 flûtes et hautbois, ou flûte, clarinette et hautbois, ou 2 flûtes et basson, et autres combinaisons avec les mêmes instruments et piano.</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0068568</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Suite de pièces</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>04</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0068905</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Nocturne</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>04</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067577</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Elégie</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>04</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067367</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Ragtime</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>04</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067731</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>20 ème siècle - 2 ème moitié</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>02</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0155174</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Ecosse</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>03</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="610">
+        <SOUSCHAMP UnimarcSubfield="610$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$3">
+          <data>0067996</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$a">
+          <data>Jazz</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="610$b">
+          <data>05</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="700">
+        <SOUSCHAMP UnimarcSubfield="700$">
+          <data> 1</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$3">
+          <data>0799562</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$a">
+          <data>Shur</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$b">
+          <data>Laura</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="700$4">
+          <data>230</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="801">
+        <SOUSCHAMP UnimarcSubfield="801$">
+          <data> 0</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$a">
+          <data>FR</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$b">
+          <data>Cite de la musique</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="801$c">
+          <data>20070109</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="856">
+        <SOUSCHAMP UnimarcSubfield="856$">
+          <data>|1</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="856$e">
+          <data>||||||||||||</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="911">
+        <SOUSCHAMP UnimarcSubfield="911$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$3">
+          <data>0447682</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="911$a">
+          <data>Alry</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="945">
+        <SOUSCHAMP UnimarcSubfield="945$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>flûte(3)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>hautbois(2)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>clarinette(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$a">
+          <data>basson(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$t">
+          <data>3</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="945$x">
+          <data>plusieurs combinaisons, toujours avec une flûte à la première voix</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="949">
+        <SOUSCHAMP UnimarcSubfield="949$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$a">
+          <data>piano(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="949$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="954">
+        <SOUSCHAMP UnimarcSubfield="954$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="954$t">
+          <data>4</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="955">
+        <SOUSCHAMP UnimarcSubfield="955$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$a">
+          <data>juin 1987</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$b">
+          <data>Grande Bretagne</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$c">
+          <data>7 min ca.</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="955$e">
+          <data>à son frère décédé en janvier 1987, dans son sommeil</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="956">
+        <SOUSCHAMP UnimarcSubfield="956$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="956$a">
+          <data>ensemble_instrumental(1)</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="956$t">
+          <data>1</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="980">
+        <SOUSCHAMP UnimarcSubfield="980$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$a">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$g">
+          <data>épithaphe pour son frère, décédé dans son sommeil en janvier 1987.</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$n">
+          <data>tonal</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$o">
+          <data>7 min ca.</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="980$q">
+          <data>5.2</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="991">
+        <SOUSCHAMP UnimarcSubfield="991$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$b">
+          <data>Falado</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$d">
+          <data>09/01/2007</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="991$e">
+          <data>PS</data>
+        </SOUSCHAMP>
+      </champs>
+      <champs UnimarcTag="997">
+        <SOUSCHAMP UnimarcSubfield="997$">
+          <data>  </data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$3">
+          <data>0799564</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$a">
+          <data>NE1028270</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$c">
+          <data>M</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$d">
+          <data>IS</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$g">
+          <data>241.4 SHU:P:P 1271</data>
+        </SOUSCHAMP>
+        <SOUSCHAMP UnimarcSubfield="997$t">
+          <data>PAR</data>
+        </SOUSCHAMP>
+      </champs>
+    </NOTICE>
+  </TYPREG>
+</NOTICES>
