@@ -7,6 +7,7 @@
 	xmlns:mus="http://data.doremus.org/ontology#"
 	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
 	xmlns:ecrm="http://erlangen-crm.org/current/"
+	xmlns:philhar="http://data.philharmoniedeparis.fr/ontology/partitions#"
 	xmlns:sparnaf="http://data.sparna.fr/function/sparnaf#"
 	xmlns:schema="http://schema.org/" exclude-result-prefixes="xsl"
 >
@@ -511,9 +512,10 @@
 			<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
 			<ecrm:E7_Activity rdf:about="{mus:URI-Publication_Event_Activity($idNotice,$source,'publisher')}">
 				<ecrm:P14_carried_out_by rdf:resource="{mus:reference_collectivite(SOUSCHAMP[@UnimarcSubfield ='911$3']/data)}" />
-				<!-- en dure -->
+				<!-- en dur -->
 				<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
-				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/publisher" />				
+				<!-- <mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/publisher" /> -->
+				<mus:U31_had_function rdf:resource="http://data.bnf.fr/vocabulary/roles/r3250/" />
 			</ecrm:E7_Activity>	
 		</ecrm:P9_consists_of>			
 	</xsl:template>	
@@ -1030,7 +1032,6 @@
 							</xsl:if>
 						</xsl:for-each>
 					</xsl:if>
-					<!-- http://data.doremus.org/vocabulary/function/author -->
 				</xsl:if>
 			</ecrm:E7_Activity>
 		</ecrm:P9_consists_of>
@@ -1150,11 +1151,11 @@
 							<xsl:choose>
 								<xsl:when test="index-of(('940$a', '941$a', '943$a','956$a'),@UnimarcSubfield)">
 									<!-- IAML -->
-									<mus:U2_foresees_use_of_medium_of_performance_instrument_vocal rdf:resource="{normalize-space($vMediumInstrument)}"/>
+									<philhar:S2_foresees_use_of_medium_of_performance_vocal rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
 								<xsl:when test="index-of(('942$a','945$a', '946$a', '947$a', '948$a', '949$a', '950$a', '951$a', '952$a', '953$a'),@UnimarcSubfield)">
 									<!-- MIMO -->
-									<mus:U2_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($vMediumInstrument)}"/>
+									<philhar:S1_foresees_use_of_medium_of_performance_instrument rdf:resource="{normalize-space($vMediumInstrument)}"/>
 								</xsl:when>
 							</xsl:choose>
 						</xsl:when>
