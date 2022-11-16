@@ -25,6 +25,7 @@
 	<xsl:template match="NOTICES">
 		<rdf:RDF>
 			<skos:ConceptScheme rdf:about="https://data.philharmoniedeparis.fr/vocabulary/thesaurus">
+				<rdfs:label xml:lang="fr">Thesaurus Cité de la Musique/Philharmonie de Paris</rdfs:label>
 				<dcterms:title xml:lang="fr">Thesaurus Cité de la Musique/Philharmonie de Paris</dcterms:title>
 			</skos:ConceptScheme>
 			<xsl:apply-templates />
