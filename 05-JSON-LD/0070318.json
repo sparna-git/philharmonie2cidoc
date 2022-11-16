@@ -1,0 +1,198 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "graph": "@graph",
+
+    "ecrm": "http://erlangen-crm.org/current/",
+    "efrbroo": "http://erlangen-crm.org/efrbroo/",
+    "mus": "http://data.doremus.org/ontology#",
+    "philhar": "http://data.philharmoniedeparis.fr/ontology/partitions#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "E35_Title": "ecrm:E35_Title",
+    "E42_Identifier": "ecrm:E42_Identifier",
+    "E52_Time-Span": "ecrm:E52_Time-Span",
+    "E7_Activity": "ecrm:E7_Activity",
+    "EducationalLevel": "philharshapes:EducationalLevel",
+    "F24_Publication_Expression": "efrbroo:F24_Publication_Expression",
+    "F30_Publication_Event": "efrbroo:F30_Publication_Event",
+    "IAML": "philharshapes:IAML",
+    "M156_Title_Statement": "mus:M156_Title_Statement",
+    "M157_Statement_of_Responsibility": "mus:M157_Statement_of_Responsibility",
+    "M159_Edition_Statement": "mus:M159_Edition_Statement",
+    "M160_Publication_Statement": "mus:M160_Publication_Statement",
+    "M163_Music_Format_Statement": "mus:M163_Music_Format_Statement",
+    "M167_Publication_Expression_Fragment": "mus:M167_Publication_Expression_Fragment",
+    "M23_Casting_Detail": "mus:M23_Casting_Detail",
+    "M6_Casting": "mus:M6_Casting",
+    "MIMO": "philharshapes:MIMO",
+
+
+    "label": {"@id":"rdfs:label", "@type":"xsd:string"},
+    "P103_was_intended_for": {"@id":"ecrm:P103_was_intended_for", "@type":"@id"},
+    "P129_is_about": {"@id":"ecrm:P129_is_about", "@type":"@id"},
+    "P148_has_component": {"@id":"ecrm:P148_has_component", "@type":"@id"},
+    "P14_carried_out_by": {"@id":"ecrm:P14_carried_out_by", "@type":"@id"},
+    "S1_foresees_use_of_medium_of_performance_instrument": {"@id":"philhar:P1_foresees_use_of_medium_of_performance_instrument", "@type":"@id"},
+    "P1_is_identified_by": {"@id":"ecrm:P1_is_identified_by", "@type":"@id"},
+    "S2_foresees_use_of_medium_of_performance_vocal": {"@id":"philhar:P2_foresees_use_of_medium_of_performance_vocal", "@type":"@id"},
+    "P2_has_type": {"@id":"ecrm:P2_has_type", "@type":"@vocab"},
+    "P3_has_note": {"@id":"ecrm:P3_has_note", "@type":"xsd:string"},
+    "P4_has_time-span": {"@id":"ecrm:P4_has_time-span", "@type":"@id"},
+    "P72_has_language": {"@id":"ecrm:P72_has_language", "@type":"@id"},
+    "P82_at_some_time_within": {"@id":"ecrm:P82_at_some_time_within", "@type":"xsd:gYear"},
+    "P9_consists_of": {"@id":"ecrm:P9_consists_of", "@type":"@id"},
+    "prefLabel": {"@id":"skos:prefLabel", "@type":"@id"},
+    "R24_created": {"@id":"mus:R24_created", "@type":"@id"},
+    "U12_has_genre": {"@id":"mus:U12_has_genre", "@type":"@id"},
+    "U13_has_casting": {"@id":"mus:U13_has_casting", "@type":"@id"},
+    "U168_has_parallel_title": {"@id":"mus:U168_has_parallel_title", "@type":"@id"},
+    "U170_has_title_statement": {"@id":"mus:U170_has_title_statement", "@type":"@id"},
+    "U172_has_statement_of_responsibility_relating_to_title": {"@id":"mus:U172_has_statement_of_responsibility_relating_to_title", "@type":"@id"},
+    "U176_has_edition_statement": {"@id":"mus:U176_has_edition_statement", "@type":"@id"},
+    "U182_has_music_format_statement": {"@id":"mus:U182_has_music_format_statement", "@type":"@id"},
+    "U184_has_publication_statement": {"@id":"mus:U184_has_publication_statement", "@type":"@id"},
+    "U19_is_categorized_as": {"@id":"mus:U19_is_categorized_as", "@type":"@id"},
+    "U227_has_content_type" : { "@id": "mus:U227_has_content_type", "@type":"@vocab"},
+    "U23_has_casting_detail": {"@id":"mus:U23_has_casting_detail", "@type":"@id"},
+    "U30_foresees_quantity_of_mop": {"@id":"mus:U30_foresees_quantity_of_mop", "@type":"xsd:integer"},
+    "U31_had_function": {"@id":"mus:U31_had_function", "@type":"@id"},
+    "U36_foresees_responsibility": {"@id":"mus:U36_foresees_responsibility", "@type":"@id"},
+    "U48_foresees_quantity_of_actors": {"@id":"mus:U48_foresees_quantity_of_actors", "@type":"xsd:integer"},
+    "U65_has_geographical_context": {"@id":"mus:U65_has_geographical_context", "@type":"@id"},
+    "U68_has_variant_title": {"@id":"mus:U68_has_variant_title", "@type":"@id"},
+    "U90_foresees_creation_or_performance_mode": {"@id":"mus:U90_foresees_creation_or_performance_mode", "@type":"@id"},
+
+    "NotatedMusic" :  "http://www.rdaregistry.info/termList/RDAContentType/#1010"
+    
+
+  },
+      
+    "id": "https://ark.philharmoniedeparis.fr/ark:49250/0070318",
+    "type":"F24_Publication_Expression",
+    "U227_has_content_type": "NotatedMusic",
+    "U170_has_title_statement" : {
+        "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#title-statement_1",
+        "type" : "M156_Title_Statement",
+        "label" : "La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)"
+    },
+    "U172_has_statement_of_responsibility_relating_to_title": {
+        "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#responsibility_1",
+        "type" : "M157_Statement_of_Responsibility",
+        "label" : "Ellie Anne Duque"
+    },
+    "U184_has_publication_statement":{
+        "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#publication_d2e636",
+        "type" : "M160_Publication_Statement",
+        "label" : "[Colombie]: Musica americana, 1998"
+    }, 
+    "U12_has_genre": "https://ark.philharmoniedeparis.fr/ark:49250/0068617",
+    "U19_is_categorized_as": ["https://ark.philharmoniedeparis.fr/ark:49250/0144424",
+                              "https://ark.philharmoniedeparis.fr/ark:49250/0067983"],
+    "P2_has_type" :  [
+                      "https://ark.philharmoniedeparis.fr/ark:49250/0068617",
+                     "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
+                     "https://ark.philharmoniedeparis.fr/ark:49250/0067983" ,
+                     "NotatedMusic"
+                     ],
+    "P148_has_component":[
+        {
+            "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273",
+            "type" : "M167_Publication_Expression_Fragment",
+            "P1_is_identified_by" : "file:/identifier_CMPP-ALOES_0096273",
+            "U227_has_content_type" : "NotatedMusic",
+            "U19_is_categorized_as" : "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
+            "U68_has_variant_title" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273/title-variant_d2e2539",
+                "type" : "E35_Title",
+                "label" : "Contredanse en Sol Majeur:pour flûte, par un amateur"
+            },
+            "U172_has_statement_of_responsibility_relating_to_title" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273/responsibility_1",
+                "type" : "M157_Statement_of_Responsibility",
+                "label" : "por un aficionado"
+            },
+            "U170_has_title_statement" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273/title-statement_1",
+                "type" : "M156_Title_Statement",
+                "label" : "Contradanza en sol mayor ; Valse en sol mayor : para flauta"
+            },
+            "U13_has_casting" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273/casting_1",
+                "type" : "M6_Casting",
+                "U23_has_casting_detail" : {
+                    "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273/casting_1/detail_d2e2634",
+                    "type" : "M23_Casting_Detail",
+                    "S1_foresees_use_of_medium_of_performance_instrument" : "http://www.mimo-db.eu/InstrumentsKeywords/4093",
+                    "U30_foresees_quantity_of_mop" : 1
+                }
+            }           
+        },
+        {
+            "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277",
+            "type" : "M167_Publication_Expression_Fragment",
+            "P1_is_identified_by" : "file:/identifier_CMPP-ALOES_0096277",
+            "U227_has_content_type" : "NotatedMusic",
+            "U19_is_categorized_as" : "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
+            "U68_has_variant_title" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277/title-variant_d2e2784",
+                "type" : "E35_Title",
+                "label" : "Contredanses n°1 et 2 en Mib Majeur:pour guitare, par un amateur"
+            },
+            "U172_has_statement_of_responsibility_relating_to_title" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277/responsibility_1",
+                "type" : "M157_Statement_of_Responsibility",
+                "label" : "por un aficionado"
+            },
+            "U170_has_title_statement" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277/title-statement_1",
+                "type" : "M156_Title_Statement",
+                "label" : "Contradanza n°1 en mi bemol mayor ; Contradanza n°2 en mi bemol mayor : para guitarra"
+            },
+            "U13_has_casting" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277/casting_1",
+                "type" : "M6_Casting",
+                "U48_foresees_quantity_of_actors" : 1,
+                "U23_has_casting_detail" : {
+                    "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277/casting_1/detail_d2e2879",
+                    "type" : "M23_Casting_Detail",
+                    "S1_foresees_use_of_medium_of_performance_instrument" : "http://www.mimo-db.eu/InstrumentsKeywords/3237",
+                    "U30_foresees_quantity_of_mop" : 1
+                }
+            }           
+        },
+        {
+            "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096288",
+            "type" : "M167_Publication_Expression_Fragment",
+            "P1_is_identified_by" : "file:/identifier_CMPP-ALOES_0096288",
+            "U227_has_content_type" : "NotatedMusic",
+            "U19_is_categorized_as" : "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
+            "U172_has_statement_of_responsibility_relating_to_title" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096288/responsibility_1",
+                "type" : "M157_Statement_of_Responsibility",
+                "label" : "Mercedes Campuzano"
+            },
+            "U170_has_title_statement" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096288/title-statement_1",
+                "type" : "M156_Title_Statement",
+                "label" : "La adelfa : contradanza en lab mayor"
+            },
+            "U13_has_casting" : {
+                "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096288/casting_1",
+                "type" : "M6_Casting",
+                "U48_foresees_quantity_of_actors" : 1,
+                "U23_has_casting_detail" : {
+                    "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096288/casting_1/detail_d2e4218",
+                    "type" : "M23_Casting_Detail",
+                    "S1_foresees_use_of_medium_of_performance_instrument" : "http://www.mimo-db.eu/InstrumentsKeywords/2299",
+                    "U30_foresees_quantity_of_mop" : 1
+                }
+            }           
+        }
+        ]
+}
