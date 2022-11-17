@@ -1,4 +1,3 @@
-@prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -24,178 +23,154 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://owl> a skos:ConceptScheme .
+
 <http://data.doremus.org/shapes/mus> a owl:Ontology;
-  rdfs:label "FRBR-EP Application Profile";
-  owl:versionInfo "0" .
+  rdfs:label "FRBR-EP Application Profile"@en;
+  owl:versionInfo "0"@en .
 
 efrbroo:F24_Publication_Expression a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25311 .
+  sh:ignoredProperties _:node1gi37cm5lx4 .
 
-_:node1g8tmdfl9x25311 rdf:first rdf:type;
+_:node1gi37cm5lx4 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F24_Publication_Expression sh:nodeKind sh:IRI;
   sh:pattern "^https://ark.philharmoniedeparis.fr/ark:49250/[0-9]*?$";
-  sh:property mus:P10, mus:P11, mus:P12, mus:P13, mus:P14, mus:P15, mus:P16, mus:P17,
-    mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23, mus:P24, mus:P25, mus:P9;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 efrbroo:F30_Publication_Event a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25312 .
+  sh:ignoredProperties _:node1gi37cm5lx5 .
 
-_:node1g8tmdfl9x25312 rdf:first rdf:type;
+_:node1gi37cm5lx5 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
-  sh:pattern "^https://ark.philharmoniedeparis.fr/ark:49250/[0-9]*#event";
-  sh:property mus:P44, mus:P45, mus:P46 .
+  sh:pattern "^https://ark.philharmoniedeparis.fr/ark:49250/[0-9]*#event" .
 
 ecrm:E7_Activity a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25313 .
+  sh:ignoredProperties _:node1gi37cm5lx6 .
 
-_:node1g8tmdfl9x25313 rdf:first rdf:type;
+_:node1gi37cm5lx6 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
-ecrm:E7_Activity sh:nodeKind sh:IRI;
-  sh:property mus:P48, mus:P49 .
+ecrm:E7_Activity sh:nodeKind sh:IRI .
 
 mus:M6_Casting a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25314 .
+  sh:ignoredProperties _:node1gi37cm5lx7 .
 
-_:node1g8tmdfl9x25314 rdf:first rdf:type;
+_:node1gi37cm5lx7 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M6_Casting sh:nodeKind sh:IRI;
-  sh:property mus:P51, mus:P52;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M23_Casting_Detail a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25315 .
+  sh:ignoredProperties _:node1gi37cm5lx8 .
 
-_:node1g8tmdfl9x25315 rdf:first rdf:type;
+_:node1gi37cm5lx8 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M23_Casting_Detail sh:nodeKind sh:IRI;
-  sh:property mus:P54, mus:P55, mus:P56, mus:P57, mus:P58, mus:P59, mus:P60;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M156_Title_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25316 .
+  sh:ignoredProperties _:node1gi37cm5lx9 .
 
-_:node1g8tmdfl9x25316 rdf:first rdf:type;
+_:node1gi37cm5lx9 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M156_Title_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P62;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M157_Statement_of_Responsibility a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25317 .
+  sh:ignoredProperties _:node1gi37cm5lx10 .
 
-_:node1g8tmdfl9x25317 rdf:first rdf:type;
+_:node1gi37cm5lx10 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
-  sh:property mus:P64;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 ecrm:E35_Title a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25318 .
+  sh:ignoredProperties _:node1gi37cm5lx11 .
 
-_:node1g8tmdfl9x25318 rdf:first rdf:type;
+_:node1gi37cm5lx11 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E35_Title sh:nodeKind sh:IRI;
-  sh:property mus:P66;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M159_Edition_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25319 .
+  sh:ignoredProperties _:node1gi37cm5lx12 .
 
-_:node1g8tmdfl9x25319 rdf:first rdf:type;
+_:node1gi37cm5lx12 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M159_Edition_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P68;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M163_Music_Format_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25320 .
+  sh:ignoredProperties _:node1gi37cm5lx13 .
 
-_:node1g8tmdfl9x25320 rdf:first rdf:type;
+_:node1gi37cm5lx13 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P70;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 mus:M160_Publication_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25321 .
+  sh:ignoredProperties _:node1gi37cm5lx14 .
 
-_:node1g8tmdfl9x25321 rdf:first rdf:type;
+_:node1gi37cm5lx14 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M160_Publication_Statement sh:nodeKind sh:IRI;
-  sh:property mus:P72;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 ecrm:E42_Identifier a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25322 .
+  sh:ignoredProperties _:node1gi37cm5lx15 .
 
-_:node1g8tmdfl9x25322 rdf:first rdf:type;
+_:node1gi37cm5lx15 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E42_Identifier sh:nodeKind sh:IRI;
-  sh:property mus:P74, mus:P75;
   foaf:depiction philharshapes:diagram_Publication_Expression .
 
 ecrm:E52_Time-Span a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25323 .
+  sh:ignoredProperties _:node1gi37cm5lx16 .
 
-_:node1g8tmdfl9x25323 rdf:first rdf:type;
+_:node1gi37cm5lx16 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
-ecrm:E52_Time-Span sh:nodeKind sh:IRI;
-  sh:property mus:P77 .
+ecrm:E52_Time-Span sh:nodeKind sh:IRI .
 
 mus:M167_Publication_Expression_Fragment a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1g8tmdfl9x25324 .
+  sh:ignoredProperties _:node1gi37cm5lx17 .
 
-_:node1g8tmdfl9x25324 rdf:first rdf:type;
+_:node1gi37cm5lx17 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M167_Publication_Expression_Fragment sh:nodeKind sh:IRI;
-  sh:property mus:P27, mus:P28, mus:P29, mus:P30, mus:P31, mus:P32, mus:P33, mus:P34,
-    mus:P35, mus:P36, mus:P37, mus:P38, mus:P39, mus:P40, mus:P41, mus:P42 .
+  sh:property mus:P27, mus:P28 .
 
-philharshapes:MIMO a sh:NodeShape;
-  sh:nodeKind sh:IRI;
-  sh:property mus:P79;
-  foaf:depiction philharshapes:diagram_Publication_Expression .
-
-philharshapes:IAML a sh:NodeShape;
-  sh:nodeKind sh:IRI;
-  sh:property mus:P81;
-  foaf:depiction philharshapes:diagram_Publication_Expression .
-
-philharshapes:EducationalLevel a sh:NodeShape;
-  sh:nodeKind sh:IRI;
-  sh:property mus:P83;
-  foaf:depiction philharshapes:diagram_Publication_Expression .
+efrbroo:F24_Publication_Expression sh:property mus:P10, mus:P11, mus:P12, mus:P13,
+    mus:P14, mus:P15, mus:P16, mus:P17, mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23,
+    mus:P24, mus:P25, mus:P9 .
 
 mus:P9 sh:maxCount 1;
   sh:minCount 1;
@@ -300,6 +275,9 @@ mus:P28 sh:minCount 1;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P72_has_language .
 
+mus:M167_Publication_Expression_Fragment sh:property mus:P29, mus:P30, mus:P31, mus:P32,
+    mus:P33, mus:P34, mus:P35, mus:P36, mus:P37, mus:P38, mus:P39, mus:P40, mus:P41 .
+
 mus:P29 sh:class mus:M156_Title_Statement;
   sh:maxCount 1;
   sh:minCount 1;
@@ -337,201 +315,489 @@ mus:P34 sh:class mus:M163_Music_Format_Statement;
   sh:nodeKind sh:IRI;
   sh:path mus:U182_has_music_format_statement .
 
-mus:P35 sh:class mus:M160_Publication_Statement;
-  sh:maxCount 1;
-  sh:minCount 1;
-  sh:name "U184 has publication statement"@en;
-  sh:nodeKind sh:IRI;
-  sh:path mus:U184_has_publication_statement .
-
-mus:P36 sh:name "U65 has geographical context"@en;
+mus:P35 sh:name "U65 has geographical context"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U65_has_geographical_context .
 
-mus:P37 sh:name "U12 has genre"@en;
+mus:P36 sh:name "U12 has genre"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U12_has_genre .
 
-mus:P38 sh:name "U19 is categorized as"@en;
+mus:P37 sh:name "U19 is categorized as"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U19_is_categorized_as .
 
-mus:P39 sh:name "P129 is about"@en;
+mus:P38 sh:name "P129 is about"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P129_is_about .
 
-mus:P40 sh:datatype xsd:string;
+mus:P39 sh:datatype xsd:string;
   sh:name "P3 has note"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P3_has_note .
 
-mus:P41 sh:class ecrm:E42_Identifier;
+mus:P40 sh:class ecrm:E42_Identifier;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "P1 is identified by"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P1_is_identified_by .
 
-mus:P42 sh:class mus:M6_Casting;
+mus:P41 sh:class mus:M6_Casting;
   sh:minCount 1;
   sh:name "U13 has casting"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U13_has_casting .
 
-mus:P44 sh:class efrbroo:F24_Publication_Expression;
+efrbroo:F30_Publication_Event sh:property mus:P43, mus:P44, mus:P45 .
+
+mus:P43 sh:class efrbroo:F24_Publication_Expression;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "R24 created"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:R24_created .
 
-mus:P45 sh:class ecrm:E7_Activity;
+mus:P44 sh:class ecrm:E7_Activity;
   sh:name "P9 consists of"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P9_consists_of .
 
-mus:P46 sh:class ecrm:E52_Time-Span;
+mus:P45 sh:class ecrm:E52_Time-Span;
   sh:maxCount 1;
   sh:name "P4 has time-span"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P4_has_time-span .
 
-mus:P48 sh:minCount 1;
+ecrm:E7_Activity sh:property mus:P47, mus:P48 .
+
+mus:P47 sh:minCount 1;
   sh:name "P14 carried out by"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P14_carried_out_by .
 
-mus:P49 sh:minCount 1;
+mus:P48 sh:minCount 1;
   sh:name "U31 had function"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U31_had_function .
 
-mus:P51 skos:example "E60 Number “3”"@en;
+mus:M6_Casting sh:property mus:P50, mus:P51 .
+
+mus:P50 skos:example "E60 Number “3”"@en;
   sh:datatype xsd:integer;
   sh:maxCount 1;
-  sh:minCount 1;
   sh:name "U48 foresees quantity of actors"@en;
   sh:nodeKind sh:Literal;
   sh:path mus:U48_foresees_quantity_of_actors .
 
-mus:P52 sh:class mus:M23_Casting_Detail;
+mus:P51 sh:class mus:M23_Casting_Detail;
   sh:minCount 1;
   sh:name "M23 Casting Detail"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U23_has_casting_detail .
 
-mus:P54 skos:example "type = saxophone alto (MIMO)"@en;
-  sh:class philharshapes:MIMO;
+mus:M23_Casting_Detail sh:property mus:P53, mus:P54, mus:P55, mus:P56, mus:P57, mus:P58,
+    mus:P59 .
+
+mus:P53 skos:example "type = saxophone alto (MIMO)"@en;
   sh:maxCount 1;
   sh:name "P1 foresees use of medium of performance instrument"@en;
+  sh:node philharshapes:MIMO;
   sh:nodeKind sh:IRI;
-  sh:path philhar:P1_foresees_use_of_medium_of_performance_instrument .
+  sh:path philhar:S1_foresees_use_of_medium_of_performance_instrument .
 
-mus:P55 skos:example "type = saxophone alto (MIMO)"@en;
-  sh:class philharshapes:IAML;
+mus:P54 skos:example "type = saxophone alto (MIMO)"@en;
   sh:maxCount 1;
   sh:name "P2 foresees use of medium of performance vocal"@en;
+  sh:node philharshapes:IAML;
   sh:nodeKind sh:IRI;
-  sh:path philhar:P2_foresees_use_of_medium_of_performance_vocal .
+  sh:path philhar:S2_foresees_use_of_medium_of_performance_vocal .
 
-mus:P56 sh:class philharshapes:EducationalLevel;
-  sh:maxCount 1;
+mus:P55 sh:maxCount 1;
   sh:name "P103 was intended for"@en;
+  sh:node philharshapes:EducationalLevel;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P103_was_intended_for .
 
-mus:P57 sh:maxCount 1;
+mus:P56 sh:maxCount 1;
   sh:name "U90 foresees creation or performance mode"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U90_foresees_creation_or_performance_mode .
 
-mus:P58 skos:example "E60 Number “1”"@en;
+mus:P57 skos:example "E60 Number “1”"@en;
   sh:datatype xsd:integer;
   sh:maxCount 1;
   sh:name "U30 foresees quantity of mop"@en;
   sh:nodeKind sh:Literal;
   sh:path mus:U30_foresees_quantity_of_mop .
 
-mus:P59 sh:datatype xsd:string;
+mus:P58 sh:datatype xsd:string;
   sh:name "P3 has note"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P3_has_note .
 
-mus:P60 sh:maxCount 1;
+mus:P59 sh:maxCount 1;
   sh:name "U36 foresees responsibility"@en;
   sh:nodeKind sh:IRI;
   sh:path mus:U36_foresees_responsibility .
 
-mus:P62 sh:datatype xsd:string;
+mus:M156_Title_Statement sh:property mus:P61 .
+
+mus:P61 sh:datatype xsd:string;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "label"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P64 sh:datatype xsd:string;
+mus:M157_Statement_of_Responsibility sh:property mus:P63 .
+
+mus:P63 sh:datatype xsd:string;
+  a skos:Concept;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "label"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P66 sh:datatype xsd:string;
+ecrm:E35_Title sh:property mus:P65 .
+
+mus:P65 a skos:Concept;
+  sh:datatype xsd:string;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "label"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P68 sh:datatype xsd:string;
+mus:M159_Edition_Statement sh:property mus:P67 .
+
+mus:P67 a skos:Concept;
+  sh:datatype xsd:string;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "label"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P70 sh:datatype xsd:string;
+mus:M163_Music_Format_Statement sh:property mus:P69 .
+
+mus:P69 a skos:Concept;
+  sh:datatype xsd:string;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "label"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P72 sh:datatype xsd:string;
+mus:M160_Publication_Statement sh:property mus:P71 .
+
+mus:P71 a skos:Concept;
+  sh:datatype xsd:string;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "label"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P74 sh:datatype xsd:string;
+ecrm:E42_Identifier sh:property mus:P73, mus:P74 .
+
+mus:P73 a skos:Concept;
+  sh:datatype xsd:string;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "P1 is identified by"@en;
   sh:nodeKind sh:Literal;
   sh:path rdfs:label .
 
-mus:P75 sh:maxCount 1;
+mus:P74 a skos:Concept;
+  sh:maxCount 1;
   sh:minCount 1;
   sh:name "P2 has type"@en;
   sh:nodeKind sh:IRI;
   sh:path ecrm:P2_has_type .
 
-mus:P77 sh:datatype xsd:gYear;
+ecrm:E52_Time-Span sh:property mus:P76 .
+
+mus:P76 a skos:Concept;
+  sh:datatype xsd:gYear;
   sh:maxCount 1;
   sh:minCount 1;
   sh:name "P4 has time-span"@en;
   sh:nodeKind sh:Literal;
   sh:path ecrm:P82_at_some_time_within .
 
-mus:P79 sh:minCount 1;
-  sh:nodeKind sh:IRI;
-  sh:path skos:prefLabel .
+mus:P9 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
 
-mus:P81 sh:minCount 1;
-  sh:nodeKind sh:IRI;
-  sh:path skos:prefLabel .
+mus:P10 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
 
-mus:P83 sh:minCount 1;
-  sh:nodeKind sh:IRI;
-  sh:path skos:prefLabel .
+mus:P11 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P12 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P13 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P14 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P15 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P16 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P17 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P18 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P19 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P20 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P21 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P22 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P23 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P24 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P25 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P27 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P28 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P29 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P30 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P31 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P32 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P33 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P34 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P35 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P36 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P37 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P38 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P39 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P40 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P41 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P43 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P44 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P45 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P47 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P48 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P50 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P51 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P53 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P54 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P55 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P56 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P57 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P58 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P59 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P61 a skos:Concept;
+  skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P63 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P65 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P67 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P69 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P71 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P73 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P74 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+mus:P76 skos:inScheme <http://data.doremus.org/shapes/mus> .
+
+<http://data.doremus.org/shapes/mus> a skos:ConceptScheme;
+  skos:hasTopConcept mus:P10, mus:P11, mus:P12, mus:P13, mus:P14, mus:P15, mus:P16,
+    mus:P17, mus:P18, mus:P19, mus:P20, mus:P21, mus:P22, mus:P23, mus:P24, mus:P25, mus:P27,
+    mus:P28, mus:P29, mus:P30, mus:P31, mus:P32, mus:P33, mus:P34, mus:P35, mus:P36, mus:P37,
+    mus:P38, mus:P39, mus:P40, mus:P41, mus:P43, mus:P44, mus:P45, mus:P47, mus:P48, mus:P50,
+    mus:P51, mus:P53, mus:P54, mus:P55, mus:P56, mus:P57, mus:P58, mus:P59, mus:P61, mus:P63,
+    mus:P65, mus:P67, mus:P69, mus:P71, mus:P73, mus:P74, mus:P76, mus:P9 .
+
+mus:P9 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P10 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P11 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P12 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P13 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P14 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P15 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P16 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P17 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P18 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P19 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P20 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P21 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P22 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P23 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P24 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P25 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P27 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P28 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P29 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P30 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P31 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P32 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P33 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P34 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P35 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P36 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P37 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P38 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P39 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P40 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P41 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P43 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P44 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P45 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P47 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P48 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P50 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P51 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P53 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P54 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P55 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P56 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P57 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P58 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P59 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P61 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P63 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P65 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P67 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P69 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P71 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P73 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P74 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
+
+mus:P76 skos:topConceptOf <http://data.doremus.org/shapes/mus> .
