@@ -11,6 +11,7 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:ore="http://www.openarchives.org/ore/terms/"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:dcterms="http://purl.org/dc/terms/">
 
 	<!-- Format -->

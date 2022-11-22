@@ -26,7 +26,7 @@
 	<xsl:param name="language_codes" select="document(concat($SHARED_XML_DIR,'/', 'languages-codes.xml'))/*/language" />
 	
 	<!-- Call sources files RDF -->
-	<xsl:param name="SHARED_RDF_DIR">../05-work/vocabulaires_rdf-xml</xsl:param>
+	<xsl:param name="SHARED_RDF_DIR">../work/vocabulaires_rdf-xml</xsl:param>
 	
 	<xsl:param name="educational-level_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'educational-level.rdf'))/rdf:RDF/*" />	
 	<xsl:param name="mimo_vocab" select="document(concat($SHARED_RDF_DIR,'/', 'mimo.rdf'))/rdf:RDF/skos:Concept" />

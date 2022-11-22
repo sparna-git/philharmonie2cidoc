@@ -22,3 +22,7 @@ validation/
 philhar2cidoc-converter/...bfg-report/
 
 philhar2cidoc-converter/bfg-1.14.0.jar
+script/input/partitions/ExportPartitions-20211201.xml-fixed.xml
+script/input/personnes/ExportAutoritesPersonnePhysique.xml
+script/output
+script/work
