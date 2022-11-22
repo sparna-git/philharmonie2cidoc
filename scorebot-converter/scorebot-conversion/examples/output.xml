@@ -1,0 +1,440 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:mus="http://data.doremus.org/ontology#"
+	xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
+	xmlns:ecrm="http://erlangen-crm.org/current/"
+>
+
+	<efrbroo:F24_Publication_Expression rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318">
+		<!-- en dur -->
+		<mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010" />
+		
+		<!--
+		<ecrm:P72_has_language>
+			<ecrm:E56_Language>
+				<rdfs:label>FR</rdfs:label>
+			</ecrm:E56_Language>
+		</ecrm:P72_has_language>
+		-->
+
+		
+		<ecrm:P1_is_identified_by>
+			<!-- Créer un nouvel identifiant à chaque fois que l’une de ces zones est remplie : 
+				UNI5 : notice id
+				UNI5 : 010$a
+				UNI5 : 013$a
+		 	-->
+			<ecrm:E42_Identifier rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#identifier_ISBN_958-95698-3-8">
+				<rdfs:label>958-95698-3-8</rdfs:label>
+
+				<!-- UNI5 : notice id
+						UNI5 : 010$a
+						UNI5 : 013$a
+
+					Indiquer “CMPP-ALOES”
+					Indiquer “ISBN” pour l’identifiant décrit en 010
+					Indiquer “ISMN” pour l’identifiant décrit en 013
+			 	-->
+				<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/ISBN" />
+
+			</ecrm:E42_Identifier>
+		</ecrm:P1_is_identified_by>
+
+		<ecrm:P1_is_identified_by>
+			<ecrm:E42_Identifier rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#identifier_CMPP-ALOES_0070318">
+				<rdfs:label>0070318</rdfs:label>
+				<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES" />
+			</ecrm:E42_Identifier>
+		</ecrm:P1_is_identified_by>
+
+		<!-- Cas 1 : 
+				Respecter l'ordre des sous-zones et générer une ponctuation entre elles, en faisant précéder 
+				- le $e de deux points, précédés et suivis d'un espace ( : ) 
+				- le $h d'un point suivi d'un espace (. )
+				- le $i d'une virgule suivie d'un espace (, ) s'il suit un $h, ou d'un point suivi d'un espace (. ) en l'absence de $h
+
+			 Cas 2 : 
+				Ne pas prendre en compte les $e qui suivent un $d
+	 	-->
+		<mus:U170_has_title_statement>
+			<mus:M156_Title_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#title-statement_1">
+				<rdfs:label>La Musica en las publicaciones periodicas colombianas del siglo XIX (1848-1860)</rdfs:label>
+			</mus:M156_Title_Statement>
+		</mus:U170_has_title_statement>
+		
+		<!-- UNI5:200$f (;) 200$g -->
+		<mus:U172_has_statement_of_responsibility_relating_to_title>
+			<mus:M157_Statement_of_Responsibility rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#responsibility_1">
+				<rdfs:label>Ellie Anne Duque</rdfs:label>
+			</mus:M157_Statement_of_Responsibility>
+		</mus:U172_has_statement_of_responsibility_relating_to_title>
+
+		<!-- 200$d Créer autant de titres parallèles qu’il y a de sous-zones $d.  Si un $e suit un $d, alors concaténer les deux en les séparant par un ( ; ) -->
+		<!--
+		<mus:U168_has_parallel_title>
+			<ecrm:E35_Title rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#title-parallel_1">
+				<rdfs:label>Symphony No. 2 : in D major</rdfs:label>
+			</ecrm:E35_Title>		
+		</mus:U168_has_parallel_title>	
+		-->
+
+		<!-- 449$a  Générer une ponctuation entre le contenu des sous-zones : un ( / ) si le $a est suivi d’un $f -->
+		<!--
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#title-variant_1">
+				<rdfs:label>Le sacre du printemps / Igor Stravinsky</rdfs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title>	
+		-->
+
+		<!-- 541$a -->
+		<!-- Générer une ponctuation entre le contenu des sous-zones : deux ( : ) si le $a est suivi d'un $e -->
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#title-variant_2">
+				<rdfs:label>La musique dans les publications colombiennes du 19ème siècle (1848-1860)</rdfs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title> 
+
+
+		<!-- UNI5:541 $a $e
+			Générer une ponctuation entre le contenu des sous-zones : deux ( : ) si le $a est suivi d'un $e UNI5:500$3
+			
+			La zone 500 contient un lien vers le titre uniforme musical (notice d’autorité de type AIC14).
+			Si une notice comporte une ou plusieurs zones 500, récupérer les informations dans la notice d’autorité (AIC14) et les intégrer en variante de titre.
+			Chaque zone 144 ou 444 remplie dans la notice d’autorité doit donner lieu à une nouvelle variante de titre.
+
+			Cette variante de titre est composée de deux parties : 
+
+			a- Nom du compositeur : 
+				Données : AIC14:322$a $m
+
+				→ séparer le 322$a et le 322$m par une virgule, si le $m est rempli.
+				  Faire suivre par un point et un tiret (. -)
+
+			b- Nom de l’oeuvre :
+				Données : 
+				AIC14:144 ou AIC14:444
+				$a $c $e $g $h $i $j $k $n $p $q $r $t $u.
+
+				AIC14:444 ou AIC14:444
+				 $a $c $e $g $h $i $j $k $n $p $r $t $u.
+
+			Cas 1- si 144 ou 444 $g, $c, $h et $i sont vides (le plus courant  pour reconstituer un TUM ) :  
+				  
+				concaténer les sous-zones suivantes  (si elles sont remplies), en respectant l'ordre indiqué et en séparant chaque occurence par un point et un espace : 
+
+				$a. $r. $n. $k. $p. $t. $u
+
+				puis (si $e, $j ou $q ne sont pas vides), ajouter à la suite : une parenthèse, chaque occurrence non vides (séparées par un point-virgule) de $e; $q); $j puis fermer la parenthèse. 		
+
+			Cas 2- si  $i ou $h sont remplis mais que $g ou $c sont vides :
+				Reprendre les instructions précédentes et ajouter à la fin, séparés par un point et un espace : $h. $i. 
+
+			Cas 3- si $g ou $c ne sont pas vides :   
+
+				$a. $g. $c. $i. $h. $r. $n. $k. $p. $t . $u
+
+			(si besoin, voici la signification des sous-champs : $a (titre), $c (Titre original de l'oeuvre), $e (qualificatif), $g (Auteur du thème adapté), $h (Numéro de partie), $i (titre de partie), $j (année), $k (cat.thématique), $n (n° d'ordre), $p (opus), $q (version), $r (instrumentation),  $t (tonalité), $u (surnom).
+
+			c- Elément additionnel présent dans la notice de la partition
+			Dans la notice UNI5, un qualificatif est parfois ajouté à la suite du titre uniforme musical en 500$w. 
+			Lorsque c’est le cas, l’ajouter dans la variante de titre, à la suite des autres formes.:  
+		-->
+		<!--
+		<mus:U68_has_variant_title>
+			<ecrm:E35_Title>
+				<refs:label>
+					Cas 1 : "Moussorski, Modeste. - [Boris Godunov (Opéra ; 1869)]”
+					Cas 2 : "Wagner, Richard. - [Das Liebesverbot. WWV 38. Ouvertüre]"
+					Cas 3 : "Liszt, Franz. - [Paraphrases. Verdi, Giuseppe. I Lombardi. Salve Marie de Jerusalem. Piano. S431]"
+					Cas 4 : “Dutilleux, Henri. - [Blackbird. Piano] Arrangement pour hautbois, percussion, contrebasse et clavecin
+				</refs:label>
+			</ecrm:E35_Title>
+		</mus:U68_has_variant_title>	
+		-->
+
+		<!-- 205$a -->
+		<!--
+		<mus:U176_has_edition_statement>
+			<mus:M159_Edition_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#edition_1">
+				<rdfs:label>2e éd. révisée</rdfs:label>
+			</mus:M159_Edition_Statement>	
+		</mus:U176_has_edition_statement>
+		-->
+
+		<!-- 208$a.  et 200 $e s’il contient l’une des valeurs suivantes - partition de poche - tablature - réduction -->
+
+		<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
+		<!--
+		<mus:U182_has_music_format_statement>
+			<mus:M163_Music_Format_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#format_1">
+				<rdfs:label>réduction piano et chant</rdfs:label>
+			</mus:M163_Music_Format_Statement>	
+		</mus:U182_has_music_format_statement>	
+
+		<mus:U182_has_music_format_statement>
+			<mus:M163_Music_Format_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#format_2">
+				<rdfs:label>partition de poche</rdfs:label>
+			</mus:M163_Music_Format_Statement>	
+		</mus:U182_has_music_format_statement>	
+		-->
+
+		<!-- 214 $a $c $d et, si le 214 n’est pas renseigné: 
+			210$a $c $d
+
+			Respecter l'ordre des sous-zones et générer une ponctuation entre elles, en faisant précéder  : 
+			- les $c par deux points (:)
+			- les $d par une virgule (,)
+	 	-->
+	 	<!--
+		<mus:U184_has_publication_statement>
+			<mus:M160_Publication_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#publication_1">
+				<rdfs:label>Paris : Billaudot, cop. 2021</rdfs:label>
+			</mus:M160_Publication_Statement>	
+		</mus:U184_has_publication_statement>
+		-->
+
+		<!-- 610$a $b Prendre la valeur de 610$a lorsque 610$b=03 (code signifiant que le descripteur est typé comme un nom géographique) -->
+
+		<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
+		<!--
+		<mus:U65_has_geographical_context rdf:resource="..." />
+		-->
+
+		<!-- mus:U12_has_genre -->
+		<!-- Prendre la valeur de 610$a lorsque 610$b=04 (code signifiant que le descripteur est typé comme un genre musical) -->
+
+	 	<mus:U12_has_genre rdf:resource="http://...Mélodie...">	
+	 	
+
+	 	<!-- Prendre la valeur de 610$a pour les toutes les occurrences où le 610$b est différent 03, 04, 06, 06b, 06c -->
+
+	 	<!-- Il faut peut-être un vocabulaire contrôlé ? -->
+
+		<mus:U19_is_categorized_as rdf:resource="http://...19 ème siècle..." />
+
+		<mus:U19_is_categorized_as rdf:resource="http://...Musique de salon..." />	
+
+
+		<!-- 600 $a $b Faire un lien vers l’autorité personne -->
+		<!--
+		<ecrm:P129_is_about rdf:resource="http://...." />
+		-->
+
+		<!-- 601 $a $b Faire un lien vers l’autorité collectivité -->
+		<!--
+		<ecrm:P129_is_about rdf:resource="http://...." />	
+		-->
+
+		<!-- 333$a Transcrire ici le contenu complet de la sous-zone. Pour la conversion vers le référentiel, se reporter à la partie sur la nomenclature. -->
+		<!--
+		<ecrm:P103_was_intended_for rdf:resource="http://...." />
+		-->
+
+		<!-- 330$a  324$a  327$a Concaténer chacune de ces sous-zones en les séparant par un point et une espace. -->
+		<!--
+		<ecrm:P3_has_note>...</ecrm:P3_has_note>	
+		-->
+
+		<!-- Parties de partitions M167 Publication Expression Fragment -->
+		<!-- UNI5:462$3
+				Pour chaque champ 462 présent dans une notice UNI5, créer une partie de partition.
+
+				Les informations détaillant la partie sont présentes dans la notice de dépouillement UNI45 dont l’identifiant est mentionné dans l’UNI5 en 462$3
+ 		-->
+
+ 		<ecrm:P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#subpart_0096273">
+ 				<!-- on peut retrouver les même éléments XML que pour la partition "mère" -->
+
+ 				<mus:U170_has_title_statement>
+					<mus:M156_Title_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#subpart_0096273/title-statement_1">
+						<rdfs:label>...</rdfs:label>
+					</mus:M156_Title_Statement>
+				</mus:U170_has_title_statement>
+
+ 			</mus:M167_Publication_Expression_Fragment>
+ 		</ecrm:P148_has_component>
+
+ 		<ecrm:P148_has_component>
+ 			<mus:M167_Publication_Expression_Fragment rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#subpart_0096277">
+ 				<!-- on peut retrouver les même éléments XML que pour la partition "mère" -->
+ 			</mus:M167_Publication_Expression_Fragment>
+ 		</ecrm:P148_has_component>
+
+ 		<!-- etc pour chaque sous-notice UNI:45 -->
+
+
+ 		<mus:U13_has_casting>
+	 		<!-- Création de M6 Casting -->
+	 		<!-- Mapping du nombre total d’exécutants -->
+	 		<!-- prendre le maximun de $t, sera le Nombre total d’exécutants -->
+	 		<mus:M6_Casting rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#casting_XX">
+	 			<mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mus:U48_foresees_quantity_of_actors>	
+	 			
+
+		 		<!-- Création des M23 Casting Detail (cas simple):  -->
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#casting_XX/detail_1">
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="...." />
+
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 					<!--
+		 				<mus:U90_foresees_creation_or_performance_mode rdf:resource="...." />
+		 				-->
+
+		 				<!-- soprano(1) -->
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
+
+		 				<!-- Voix(1) 940$x-->
+		 				<!--
+		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
+		 				-->
+
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
+		 				<!-- Voix(1) 940$t-->
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>
+		 			
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#casting_XX/detail_2">
+		 				<!-- 945$a flûte_traversière(1) -->
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/wfl" />
+		 				
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 				<!--
+		 				<mus:U90_foresees_creation_or_performance_mode rdf:resource="...." />
+		 				-->
+
+		 				<!-- flûte_traversière(1) -->
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
+
+		 				<!--
+		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
+		 				-->
+
+		 				<!-- Voix(1) 940$t -->
+		 				<!-- vocabulaire responsabilité : soliste (à ajouter seulement si une des sous zones 945, 946, 947, 948, 949, 950, 951, 952, 953, 956 $a  est renseignée) -->
+		 				<mus:U36_foresees_responsibility rdf:resource="http://data.doremus.org/vocabulary/responsibility/soloist"/>-->
+
+		 			</mus:M23_Casting_Detail>
+		 		</mus:U23_has_casting_detail>	
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#casting_XX/detail_3">
+		 				<!-- 949$a piano(1) -->
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/kpf" />
+		 				
+		 				<!-- U90 foresees creation or performance mode =quatre mains(IAML “number of hands / players”) algo= prendre le suffixe pas utilisé et le chercher dans IAML -->
+		 				<!--
+		 				<mus:U90_foresees_creation_or_performance_mode rdf:resource="...." />
+		 				-->
+
+
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
+
+		 				<!-- Voix(1) 940$x-->
+		 				<!--
+		 				<ecrm:P3_has_note>indéterminée</ecrm:P3_has_note>
+		 				-->
+		 				
+		 			</mus:M23_Casting_Detail>
+		 		</mus:U23_has_casting_detail>
+		 		<mus:U23_has_casting_detail>	
+		 			<mus:M23_Casting_Detail rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#casting_XX/detail_4">
+		 				<!-- 950$a guitare(1) -->
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://data.doremus.org/vocabulary/iaml/mop/tgu" />	
+
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>	 				
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+			</mus:M6_Casting>
+		</mus:U13_has_casting>
+
+
+
+ 		<!-- Casting alternatif -->
+ 		<!-- note $x “hautbois ou cor anglais et trompette” - utiliser le “ou” pour construire le casting alternatif  -->
+ 		
+		<!-- hautbois -->
+ 		<mus:U13_has_casting>
+ 			<mus:M6_Casting>
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://...hautbois..." />	
+
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>	
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 	<mus:M6_Casting>
+ 		</mus:U13_has_casting>
+
+ 		<!-- cor anglais et trompette -->
+ 		<mus:U13_has_casting>
+ 			<mus:M6_Casting>
+		 		<mus:U23_has_casting_detail>
+		 			<mus:M23_Casting_Detail>
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://...cor anglais..." />
+		 				<mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://...trompette..." />
+		 				<mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
+		 			</mus:M23_Casting_Detail>	
+		 		</mus:U23_has_casting_detail>
+		 	<mus:M6_Casting>
+ 		</mus:U13_has_casting>
+
+
+	</efrbroo:F24_Publication_Expression>
+
+
+	<!-- Description de l’activité d’édition F30 Publication Event pour le 911$a -->
+	<efrbroo:F30_Publication_Event rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#event">
+		<!-- 911$a Créer une instance de  F30 Publication Event si la notice comporte au moins un champ 911.  -->
+		<!-- Lien vers la Publication Expression de Partition -->
+		<mus:R24_created rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/0070318" />
+
+		<!-- 214 $d
+			et, si le 214$d n’est pas renseigné: 210 $d
+			Cas 1 : 
+				la sous-zone ne comporte qu’une année, reprendre les données telles quelles. 
+			Cas 2 : 
+				Si la sous-zone $d comporte une chaîne de caractères qui précède l’année (Ex : “cop.”, “copyright”, “DL”) et qui a une valeur autre que “impr.”, ne conserver que l’année. 
+			Cas 3 : 
+				Ne pas conserver les années qui sont précédées de la mention “impr.”
+		-->
+		<!--
+		<ecrm:P4_has_time-span>
+			<ecrm:E52_Time-Span rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#event/time-span">
+				<ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">...</ecrm:P82_at_some_time_within>
+			</ecrm:E52_Time-Span>	
+		</ecrm:P4_has_time-span>
+		-->
+
+		<ecrm:P9_consists_of>		
+			<!-- Créer une instance de E7 Activity pour chaque champ 911. -->
+			<ecrm:E7_Activity rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#event/activity_123456_editor">
+				<!-- 911$a Lien vers l’autorité collectivité éditeur -->
+				<ecrm:P14_carried_out_by rdf:resource="http://...123456" />
+
+				<!-- en dure -->
+				<!-- 911$a Toujours préciser le rôle “éditeur” issu du référentiel http://data.doremus.org/vocabulary/function/publisher -->
+				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/editor" />				
+			</ecrm:E7_Activity>	
+		</ecrm:P9_consists_of>	
+
+		<!-- Description de l’activité de composition, d’arrangement, d’édition scientifique, etc. F30 Publication Event pour 700, 701, 702, 710, 711, 712.  -->
+
+		<!-- Créer une instance de E7 Activité pour chaque zone 700, 701, 710, 711, 712 -->
+		<ecrm:P9_consists_of>
+			<ecrm:E7_Activity rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0070318#event/activity_234567_author">			
+				<!-- 700, 701, 702$a Lien vers une autorité personne -->
+				<ecrm:P14_carried_out_by rdf:resource="http://...234567" />
+					
+				<!-- 7700, 701, 710 ou 711 $4 Convertir les fonctions d’Aloes vers le référentiel DOREMUS : http://data.doremus.org/vocabulary/function -->
+				<mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/author" />
+			</ecrm:E7_Activity>
+		</ecrm:P9_consists_of>	
+	</efrbroo:F30_Publication_Event>	
+
+</rdf:RDF>

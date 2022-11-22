@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:ecrm="http://erlangen-crm.org/current/"
+         xmlns:efrbroo="http://erlangen-crm.org/efrbroo/"
+         xmlns:mus="http://data.doremus.org/ontology#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:schema="http://schema.org/"
+         xmlns:sparnaf="http://data.sparna.fr/function/sparnaf#">
+   <efrbroo:F24_Publication_Expression rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114">
+      <mus:U227_has_content_type rdf:resource="http://www.rdaregistry.info/termList/RDAContentType/#1010"/>
+      <ecrm:P1_is_identified_by>
+         <ecrm:E42_Identifier rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#identifier_CMPP-ALOES_0079114">
+            <rdfs:label>0079114</rdfs:label>
+            <ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES"/>
+         </ecrm:E42_Identifier>
+      </ecrm:P1_is_identified_by>
+      <!--Sequence Title Statement: 0 ::::::-->
+      <mus:U170_has_title_statement>
+         <mus:M156_Title_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#title-statement_1">
+            <rdfs:label>Autour : pour flûte alto</rdfs:label>
+         </mus:M156_Title_Statement>
+      </mus:U170_has_title_statement>
+      <mus:U172_has_statement_of_responsibility_relating_to_title>
+         <mus:M157_Statement_of_Responsibility rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#responsibility_1">
+            <rdfs:label>Jean-Louis Agobet</rdfs:label>
+         </mus:M157_Statement_of_Responsibility>
+      </mus:U172_has_statement_of_responsibility_relating_to_title>
+      <mus:U184_has_publication_statement>
+         <mus:M160_Publication_Statement rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#publication_d2e44">
+            <rdfs:label>Paris: Max Eschig, cop. 1996</rdfs:label>
+         </mus:M160_Publication_Statement>
+      </mus:U184_has_publication_statement>
+      <mus:U19_is_categorized_as rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/0067139"/>
+      <mus:U19_is_categorized_as rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/0067731"/>
+      <mus:U13_has_casting>
+         <mus:M6_Casting rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#casting_14">
+            <mus:U48_foresees_quantity_of_actors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U48_foresees_quantity_of_actors>
+            <!--Notice: 0079114, IdCasting: 945$a-->
+            <mus:U23_has_casting_detail>
+               <mus:M23_Casting_Detail rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#casting_14/detail_d2e112">
+                  <mus:U2_foresees_use_of_medium_of_performance rdf:resource="http://www.mimo-db.eu/InstrumentsKeywords/3955"/>
+                  <mus:U30_foresees_quantity_of_mop rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mus:U30_foresees_quantity_of_mop>
+               </mus:M23_Casting_Detail>
+            </mus:U23_has_casting_detail>
+         </mus:M6_Casting>
+      </mus:U13_has_casting>
+   </efrbroo:F24_Publication_Expression>
+   <efrbroo:F30_Publication_Event rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#event">
+      <mus:R24_created rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/0079114"/>
+      <ecrm:P9_consists_of>
+         <ecrm:E7_Activity rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#event/activity_0046478_230">
+            <ecrm:P14_carried_out_by rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/0046478"/>
+         </ecrm:E7_Activity>
+      </ecrm:P9_consists_of>
+      <ecrm:P4_has_time-span>
+         <ecrm:E52_Time-Span rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#event/time-span">
+            <ecrm:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1996</ecrm:P82_at_some_time_within>
+         </ecrm:E52_Time-Span>
+      </ecrm:P4_has_time-span>
+      <ecrm:P9_consists_of>
+         <ecrm:E7_Activity rdf:about="https://ark.philharmoniedeparis.fr/ark/49250/0079114#event/activity_0437428_publisher">
+            <ecrm:P14_carried_out_by rdf:resource="https://ark.philharmoniedeparis.fr/ark/49250/0437428"/>
+            <mus:U31_had_function rdf:resource="http://data.doremus.org/vocabulary/function/publisher"/>
+         </ecrm:E7_Activity>
+      </ecrm:P9_consists_of>
+   </efrbroo:F30_Publication_Event>
+</rdf:RDF>

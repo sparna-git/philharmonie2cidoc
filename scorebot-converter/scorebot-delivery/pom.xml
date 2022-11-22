@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>fr.citedelamusique.scorebot</groupId>
+		<artifactId>scorebot-root-pom</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<groupId>fr.citedelamusique.scorebot</groupId>
+	<artifactId>scorebot-converter-delivery</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Scorebot converter delivery package</name>
+	<description>Scorebot converter delivery package</description>
+
+	<build>
+		<plugins>
+
+		  <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>assemble</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+		                    <descriptors>
+		                        <descriptor>src/main/assembly/delivery.xml</descriptor>
+		                    </descriptors>
+		                    <attach>true</attach>
+		                </configuration>
+                    </execution>
+                </executions>
+          </plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+            <groupId>fr.citedelamusique.scorebot</groupId>
+            <artifactId>scorebot-conversion</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+            <classifier>script</classifier>
+        </dependency>
+        <dependency>
+            <groupId>fr.citedelamusique.scorebot</groupId>
+            <artifactId>scorebot-validation</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+            <classifier>shacl</classifier>
+        </dependency>
+	</dependencies>
+
+</project>
