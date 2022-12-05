@@ -42,3 +42,5 @@ scorebot-converter/scorebot-conversion/script/work/
 scorebot-converter/scorebot-validation/xls2rdf.log
 
 scorebot-converter/scorebot-delivery/src/main/resources/scorebot-validation-report.html
+
+scorebot-converter/scorebot-conversion/script/input/partitions/ExportPartitions-20211201.xml-fixed.xml
