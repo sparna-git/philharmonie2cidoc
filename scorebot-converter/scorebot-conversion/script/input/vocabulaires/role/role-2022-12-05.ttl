@@ -1,0 +1,885 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix score: <http://data.philharmoniedeparis.fr/ontology/partitions#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> a skos:ConceptScheme;
+  dct:created "2021-11-18T00:00:00.000Z"^^xsd:dateTime;
+  dct:publisher "Philharmonie de Paris";
+  dct:rights "copyright Philharmonie de Paris 2021";
+  dct:title "liste des rôles"@en;
+  skos:hasTopConcept <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/020>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/030>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/040>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/050>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/060>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/063>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/065>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/070>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/072>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/075>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/080>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/090>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/100>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/110>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/120>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/130>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/140>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/150>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/160>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/170>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/180>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/190>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/195>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/200>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/205>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/206>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/210>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/212>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/220>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/230>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/233>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/236>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/240>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/245>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/250>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/260>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/270>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/273>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/274>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/280>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/290>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/300>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/303>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/305>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/310>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/320>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/330>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/340>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/350>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/360>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/365>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/370>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/380>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/390>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/400>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/410>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/420>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/430>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/440>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/450>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/460>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/470>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/480>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/490>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/500>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/510>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/520>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/530>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/540>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/545>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/550>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/560>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/570>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/580>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/590>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/600>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/610>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/620>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/630>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/632>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/635>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/640>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/650>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/651>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/660>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/665>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/670>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/672>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/675>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/680>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/690>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/695>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/700>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/705>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/710>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/720>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/721>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/723>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/727>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/730>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/740>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/750>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/760>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/770>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/780>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/790>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/800>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m01>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m05>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m09>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m13>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m17>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m21>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m25>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m29>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m33>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m37>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m41>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m45>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m49>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m53>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m57>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m61>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m65>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m69>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m73>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m77>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m81>, <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m85>,
+    <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m86> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/020> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "020"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "annotateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/030> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "030"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "arrangeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/040> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "040"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "interprète principal"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/050> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "050"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "cessionnaire de droits"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/060> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "060"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "nom associé"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/063> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "063"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur présumé"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/065> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "065"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "commissaire-priseur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/070> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "070"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/072> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "072"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur de citation"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/075> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "075"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "postfacier"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/080> a skos:Concept;
+  skos:exactMatch <http://data.doremus.org/vocabulary/function/author_of_preface>;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "080"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "préfacier"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/090> a skos:Concept;
+  skos:altLabel "auteur du dialogue"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "090"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur du script"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/100> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "100"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur adapté"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/110> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "110"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "relieur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/120> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "120"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "dessinateur de la reliure"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/130> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "130"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "maquettiste"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/140> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "140"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "dessinateur de la jaquette"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/150> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "150"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "dessinateur de l'ex-libris"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/160> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "160"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "libraire"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/170> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "170"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "calligraphe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/180> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "180"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "cartographe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/190> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "190"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "censeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/195> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "195"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "chef de choeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/200> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "200"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "chorégraphe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/205> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "205"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "collaborateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/206> a skos:Concept;
+  skos:editorialNote "(par ex. musique traditionnelle)"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "206"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "collecteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/210> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "210"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "commentateur en audiovisuel"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/212> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "212"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "commentateur de texte écrit"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/220> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "220"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "compilateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/230> a skos:Concept;
+  skos:exactMatch <http://data.doremus.org/vocabulary/function/composer>;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "230"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "compositeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/233> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "233"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "compositeur de l'oeuvre adaptée"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/236> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "236"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "compositeur de l'oeuvre principale"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/240> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "240"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "compositeur typographe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/245> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "245"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "concepteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/250> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "250"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "chef d'orchestre ou de choeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/260> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "260"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "détenteur du copyright"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/270> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "270"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "correcteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/273> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "273"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "commissaire d'une exposition"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/274> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "274"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "danseur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/280> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "280"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "dédicataire"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/290> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "290"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur de la dédicace"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/300> a skos:Concept;
+  skos:altLabel "metteur en scène"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "300"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "réalisateur de film"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/303> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "303"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "disc jockey"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/305> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "305"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "doctorant"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/310> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "310"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "distributeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/320> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "320"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "donateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/330> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "330"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur prétendu"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/340> a skos:Concept;
+  skos:exactMatch <http://data.doremus.org/vocabulary/function/editor>;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "340"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "éditeur scientifique"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/350> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "350"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "graveur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/360> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "360"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "aquafortiste"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/365> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "365"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "expert"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/370> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "370"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "monteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/380> a skos:Concept;
+  skos:altLabel "faussaire"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "380"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "contrefacteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/390> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "390"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "propriétaire précédent"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/400> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "400"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "mécène"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/410> a skos:Concept;
+  skos:altLabel "technicien graphique"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "410"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "dessinateur sur ordinateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/420> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "420"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "personne honorée"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/430> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "430"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "enlumineur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/440> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "440"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "illustrateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/450> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "450"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "signataire de la présentation"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/460> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "460"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "personne interviewée"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/470> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "470"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "interviewer"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/480> a skos:Concept;
+  skos:exactMatch <http://data.doremus.org/vocabulary/function/librettist>;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "480"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "librettiste"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/490> a skos:Concept;
+  skos:editorialNote "(premier détenteur)"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "490"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "titulaire des droits"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/500> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "500"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "concesseur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/510> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "510"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "lithographe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/520> a skos:Concept;
+  skos:exactMatch <http://data.doremus.org/vocabulary/function/lyricist>;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "520"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "parolier"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/530> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "530"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "graveur sur métal"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/540> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "540"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "contrôleur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/545> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "545"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "musicien"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/550> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "550"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "narrateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/560> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "560"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "créateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/570> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "570"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "autres"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/580> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "580"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "fabricant de papier"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/590> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "590"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "interprète"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/600> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "600"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "photographe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/610> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "610"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "imprimeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/620> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "620"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "imprimeur de gravures"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/630> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "630"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "producteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/632> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "632"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "scénographe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/635> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "635"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "programmeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/640> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "640"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "correcteur d'épreuves"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/650> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "650"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "éditeur commercial"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/651> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "651"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "directeur de publication"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/660> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "660"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "destinataire"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/665> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "665"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "producteur de disque"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/670> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "670"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "ingénieur du son"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/672> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "672"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "remixeur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/675> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "675"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "critique"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/680> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "680"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "rubricateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/690> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "690"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "scénariste"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/695> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "695"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "conseiller scientifique"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/700> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "700"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "copiste"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/705> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "705"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "sculpteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/710> a skos:Concept;
+  skos:altLabel "rédacteur, secrétaire"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "710"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "attaché de presse"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/720> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "720"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "signataire"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/721> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "721"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "chanteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/723> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "723"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "commanditaire"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/727> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "727"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "directeur de thèse"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/730> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "730"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "traducteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/740> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "740"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "dessinateur de caractères d'imprimerie"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/750> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "750"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "typographe"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/760> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "760"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "graveur sur bois"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/770> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "770"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "auteur du matériel d'accompagnement"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/780> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "780"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "acteur,exécutant"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/790> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "790"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "conférencier"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/800> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "800"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "intervenant"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m01> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m01"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Bibliographie"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m05> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m05"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Cadences"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m09> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m09"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Collaborateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m13> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m13"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Coups d'archet"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m17> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m17"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Directeur d'études"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m21> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m21"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Directeur de publication"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m25> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m25"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Documentation"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m29> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m29"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Doigtés"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m33> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m33"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Harmonisateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m37> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m37"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Indications pédales"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m41> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m41"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Instrumentation"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m45> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m45"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Notateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m49> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m49"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Orchestrateur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m53> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m53"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Ornementation"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m57> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m57"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Registration"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m61> a skos:Concept;
+  skos:editorialNote "(musique)"@fr;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m61"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Réalisation"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m65> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m65"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Réalisation de la basse continue"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m69> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m69"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Rédacteur"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m73> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m73"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Réduction"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m77> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m77"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Révision"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m81> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m81"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Tablatures"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m85> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m85"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Transcription"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
+
+<https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/m86> a skos:Concept;
+  skos:inScheme <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/>;
+  skos:notation "m86"^^<https://data.philharmoniedeparis.fr/vocabulary/type/philharmonie>;
+  skos:prefLabel "Informatique musicale"@fr;
+  skos:topConceptOf <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/> .
