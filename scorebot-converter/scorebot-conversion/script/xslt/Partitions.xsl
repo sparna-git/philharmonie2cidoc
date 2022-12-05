@@ -464,6 +464,39 @@
 		</xsl:if>
 	</xsl:template>
 	
+
+	<xsl:template match="champs[@UnimarcTag='610']">
+		<xsl:variable name="data_610_a" select="SOUSCHAMP[@UnimarcSubfield ='610$a']/data"/>
+		<xsl:variable name="data_610_b" select="SOUSCHAMP[@UnimarcSubfield ='610$b']/data"/>
+		<xsl:variable name="data_610_3" select="SOUSCHAMP[@UnimarcSubfield ='610$3']/data"/>
+
+		<xsl:if test="$data_610_b = '02'">
+			<mus:M40_Context>
+				<mus:U66i_is_historical_context_of>
+					<rdfs:label><xsl:value-of select="$data_610_a"/></rdfs:label>
+				</mus:U66i_is_historical_context_of>				
+			</mus:M40_Context>
+		</xsl:if>
+
+
+		<xsl:if test="$data_610_b = '03'">
+			<xsl:for-each select="$data_610_3">
+				<mus:U65_has_geographical_context rdf:resource="{mus:reference_thesaurus(.)}"/>
+			</xsl:for-each>
+		</xsl:if>
+		
+		<xsl:if test="$data_610_b = '04' or $data_610_b = '05'">
+			<xsl:for-each select="$data_610_3">
+				<mus:U12_has_genre rdf:resource="{mus:reference_thesaurus(.)}"/>
+			</xsl:for-each>
+		</xsl:if>
+
+		<xsl:if test="$data_610_b = '01' or string-length($data_610_b) = 0 ">
+			<xsl:for-each select="$data_610_3">
+				<mus:U19_is_categorized_as rdf:resource="{mus:reference_thesaurus(.)}"/>
+			</xsl:for-each>
+		</xsl:if>
+	</xsl:template>
 	
 	
 	<!-- Event 	
@@ -878,8 +911,10 @@
 				<!-- l’autorité collectivité -->
 				<xsl:apply-templates select="champs[@UnimarcTag='601']/SOUSCHAMP[@UnimarcSubfield ='601$3']"/>
 	 			<!-- Context,Genre,Categorization   -->
+	 			<xsl:apply-templates select="champs[@UnimarcTag='610']"/>
+	 			<!--  
 				<xsl:apply-templates select="champs[@UnimarcTag='610']/SOUSCHAMP[@UnimarcSubfield ='610$b']"/>
-	 			
+	 			-->
 	 			
 	 			<!-- Casting --> 
 	 			<xsl:comment>Casting for parties de partitions <xsl:value-of select="$idNotice"/></xsl:comment>
@@ -945,8 +980,6 @@
 				</mus:U68_has_variant_title>				
 			</xsl:when>
 		</xsl:choose>
-		
-		
 	</xsl:template>
 	
 	
@@ -963,9 +996,11 @@
 	</xsl:template>
 	
 	
+	<!-- 	
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='610$b']">
 		<xsl:variable name="data_b" select="data"/>
 		<xsl:variable name="data_610_3" select="../SOUSCHAMP[@UnimarcSubfield ='610$3']/data"/>
+		
 		<xsl:if test="$data_b = '03'">
 			<xsl:for-each select="$data_610_3">
 				<mus:U65_has_geographical_context rdf:resource="{mus:reference_thesaurus(.)}"/>
@@ -984,7 +1019,9 @@
 			</xsl:for-each>
 		</xsl:if>		
 	</xsl:template>
-	
+	-->
+
+
 	<!-- Activitiy Event 700 -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield='700$3' or
 								   @UnimarcSubfield='701$3' or
