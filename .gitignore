@@ -26,3 +26,9 @@ script/input/partitions/ExportPartitions-20211201.xml-fixed.xml
 script/input/personnes/ExportAutoritesPersonnePhysique.xml
 script/output
 script/work
+
+scorebot-converter/scorebot-delivery/target/
+
+scorebot-converter/scorebot-conversion/target/
+
+scorebot-converter/scorebot-validation/target/
