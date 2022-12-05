@@ -32,3 +32,13 @@ scorebot-converter/scorebot-delivery/target/
 scorebot-converter/scorebot-conversion/target/
 
 scorebot-converter/scorebot-validation/target/
+
+scorebot-converter/scorebot-conversion/script/input/personnes/ExportAutoritesPersonnePhysique.xml
+
+scorebot-converter/scorebot-conversion/script/output/
+
+scorebot-converter/scorebot-conversion/script/work/
+
+scorebot-converter/scorebot-validation/xls2rdf.log
+
+scorebot-converter/scorebot-delivery/src/main/resources/scorebot-validation-report.html

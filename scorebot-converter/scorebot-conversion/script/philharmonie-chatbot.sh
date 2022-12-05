@@ -2,7 +2,7 @@
 export HOME=$(dirname $0)
 
 # inputs
-export INPUT_FOLDER=$HOME/01-input
+export INPUT_FOLDER=$HOME/input
 export DIR_VOCABULARIES_SOURCE=$INPUT_FOLDER/vocabulaires
 export DIR_PARTITIONS_SOURCE=$INPUT_FOLDER/partitions
 export DIR_PERSONNE_SOURCE=$INPUT_FOLDER/personnes
@@ -10,18 +10,19 @@ export DIR_COLLECTIVITE_SOURCE=$INPUT_FOLDER/collectivites
 export DIR_THESAURUS_SOURCE=$INPUT_FOLDER/thesaurus
 
 # work
-export WORK_FOLDER=$HOME/05-work
+export WORK_FOLDER=$HOME/work
 export LOG_FOLDER=$WORK_FOLDER/logs
 export DIR_VOCABULARIES=$WORK_FOLDER/vocabulaires_rdf-xml
 
 # output
-export OUTPUT_FOLDER=$HOME/06-output
+export OUTPUT_FOLDER=$HOME/output
 
 # XSLT
-export XSLT_DIR=$HOME/02-xslt
+export XSLT_DIR=$HOME/xslt
 
 # Clean logs
 rm -rf $LOG_FOLDER
+mkdir $WORK_FOLDER
 mkdir $LOG_FOLDER
 
 # Create the folders 
