@@ -471,11 +471,9 @@
 		<xsl:variable name="data_610_3" select="SOUSCHAMP[@UnimarcSubfield ='610$3']/data"/>
 
 		<xsl:if test="$data_610_b = '02'">
-			<mus:M40_Context>
-				<mus:U66i_is_historical_context_of>
-					<rdfs:label><xsl:value-of select="$data_610_a"/></rdfs:label>
-				</mus:U66i_is_historical_context_of>				
-			</mus:M40_Context>
+			<xsl:for-each select="$data_610_3">
+				<mus:U66_has_historical_context rdf:resource="{mus:reference_thesaurus(.)}"/>
+			</xsl:for-each>
 		</xsl:if>
 
 
@@ -491,7 +489,7 @@
 			</xsl:for-each>
 		</xsl:if>
 
-		<xsl:if test="$data_610_b = '01' or string-length($data_610_b) = 0 ">
+		<xsl:if test="$data_610_b = '01' or not(SOUSCHAMP[@UnimarcSubfield ='610$b'])">
 			<xsl:for-each select="$data_610_3">
 				<mus:U19_is_categorized_as rdf:resource="{mus:reference_thesaurus(.)}"/>
 			</xsl:for-each>
