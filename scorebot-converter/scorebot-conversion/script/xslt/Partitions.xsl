@@ -881,7 +881,7 @@
 
 				<!-- son identifiant en dur -->
 				<ecrm:P1_is_identified_by>
-					<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier(@id,@id,'CMPP-ALOES',@type)}">
+					<ecrm:E42_Identifier rdf:about="{mus:URI-Identifier($idNotice,@id,'CMPP-ALOES',@type)}">
 						<rdfs:label><xsl:value-of select="@id"/></rdfs:label>
 							<!-- UNI5 : notice id - Indiquer “CMPP-ALOES” -->
 						<ecrm:P2_has_type rdf:resource="http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES"/>								

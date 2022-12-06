@@ -58,7 +58,7 @@
 		<xsl:param name="typeNotice" />
 		<xsl:choose>
 			<xsl:when test="$typeNotice='UNI:5'"><xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idReferenceNotice,'#identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))" /></xsl:when>
-			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat('/identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))"/></xsl:when>
+			<xsl:when test="$typeNotice='UNI:45'"><xsl:value-of select="concat(mus:URI-Publication_Expression_Fragment($idReferenceNotice,$idIdentifier),'/identifier_',$idTypeIdentifier,'_',encode-for-uri($idIdentifier))"/></xsl:when>
 		</xsl:choose>
 		
 	</xsl:function>
