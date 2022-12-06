@@ -32,7 +32,12 @@
         {
             "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096273",
             "type" : "M167_Publication_Expression_Fragment",
-            "P1_is_identified_by" : "file:/identifier_CMPP-ALOES_0096273",
+            "P1_is_identified_by" : {
+                "id": "file:/identifier_CMPP-ALOES_0096273",
+                "type": "E42_Identifier",
+                "P2_has_type": "http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES",
+                "label": "0096273"
+            },
             "U227_has_content_type" : "NotatedMusic",
             "U19_is_categorized_as" : "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
             "U68_has_variant_title" : {
@@ -64,7 +69,12 @@
         {
             "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096277",
             "type" : "M167_Publication_Expression_Fragment",
-            "P1_is_identified_by" : "file:/identifier_CMPP-ALOES_0096277",
+            "P1_is_identified_by" : {
+                "id": "file:/identifier_CMPP-ALOES_0096277",
+                "type": "E42_Identifier",
+                "P2_has_type": "http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES",
+                "label": "0096277"
+            },
             "U227_has_content_type" : "NotatedMusic",
             "U19_is_categorized_as" : "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
             "U68_has_variant_title" : {
@@ -97,7 +107,12 @@
         {
             "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0070318#subpart_0096288",
             "type" : "M167_Publication_Expression_Fragment",
-            "P1_is_identified_by" : "file:/identifier_CMPP-ALOES_0096288",
+            "P1_is_identified_by" : {
+                "id": "file:/identifier_CMPP-ALOES_0096288",
+                "type": "E42_Identifier",
+                "P2_has_type": "http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES",
+                "label": "0096288"
+            },
             "U227_has_content_type" : "NotatedMusic",
             "U19_is_categorized_as" : "https://ark.philharmoniedeparis.fr/ark:49250/0144424",
             "U172_has_statement_of_responsibility_relating_to_title" : {

@@ -3,7 +3,12 @@
       
         "id" : "https://ark.philharmoniedeparis.fr/ark:49250/0079114",
         "type":"F24_Publication_Expression",
-        "P1_is_identified_by" : "https://ark.philharmoniedeparis.fr/ark:49250/0079114#identifier_CMPP-ALOES_0079114",
+        "P1_is_identified_by" : {
+                "id": "https://ark.philharmoniedeparis.fr/ark:49250/0079114#identifier_CMPP-ALOES_0079114",
+                "type": "E42_Identifier",
+                "P2_has_type": "http://data.philharmoniedeparis.fr/vocabulary/CMPP-ALOES",
+                "label": "0079114"
+        },
         "U227_has_content_type" : "NotatedMusic",
         "U19_is_categorized_as" : ["https://ark.philharmoniedeparis.fr/ark:49250/0067139", "https://ark.philharmoniedeparis.fr/ark:49250/0067731"],
         "U184_has_publication_statement" : {
