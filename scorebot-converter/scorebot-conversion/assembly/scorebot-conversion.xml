@@ -15,8 +15,6 @@
             <exclude>work/**</exclude>
             <exclude>input_all/**</exclude>
             <exclude>output/**</exclude>
-            <exclude>*.sh</exclude>
-            <exclude>*.bat</exclude>
           </excludes>
         </fileSet>
     </fileSets>

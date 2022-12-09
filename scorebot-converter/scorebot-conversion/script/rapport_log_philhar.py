@@ -1,5 +1,12 @@
 # python
-
+# Ce script génère un tableau en comptant le nombre de messages de Warning dans le fichier de log
+# C'est un utilitaire qui n'est pas obligatoire pour la conversion des fichiers,
+# il facilite simplement la lecture du fichier de log
+# 
+# Pour le lancer, il faut :
+# - Installer Python
+# - python rapport_log_philhar.py <path_du_fichier_de_log.log> <chemin_du_fichier_output.csv>
+# 
 
 
 import os
@@ -37,7 +44,7 @@ def find_mot_cle(df,keyword : str):
 if __name__ == '__main__':
 
 	# read log
-	pathFolder = sys.argv[1] # Param 1 - Get the folder with the sparql files
+	pathFolder = sys.argv[1] # Param 1 - Path to the log file to parse
 	outputFile = sys.argv[2] # Param 2 - output file
 	try:
 		keyword = sys.argv[3] # Param 3 - find a word key

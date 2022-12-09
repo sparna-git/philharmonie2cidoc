@@ -31,9 +31,9 @@
 
 efrbroo:F24_Publication_Expression a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox4 .
+  sh:ignoredProperties _:node1gjr003p5x4 .
 
-_:node1gjqvok1ox4 rdf:first rdf:type;
+_:node1gjr003p5x4 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F24_Publication_Expression sh:nodeKind sh:IRI;
@@ -42,9 +42,9 @@ efrbroo:F24_Publication_Expression sh:nodeKind sh:IRI;
 
 efrbroo:F30_Publication_Event a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox5 .
+  sh:ignoredProperties _:node1gjr003p5x5 .
 
-_:node1gjqvok1ox5 rdf:first rdf:type;
+_:node1gjr003p5x5 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
@@ -52,18 +52,18 @@ efrbroo:F30_Publication_Event sh:nodeKind sh:IRI;
 
 ecrm:E7_Activity a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox6 .
+  sh:ignoredProperties _:node1gjr003p5x6 .
 
-_:node1gjqvok1ox6 rdf:first rdf:type;
+_:node1gjr003p5x6 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E7_Activity sh:nodeKind sh:IRI .
 
 mus:M6_Casting a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox7 .
+  sh:ignoredProperties _:node1gjr003p5x7 .
 
-_:node1gjqvok1ox7 rdf:first rdf:type;
+_:node1gjr003p5x7 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M6_Casting sh:nodeKind sh:IRI;
@@ -71,9 +71,9 @@ mus:M6_Casting sh:nodeKind sh:IRI;
 
 mus:M23_Casting_Detail a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox8 .
+  sh:ignoredProperties _:node1gjr003p5x8 .
 
-_:node1gjqvok1ox8 rdf:first rdf:type;
+_:node1gjr003p5x8 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M23_Casting_Detail sh:nodeKind sh:IRI;
@@ -81,9 +81,9 @@ mus:M23_Casting_Detail sh:nodeKind sh:IRI;
 
 mus:M156_Title_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox9 .
+  sh:ignoredProperties _:node1gjr003p5x9 .
 
-_:node1gjqvok1ox9 rdf:first rdf:type;
+_:node1gjr003p5x9 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M156_Title_Statement sh:nodeKind sh:IRI;
@@ -91,9 +91,9 @@ mus:M156_Title_Statement sh:nodeKind sh:IRI;
 
 mus:M157_Statement_of_Responsibility a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox10 .
+  sh:ignoredProperties _:node1gjr003p5x10 .
 
-_:node1gjqvok1ox10 rdf:first rdf:type;
+_:node1gjr003p5x10 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
@@ -101,9 +101,9 @@ mus:M157_Statement_of_Responsibility sh:nodeKind sh:IRI;
 
 ecrm:E35_Title a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox11 .
+  sh:ignoredProperties _:node1gjr003p5x11 .
 
-_:node1gjqvok1ox11 rdf:first rdf:type;
+_:node1gjr003p5x11 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E35_Title sh:nodeKind sh:IRI;
@@ -111,9 +111,9 @@ ecrm:E35_Title sh:nodeKind sh:IRI;
 
 mus:M159_Edition_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox12 .
+  sh:ignoredProperties _:node1gjr003p5x12 .
 
-_:node1gjqvok1ox12 rdf:first rdf:type;
+_:node1gjr003p5x12 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M159_Edition_Statement sh:nodeKind sh:IRI;
@@ -121,9 +121,9 @@ mus:M159_Edition_Statement sh:nodeKind sh:IRI;
 
 mus:M163_Music_Format_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox13 .
+  sh:ignoredProperties _:node1gjr003p5x13 .
 
-_:node1gjqvok1ox13 rdf:first rdf:type;
+_:node1gjr003p5x13 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
@@ -131,9 +131,9 @@ mus:M163_Music_Format_Statement sh:nodeKind sh:IRI;
 
 mus:M160_Publication_Statement a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox14 .
+  sh:ignoredProperties _:node1gjr003p5x14 .
 
-_:node1gjqvok1ox14 rdf:first rdf:type;
+_:node1gjr003p5x14 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M160_Publication_Statement sh:nodeKind sh:IRI;
@@ -141,9 +141,9 @@ mus:M160_Publication_Statement sh:nodeKind sh:IRI;
 
 ecrm:E42_Identifier a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox15 .
+  sh:ignoredProperties _:node1gjr003p5x15 .
 
-_:node1gjqvok1ox15 rdf:first rdf:type;
+_:node1gjr003p5x15 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E42_Identifier sh:nodeKind sh:IRI;
@@ -151,18 +151,18 @@ ecrm:E42_Identifier sh:nodeKind sh:IRI;
 
 ecrm:E52_Time-Span a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox16 .
+  sh:ignoredProperties _:node1gjr003p5x16 .
 
-_:node1gjqvok1ox16 rdf:first rdf:type;
+_:node1gjr003p5x16 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 ecrm:E52_Time-Span sh:nodeKind sh:IRI .
 
 mus:M167_Publication_Expression_Fragment a rdfs:Class, sh:NodeShape;
   sh:closed true;
-  sh:ignoredProperties _:node1gjqvok1ox17 .
+  sh:ignoredProperties _:node1gjr003p5x17 .
 
-_:node1gjqvok1ox17 rdf:first rdf:type;
+_:node1gjr003p5x17 rdf:first rdf:type;
   rdf:rest rdf:nil .
 
 mus:M167_Publication_Expression_Fragment sh:nodeKind sh:IRI;
