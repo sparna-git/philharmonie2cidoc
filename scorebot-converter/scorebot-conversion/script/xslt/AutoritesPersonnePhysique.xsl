@@ -34,6 +34,8 @@
 		<ecrm:E21_Person rdf:about="{concat($rootUri,@id)}">
 			<!-- rdfs:label -->
 			<xsl:apply-templates select="champs[@UnimarcTag = '100'][SOUSCHAMP/@UnimarcSubfield ='100$a']" />
+			<!-- skos:altLabel -->
+			<xsl:apply-templates select="champs[@UnimarcTag = '400'][SOUSCHAMP/@UnimarcSubfield ='400$a']" />
 		</ecrm:E21_Person>
 	</xsl:template>
 
@@ -44,13 +46,30 @@
 		<xsl:variable name="SC_100_m"
 			select="SOUSCHAMP[@UnimarcSubfield ='100$m']/data" />
 
-		<xsl:variable name="PREF" select="concat(
-			if($SC_100_m != '') then concat($SC_100_m, ' ') else '' 
-			,$SC_100_a)" />
+		<xsl:variable name="value" select="concat(
+			if($SC_100_m != '') then concat($SC_100_m, ' ') else '' ,
+			$SC_100_a
+		)" />
 
-		<rdfs:label>
-			<xsl:value-of select="$PREF" />
+		<rdfs:label xml:lang="fr">
+			<xsl:value-of select="$value" />
 		</rdfs:label>
+	</xsl:template>
+
+	<xsl:template match="champs[@UnimarcTag = '400']">
+		<xsl:variable name="SC_400_a"
+			select="SOUSCHAMP[@UnimarcSubfield ='400$a']/data" />
+		<xsl:variable name="SC_400_m"
+			select="SOUSCHAMP[@UnimarcSubfield ='400$m']/data" />
+
+		<xsl:variable name="value" select="concat(
+			if($SC_400_m != '') then concat($SC_400_m, ' ') else '' ,
+			$SC_400_a
+		)" />
+
+		<skos:altLabel xml:lang="fr">
+			<xsl:value-of select="$value" />
+		</skos:altLabel>
 	</xsl:template>
 
 	<xsl:template match="text()"></xsl:template>

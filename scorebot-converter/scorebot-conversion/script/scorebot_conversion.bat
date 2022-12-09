@@ -1,23 +1,23 @@
 set HOME=%CD%
 
 echo inputs
-set INPUT_FOLDER=%HOME%\01_input
-set DIR_VOCABULARIES_SOURCE=%INPUT_FOLDER%\controlled_vocabularies
+set INPUT_FOLDER=%HOME%\input
+set DIR_VOCABULARIES_SOURCE=%INPUT_FOLDER%\vocabulaires
 set DIR_PARTITIONS_SOURCE=%INPUT_FOLDER%\partitions
-set DIR_PERSONNE_SOURCE=%INPUT_FOLDER%\personne
+set DIR_PERSONNE_SOURCE=%INPUT_FOLDER%\personnes
 set DIR_COLLECTIVITE_SOURCE=%INPUT_FOLDER%\collectivites
 set DIR_THESAURUS_SOURCE=%INPUT_FOLDER%\thesaurus
 
 echo work
-set WORK_FOLDER=%HOME%\05-work
+set WORK_FOLDER=%HOME%\work
 set LOG_FOLDER=%WORK_FOLDER%\logs
 set DIR_VOCABULARIES=%WORK_FOLDER%\vocabulaires_rdf-xml
 
 echo output
-set OUTPUT_FOLDER=%HOME%\06-output
+set OUTPUT_FOLDER=%HOME%\output
 
 echo XSLT
-set XSLT_DIR=%HOME%\02-xslt
+set XSLT_DIR=%HOME%\xslt
 
 echo Clean logs
 mkdir %LOG_FOLDER%
@@ -27,6 +27,10 @@ echo Create the folders
 mkdir %OUTPUT_FOLDER%
 mkdir %WORK_FOLDER%
 mkdir %DIR_VOCABULARIES%
+
+
+set startVC=%time%
+echo "Start Conversion - vocabulaires contrôlés " %startVC%
 
 
 echo "#######################################################################"
@@ -39,6 +43,12 @@ for /D %%f in (%DIR_VOCABULARIES_SOURCE%\*) do (
 	java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize --input %%f -o %DIR_VOCABULARIES%\%%~nf.rdf
 )
 
+set endVC=%time%
+echo "End Conversion - vocabulaires contrôlés " %endVC%
+
+
+set startAut=%time%
+echo "Start Autorites  " %startAut%
 
 echo "#######################################################################"
 echo "###  Etape 2 - Conversion Personnes / Collectivites / Thesaurus     ###"
@@ -55,12 +65,27 @@ echo "Converting ExportThesaurus..."
 java -Xmx4048M -jar saxon-he-10.1.jar -s:%DIR_THESAURUS_SOURCE%\ExportThesaurus.xml -xsl:%XSLT_DIR%\Thesaurus.xsl -o:%OUTPUT_FOLDER%\ExportThesaurus.rdf >> %LOG_FOLDER%\Thesaurus.log 2>&1
 
 
+set endAut=%time%
+echo "End Autorites  " %endAut%
+
+
+
+set startPartitions=%time%
+echo "Start Partitions  " %startPartitions%
+
+
 echo Step 1 - Convert xml file to rdf file
 echo "#######################################################################"
 echo "###  Etape 3 - Conversion Partitions                                ###"
 echo "#######################################################################"
 
-java -Xmx8048M -jar saxon-he-10.1.jar -s:%DIR_PARTITIONS_SOURCE%\ExportPartitions-20211201-sample-pretty.xml -xsl:%XSLT_DIR%\Partitions.xsl -o:%OUTPUT_FOLDER%\philharmonie.rdf >> %LOG_FOLDER%\philharmonie.tsv 2>&1
+for %%f in (%DIR_PARTITIONS_SOURCE%\*) do (	
 
+	java -Xmx8048M -jar saxon-he-10.1.jar -s:%%f -xsl:%XSLT_DIR%\Partitions.xsl -o:%OUTPUT_FOLDER%\%%~nf.rdf >> %LOG_FOLDER%\%%~nf.tsv 2>&1
+)
+
+
+set endPartitions=%time%
+echo "End Partitions  " %endPartitions%
 
 echo "Step 1 - Converting xml file to rdf file end " 

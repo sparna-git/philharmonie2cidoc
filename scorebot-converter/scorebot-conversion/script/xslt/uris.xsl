@@ -62,6 +62,12 @@
 		</xsl:choose>
 		
 	</xsl:function>
+
+	<!-- URI des Cotes -->
+	<xsl:function name="mus:URI-Cote">
+		<xsl:param name="idNotice" />
+		<xsl:value-of select="concat('https://ark.philharmoniedeparis.fr/ark:49250/',$idNotice,'#cote')" />		
+	</xsl:function>
 	
 	<!-- URI Title -->
 	<xsl:function name="mus:URI-Title">

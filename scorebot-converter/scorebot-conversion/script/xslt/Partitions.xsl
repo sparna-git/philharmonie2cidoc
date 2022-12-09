@@ -782,6 +782,18 @@
 			</ecrm:E42_Identifier>	
 		</ecrm:P1_is_identified_by>		
 	</xsl:template>
+
+
+	<!-- 997$g Cote -->
+	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='997$g']">
+		<xsl:variable name="idNotice" select="../../@id"/>
+		<ecrm:U19_is_categorized_as>
+			<ecrm:M19_Categorization rdf:about="{mus:URI-Cote($idNotice)}">
+				<rdfs:label><xsl:value-of select="data"/></rdfs:label>			
+			</ecrm:M19_Categorization>	
+		</ecrm:U19_is_categorized_as>
+		
+	</xsl:template>
 	
 	<!-- UNI5:101$a -->
 	<xsl:template match="SOUSCHAMP[@UnimarcSubfield ='101$a']">

@@ -34,7 +34,9 @@
 	<xsl:template match="NOTICE">
 		<ecrm:E74_Group rdf:about="{concat($rootUri,@id)}">
 			<!-- rdfs:label -->
-			<xsl:apply-templates select="champs[@UnimarcTag = '110']/SOUSCHAMP[@UnimarcSubfield ='110$a']" />
+			<xsl:apply-templates select="champs[@UnimarcTag = '110'][SOUSCHAMP/@UnimarcSubfield ='110$a']" />
+			<!-- skos:altLabel -->
+			<xsl:apply-templates select="champs[@UnimarcTag = '410'][SOUSCHAMP/@UnimarcSubfield ='410$a']" />
 		</ecrm:E74_Group>
 	</xsl:template>
 
@@ -42,11 +44,36 @@
 		<xsl:apply-templates />
 	</xsl:template>
 
-	<xsl:template
-		match="SOUSCHAMP[@UnimarcSubfield = '110$a']">
-		<rdfs:label>
-			<xsl:value-of select="data" />
+	<xsl:template match="champs[@UnimarcTag = '110']">
+		<xsl:variable name="SC_110_a"
+			select="SOUSCHAMP[@UnimarcSubfield ='110$a']/data" />
+		<xsl:variable name="SC_110_c"
+			select="SOUSCHAMP[@UnimarcSubfield ='110$c']/data" />
+
+		<xsl:variable name="value" select="concat(
+			$SC_110_a,
+			if($SC_110_c != '') then concat(' (',$SC_110_c, ')') else ''			
+		)" />
+
+		<rdfs:label xml:lang="fr">
+			<xsl:value-of select="$value" />
 		</rdfs:label>
+	</xsl:template>
+
+	<xsl:template match="champs[@UnimarcTag = '410']">
+		<xsl:variable name="SC_410_a"
+			select="SOUSCHAMP[@UnimarcSubfield ='410$a']/data" />
+		<xsl:variable name="SC_410_c"
+			select="SOUSCHAMP[@UnimarcSubfield ='410$c']/data" />
+
+		<xsl:variable name="value" select="concat(
+			$SC_410_a,
+			if($SC_410_c != '') then concat(' (',$SC_410_c, ')') else ''			
+		)" />
+
+		<skos:altLabel xml:lang="fr">
+			<xsl:value-of select="$value" />
+		</skos:altLabel>
 	</xsl:template>
 
 	<xsl:template match="text()"></xsl:template>
