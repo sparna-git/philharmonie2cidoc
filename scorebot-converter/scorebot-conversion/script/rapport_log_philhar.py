@@ -5,7 +5,7 @@
 # 
 # Pour le lancer, il faut :
 # - Installer Python
-# - python rapport_log_philhar.py <path_du_fichier_de_log.log> <chemin_du_fichier_output.csv>
+# - python rapport_log_philhar.py <path_du_fichier_de_log.log> <chemin_du_fichier_output.csv> <mot-clé_optionnel>
 # 
 
 
