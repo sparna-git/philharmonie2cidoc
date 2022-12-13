@@ -62,14 +62,21 @@
 		<xsl:variable name="SC_400_m"
 			select="SOUSCHAMP[@UnimarcSubfield ='400$m']/data" />
 
-		<xsl:variable name="value" select="concat(
-			if($SC_400_m != '') then concat($SC_400_m, ' ') else '' ,
-			$SC_400_a
-		)" />
-
-		<skos:altLabel xml:lang="fr">
-			<xsl:value-of select="$value" />
-		</skos:altLabel>
+		<xsl:choose>
+			<xsl:when test="$SC_400_m != ''">
+				<xsl:for-each select="$SC_400_m">
+					<skos:altLabel xml:lang="fr">
+						<xsl:value-of select="concat(., ' ',$SC_400_a)" />
+					</skos:altLabel>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<skos:altLabel xml:lang="fr">
+					<xsl:value-of select="$SC_400_a" />
+				</skos:altLabel>				
+			</xsl:otherwise>
+		</xsl:choose>	
+		
 	</xsl:template>
 
 	<xsl:template match="text()"></xsl:template>
