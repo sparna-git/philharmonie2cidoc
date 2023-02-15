@@ -1,0 +1,19 @@
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+CONSTRUCT {
+    # On surajoute les instruments et les voix génériques sur les partitions
+    ?partition philhar:S1_foresees_use_of_medium_of_performance_instrument ?instrumentGenerique .
+    ?partition philhar:S2_foresees_use_of_medium_of_performance_vocal ?voixGenerique .
+}
+#SELECT ?partition ?instrumentGenerique ?voixGenerique
+WHERE {
+    {
+        ?partition philhar:S1_foresees_use_of_medium_of_performance_instrument ?instrument .
+        ?instrument skos:broader+ ?instrumentGenerique .
+    }
+    UNION
+    {
+        ?partition philhar:S2_foresees_use_of_medium_of_performance_vocal ?voix .
+        ?voix skos:broader+ ?voixGenerique .   
+    }
+}
