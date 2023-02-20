@@ -102,4 +102,4 @@ done
 
 export end_xml_rdf="$(date +"%r")"
 
-echo "Step 1 - Converting xml file to rdf file from " $start_xml_rdf " to " $end_xml_rdf
+echo "Finished converting from " $start_xml_rdf " to " $end_xml_rdf
