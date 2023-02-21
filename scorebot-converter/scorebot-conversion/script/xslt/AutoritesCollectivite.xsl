@@ -52,7 +52,7 @@
 
 		<xsl:variable name="value" select="concat(
 			$SC_110_a,
-			if($SC_110_c != '') then concat(' (',$SC_110_c, ')') else ''			
+			if($SC_110_c != '') then concat(' (',string-join($SC_110_c, ', '), ')') else ''			
 		)" />
 
 		<rdfs:label xml:lang="fr">
@@ -68,7 +68,7 @@
 
 		<xsl:variable name="value" select="concat(
 			$SC_410_a,
-			if($SC_410_c != '') then concat(' (',$SC_410_c, ')') else ''			
+			if($SC_410_c != '') then concat(' (',string-join($SC_410_c, ', '), ')') else ''			
 		)" />
 
 		<skos:altLabel xml:lang="fr">

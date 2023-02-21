@@ -4,6 +4,7 @@ export HOME=$(dirname $0)
 # inputs
 export INPUT_FOLDER=$HOME/input
 export DIR_VOCABULARIES_SOURCE=$INPUT_FOLDER/vocabulaires
+export DIR_VOCABULARIES_ADDITIONNAL=$INPUT_FOLDER/vocabulaires-complementaires
 export DIR_PARTITIONS_SOURCE=$INPUT_FOLDER/partitions
 export DIR_PERSONNE_SOURCE=$INPUT_FOLDER/personnes
 export DIR_COLLECTIVITE_SOURCE=$INPUT_FOLDER/collectivites
@@ -42,10 +43,8 @@ echo "#######################################################################"
 
 
 for d in $DIR_VOCABULARIES_SOURCE/*;
-do
-	
-	VOC_NAME=$(basename $d .ttl)
-	
+do	
+	VOC_NAME=$(basename $d .ttl)	
 	java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar serialize -ns skos,http://www.w3.org/2004/02/skos/core# --input $d -o $DIR_VOCABULARIES/$VOC_NAME.rdf
 done
 
@@ -53,9 +52,17 @@ done
 export start_xml_rdf="$(date +"%r")"
 
 
+echo "Debut conversion vocabulaires complementaires "
+echo "#######################################################################"
+echo "###  Etape 2 - Conversion vocabulaires contrôlés complementaires    ###"
+echo "#######################################################################"
+
+java -jar xls2rdf-app-2.2.0-onejar.jar convert -i $DIR_VOCABULARIES_ADDITIONNAL/vocabulaires-complementaires.xlsx -o $DIR_VOCABULARIES/vocabulaires-complementaires.rdf
+
+
 # Convert other vocabularies
 echo "#######################################################################"
-echo "###  Etape 2 - Conversion Personnes / Collectivites / Thesaurus     ###"
+echo "###  Etape 3 - Conversion Personnes / Collectivites / Thesaurus     ###"
 echo "#######################################################################"
 
 
@@ -78,9 +85,8 @@ java -Xmx4048M -jar saxon-he-10.1.jar \
 		-o:$OUTPUT_FOLDER/ExportThesaurus.rdf &>> $LOG_FOLDER/Thesaurus.log
 
 
-# Step 1 - Convert xml file to rdf file
 echo "#######################################################################"
-echo "###  Etape 3 - Conversion Partitions                                ###"
+echo "###  Etape 4 - Conversion Partitions                                ###"
 echo "#######################################################################"
 
 for f in $(find $DIR_PARTITIONS_SOURCE -name '*.xml');
@@ -103,3 +109,12 @@ done
 export end_xml_rdf="$(date +"%r")"
 
 echo "Finished converting from " $start_xml_rdf " to " $end_xml_rdf
+
+echo "Start Surindexation calculation  "
+echo "#######################################################################"
+echo "###  Etape 5 - Calcul de la surindexation sur les instruments       ###"
+echo "#######################################################################"
+
+java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar construct --input $OUTPUT_FOLDER --input $DIR_VOCABULARIES --queries query --output $OUTPUT_FOLDER/surindexation.ttl
+
+echo "Fin Calcul surindexation  "

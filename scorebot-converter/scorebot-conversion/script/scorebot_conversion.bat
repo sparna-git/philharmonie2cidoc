@@ -60,7 +60,7 @@ echo "Fin Conversion vocabulaires complementaires  " %endConversionVocabulairesC
 set startAut=%time%
 echo "Start Conversion Personnes / Collectivites / Thesaurus " %startAut%
 echo "#######################################################################"
-echo "###  Etape 2 - Conversion Personnes / Collectivites / Thesaurus     ###"
+echo "###  Etape 3 - Conversion Personnes / Collectivites / Thesaurus     ###"
 echo "#######################################################################"
 
 
@@ -81,7 +81,7 @@ echo "End Conversion Personnes / Collectivites / Thesaurus " %endAut%
 set startPartitions=%time%
 echo "Start Conversion Partitions  " %startPartitions%
 echo "#######################################################################"
-echo "###  Etape 3 - Conversion Partitions                                ###"
+echo "###  Etape 4 - Conversion Partitions                                ###"
 echo "#######################################################################"
 
 for %%f in (%DIR_PARTITIONS_SOURCE%\*) do (	
@@ -95,7 +95,7 @@ echo "Fin Conversion Partitions  " %endPartitions%
 set startSurindexation=%time%
 echo "Start Surindexation calculation  " %startSurindexation%
 echo "#######################################################################"
-echo "###  Etape 4 - Calcul de la surindexation sur les instruments       ###"
+echo "###  Etape 5 - Calcul de la surindexation sur les instruments       ###"
 echo "#######################################################################"
 
 java -jar -Dfile.encoding=UTF-8 rdf-toolkit-0.6.1-onejar.jar construct --input %OUTPUT_FOLDER% --input %DIR_VOCABULARIES% --queries query --output %OUTPUT_FOLDER%/surindexation.ttl
